@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta>
+<title>FAQ Leckermeister</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Hintergrundfarbe */
+  }
+  .logo-header {
+    width: 100%;
+    background-color: white; /* Grüne Hintergrundfarbe */
+    text-align: center;
+  }
+  .logo {
+    width: 100px; /* Breite des Logos */
+    height: auto; /* Automatische Höhe */
+  }
+  .main-header {
+    width: 100%;
+    background-color:#5F764F; /* Transparenter Hintergrund */
+    text-align: center;
+    padding: 20px 0; /* Innenabstand oben und unten */
+    position: relative; /* Position relativ für Overlay */
+  }
+  .icons {
+    display: flex;
+    justify-content: space-around; /* Gleicher Abstand zwischen den Icons */
+    align-items: center;
+    position: relative; /* Position relativ für Overlay */
+  }
+  .icons img {
+    width: 40px;
+    height: 40px;
+  }
+body {background-color: white;}
+h3 {color:#5F764F}
+ol{background-color:#5f764f4d;}
+  
+</style>
+
+</head>
+<body>
+  <div class="logo-header">
+    <div >
+      <img class="logo" src="Logo.jpg" alt="Logo">
+    </div>
+  </div>
+  <header class="main-header">
+    <div class="icons">
+      <a href="link1"><img src="Home.png" alt="Home_Icon"></a>
+      <a href="link2"><img src="Suche.png" alt="Such_Icon"></a>
+      <a href="link3"><img src="plus_kreis.png" alt="Plus_Icon"></a>
+      <a href="link4"><img src="Besteck.png" alt="Besteck_Icon"></a>
+      <a href="link5"><img src="Person.png" alt="Person_Icon"></a>
+    </div>
+  </header>
+  <h1>FAQ-Häufig gestellte Fragen</h1>
+  <p>Auf dieser Seite finden Sie häufig gestellte Fragen und die passenden Antworten dazu</p>
+  <p>
+    <ol>
+    <li><h3>Wie funktioniert es ein Rezept hochzuladen?</h3>
+    Antwort auf Frage 
+    </li>
+    <li>
+    <h3> Kommen Kosten auf mich zu?</h3>
+    Nein, unsere Webseite ist für die Nutzer komplett Kostenfrei.</li>
+    <li><h3> Wer darf Rezepte hochladen?</h3>
+    Jeder der einen Account auf unserer Webseite besitzt.</li>
+    <li><h3>Wer darf Bilder hochladen?</h3>
+    Jeder mit einem Account auf Leckermeister</li>
+    <li><h3>Wer darf Rezepte kommentieren?</h3>
+    Jeder der einen Account auf Leckermeister besitzt</li>
+    <li><h3> Welche Reztepte eignen sich?</h3>
+    Jedes Rezept, dass Sie gerne weitergeben möchten.</li>
+    <li><h3>Ist es mögliche ein Rezept ohne Bilder hochzuladen?</h3>
+    Ja, Sie können gerne Rezepte ohhne Bilder hochladen, da jeder User Bilder im nachhinein hinzufügen können.</li>
+    <li><h3>Kann ich verhindern das andere User Bilder zu meinem Rezept hinzufügen</h3>
+    Nein das ist leider nicht möglich</li>
+    </ol>
+  </p>
+</body>
+</html>
