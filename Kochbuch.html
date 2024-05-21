@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mein Kochbuch</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #5f764f;
+        color: #ffffff;
+        padding: 20px;
+        margin: 0;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        margin-top: 20px;
+      }
+
+      .recipe {
+        background-color: #ffffff;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 10px;
+        color: #5f764f;
+      }
+
+      img {
+        max-width: 100%;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+
+      /* Header Styles */
+      .logo-header {
+        width: 100%;
+        background-color: white;
+        text-align: center;
+      }
+      .logo {
+        width: 100px;
+        height: auto;
+      }
+      .main-header {
+        width: 100%;
+        background-color: #5f764f;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+        cursor: pointer;
+      }
+      .icons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+      }
+      .icons img {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s ease;
+      }
+
+      .icons img:hover {
+        transform: scale(1.5);
+      }
+
+      /* Footer Styles */
+      .footer {
+        background-color: #5f764f;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+      .footer-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        display: flex;
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="logo-header">
+      <div>
+        <img class="logo" src="Logo.jpg" alt="Logo" />
+      </div>
+    </div>
+    <header class="main-header">
+      <div class="icons">
+        <a href="Homeseite.html"><img src="Home.png" alt="Home_Icon" /></a>
+        <a href="Suchseite.html"><img src="Suche.png" alt="Such_Icon" /></a>
+        <a href="Upload.html"><img src="plus_kreis.png" alt="Plus_Icon" /></a>
+        <a href="Kochbuch.html"><img src="Besteck.png" alt="Besteck_Icon" /></a>
+        <a href="Profil.html"><img src="Person.png" alt="Person_Icon" /></a>
+      </div>
+    </header>
+
+    <h1>Mein Kochbuch</h1>
+
+    <div class="recipe">
+      <h2>Spaghetti Carbonara</h2>
+      <h3>Zutaten:</h3>
+      <ul>
+        <li>250g Spaghetti</li>
+        <li>150g Pancetta oder Speck</li>
+        <li>2 Eigelb</li>
+        <li>50g geriebener Parmesan</li>
+        <li>Salz und Pfeffer nach Geschmack</li>
+      </ul>
+      <h3>Zubereitung:</h3>
+      <ol>
+        <li>
+          Koche die Spaghetti gemäß den Anweisungen auf der Verpackung al dente.
+        </li>
+        <li>
+          Während die Spaghetti kochen, brate den Pancetta oder Speck in einer
+          Pfanne knusprig an.
+        </li>
+        <li>
+          In einer Schüssel die Eigelbe mit dem geriebenen Parmesan vermischen.
+        </li>
+        <li>
+          Sobald die Spaghetti fertig sind, abgießen und direkt in die Schüssel
+          mit den Eigelben und dem Parmesan geben. Schnell vermischen, damit die
+          Eigelbe durch die Hitze der Spaghetti cremig werden.
+        </li>
+        <li>
+          Mit dem gebratenen Pancetta oder Speck garnieren und mit Salz und
+          Pfeffer abschmecken. Sofort servieren.
+        </li>
+      </ol>
+      <img
+        src="https://example.com/spaghetti_carbonara.jpg"
+        alt="Spaghetti Carbonara"
+      />
+    </div>
+
+    <div class="recipe">
+      <h2>Griechischer Salat</h2>
+      <h3>Zutaten:</h3>
+      <ul>
+        <li>1 Salatgurke</li>
+        <li>3 Tomaten</li>
+        <li>1 rote Zwiebel</li>
+        <li>100g Feta-Käse</li>
+        <li>Olivenöl</li>
+        <li>Essig</li>
+        <li>Salz und Pfeffer nach Geschmack</li>
+      </ul>
+      <h3>Zubereitung:</h3>
+      <ol>
+        <li>
+          Die Salatgurke und Tomaten in Scheiben schneiden. Die rote Zwiebel in
+          Ringe schneiden.
+        </li>
+        <li>Alle Zutaten in einer Schüssel vermischen.</li>
+        <li>Feta-Käse darüber bröckeln.</li>
+        <li>Mit Olivenöl und Essig beträufeln.</li>
+        <li>Mit Salz und Pfeffer abschmecken und servieren.</li>
+      </ol>
+      <img
+        src="https://example.com/griechischer_salat.jpg"
+        alt="Griechischer Salat"
+      />
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="#">Datenschutz</a>
+        <a href="#">Impressum</a>
+        <a href="#">AGB</a>
+      </div>
+    </footer>
+  </body>
+</html>
