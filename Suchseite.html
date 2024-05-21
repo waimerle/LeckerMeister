@@ -1,92 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta>
-<title>Leckermeister_Suchseite</title>
-<style>
- body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0; 
- }
-  .logo-header {
-    width: 100%;
-    background-color: white; 
-    text-align: center;
-  }
-  .logo {
-    width: 100px; 
-    height: auto; 
-  }
-  .main-header {
-    width: 100%;
-    background-color:#5F764F; 
-    text-align: center;
-    padding: 20px 0; /* Innenabstand oben und unten */
-    position: relative; /* Position relativ  */
-  }
-  .icons {
-    display: flex;
-    justify-content: space-around; /* Gleicher Abstand zwischen den Icons */
-    align-items: center;
-    position: relative; /* Position relativ  */
-  }
-  .icons img {
-    width: 40px;
-    height: 40px;
-  }
-  .button-container {
-    overflow-x: auto; /* Horizontale Scrollleiste anzeigen, wenn die Buttons nicht in eine Reihe passen */
-    white-space: nowrap; /* Buttons in einer Zeile  */
-  }
-  .button {
-    padding: 80px ;
-    margin: 10px;
-    background-color: #5F764F;
-    color: white;
-    border: none;
-    border-radius: 10px;
-  }
-  .button:hover {
-    background-color: #41612b ;
-  }
- 
-</style>
-</head>
-<body>
-  <div class="logo-header">
-    <div >
-      <img class="logo" src="Logo.jpg" alt="Logo">
-    </div>
-  </div>
-  <header class="main-header">
-    <div class="icons">
-      <a href="Startseite.html"><img src="Home.png" alt="Home_Icon"></a>
-      <a href="Suchseite.html"><img src="Suche.png" alt="Such_Icon"></a>
-      <a href="link3"><img src="plus_kreis.png" alt="Plus_Icon"></a>
-      <a href="link4"><img src="Besteck.png" alt="Besteck_Icon"></a>
-      <a href="link5"><img src="Person.png" alt="Person_Icon"></a>
-    </div>
-  </header>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeckerMeister_Suchseite</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
 
-  <div class="button-container">
-    <button class="button" >Kategorie 1</button>
-    <button class="button" >Kategorie 2</button>
-    <button class="button" >Kategorie 3</button>
-    <button class="button" >Kategorie 4</button>
-    <button class="button" >Kategorie 5</button>
-    <button class="button" >Kategorie 6</button>
-    <button class="button" >Kategorie 7</button>
-    <button class="button" >Kategorie 8</button>
-    <button class="button" >Kategorie 9</button>
-    <button class="button" >Kategorie 10</button>
-    <button class="button" >Kategorie 11</button>
-    <button class="button" >Kategorie 12</button>
-    <!-- Weitere Buttons für weitere Kategorien -->
-  </div>
+      .button-container {
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      .button {
+        padding: 80px;
+        margin: 10px;
+        background-color: #5f764f;
+        color: white;
+        border: none;
+        border-radius: 10px;
+      }
+      .button:hover {
+        background-color: #41612b;
+      }
+      /* Header Styles */
+      .logo-header {
+        width: 100%;
+        background-color: white;
+        text-align: center;
+      }
+      .logo {
+        width: 100px;
+        height: auto;
+      }
+      .main-header {
+        width: 100%;
+        background-color: #5f764f;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+        cursor: pointer;
+      }
+      .icons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+      }
+      .icons img {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s ease;
+      }
 
- 
-</body>
+      .icons img:hover {
+        transform: scale(1.5);
+      }
+
+      /* Search Styles */
+      .search-container {
+        width: 100%;
+        background-color: #5f764f;
+        padding: 10px 0;
+        position: relative;
+      }
+
+      .search-box {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-right: 10px;
+        width: calc(100% - 120px);
+      }
+
+      .search-button {
+        padding: 10px 20px;
+        background-color: #41612b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .search-button:hover {
+        background-color: #2a401f;
+      }
+
+      /* Footer Styles */
+      .footer {
+        background-color: #5f764f;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+      .footer-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        display: flex;
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo-header">
+      <div>
+        <img class="logo" src="Logo.jpg" alt="Logo" />
+      </div>
+    </div>
+    <header class="main-header">
+      <div class="icons">
+        <a href="Startseite.html"><img src="Home.png" alt="Home_Icon" /></a>
+        <a href="Suchseite.html"><img src="Suche.png" alt="Such_Icon" /></a>
+        <a href="link3"><img src="plus_kreis.png" alt="Plus_Icon" /></a>
+        <a href="link4"><img src="Besteck.png" alt="Besteck_Icon" /></a>
+        <a href="link5"><img src="Person.png" alt="Person_Icon" /></a>
+      </div>
+    </header>
+    <div class="search-container">
+      <input type="text" placeholder="Suche..." class="search-box" />
+      <button class="search-button">Suchen</button>
+    </div>
+    <div class="button-container">
+      <button class="button">Auflauf</button>
+      <button class="button">Pizza</button>
+      <button class="button">Reis- oder Nudelsalat</button>
+      <button class="button">Salate</button>
+      <button class="button">Salatdressing</button>
+      <button class="button">Tarte</button>
+      <button class="button">Fingerfood</button>
+      <button class="button">Dips</button>
+      <button class="button">Saucen</button>
+      <button class="button">Suppe</button>
+      <button class="button">Klöße</button>
+      <button class="button">Brot und Brötchen</button>
+      <button class="button">Brotspeise</button>
+      <button class="button">Aufstrich</button>
+      <button class="button">Süßspeise</button>
+      <button class="button">Eis</button>
+      <button class="button">Kuchen</button>
+      <button class="button">Kekse</button>
+      <button class="button">Torte</button>
+      <button class="button">Confiserie</button>
+      <button class="button">Getränke</button>
+      <button class="button">Shake</button>
+      <button class="button">Gewürzmischung</button>
+      <button class="button">Pasten</button>
+      <button class="button">Studentenküche</button>
+      <!-- Weitere Buttons für weitere Kategorien -->
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="#">Datenschutz</a>
+        <a href="#">Impressum</a>
+        <a href="#">AGB</a>
+      </div>
+    </footer>
+  </body>
 </html>
