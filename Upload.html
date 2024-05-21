@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rezept hochladen</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #5f764f;
+        color: #060606;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #5f764f;
+        color: #fffbfb;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Rezept hochladen</h1>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+      <label for="recipeName">Name des Rezepts:</label>
+      <input type="text" id="recipeName" name="recipeName" required />
+
+      <label for="recipeImage">Bild hochladen:</label>
+      <input
+        type="file"
+        id="recipeImage"
+        name="recipeImage"
+        accept="image/*"
+        required
+      />
+
+      <label for="ingredients">Zutaten:</label>
+      <textarea
+        id="ingredients"
+        name="ingredients"
+        rows="4"
+        required
+      ></textarea>
+
+      <label for="instructions">Zubereitung:</label>
+      <textarea
+        id="instructions"
+        name="instructions"
+        rows="6"
+        required
+      ></textarea>
+
+      <label for="category">Kategorie:</label>
+      <select id="category" name="category" required>
+        <option value="">Bitte Kategorie auswählen</option>
+        <option value="vegan">Vegan</option>
+        <option value="süß">Süß</option>
+        <option value="herzhaft">Herzhaft</option>
+        <!-- Weitere Kategorien hier ergänzen -->
+      </select>
+
+      <input type="submit" value="Rezept hochladen" />
+    </form>
+  </body>
+</html>
+
