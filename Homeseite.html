@@ -37,6 +37,83 @@
         width: 40px;
         height: 40px;
       }
+            /* Header Styles */
+            .logo-header {
+        width: 100%;
+        background-color: white;
+        text-align: center;
+      }
+      .logo {
+        width: 100px;
+        height: auto;
+      }
+      .main-header {
+        width: 100%;
+        background-color: #5f764f;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+        cursor: pointer;
+      }
+      .icons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+      }
+      .icons img {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s ease;
+      }
+
+      .icons img:hover {
+        transform: scale(1.5);
+      }
+
+      /* Search Styles */
+      .search-container {
+        width: 100%;
+        background-color: #5f764f;
+        padding: 10px 0;
+        position: relative;
+      }
+
+      .search-box {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-right: 10px;
+        width: calc(100% - 120px);
+      }
+
+      .search-button {
+        padding: 10px 20px;
+        background-color: #41612b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .search-button:hover {
+        background-color: #2a401f;
+      }
+
+      /* Footer Styles */
+      .footer {
+        background-color: #5f764f;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+      .footer-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        display: flex;
+        justify-content: space-around;
+      }
     </style>
   </head>
   <body>
@@ -56,4 +133,12 @@
     </header>
     ..........weiter schreiben.....
   </body>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-links">
+          <a href="#">Datenschutz</a>
+          <a href="#">Impressum</a>
+          <a href="#">AGB</a>
+        </div>
+      </footer>
 </html>
