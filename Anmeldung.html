@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anmelden & Registrieren</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      .container {
+        max-width: 400px;
+        margin: 100px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        color: #5f764f; /* Dunkelgrün */
+      }
+
+      input[type="email"],
+      input[type="password"],
+      button {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #5f764f; /* Dunkelgrün */
+        color: #fff;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #445c3c; /* Hellgrün */
+      }
+
+      p {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Anmelden</h2>
+      <form id="loginForm">
+        <input type="email" id="loginEmail" placeholder="E-Mail" required />
+        <input
+          type="password"
+          id="loginPassword"
+          placeholder="Passwort"
+          required
+        />
+        <button type="submit">Anmelden</button>
+      </form>
+      <p>
+        Noch keinen Account?
+        <a href="#" id="showRegister">Hier registrieren</a>.
+      </p>
+
+      <h2 style="display: none" id="registerHeader">Registrieren</h2>
+      <form id="registerForm" style="display: none">
+        <input type="email" id="registerEmail" placeholder="E-Mail" required />
+        <input
+          type="password"
+          id="registerPassword"
+          placeholder="Passwort"
+          required
+        />
+        <input
+          type="password"
+          id="confirmPassword"
+          placeholder="Passwort bestätigen"
+          required
+        />
+        <button type="submit">Registrieren</button>
+      </form>
+      <p style="display: none" id="loginLink">
+        Bereits einen Account? <a href="#" id="showLogin">Hier anmelden</a>.
+      </p>
+    </div>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          var email = document.getElementById("loginEmail").value;
+          var password = document.getElementById("loginPassword").value;
+          // Hier würde die Authentifizierung stattfinden
+          // Für die Einfachheit zeigen wir jetzt nur eine Weiterleitung an
+          window.location.href = "startseite.html"; // Weiterleitung nach erfolgreicher Anmeldung
+        });
+
+      document
+        .getElementById("registerForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          var email = document.getElementById("registerEmail").value;
+          var password = document.getElementById("registerPassword").value;
+          var confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+          if (password !== confirmPassword) {
+            alert(
+              "Die Passwörter stimmen nicht überein. Bitte versuchen Sie es erneut."
+            );
+            return;
+          }
+
+          // Hier würde die Registrierung stattfinden
+          // Für die Einfachheit zeigen wir jetzt nur eine Benachrichtigung an
+          alert("Registrierung erfolgreich für: " + email);
+          // Hier würde eine E-Mail an die registrierte E-Mail-Adresse gesendet werden
+        });
+
+      document
+        .getElementById("showRegister")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          document.getElementById("loginForm").style.display = "none";
+          document.getElementById("registerHeader").style.display = "block";
+          document.getElementById("registerForm").style.display = "block";
+          document.getElementById("loginLink").style.display = "block";
+        });
+
+      document
+        .getElementById("showLogin")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          document.getElementById("loginForm").style.display = "block";
+          document.getElementById("registerHeader").style.display = "none";
+          document.getElementById("registerForm").style.display = "none";
+          document.getElementById("loginLink").style.display = "none";
+        });
+    </script>
+  </body>
+</html>
