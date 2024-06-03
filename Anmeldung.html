@@ -21,7 +21,7 @@
 
       h2 {
         text-align: center;
-        color: #5f764f; /* Dunkelgrün */
+        color: #5f764f; /* DunkelgrÃ¼n */
       }
 
       input[type="email"],
@@ -36,13 +36,13 @@
       }
 
       button {
-        background-color: #5f764f; /* Dunkelgrün */
+        background-color: #5f764f; /* DunkelgrÃ¼n */
         color: #fff;
         cursor: pointer;
       }
 
       button:hover {
-        background-color: #445c3c; /* Hellgrün */
+        background-color: #445c3c; /* HellgrÃ¼n */
       }
 
       p {
@@ -80,7 +80,7 @@
         <input
           type="password"
           id="confirmPassword"
-          placeholder="Passwort bestätigen"
+          placeholder="Passwort bestÃ¤tigen"
           required
         />
         <button type="submit">Registrieren</button>
@@ -97,9 +97,9 @@
           event.preventDefault();
           var email = document.getElementById("loginEmail").value;
           var password = document.getElementById("loginPassword").value;
-          // Hier würde die Authentifizierung stattfinden
-          // Für die Einfachheit zeigen wir jetzt nur eine Weiterleitung an
-          window.location.href = "startseite.html"; // Weiterleitung nach erfolgreicher Anmeldung
+          // Hier wÃ¼rde die Authentifizierung stattfinden
+          // FÃ¼r die Einfachheit zeigen wir jetzt nur eine Weiterleitung an
+          window.location.href = "Homeseite.html"; // Weiterleitung nach erfolgreicher Anmeldung
         });
 
       document
@@ -113,15 +113,15 @@
 
           if (password !== confirmPassword) {
             alert(
-              "Die Passwörter stimmen nicht überein. Bitte versuchen Sie es erneut."
+              "Die PasswÃ¶rter stimmen nicht Ã¼berein. Bitte versuchen Sie es erneut."
             );
             return;
           }
 
-          // Hier würde die Registrierung stattfinden
-          // Für die Einfachheit zeigen wir jetzt nur eine Benachrichtigung an
-          alert("Registrierung erfolgreich für: " + email);
-          // Hier würde eine E-Mail an die registrierte E-Mail-Adresse gesendet werden
+          // Hier wÃ¼rde die Registrierung stattfinden
+          // FÃ¼r die Einfachheit zeigen wir jetzt nur eine Benachrichtigung an
+          alert("Registrierung erfolgreich fÃ¼r: " + email);
+          // Hier wÃ¼rde eine E-Mail an die registrierte E-Mail-Adresse gesendet werden
         });
 
       document
