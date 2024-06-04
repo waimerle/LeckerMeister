@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeckerMeister</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+      .logo-header {
+        width: 100%;
+        background-color: white;
+        text-align: center;
+      }
+      .logo {
+        width: 100px;
+        height: auto;
+      }
+      .main-header {
+        width: 100%;
+        background-color: #5f764f;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+      }
+      .icons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+      }
+      .icons img {
+        width: 40px;
+        height: 40px;
+      }
+      /* Footer Styles */
+      .footer {
+        background-color: #5f764f;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+      .footer-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        display: flex;
+        justify-content: space-around;
+      }
+      .rezept-container {
+         margin-bottom: 20px; 
+         border-bottom: 1px solid green; 
+         padding-bottom: 20px; 
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="logo-header">
+      <div>
+        <img class="logo" src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Logo.jpg" alt="Logo" />
+      </div>
+    </div>
+    <header class="main-header">
+      <div class="icons">
+        <a href="Homeseite.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Home.png" alt="Home_Icon" /></a>
+        <a href="Suchseite.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Suche.png" alt="Such_Icon" /></a>
+        <a href="Upload.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/plus_kreis.png" alt="Plus_Icon" /></a>
+        <a href="Kochbuch.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Besteck.png" alt="Besteck_Icon" /></a>
+        <a href="Profil.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Person.png" alt="Person_Icon" /></a>
+      </div>
+    </header>
+     {% for rezept in rezepte %}
+      <div class="rezept-container">
+	<h1>{{ rezept.name }}</h1>	
+	<img src="{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="400" height="300">
+	<h2>Zutaten:</h2>
+	<ul>
+		<li>{{ rezept.Zutaten }}</li>
+		
+	</ul>
+	<h2>Anleitung:</h2>
+	<ol>
+            {% for schritt in rezept.Zubereitung %}
+			<li>{{ rezept.Zubereitung }}</li>
+            {% endfor %}
+	</ol>
+	<h2>Zubereitungszeit:</h2>
+	<p>{{ rezept.Zubereitungszeit }}</p>
+     </div>
+    {% endfor %}
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="Datenschutz.html">Datenschutz</a>
+        <a href="Impressum.html">Impressum</a>
+        <a href="AGB.html">AGB</a>
+      </div>
+    </footer>
+
+  </body>
+</html>
