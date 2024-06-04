@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeckerMeister_Suchseite</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      .button-container {
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      .button {
+        padding: 80px;
+        margin: 10px;
+        background-color: #5f764f;
+        color: white;
+        border: none;
+        border-radius: 10px;
+      }
+      .button:hover {
+        background-color: #41612b;
+      }
+      /* Header Styles */
+      .logo-header {
+        width: 100%;
+        background-color: white;
+        text-align: center;
+      }
+      .logo {
+        width: 100px;
+        height: auto;
+      }
+      .main-header {
+        width: 100%;
+        background-color: #5f764f;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+        cursor: pointer;
+      }
+      .icons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+      }
+      .icons img {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s ease;
+      }
+
+      .icons img:hover {
+        transform: scale(1.5);
+      }
+
+      /* Search Styles */
+      .search-container {
+        width: 100%;
+        background-color: #5f764f;
+        padding: 10px 0;
+        position: relative;
+      }
+
+      .search-box {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-right: 10px;
+        width: calc(100% - 120px);
+      }
+
+      .search-button {
+        padding: 10px 20px;
+        background-color: #41612b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .search-button:hover {
+        background-color: #2a401f;
+      }
+
+      /* Footer Styles */
+      .footer {
+        background-color: #5f764f;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+      .footer-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        display: flex;
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo-header">
+      <div>
+        <img class="logo" src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Logo.jpg" alt="Logo" />
+      </div>
+    </div>
+    <header class="main-header">
+      <div class="icons">
+        <a href="Homeseite.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Home.png" alt="Home_Icon" /></a>
+        <a href="Suchseite.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Suche.png" alt="Such_Icon" /></a>
+        <a href="Upload.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/plus_kreis.png" alt="Plus_Icon" /></a>
+        <a href="Kochbuch.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Besteck.png" alt="Besteck_Icon" /></a>
+        <a href="Profil.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Person.png" alt="Person_Icon" /></a>
+      </div>
+    </header>
+    <div class="search-container">
+      <input type="text" placeholder="Suche..." class="search-box" />
+      <button class="search-button">Suchen</button>
+    </div>
+    <div class="button-container">
+      <button class="button">Auflauf</button>
+      <button class="button">Pizza</button>
+      <button class="button">Reis- oder Nudelsalat</button>
+      <button class="button">Salate</button>
+      <button class="button">Salatdressing</button>
+      <button class="button">Tarte</button>
+      <button class="button">Fingerfood</button>
+      <button class="button">Dips</button>
+      <button class="button">Saucen</button>
+      <button class="button">Suppe</button>
+      <button class="button">KlÃ¶ÃŸe</button>
+      <button class="button">Brot und BrÃ¶tchen</button>
+      <button class="button">Brotspeise</button>
+      <button class="button">Aufstrich</button>
+      <button class="button">SÃ¼ÃŸspeise</button>
+      <button class="button">Eis</button>
+      <button class="button">Kuchen</button>
+      <button class="button">Kekse</button>
+      <button class="button">Torte</button>
+      <button class="button">Confiserie</button>
+      <button class="button">GetrÃ¤nke</button>
+      <button class="button">Shake</button>
+      <button class="button">GewÃ¼rzmischung</button>
+      <button class="button">Pasten</button>
+      <button class="button">StudentenkÃ¼che</button>
+      <!-- Weitere Buttons fÃ¼r weitere Kategorien -->
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="Datenschutz.html">Datenschutz</a>
+        <a href="Impressum.html">Impressum</a>
+        <a href="AGB.html">AGB</a>
+      </div>
+    </footer>
+  </body>
+</html>
