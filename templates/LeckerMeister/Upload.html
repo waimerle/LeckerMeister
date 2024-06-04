@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rezept hochladen</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #5f764f;
+        color: #060606;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #5f764f;
+        color: #fffbfb;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      /* Header Styles */
+      .logo-header {
+        width: 100%;
+        background-color: white;
+        text-align: center;
+      }
+      .logo {
+        width: 100px;
+        height: auto;
+      }
+      .main-header {
+        width: 100%;
+        background-color: #5f764f;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+        cursor: pointer;
+      }
+      .icons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+      }
+      .icons img {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s ease;
+      }
+
+      .icons img:hover {
+        transform: scale(1.5);
+      }
+      /* Footer Styles */
+      .footer {
+        background-color: #5f764f;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+      .footer-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        display: flex;
+        justify-content: space-around;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="logo-header">
+      <div>
+        <img class="logo" src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Logo.jpg" alt="Logo" />
+      </div>
+    </div>
+    <header class="main-header">
+      <div class="icons">
+        <a href="Homeseite.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Home.png" alt="Home_Icon" /></a>
+        <a href="Suchseite.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Suche.png" alt="Such_Icon" /></a>
+        <a href="Upload.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/plus_kreis.png" alt="Plus_Icon" /></a>
+        <a href="Kochbuch.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Besteck.png" alt="Besteck_Icon" /></a>
+        <a href="Profil.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Person.png" alt="Person_Icon" /></a>
+      </div>
+    </header>
+
+    <h1>Rezept hochladen</h1>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+      <label for="recipeName">Name des Rezepts:</label>
+      <input type="text" id="recipeName" name="recipeName" required />
+
+      <label for="recipeImage">Bild hochladen:</label>
+      <input
+        type="file"
+        id="recipeImage"
+        name="recipeImage"
+        accept="image/*"
+        required
+      />
+
+      <label for="ingredients">Zutaten:</label>
+      <textarea
+        id="ingredients"
+        name="ingredients"
+        rows="4"
+        required
+      ></textarea>
+
+      <label for="instructions">Zubereitung:</label>
+      <textarea
+        id="instructions"
+        name="instructions"
+        rows="6"
+        required
+      ></textarea>
+
+      <label for="category">Kategorie:</label>
+      <select id="category" name="category" required>
+        <option value="">Bitte Kategorie auswÃ¤hlen</option>
+        <option value="vegan">Vegan</option>
+        <option value="sÃ¼ÃŸ">SÃ¼ÃŸ</option>
+        <option value="herzhaft">Herzhaft</option>
+        <!-- Weitere Kategorien hier ergÃ¤nzen -->
+      </select>
+
+      <input type="submit" value="Rezept hochladen" />
+    </form>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="Datenschutz.html">Datenschutz</a>
+        <a href="Impressum.html">Impressum</a>
+        <a href="AGB.html">AGB</a>
+      </div>
+    </footer>
+
+  </body>
+</html>
