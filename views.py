@@ -49,3 +49,14 @@ def Profil(request):
 	}
 		
 	return render(request, "LeckerMeister/Profil.html", vars)
+
+def Datenschutz(request):
+	return render(request, "LeckerMeister/Datenschutz.html")
+
+def Impressum(request):
+	return render(request, "LeckerMeister/Impressum.html")
+
+def AGB(request):
+	return render(request, "LeckerMeister/AGB.html")
+
+
