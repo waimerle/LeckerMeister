@@ -6,7 +6,26 @@ def Anmeldung(request):
 	return render(request, "LeckerMeister/Anmeldung.html")
 
 def Homeseite(request):
-	return render(request, "LeckerMeister/Homeseite.html")
+
+	Rezept_Filename = "/var/www/django-projekt/LeckerMeister/Rezepte.json"
+
+	if not os.path.isfile(Rezept_Filename):
+		return HttpResponse("Die Rezeptdatei existiert nicht!")
+
+	with open(Rezept_Filename, "r") as file: 
+		Rezept_list = json.load(file)
+
+	rezepte = []
+	for rezept in Rezept_list:
+		rezepte.append({
+			"Rezeptbild": rezept.get("Rezeptbild", ""),
+			"name": rezept.get("name", ""),
+			"Zutaten": rezept.get("Zutaten", ""),
+			"Zubereitung": rezept.get("Zubereitung", ""),
+			"Zubereitungszeit": rezept.get("Zubereitungszeit", ""),
+		})
+
+	return render(request, "LeckerMeister/Homeseite.html", {"rezepte": rezepte})
 
 def Suchseite(request):
 	return render(request, "LeckerMeister/Suchseite.html")
