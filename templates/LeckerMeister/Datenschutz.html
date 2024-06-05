@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="de">
   <head>
@@ -36,6 +37,11 @@
       .icons img {
         width: 40px;
         height: 40px;
+        transition: transform 0.3s ease;
+      }
+
+      .icons img:hover {
+        transform: scale(1.5);
       }
       /* Footer Styles */
       .footer {
@@ -64,31 +70,31 @@
   <body>
     <div class="logo-header">
       <div>
-        <img class="logo" src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Logo.jpg" alt="Logo" />
+        <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
       </div>
     </div>
     <header class="main-header">
       <div class="icons">
-        <a href="Homeseite.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Home.png" alt="Home_Icon" /></a>
-        <a href="Suchseite.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Suche.png" alt="Such_Icon" /></a>
-        <a href="Upload.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/plus_kreis.png" alt="Plus_Icon" /></a>
-        <a href="Kochbuch.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Besteck.png" alt="Besteck_Icon" /></a>
-        <a href="Profil.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Person.png" alt="Person_Icon" /></a>
+        <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
+        <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
+        <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
+        <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
+        <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
       </div>
     </header>
     <div class="design">
       <h1>Datenschutz</h1> 
-      Du mÃ¶chtest wissen, wie wir bei LeckerMeister GmbH mit dem Thema Datenschutz umgehen? <br>
-      Uns ist es wichtig, dich hierÃ¼ber aufzuklÃ¤ren. 
+      Du mÃƒÂ¶chtest wissen, wie wir bei LeckerMeister GmbH mit dem Thema Datenschutz umgehen? <br>
+      Uns ist es wichtig, dich hierÃƒÂ¼ber aufzuklÃƒÂ¤ren. 
       Denn wenn du unsere Angebote und Services nutzt, verarbeiten wir personenbezogene Daten von dir.
-       Dies tun wir, um das Betreiben unserer Website mit Informationen zum Thema Kochen und Rezepte sowie die Darstellung und das Angebot von Dienstleistungen zu diesen Themen zu gewÃ¤hrleisten. 
-       Das Verarbeiten von personenbezogenen Daten ist notwendig, um unsere Angebote bzw. Services fÃ¼r dich besser zu gestalten. 
+       Dies tun wir, um das Betreiben unserer Website mit Informationen zum Thema Kochen und Rezepte sowie die Darstellung und das Angebot von Dienstleistungen zu diesen Themen zu gewÃƒÂ¤hrleisten. 
+       Das Verarbeiten von personenbezogenen Daten ist notwendig, um unsere Angebote bzw. Services fÃƒÂ¼r dich besser zu gestalten. 
        Wir machen dies jedoch verantwortungsvoll und nur, soweit es nach den Vorgaben der geltenden Datenschutzgesetze erlaubt ist, insbesondere der EU-Datenschutzgrundverordnung (DSGVO).
-      Die Verwendung von Daten fÃ¼r Werbezwecke macht es mÃ¶glich, kostenlose Angebote und Services betreiben zu kÃ¶nnen. 
-      AuÃŸerdem mÃ¶chten wir stÃ¤ndig besser werden und Angebote und Services gern auch speziell auf dich zuschneiden, also personalisieren.
-       Das gelingt uns nur, wenn wir die Nutzung der Angebote und Services genauer beobachten und auswerten.es und alles Weitere, was mit deinen Daten geschieht, werden wir nicht heimlich tun, sondern nur mit der nÃ¶tigen Transparenz. 
-       Daher informieren wir dich an dieser Stelle umfassend Ã¼ber das Was, Wie und Warum solcher Verarbeitungen. 
-       Auch alle relevanten Pflichtinformationen, die wir gemÃ¤ÃŸ der EU-Datenschutzgrundverordnung bereitstellen mÃ¼ssen, haben wir hier fÃ¼r dich zusammengestellt.
+      Die Verwendung von Daten fÃƒÂ¼r Werbezwecke macht es mÃƒÂ¶glich, kostenlose Angebote und Services betreiben zu kÃƒÂ¶nnen. 
+      AuÃƒÅ¸erdem mÃƒÂ¶chten wir stÃƒÂ¤ndig besser werden und Angebote und Services gern auch speziell auf dich zuschneiden, also personalisieren.
+       Das gelingt uns nur, wenn wir die Nutzung der Angebote und Services genauer beobachten und auswerten.es und alles Weitere, was mit deinen Daten geschieht, werden wir nicht heimlich tun, sondern nur mit der nÃƒÂ¶tigen Transparenz. 
+       Daher informieren wir dich an dieser Stelle umfassend ÃƒÂ¼ber das Was, Wie und Warum solcher Verarbeitungen. 
+       Auch alle relevanten Pflichtinformationen, die wir gemÃƒÂ¤ÃƒÅ¸ der EU-Datenschutzgrundverordnung bereitstellen mÃƒÂ¼ssen, haben wir hier fÃƒÂ¼r dich zusammengestellt.
    </div>
    <br>
   </body>
