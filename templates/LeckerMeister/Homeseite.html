@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="de">
   <head>
@@ -36,8 +37,26 @@
       .icons img {
         width: 40px;
         height: 40px;
+        transition: transform 0.3s ease;
       }
-      /* Footer Styles */
+
+      .icons img:hover {
+        transform: scale(1.5);
+      }
+      .rezept-container {
+        background-color: white;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        max-width: 800px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .rezept-container + .rezept-container {
+        margin-top: 40px;
+        border-top: 2px solid #5f764f;
+        padding-top: 20px;
+      }
       .footer {
         background-color: #5f764f;
         color: white;
@@ -51,48 +70,45 @@
         display: flex;
         justify-content: space-around;
       }
-      .rezept-container {
-         margin-bottom: 20px; 
-         border-bottom: 1px solid green; 
-         padding-bottom: 20px; 
-      }
-
     </style>
   </head>
   <body>
     <div class="logo-header">
       <div>
-        <img class="logo" src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Logo.jpg" alt="Logo" />
+        <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
       </div>
     </div>
     <header class="main-header">
       <div class="icons">
-        <a href="Homeseite.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Home.png" alt="Home_Icon" /></a>
-        <a href="Suchseite.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Suche.png" alt="Such_Icon" /></a>
-        <a href="Upload.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/plus_kreis.png" alt="Plus_Icon" /></a>
-        <a href="Kochbuch.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Besteck.png" alt="Besteck_Icon" /></a>
-        <a href="Profil.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Person.png" alt="Person_Icon" /></a>
+        <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
+        <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
+        <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
+        <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
+        <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
       </div>
     </header>
-     {% for rezept in rezepte %}
+
+    {% for rezept in rezepte %}
       <div class="rezept-container">
-	<h1>{{ rezept.name }}</h1>	
-	<img src="{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="400" height="300">
-	<h2>Zutaten:</h2>
-	<ul>
-		<li>{{ rezept.Zutaten }}</li>
-		
-	</ul>
-	<h2>Anleitung:</h2>
-	<ol>
-            {% for schritt in rezept.Zubereitung %}
-			<li>{{ rezept.Zubereitung }}</li>
-            {% endfor %}
-	</ol>
-	<h2>Zubereitungszeit:</h2>
-	<p>{{ rezept.Zubereitungszeit }}</p>
-     </div>
+        <h1>{{ rezept.name }}</h1>
+        <img src="{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="400" height="300">
+        <h2>Zutaten:</h2>
+        <ul>
+          {% for zutat in rezept.Zutaten %}
+            <li>{{ zutat }}</li>
+          {% endfor %}
+        </ul>
+        <h2>Anleitung:</h2>
+        <ol>
+          {% for schritt in rezept.Zubereitung %}
+            <li>{{ schritt }}</li>
+          {% endfor %}
+        </ol>
+        <h2>Zubereitungszeit:</h2>
+        <p>{{ rezept.Zubereitungszeit }}</p>
+      </div>
     {% endfor %}
+
     <!-- Footer -->
     <footer class="footer">
       <div class="footer-links">
