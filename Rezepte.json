@@ -2,7 +2,11 @@
   {
     "Rezeptbild": "https://cdn.pixabay.com/photo/2024/02/16/15/36/recipe-8577854_1280.jpg",
     "name": "Spaghetti",
-    "Zutaten": "Nudeln, Wasser, Salz",
+    "Zutaten": [
+      "Nudeln", 
+      "Wasser", 
+      "Salz"
+    ],
     "Zubereitung": [
       "Wasser zum kochen bringen", 
       "Salz und Nudeln hinzufuegen", 
@@ -13,7 +17,11 @@
   {
     "Rezeptbild": "https://www.aok.de/pk/magazin/cms/fileadmin/_processed_/5/d/csm_ist-reis-gesund_69c3a0626d.jpg.webp",
     "name": "Reis",
-    "Zutaten": "Reis, Wasser, Salz",
+    "Zutaten": [
+      "Reis", 
+      "Wasser", 
+      "Salz"
+    ],
     "Zubereitung": [
       "Wasser zum kochen bringen"
     ],
