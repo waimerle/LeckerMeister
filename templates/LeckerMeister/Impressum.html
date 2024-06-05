@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="de">
   <head>
@@ -36,6 +37,11 @@
       .icons img {
         width: 40px;
         height: 40px;
+        transition: transform 0.3s ease;
+      }
+
+      .icons img:hover {
+        transform: scale(1.5);
       }
       /* Footer Styles */
       .footer {
@@ -64,28 +70,28 @@
   <body>
     <div class="logo-header">
       <div>
-        <img class="logo" src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Logo.jpg" alt="Logo" />
+        <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
       </div>
     </div>
     <header class="main-header">
       <div class="icons">
-        <a href="Homeseite.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Home.png" alt="Home_Icon" /></a>
-        <a href="Suchseite.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Suche.png" alt="Such_Icon" /></a>
-        <a href="Upload.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/plus_kreis.png" alt="Plus_Icon" /></a>
-        <a href="Kochbuch.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Besteck.png" alt="Besteck_Icon" /></a>
-        <a href="Profil.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Person.png" alt="Person_Icon" /></a>
+        <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
+        <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
+        <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
+        <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
+        <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
       </div>
     </header>
     <div class="design">
      <h1>Impressum LeckerMeister</h1> 
-      LeckerMeister ist ein Produkt von Leonie Waimer, Sophie Schumann, Sabrina SchÃ¶nweiler <br><br>
+      LeckerMeister ist ein Produkt von Leonie Waimer, Sophie Schumann, Sabrina SchÃƒÂ¶nweiler <br><br>
 
      <h3>Kundenservice:</h3>
-      HÃ¤ufig gestellte Fragen: FAQ<br><br>
+      HÃƒÂ¤ufig gestellte Fragen: FAQ<br><br>
 
      <h3>Anschrift:</h3>
       LeckerMeister GmbH<br>
-      MusterstraÃŸe 33<br>
+      MusterstraÃƒÅ¸e 33<br>
       71336 Waiblingen<br>
       Tel: 1111122220 (kein Kundenservice)<br>
       Fax: 1111122220<br>
