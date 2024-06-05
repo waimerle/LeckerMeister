@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="de">
   <head>
@@ -113,16 +113,16 @@
   <body>
     <div class="logo-header">
       <div>
-        <img class="logo" src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Logo.jpg" alt="Logo" />
+        <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
       </div>
     </div>
     <header class="main-header">
       <div class="icons">
-        <a href="Homeseite.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Home.png" alt="Home_Icon" /></a>
-        <a href="Suchseite.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Suche.png" alt="Such_Icon" /></a>
-        <a href="Upload.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/plus_kreis.png" alt="Plus_Icon" /></a>
-        <a href="Kochbuch.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Besteck.png" alt="Besteck_Icon" /></a>
-        <a href="Profil.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Person.png" alt="Person_Icon" /></a>
+        <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
+        <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
+        <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
+        <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
+        <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
       </div>
     </header>
 
@@ -159,11 +159,11 @@
 
       <label for="category">Kategorie:</label>
       <select id="category" name="category" required>
-        <option value="">Bitte Kategorie auswÃ¤hlen</option>
+        <option value="">Bitte Kategorie auswÃƒÂ¤hlen</option>
         <option value="vegan">Vegan</option>
-        <option value="sÃ¼ÃŸ">SÃ¼ÃŸ</option>
+        <option value="sÃƒÂ¼ÃƒÅ¸">SÃƒÂ¼ÃƒÅ¸</option>
         <option value="herzhaft">Herzhaft</option>
-        <!-- Weitere Kategorien hier ergÃ¤nzen -->
+        <!-- Weitere Kategorien hier ergÃƒÂ¤nzen -->
       </select>
 
       <input type="submit" value="Rezept hochladen" />
