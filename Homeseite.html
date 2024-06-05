@@ -37,7 +37,20 @@
         width: 40px;
         height: 40px;
       }
-      /* Footer Styles */
+      .rezept-container {
+        background-color: white;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        max-width: 800px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .rezept-container + .rezept-container {
+        margin-top: 40px;
+        border-top: 2px solid #5f764f;
+        padding-top: 20px;
+      }
       .footer {
         background-color: #5f764f;
         color: white;
@@ -51,7 +64,6 @@
         display: flex;
         justify-content: space-around;
       }
-
     </style>
   </head>
   <body>
@@ -69,14 +81,36 @@
         <a href="Profil.html"><img src="http://[2001:7c0:2320:2:f816:3eff:fe2f:3fb]/Person.png" alt="Person_Icon" /></a>
       </div>
     </header>
-    ..........weiter schreiben.....
+
+    {% for rezept in rezepte %}
+      <div class="rezept-container">
+        <h1>{{ rezept.name }}</h1>
+        <img src="{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="400" height="300">
+        <h2>Zutaten:</h2>
+        <ul>
+          {% for zutat in rezept.Zutaten %}
+            <li>{{ zutat }}</li>
+          {% endfor %}
+        </ul>
+        <h2>Anleitung:</h2>
+        <ol>
+          {% for schritt in rezept.Zubereitung %}
+            <li>{{ schritt }}</li>
+          {% endfor %}
+        </ol>
+        <h2>Zubereitungszeit:</h2>
+        <p>{{ rezept.Zubereitungszeit }}</p>
+      </div>
+    {% endfor %}
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="Datenschutz.html">Datenschutz</a>
+        <a href="Impressum.html">Impressum</a>
+        <a href="AGB.html">AGB</a>
+      </div>
+    </footer>
+
   </body>
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="footer-links">
-          <a href="Datenschutz.html">Datenschutz</a>
-          <a href="Impressum.html">Impressum</a>
-          <a href="AGB.html">AGB</a>
-        </div>
-      </footer>
 </html>
