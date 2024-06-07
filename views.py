@@ -2,8 +2,9 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 import json, os
 
-def Anmeldung(request):
+def Anmeldung(request):		
 	return render(request, "LeckerMeister/Anmeldung.html")
+
 
 def Homeseite(request):
 
