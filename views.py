@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 import json, os
 
@@ -36,8 +36,11 @@ def Upload(request):
         # Formulardaten abrufen
         rezept_name = request.POST.get('recipeName')
         rezept_bild = request.FILES.get('recipeImage')
-        zutaten = request.POST.get('ingredients')
-        zubereitung = request.POST.get('instructions')
+        zutaten_str = request.POST.get('ingredients')  # Zutaten als Zeichenkette abrufen
+        zutaten = [z.strip() for z in zutaten_str.split(',')]  # Zutaten aufteilen und Leerzeichen entfernen
+        zubereitung_str = request.POST.get('instructions')  # Zubereitung als Zeichenkette abrufen
+        zubereitung = [step.strip() for step in zubereitung_str.split(',')]  # Zubereitung aufteilen und Leerzeichen entfernen
+        zubereitungszeit = request.POST.get('preparationTime')
         kategorie = request.POST.get('category')
 
         neues_rezept = {
@@ -56,7 +59,7 @@ def Upload(request):
             rezepte = []
 
 
-        rezepte.append(neues_rezept)
+        rezepte.insert(0, neues_rezept)
 
         with open(rezept_filename, 'w') as file:
             json.dump(rezepte, file, indent=4)
@@ -66,7 +69,7 @@ def Upload(request):
             for chunk in rezept_bild.chunks():
                 destination.write(chunk)
 
-        return HttpResponse("Rezept erfolgreich hochgeladen")
+        return redirect("Homeseite.html")
 
     return render(request, 'LeckerMeister/Upload.html')
 
