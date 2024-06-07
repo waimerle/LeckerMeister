@@ -70,6 +70,27 @@
         display: flex;
         justify-content: space-around;
       }
+      .like-button {
+            background-color: #5f764f;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+        .like-button.liked {
+            background-color: #354827;
+
+        }
+        .like-count {
+            font-size: 18px;
+            margin-top: 10px;
+        }
     </style>
   </head>
   <body>
@@ -109,6 +130,32 @@
         <h2>Kategorie:</h2>
         <p>{{ rezept.Kategorie }}</p>
 
+        <button id="likeButton" class="like-button" onclick="toggleLike()">Gutes Rezept!</button>
+    <div class="like-count">Likes: <span id="likeCount">0</span></div>
+
+    <script>
+        let likeCount = 0;
+        let userHasLiked = false;
+
+        function toggleLike() {
+            const likeButton = document.getElementById('likeButton');
+            const likeCountElement = document.getElementById('likeCount');
+
+            if (userHasLiked) {
+                likeCount--;
+                likeButton.classList.remove('liked');
+                likeButton.textContent = 'Gutes Rezept!';
+            } else {
+                likeCount++;
+                likeButton.classList.add('liked');
+                likeButton.textContent = 'Gefällt mir nichtmehr';
+            }
+
+            userHasLiked = !userHasLiked;
+            likeCountElement.textContent = likeCount;
+        }
+    </script>
+
       </div>
     {% endfor %}
 
@@ -123,4 +170,3 @@
 
   </body>
 </html>
-
