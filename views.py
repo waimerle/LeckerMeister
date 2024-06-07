@@ -65,7 +65,7 @@ def Upload(request):
             json.dump(rezepte, file, indent=4)
 
 
-        with open(f'/var/www/django-projekt/LeckerMeister/uploads/{rezept_bild.name}', 'wb+') as destination:
+        with open(f'/var/www/static/uploads/{rezept_bild.name}', 'wb+') as destination:
             for chunk in rezept_bild.chunks():
                 destination.write(chunk)
 
