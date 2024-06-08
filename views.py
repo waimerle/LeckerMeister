@@ -9,15 +9,14 @@ def Anmeldung(request):
 def Homeseite(request):
 
 	Rezept_Filename = "/var/www/django-projekt/LeckerMeister/Rezepte.json"
-    Kommentar_Filename = "/var/www/django-projekt/LeckerMeister/Kommentare.json"
-	
-	
-	with open(Rezept_Filename, "r") as file, open(Kommentar_Filename, "r") as kommentar_file: 
-		Rezept_list = json.loads(file.read())
-        Kommentar_list = json.loads(kommentar_file.read())
+	Kommentar_Filename = "/var/www/django-projekt/LeckerMeister/Kommentare.json"
 
-	rezepte = []
-	for rezept in Rezept_list:
+with open(Rezept_Filename, "r") as file, open(Kommentar_Filename, "r") as kommentar_file: 
+		Rezept_list = json.loads(file.read())
+		Kommentar_list = json.loads(kommentar_file.read())
+
+rezepte = []
+for rezept in Rezept_list:
 		rezepte.append({
 			"Rezeptbild": rezept.get("Rezeptbild", ""),
 			"name": rezept.get("name", ""),
@@ -26,19 +25,20 @@ def Homeseite(request):
 			"Zubereitungszeit": rezept.get("Zubereitungszeit", ""),
 			"Kategorie": rezept.get("Kategorie", ""),
 		})
-	if request.method == 'POST':
-	    rezept_id = request.POST.get('rezept_id')
-        kommentar_text = request.POST.get('comment')
+if request.method == 'POST':
+	rezept_id = request.POST.get('rezept_id')
+	kommentar_text = request.POST.get('comment')
     
-	kommentare=[]
-    for kommentare in Kommentar_list:
+kommentare=[]
+for kommentare in Kommentar_list:
 		kommentare.append = {
             "rezept_id": rezept_id,
             "text": kommentar_text
 		}
-
-
-	return render(request, "LeckerMeister/Homeseite.html", {"rezepte": rezepte})
+with open(Kommentar_Filename, "w") as kommentar_file:
+	json.dump(Kommentar_list, kommentar_file, indent=4)
+	
+return render(request, "LeckerMeister/Homeseite.html", {"rezepte": rezepte})
 
 
 def Suchseite(request):
