@@ -132,7 +132,8 @@
 
         <button id="likeButton" class="like-button" onclick="toggleLike()">Gutes Rezept!</button>
     <div class="like-count">Likes: <span id="likeCount">0</span></div>
-
+      </div>
+    {% endfor %}
     <script>
         let likeCount = 0;
         let userHasLiked = false;
@@ -156,8 +157,7 @@
         }
     </script>
 
-      </div>
-    {% endfor %}
+
 
     <!-- Footer -->
     <footer class="footer">
