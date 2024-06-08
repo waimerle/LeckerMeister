@@ -29,14 +29,12 @@ def Homeseite(request):
 	if request.method == 'POST':
 	    rezept_id = request.POST.get('rezept_id')
         kommentar_text = request.POST.get('comment')
-        neue_kommentar = {
+    
+	kommentare=[]
+		kommentare.append = {
             "rezept_id": rezept_id,
             "text": kommentar_text
-        }
-        Kommentar_list.append(neue_kommentar)
-        with open(Kommentar_Filename, "w") as kommentar_file:
-            json.dump(Kommentar_list, kommentar_file, indent=4)
-        return redirect('Homeseite.html')
+		}
 
 
 	return render(request, "LeckerMeister/Homeseite.html", {"rezepte": rezepte})
