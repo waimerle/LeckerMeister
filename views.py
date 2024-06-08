@@ -35,11 +35,7 @@ def Homeseite(request):
                 if rezept["name"] == rezept_id:
                     rezept["Kommentare"].append({"text": kommentar_text})
 
-            # Aktualisiere die Kommentar-Liste
-            kommentar_file.seek(0)  # Gehe zum Anfang der Datei
-            kommentar_file.truncate()  # Lösche den Inhalt der Datei
-            json.dump(Kommentar_list, kommentar_file, indent=4)  # Schreibe die aktualisierte Liste in die Datei
-
+            
     return render(request, "LeckerMeister/Homeseite.html", {"rezepte": rezepte})
 
 
