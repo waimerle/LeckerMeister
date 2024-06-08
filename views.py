@@ -4,6 +4,50 @@ import json, os
 
 def Anmeldung(request):		
 	return render(request, "LeckerMeister/Anmeldung.html")
+	
+def Registrierung(request):
+
+    if request.method == 'POST':
+        # Formulardaten abrufen
+        benutzer_name = request.POST.get('benutzer_name')
+        profil_bild = request.FILES.get('profil_bild')
+        email = request.POST.get('email')
+        Wohnort = request.POST.get('Wohnort')
+        Biografie = request.POST.get('Biografie') 
+        Passwort = request.POST.get('Passwort')
+        
+        profil_bild_name = profil_bild.name if profil_bild else None
+
+        neuer_Benutzer = {
+            "Profilbild": profil_bild_name, 
+            "name": benutzer_name, 
+            "email": email,
+            "Wohnort": Wohnort,
+            "Passwort": Passwort,
+            "bio": Biografie
+        }
+
+        user_filename = "/var/www/django-projekt/LeckerMeister/user_Data.json"
+        try:
+            with open(user_filename, 'r') as file:
+                benutzer = json.load(file)
+        except FileNotFoundError:
+            benutzer = []
+
+        benutzer.append(neuer_Benutzer)
+
+        with open(user_filename, 'w') as file:
+            json.dump(benutzer, file, indent=4)
+
+
+        if profil_bild:
+            with open(f'/var/www/static/users/{profil_bild.name}', 'wb+') as destination:
+                for chunk in profil_bild.chunks():
+                    destination.write(chunk)
+
+        return redirect("Homeseite.html")
+
+    return render(request, 'LeckerMeister/Registrierung.html')
 
 
 def Homeseite(request):
