@@ -11,33 +11,34 @@ def Homeseite(request):
     Rezept_Filename = "/var/www/django-projekt/LeckerMeister/Rezepte.json"
     Kommentar_Filename = "/var/www/django-projekt/LeckerMeister/Kommentare.json"
 
-    with open(Rezept_Filename, "r") as file, open(Kommentar_Filename, "r") as kommentar_file: 
+    with open(Rezept_Filename, "r") as file, open(Kommentar_Filename, "r+") as kommentar_file: 
         Rezept_list = json.loads(file.read())
         Kommentar_list = json.loads(kommentar_file.read())
 
-    rezepte = []
-    for rezept in Rezept_list:
-        rezepte.append({
-            "Rezeptbild": rezept.get("Rezeptbild", ""),
-            "name": rezept.get("name", ""),
-            "Zutaten": rezept.get("Zutaten", ""),
-            "Zubereitung": rezept.get("Zubereitung", ""),
-            "Zubereitungszeit": rezept.get("Zubereitungszeit", ""),
-            "Kategorie": rezept.get("Kategorie", ""),
-            "Kommentare": []  # Füge ein leeres Kommentarfeld hinzu
-        })
+        rezepte = []
+        for rezept in Rezept_list:
+            rezepte.append({
+                "Rezeptbild": rezept.get("Rezeptbild", ""),
+                "name": rezept.get("name", ""),
+                "Zutaten": rezept.get("Zutaten", ""),
+                "Zubereitung": rezept.get("Zubereitung", ""),
+                "Zubereitungszeit": rezept.get("Zubereitungszeit", ""),
+                "Kategorie": rezept.get("Kategorie", ""),
+                "Kommentare": []  # Füge ein leeres Kommentarfeld hinzu
+            })
 
-    if request.method == 'POST':
-        rezept_id = request.POST.get('rezept_id')
-        kommentar_text = request.POST.get('comment')
+        if request.method == 'POST':
+            rezept_id = request.POST.get('rezept_id')
+            kommentar_text = request.POST.get('comment')
 
-        for rezept in rezepte:
-            if rezept["name"] == rezept_id:
-                rezept["Kommentare"].append({"text": kommentar_text})
+            for rezept in rezepte:
+                if rezept["name"] == rezept_id:
+                    rezept["Kommentare"].append({"text": kommentar_text})
 
-        # Aktualisiere die Kommentar-Datei
-        with open(Kommentar_Filename, "w") as kommentar_file:
-            json.dump(Kommentar_list, kommentar_file, indent=4)
+            # Aktualisiere die Kommentar-Liste
+            kommentar_file.seek(0)  # Gehe zum Anfang der Datei
+            kommentar_file.truncate()  # Lösche den Inhalt der Datei
+            json.dump(Kommentar_list, kommentar_file, indent=4)  # Schreibe die aktualisierte Liste in die Datei
 
     return render(request, "LeckerMeister/Homeseite.html", {"rezepte": rezepte})
 
