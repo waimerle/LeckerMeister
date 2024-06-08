@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anmelden & Registrieren</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    .container {
+      max-width: 400px;
+      margin: 100px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #5f764f; /* DunkelgrÃ¼n */
+    }
+    input[type="email"],
+    input[type="password"],
+    input[type="text"],
+    input[type="file"],
+    textarea,
+    button {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #5f764f; /* DunkelgrÃ¼n */
+      color: #fff;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #445c3c; /* HellgrÃ¼n */
+    }
+    p {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h2>Registrieren</h2>
+    <form id="registerForm" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+    <label for="benutzer_name">Benutzername:</label>
+    <input type="text" id="benutzer_name" name="benutzer_name">
+    
+    <label for="profil_bild">Profilbild:</label>
+    <input type="file" id="profil_bild" name="profil_bild">
+    
+    <label for="email">E-Mail:</label>
+    <input type="email" id="email" name="email">
+    
+    <label for="Wohnort">Wohnort:</label>
+    <input type="text" id="Wohnort" name="Wohnort">
+    
+    <label for="Biografie">Biografie:</label>
+    <textarea id="Biografie" name="Biografie"></textarea>
+    
+    <label for="Passwort">Passwort:</label>
+    <input type="password" id="Passwort" name="Passwort">
+    
+    <button type="submit">Registrieren</button>    </form>
+    <p>
+      Bereits einen Account? <a href="Anmeldung.html" id="showLogin">Hier anmelden</a>.
+    </p>
+  </div>
+</body>
+</html>
