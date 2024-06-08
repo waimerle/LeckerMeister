@@ -9,9 +9,12 @@ def Anmeldung(request):
 def Homeseite(request):
 
 	Rezept_Filename = "/var/www/django-projekt/LeckerMeister/Rezepte.json"
-
-	with open(Rezept_Filename, "r") as file: 
+    Kommentar_Filename = "/var/www/django-projekt/LeckerMeister/Kommentare.json"
+	
+	
+	with open(Rezept_Filename, "r") as file, open(Kommentar_Filename, "r") as kommentar_file: 
 		Rezept_list = json.loads(file.read())
+        Kommentar_list = json.loads(kommentar_file.read())
 
 	rezepte = []
 	for rezept in Rezept_list:
@@ -23,6 +26,17 @@ def Homeseite(request):
 			"Zubereitungszeit": rezept.get("Zubereitungszeit", ""),
 			"Kategorie": rezept.get("Kategorie", ""),
 		})
+	if request.method == 'POST':
+	    rezept_id = request.POST.get('rezept_id')
+        kommentar_text = request.POST.get('comment')
+        neue_kommentar = {
+            "rezept_id": rezept_id,
+            "text": kommentar_text
+        }
+        Kommentar_list.append(neue_kommentar)
+        with open(Kommentar_Filename, "w") as kommentar_file:
+            json.dump(Kommentar_list, kommentar_file, indent=4)
+        return redirect('Homeseite.html')
 
 
 	return render(request, "LeckerMeister/Homeseite.html", {"rezepte": rezepte})
