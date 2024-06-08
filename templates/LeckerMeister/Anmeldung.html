@@ -51,101 +51,16 @@
 <body>
   <div class="container">
     <h2>Anmelden</h2>
-    <form id="loginForm">
-      <input type="text" id="loginUsernameEmail" placeholder="Benutzername oder E-Mail" required />
-      <input type="password" id="loginPassword" placeholder="Passwort" required />
-      <button type="submit">Anmelden</button>
-    </form>
+      <form id="loginForm" method="post">
+         {% csrf_token %}
+         <input type="text" id="benutzer_name" name="benutzer_name" placeholder="Benutzername" required />
+         <input type="password" id="Passwort" name="Passwort" placeholder="Passwort" required />
+         <button type="submit">Anmelden</button>
+      </form>
     <p>
       Noch keinen Account?
-      <a href="#" id="showRegister">Hier registrieren</a>.
-    </p>
-
-    <h2 style="display: none" id="registerHeader">Registrieren</h2>
-    <form id="registerForm" style="display: none" enctype="multipart/form-data">
-      <input type="text" id="registerName" placeholder="Name" required />
-      <input type="email" id="registerEmail" placeholder="E-Mail" required />
-      <input type="text" id="registerLocation" placeholder="Wohnort" required />
-      <textarea id="registerBio" placeholder="Biografie" required></textarea>
-      <label for="registerProfilePic" class="file-label">Profilbild hochladen:</label>
-      <input type="file" id="registerProfilePic" accept="image/*" required />
-      <input type="password" id="registerPassword" placeholder="Passwort" required />
-      <input type="password" id="confirmPassword" placeholder="Passwort bestÃ¤tigen" required />
-      <button type="submit">Registrieren</button>
-    </form>
-    <p style="display: none" id="loginLink">
-      Bereits einen Account? <a href="#" id="showLogin">Hier anmelden</a>.
+      <a href="Registrierung.html" id="showRegister">Hier registrieren</a>.
     </p>
   </div>
-
-  <script>
-    document.getElementById("loginForm").addEventListener("submit", function (event) {
-      event.preventDefault();
-      var usernameOrEmail = document.getElementById("loginUsernameEmail").value;
-      var password = document.getElementById("loginPassword").value;
-      // Hier wÃ¼rde die Authentifizierung stattfinden
-      // FÃ¼r die Einfachheit zeigen wir jetzt nur eine Weiterleitung an
-      window.location.href = "Homeseite.html"; // Weiterleitung nach erfolgreicher Anmeldung
-    });
-
-    document.getElementById("registerForm").addEventListener("submit", function (event) {
-      event.preventDefault();
-      var name = document.getElementById("registerName").value;
-      var email = document.getElementById("registerEmail").value;
-      var location = document.getElementById("registerLocation").value;
-      var bio = document.getElementById("registerBio").value;
-      var profilePic = document.getElementById("registerProfilePic").files[0];
-      var password = document.getElementById("registerPassword").value;
-      var confirmPassword = document.getElementById("confirmPassword").value;
-
-      if (password !== confirmPassword) {
-        alert("Die PasswÃ¶rter stimmen nicht Ã¼berein. Bitte versuchen Sie es erneut.");
-        return;
-      }
-
-      var formData = new FormData();
-      formData.append('name', name);
-      formData.append('email', email);
-      formData.append('location', location);
-      formData.append('bio', bio);
-      formData.append('profilePic', profilePic);
-      formData.append('password', password);
-
-      // Hier wÃ¼rde die Registrierung stattfinden
-      // Beispielsweise kann man die Formulardaten an einen Server senden
-      fetch('/register', {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          alert("Registrierung erfolgreich fÃ¼r: " + email);
-          // Hier kÃ¶nnte eine Weiterleitung zur Anmeldeseite erfolgen
-        } else {
-          alert("Registrierung fehlgeschlagen: " + data.error);
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-    });
-
-    document.getElementById("showRegister").addEventListener("click", function (event) {
-      event.preventDefault();
-      document.getElementById("loginForm").style.display = "none";
-      document.getElementById("registerHeader").style.display = "block";
-      document.getElementById("registerForm").style.display = "block";
-      document.getElementById("loginLink").style.display = "block";
-    });
-
-    document.getElementById("showLogin").addEventListener("click", function (event) {
-      event.preventDefault();
-      document.getElementById("loginForm").style.display = "block";
-      document.getElementById("registerHeader").style.display = "none";
-      document.getElementById("registerForm").style.display = "none";
-      document.getElementById("loginLink").style.display = "none";
-    });
-  </script>
 </body>
 </html>
