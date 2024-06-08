@@ -31,6 +31,7 @@ def Homeseite(request):
         kommentar_text = request.POST.get('comment')
     
 	kommentare=[]
+    for kommentare in Kommentar_list:
 		kommentare.append = {
             "rezept_id": rezept_id,
             "text": kommentar_text
