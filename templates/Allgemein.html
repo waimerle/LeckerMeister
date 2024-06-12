@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anmelden & Registrieren</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    .container {
+      max-width: 400px;
+      margin: 100px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #5f764f; /* DunkelgrÃ¼n */
+    }
+    input[type="email"],
+    input[type="password"],
+    input[type="text"],
+    input[type="file"],
+    textarea,
+    button {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #5f764f; /* DunkelgrÃ¼n */
+      color: #fff;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #445c3c; /* HellgrÃ¼n */
+    }
+    p {
+      text-align: center;
+    }
+   /*Anmeldeseite */
+  </style> 
+</head>
+<body>
+function Anmeldeseite.html(){
+    var hideSuchseite = document.getElementbyId("Suchseite.html").setAttribute("style","display:none");
+    var hideHomeseite = document.getElementbyId("Homeseite.html").setAttribute("style","display:none");
+    var hideUploadseite = document.getElementbyId("Upload.html").setAttribute("style","display:none");
+    
+}
+ <div id="Anmeldeseite.html">
+  <div class="container">
+    <h2>Anmelden</h2>
+      <form id="loginForm" method="post">
+         {% csrf_token %}
+         <input type="text" id="benutzer_name" name="benutzer_name" placeholder="Benutzername" required />
+         <input type="password" id="Passwort" name="Passwort" placeholder="Passwort" required />
+         <button type="submit">Anmelden</button>
+         <input type="hidden" name="next" value="{% url 'Profil' %}?benutzer={{ benutzer_name }}" />
+      </form>
+    <p>
+      Noch keinen Account?
+      <a href="Registrierung.html" id="showRegister">Hier registrieren</a>.
+    </p>
+  </div>
+ </div>
+</body>
+</html>
