@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anmelden & Registrieren</title>
   <style>
+/* Anmeldeseite + Registrierung  */
     body {
       font-family: Arial, sans-serif;
       background-color: #f0f0f0;
@@ -22,11 +23,12 @@
       text-align: center;
       color: #5f764f; /* DunkelgrÃ¼n */
     }
+    /* schauen ob man das wirklich braucht 
     input[type="email"],
     input[type="password"],
     input[type="text"],
     input[type="file"],
-    textarea,
+    textarea, */
     button {
       width: 100%;
       margin-bottom: 10px;
@@ -46,7 +48,82 @@
     p {
       text-align: center;
     }
-   /* Anmeldeseite + Registrierung  */
+/* Header Styles */
+   .logo-header {
+        width: 100%;
+        background-color: white;
+        text-align: center;
+      }
+      .logo {
+        width: 100px;
+        height: auto;
+      }
+      .main-header {
+        width: 100%;
+        background-color: #5f764f;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+        cursor: pointer;
+      }
+      .icons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+      }
+      .icons img {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s ease;
+      }
+
+      .icons img:hover {
+        transform: scale(1.5);
+      }
+  /* Search Styles */
+      .search-container {
+        width: 100%;
+        background-color: #5f764f;
+        padding: 10px 0;
+        position: relative;
+      }
+
+      .search-box {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-right: 10px;
+        width: calc(100% - 120px);
+      }
+
+      .search-button {
+        padding: 10px 20px;
+        background-color: #41612b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .search-button:hover {
+        background-color: #2a401f;
+      }
+
+  /* Footer Styles */
+      .footer {
+        background-color: #5f764f;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+      .footer-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        display: flex;
+        justify-content: space-around;
+      }
 
   </style> 
 </head>
@@ -212,23 +289,358 @@ function Datenschutz(){
   </div>
   <!-----------------------Suchseite--------------------------------------------------------------------------------------------->
  <div onclick="Suchseite">
+  <div class="logo-header">
+    <div>
+      <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
+    </div>
+  </div>
+  <header class="main-header">
+    <div class="icons">
+      <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
+      <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
+      <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
+      <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
+      <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
+    </div>
+  </header>
+  <div class="search-container">
+    <input type="text" placeholder="Suche..." class="search-box" />
+    <button class="search-button">Suchen</button>
+  </div>
+  <div class="button-container">
+    <button class="button">Auflauf</button>
+    <button class="button">Pizza</button>
+    <button class="button">Reis- oder Nudelsalat</button>
+    <button class="button">Salate</button>
+    <button class="button">Salatdressing</button>
+    <button class="button">Tarte</button>
+    <button class="button">Fingerfood</button>
+    <button class="button">Dips</button>
+    <button class="button">Saucen</button>
+    <button class="button">Suppe</button>
+    <button class="button">Kloesse</button>
+    <button class="button">Brot und Broetchen</button>
+    <button class="button">Brotspeise</button>
+    <button class="button">Aufstrich</button>
+    <button class="button">Suessspeise</button>
+    <button class="button">Eis</button>
+    <button class="button">Kuchen</button>
+    <button class="button">Kekse</button>
+    <button class="button">Torte</button>
+    <button class="button">Confiserie</button>
+    <button class="button">Getraenke</button>
+    <button class="button">Shake</button>
+    <button class="button">Gewuerzmischung</button>
+    <button class="button">Pasten</button>
+    <button class="button">Studentenkueche</button>
 
+  </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="Datenschutz.html">Datenschutz</a>
+      <a href="Impressum.html">Impressum</a>
+      <a href="AGB.html">AGB</a>
+    </div>
+  </footer>
  </div>
  <!------------------------Homeseite--------------------------------------------------------------------------------------------->
  <div onclick="Homeseite">
+  <div class="logo-header">
+    <div>
+      <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
+    </div>
+  </div>
+  <header class="main-header">
+    <div class="icons">
+      <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
+      <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
+      <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
+      <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
+      <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
+    </div>
+  </header>
+
+  {% for rezept in rezepte %}
+    <div class="rezept-container">
+      <h1>{{ rezept.name }}</h1>
+      <img src="/static/uploads/{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="400" height="300">
+      <h2>Zutaten:</h2>
+      <ul>
+        {% for zutat in rezept.Zutaten %}
+          <li>{{ zutat }}</li>
+        {% endfor %}
+      </ul>
+      <h2>Anleitung:</h2>
+      <ol>
+        {% for schritt in rezept.Zubereitung %}
+          <li>{{ schritt }}</li>
+        {% endfor %}
+      </ol>
+      <h2>Zubereitungszeit:</h2>
+      <p>{{ rezept.Zubereitungszeit }}</p>
+      <h2>Kategorie:</h2>
+      <p>{{ rezept.Kategorie }}</p>
+
+    </div>
+  {% endfor %}
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="Datenschutz.html">Datenschutz</a>
+      <a href="Impressum.html">Impressum</a>
+      <a href="AGB.html">AGB</a>
+    </div>
+  </footer>
 
  </div>
  <!------------------------Upload-------------------------------------------------------------------------------------------------->
  <div onclick="Upload">
+  <div class="logo-header">
+    <div>
+      <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
+    </div>
+  </div>
+  <header class="main-header">
+    <div class="icons">
+      <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
+      <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
+      <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
+      <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
+      <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
+    </div>
+  </header>
 
+  <h1>Rezept hochladen</h1>
+
+  <form action="#" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="recipeName">Name des Rezepts:</label>
+    <input type="text" id="recipeName" name="recipeName" required />
+
+    <label for="recipeImage">Bild hochladen:</label>
+    <input
+      type="file"
+      id="recipeImage"
+      name="recipeImage"
+      accept="image/*"
+      required
+    />
+
+    <label for="ingredients">Zutaten:</label>
+    <textarea
+      id="ingredients"
+      name="ingredients"
+      rows="4"
+      required
+    ></textarea>
+
+    <label for="instructions">Zubereitung:</label>
+    <textarea
+      id="instructions"
+      name="instructions"
+      rows="6"
+      required
+    ></textarea>
+
+    <label for="preparationTime">Zubereitungszeit:</label>
+    <textarea
+      id="preparationTime"
+      name="preparationTime"
+      rows="1"
+      required
+    ></textarea>
+
+
+    <label for="category">Kategorie:</label>
+    <select id="category" name="category" required>
+      <option value="">Bitte Kategorie ausweahlen</option>
+      <option value="Auflauf">Auflauf</option>
+      <option value="PizzaÂ¸">Pizza</option>
+      <option value="Reis- oder Nudelsalat">Reis- oder Nudelsalat</option>
+      <option value="Salatdressing">Salatdressing</option>
+      <option value="Tarte">Tarte</option>
+      <option value="Fingerfood">Fingerfood</option>
+      <option value="Dips">Dips</option>
+      <option value="Saucen">Saucen</option>
+      <option value="Suppe">Suppe</option>
+      <option value="Kloesse">Kloesse</option>
+      <option value="Brot und Broetchen">Brot und Broetchen</option>
+      <option value="Brotspeise">Brotspeise</option>
+      <option value="Aufstrich">Aufstrich</option>
+      <option value="Suessspeise">Suessspeise</option>
+      <option value="Eis">Eis</option>
+      <option value="Kuchen">Kuchen</option>
+      <option value="Kekse">Kekse</option>
+      <option value="Torte">Torte</option>
+      <option value="Confiserie">Confiserie</option>
+      <option value="Getraenke">Getraenke</option>
+      <option value="Shake">Shake</option>
+      <option value="Gewuerzmischung">Gewuerzmischung</option>
+      <option value="Pasten">Pasten</option>
+      <option value="Studentenkueche">Studentenkueche</option>
+
+
+    </select>
+
+    <input type="submit" value="Rezept hochladen" />
+  </form>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="Datenschutz.html">Datenschutz</a>
+      <a href="Impressum.html">Impressum</a>
+      <a href="AGB.html">AGB</a>
+    </div>
+  </footer>
  </div>
  <!------------------------Profil-------------------------------------------------------------------------------------------------->
  <div onclick="Profil">
+  <div class="logo-header">
+    <div>
+      <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
+    </div>
+  </div>
+  <header class="main-header">
+    <div class="icons">
+      <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
+      <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
+      <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
+      <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
+      <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
+    </div>
+  </header>
+  <div class="container">
+    <img class="profile-picture" src="{{ Profilbild }}" alt="Profilbild" />
+    <div class="user-info">
+      <h2>{{ Name }}</h2>
+      <p>E-Mail: {{ EMail }}</p>
+      <p>Ort: {{ Wohnort }}</p>
+      <p>
+        Biografie: {{ Bio }}
+      </p>
+    </div>
+    <div class="edit-profile">
+      <button onclick="changePassword()">Passwort ÃƒÂ¤ndern</button>
+      <button onclick="addBiography()">Biografie hinzufÃƒÂ¼gen/ÃƒÂ¤ndern</button>
+    </div>
+  </div>
 
+  <script>
+    function changePassword() {
+      // Hier kannst du Logik zum Ãƒâ€žndern des Passworts implementieren
+      alert("Passwort ÃƒÂ¤ndern");
+    }
+
+    function addBiography() {
+      // Hier kannst du Logik zum HinzufÃƒÂ¼gen/Ãƒâ€žndern der Biografie implementieren
+      alert("Biografie hinzufÃƒÂ¼gen/ÃƒÂ¤ndern");
+    }
+  </script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="Datenschutz.html">Datenschutz</a>
+      <a href="Impressum.html">Impressum</a>
+      <a href="AGB.html">AGB</a>
+    </div>
+  </footer>
  </div>
  <!-----------------------Kochbuch------------------------------------------------------------------------------------------------->
  <div onclick="Kochbuch">
+  <div class="logo-header">
+    <div>
+      <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
+    </div>
+  </div>
+  <header class="main-header">
+    <div class="icons">
+      <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
+      <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
+      <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
+      <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
+      <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
+    </div>
+  </header>
 
+  <h1>Mein Kochbuch</h1>
+
+  <div class="recipe">
+    <h2>Spaghetti Carbonara</h2>
+    <h3>Zutaten:</h3>
+    <ul>
+      <li>250g Spaghetti</li>
+      <li>150g Pancetta oder Speck</li>
+      <li>2 Eigelb</li>
+      <li>50g geriebener Parmesan</li>
+      <li>Salz und Pfeffer nach Geschmack</li>
+    </ul>
+    <h3>Zubereitung:</h3>
+    <ol>
+      <li>
+        Koche die Spaghetti gemÃ¤ÃŸ den Anweisungen auf der Verpackung al dente.
+      </li>
+      <li>
+        WÃ¤hrend die Spaghetti kochen, brate den Pancetta oder Speck in einer
+        Pfanne knusprig an.
+      </li>
+      <li>
+        In einer SchÃ¼ssel die Eigelbe mit dem geriebenen Parmesan vermischen.
+      </li>
+      <li>
+        Sobald die Spaghetti fertig sind, abgieÃŸen und direkt in die SchÃ¼ssel
+        mit den Eigelben und dem Parmesan geben. Schnell vermischen, damit die
+        Eigelbe durch die Hitze der Spaghetti cremig werden.
+      </li>
+      <li>
+        Mit dem gebratenen Pancetta oder Speck garnieren und mit Salz und
+        Pfeffer abschmecken. Sofort servieren.
+      </li>
+    </ol>
+    <img
+      src="https://example.com/spaghetti_carbonara.jpg"
+      alt="Spaghetti Carbonara"
+    />
+  </div>
+
+  <div class="recipe">
+    <h2>Griechischer Salat</h2>
+    <h3>Zutaten:</h3>
+    <ul>
+      <li>1 Salatgurke</li>
+      <li>3 Tomaten</li>
+      <li>1 rote Zwiebel</li>
+      <li>100g Feta-KÃ¤se</li>
+      <li>OlivenÃ¶l</li>
+      <li>Essig</li>
+      <li>Salz und Pfeffer nach Geschmack</li>
+    </ul>
+    <h3>Zubereitung:</h3>
+    <ol>
+      <li>
+        Die Salatgurke und Tomaten in Scheiben schneiden. Die rote Zwiebel in
+        Ringe schneiden.
+      </li>
+      <li>Alle Zutaten in einer SchÃ¼ssel vermischen.</li>
+      <li>Feta-KÃ¤se darÃ¼ber brÃ¶ckeln.</li>
+      <li>Mit OlivenÃ¶l und Essig betrÃ¤ufeln.</li>
+      <li>Mit Salz und Pfeffer abschmecken und servieren.</li>
+    </ol>
+    <img
+      src="https://example.com/griechischer_salat.jpg"
+      alt="Griechischer Salat"
+    />
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="Datenschutz.html">Datenschutz</a>
+      <a href="Impressum.html">Impressum</a>
+      <a href="AGB.html">AGB</a>
+    </div>
+  </footer>
  </div>
  <!------------------------Impressum----------------------------------------------------------------------------------------------->
  <div onclick="Impressum">
