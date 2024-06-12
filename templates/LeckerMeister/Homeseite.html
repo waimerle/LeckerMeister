@@ -91,7 +91,7 @@
     {% for rezept in rezepte %}
       <div class="rezept-container">
         <h1>{{ rezept.name }}</h1>
-        <img src="{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="400" height="300">
+        <img src="/static/uploads/{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="400" height="300">
         <h2>Zutaten:</h2>
         <ul>
           {% for zutat in rezept.Zutaten %}
@@ -106,6 +106,9 @@
         </ol>
         <h2>Zubereitungszeit:</h2>
         <p>{{ rezept.Zubereitungszeit }}</p>
+        <h2>Kategorie:</h2>
+        <p>{{ rezept.Kategorie }}</p>
+
       </div>
     {% endfor %}
 
@@ -120,3 +123,4 @@
 
   </body>
 </html>
+
