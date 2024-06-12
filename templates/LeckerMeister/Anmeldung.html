@@ -56,6 +56,7 @@
          <input type="text" id="benutzer_name" name="benutzer_name" placeholder="Benutzername" required />
          <input type="password" id="Passwort" name="Passwort" placeholder="Passwort" required />
          <button type="submit">Anmelden</button>
+         <input type="hidden" name="next" value="{% url 'Profil' %}?benutzer={{ benutzer_name }}" />
       </form>
     <p>
       Noch keinen Account?
