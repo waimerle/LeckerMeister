@@ -10,6 +10,9 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+        
     }
     .container {
       max-width: 400px;
@@ -644,16 +647,152 @@ function Datenschutz(){
  </div>
  <!------------------------Impressum----------------------------------------------------------------------------------------------->
  <div onclick="Impressum">
+  <div class="logo-header">
+    <div>
+      <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
+    </div>
+  </div>
+  <header class="main-header">
+    <div class="icons">
+      <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
+      <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
+      <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
+      <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
+      <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
+    </div>
+  </header>
+  <div class="design">
+   <h1>Impressum LeckerMeister</h1> 
+    LeckerMeister ist ein Produkt von Leonie Waimer, Sophie Schumann, Sabrina SchÃƒÂ¶nweiler <br><br>
 
+   <h3>Kundenservice:</h3>
+    HÃƒÂ¤ufig gestellte Fragen: FAQ<br><br>
+
+   <h3>Anschrift:</h3>
+    LeckerMeister GmbH<br>
+    MusterstraÃƒÅ¸e 33<br>
+    71336 Waiblingen<br>
+    Tel: 1111122220 (kein Kundenservice)<br>
+    Fax: 1111122220<br>
+    E-Mail: leckermeister@gmail.net<br><br>
+</div>
+<br>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="Datenschutz.html">Datenschutz</a>
+        <a href="Impressum.html">Impressum</a>
+        <a href="AGB.html">AGB</a>
+      </div>
+    </footer>
  </div>
  <!------------------------AGB----------------------------------------------------------------------------------------------------->
  <div onclick="AGB">
-
+  <div class="logo-header">
+    <div>
+      <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
+    </div>
+  </div>
+  <header class="main-header">
+    <div class="icons">
+      <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
+      <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
+      <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
+      <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
+      <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
+    </div>
+  </header>
+  <div class="design">
+    <h1>AGB</h1> 
+    <h3>1. Unser Angebot</h3>
+    Bei LeckerMeister findest du neben hunderttausenden Rezepten alles rund ums Kochen, GenieÃŸen, KÃ¼che & Co. 
+    Unsere Mission ist es, passende Rezepte fÃ¼r dich, deine Familie oder Freunde zu finden. 
+    In deinem Nutzerprofil kannst du dazu alles NÃ¶tige einstellen. 
+    Mit deinem individuellen LeckerMeister-Kochbuch kannst du Rezepte sammeln, schnell wiederfinden.
+    <h3>2.Kostenloses Benutzerkonto, Passwort, aktuelle E-Mail-Adresse</h3>
+    2.1. Bei LeckerMeister kannst du dich kostenlos registrieren, 
+    um dein persÃ¶nliches Kochbuch zu nutzen, eigene Rezepte und Bilder hochzuladen oder anderweitig aktiv zu werden.<br>
+    2.2. Du darfst dich registrieren, wenn du voll geschÃ¤ftsfÃ¤hig bist und noch kein Benutzerkonto bei uns hast. 
+    Pro Person ist nur eine Registrierung erlaubt.<br>
+    2.3. FÃ¼r die Registrierung benÃ¶tigen wir deine E-Mail-Adresse. 
+    AuÃŸerdem musst du ein Passwort festlegen, um dein Konto zu schÃ¼tzen.<br>
+    2.4. Bewahre dein Passwort stets geheim und sorge dafÃ¼r, dass es niemand anderes kennt. 
+    Falls du vermutest, dass jemand dein Passwort erfahren hat oder Zugriff auf dein Benutzerkonto hat, benachrichtige uns bitte umgehend per E-Mail.<br>
+    2.5. Du bist verpflichtet, die E-Mail-Adresse in deinem Benutzerkonto stets aktuell zu halten und uns Ã„nderungen unverzÃ¼glich mitzuteilen.<br>
+    <h3>3. Nutzung der Inhalte</h3>
+    3.1. Die Inhalte auf LeckerMeister, einschlieÃŸlich Rezepte, Bilder und Texte, sind urheberrechtlich geschÃ¼tzt. 
+    Du darfst sie ausschlieÃŸlich fÃ¼r den privaten Gebrauch nutzen und nicht ohne unsere ausdrÃ¼ckliche Zustimmung verÃ¶ffentlichen, vervielfÃ¤ltigen oder anderweitig kommerziell verwenden.<br>
+    3.2. Wenn du eigene Inhalte hochlÃ¤dst, versicherst du, dass du die erforderlichen Rechte besitzt und keine Rechte Dritter verletzt werden. 
+    Du rÃ¤umst uns das Recht ein, diese Inhalte auf unserer Website und in unseren Dienstleistungen zu verwenden, zu bearbeiten und zu verbreiten.<br>
+    3.3. Wir behalten uns das Recht vor, hochgeladene Inhalte, die gegen unsere Richtlinien oder geltendes Recht verstoÃŸen, ohne VorankÃ¼ndigung zu lÃ¶schen oder zu sperren.<br>
+    <h3>4. Haftung und GewÃ¤hrleistung</h3>
+    4.1. Wir bemÃ¼hen uns, die Website stets erreichbar und fehlerfrei zu halten, Ã¼bernehmen jedoch keine Garantie fÃ¼r die stÃ¤ndige VerfÃ¼gbarkeit oder die Fehlerfreiheit der angebotenen Dienste und Inhalte.<br>
+    4.2. LeckerMeister haftet nicht fÃ¼r SchÃ¤den, die durch die Nutzung der Website oder der Inhalte entstehen, es sei denn, diese sind auf vorsÃ¤tzliches oder grob fahrlÃ¤ssiges Verhalten unsererseits zurÃ¼ckzufÃ¼hren.<br>
+    4.3. Wir Ã¼bernehmen keine Verantwortung fÃ¼r Inhalte, die von Nutzern hochgeladen werden, und distanzieren uns ausdrÃ¼cklich von solchen Inhalten, die gegen geltendes Recht oder unsere Richtlinien verstoÃŸen.<br>
+    <h3>5. Datenschutz</h3>
+    5.1. Der Schutz deiner personenbezogenen Daten ist uns wichtig. Alle Informationen zur Verarbeitung deiner Daten findest du in unserer DatenschutzerklÃ¤rung.<br>
+    5.2. Deine Daten werden ausschlieÃŸlich im Rahmen der geltenden Datenschutzgesetze und nur in dem Umfang verwendet, wie es fÃ¼r die Nutzung unserer Dienste erforderlich ist.<br>
+    <h3>6. Vertragsdauer und KÃ¼ndigung</h3>
+    6.1. Der Nutzungsvertrag fÃ¼r das Benutzerkonto wird auf unbestimmte Zeit geschlossen und kann von beiden Seiten jederzeit ohne Angabe von GrÃ¼nden gekÃ¼ndigt werden.<br>
+    6.2. Bei VerstÃ¶ÃŸen gegen diese AGB oder geltendes Recht behalten wir uns das Recht vor, dein Benutzerkonto ohne Vorwarnung zu sperren oder zu lÃ¶schen.<br>
+    <h3>7. Ã„nderungen der AGB</h3>
+    7.1. LeckerMeister behÃ¤lt sich das Recht vor, diese AGB jederzeit zu Ã¤ndern. Ãœber wesentliche Ã„nderungen wirst du rechtzeitig informiert.<br>
+    7.2. Solltest du den geÃ¤nderten AGB nicht zustimmen, steht es dir frei, dein Benutzerkonto zu lÃ¶schen. Die fortgesetzte Nutzung der Website nach Inkrafttreten der Ã„nderungen gilt als Zustimmung zu den neuen Bedingungen.<br>
+    <h3>8. Anwendbares Recht und Gerichtsstand</h3>
+    8.1. Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts.<br>
+    8.2. FÃ¼r alle Streitigkeiten aus oder im Zusammenhang mit der Nutzung der Website und diesen AGB ist der Gerichtsstand der Sitz der LeckerMeister GmbH, sofern der Nutzer Kaufmann, juristische Person des Ã¶ffentlichen Rechts oder Ã¶ffentlich-rechtliches SondervermÃ¶gen ist.<br>
+ </div>
+ <br>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="Datenschutz.html">Datenschutz</a>
+        <a href="Impressum.html">Impressum</a>
+        <a href="AGB.html">AGB</a>
+      </div>
+    </footer>
  </div>
  <!-----------------------Datenschutz---------------------------------------------------------------------------------------------->
  <div onclick="Datenschutz">
-
+  <div class="logo-header">
+    <div>
+      <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
+    </div>
+  </div>
+  <header class="main-header">
+    <div class="icons">
+      <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
+      <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
+      <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
+      <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
+      <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
+    </div>
+  </header>
+  <div class="design">
+    <h1>Datenschutz</h1> 
+    Du mÃƒÂ¶chtest wissen, wie wir bei LeckerMeister GmbH mit dem Thema Datenschutz umgehen? <br>
+    Uns ist es wichtig, dich hierÃƒÂ¼ber aufzuklÃƒÂ¤ren. 
+    Denn wenn du unsere Angebote und Services nutzt, verarbeiten wir personenbezogene Daten von dir.
+     Dies tun wir, um das Betreiben unserer Website mit Informationen zum Thema Kochen und Rezepte sowie die Darstellung und das Angebot von Dienstleistungen zu diesen Themen zu gewÃƒÂ¤hrleisten. 
+     Das Verarbeiten von personenbezogenen Daten ist notwendig, um unsere Angebote bzw. Services fÃƒÂ¼r dich besser zu gestalten. 
+     Wir machen dies jedoch verantwortungsvoll und nur, soweit es nach den Vorgaben der geltenden Datenschutzgesetze erlaubt ist, insbesondere der EU-Datenschutzgrundverordnung (DSGVO).
+    Die Verwendung von Daten fÃƒÂ¼r Werbezwecke macht es mÃƒÂ¶glich, kostenlose Angebote und Services betreiben zu kÃƒÂ¶nnen. 
+    AuÃƒÅ¸erdem mÃƒÂ¶chten wir stÃƒÂ¤ndig besser werden und Angebote und Services gern auch speziell auf dich zuschneiden, also personalisieren.
+     Das gelingt uns nur, wenn wir die Nutzung der Angebote und Services genauer beobachten und auswerten.es und alles Weitere, was mit deinen Daten geschieht, werden wir nicht heimlich tun, sondern nur mit der nÃƒÂ¶tigen Transparenz. 
+     Daher informieren wir dich an dieser Stelle umfassend ÃƒÂ¼ber das Was, Wie und Warum solcher Verarbeitungen. 
+     Auch alle relevanten Pflichtinformationen, die wir gemÃƒÂ¤ÃƒÅ¸ der EU-Datenschutzgrundverordnung bereitstellen mÃƒÂ¼ssen, haben wir hier fÃƒÂ¼r dich zusammengestellt.
+ </div>
+ <br>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="Datenschutz.html">Datenschutz</a>
+        <a href="Impressum.html">Impressum</a>
+        <a href="AGB.html">AGB</a>
+      </div>
+    </footer>
  </div>
 </div>
+<!----------------------------Ende--------------------------------------------------------------------------------------------------->
 </body>
 </html>
