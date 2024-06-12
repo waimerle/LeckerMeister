@@ -2,9 +2,24 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 import json, os
 
-def Anmeldung(request):		
-	return render(request, "LeckerMeister/Anmeldung.html")
-	
+
+def Anmeldung(request):
+	user_filename = "/var/www/django-projekt/LeckerMeister/user_Data.json"
+
+	with open(user_filename, "r") as file: 
+		user_list = json.load(file)
+
+	if request.method == 'POST':
+		benutzer_name = request.POST.get('benutzer_name')
+		password = request.POST.get('Passwort')
+		for user in user_list:
+			if user['name'] == benutzer_name and user['Passwort'] == password:
+				return redirect('Homeseite.html')
+
+		return render(request, 'LeckerMeister/Anmeldung.html', {'error': 'UngÃ¼ltiges Passwort'}) 
+
+	return render(request, 'LeckerMeister/Anmeldung.html')
+
 def Registrierung(request):
 
     if request.method == 'POST':
@@ -48,40 +63,29 @@ def Registrierung(request):
         return redirect("Homeseite.html")
 
     return render(request, 'LeckerMeister/Registrierung.html')
+		
 
 
 def Homeseite(request):
 
-    Rezept_Filename = "/var/www/django-projekt/LeckerMeister/Rezepte.json"
-    Kommentar_Filename = "/var/www/django-projekt/LeckerMeister/Kommentare.json"
+	Rezept_Filename = "/var/www/django-projekt/LeckerMeister/Rezepte.json"
 
-    with open(Rezept_Filename, "r") as file, open(Kommentar_Filename, "r+") as kommentar_file: 
-        Rezept_list = json.loads(file.read())
-        Kommentar_list = json.loads(kommentar_file.read())
+	with open(Rezept_Filename, "r") as file: 
+		Rezept_list = json.loads(file.read())
 
-        rezepte = []
-        for rezept in Rezept_list:
-            rezepte.append({
-                "Rezeptbild": rezept.get("Rezeptbild", ""),
-                "name": rezept.get("name", ""),
-                "Zutaten": rezept.get("Zutaten", ""),
-                "Zubereitung": rezept.get("Zubereitung", ""),
-                "Zubereitungszeit": rezept.get("Zubereitungszeit", ""),
-                "Kategorie": rezept.get("Kategorie", ""),
-                "Kommentare": []  # Füge ein leeres Kommentarfeld hinzu
-            })
+	rezepte = []
+	for rezept in Rezept_list:
+		rezepte.append({
+			"Rezeptbild": rezept.get("Rezeptbild", ""),
+			"name": rezept.get("name", ""),
+			"Zutaten": rezept.get("Zutaten", ""),
+			"Zubereitung": rezept.get("Zubereitung", ""),
+			"Zubereitungszeit": rezept.get("Zubereitungszeit", ""),
+			"Kategorie": rezept.get("Kategorie", ""),
+		})
 
-        if request.method == 'POST':
-            rezept_id = request.POST.get('rezept_id')
-            kommentar_text = request.POST.get('comment')
 
-            for rezept in rezepte:
-                if rezept["name"] == rezept_id:
-                    rezept["Kommentare"].append({"text": kommentar_text})
-
-            
-    return render(request, "LeckerMeister/Homeseite.html", {"rezepte": rezepte})
-
+	return render(request, "LeckerMeister/Homeseite.html", {"rezepte": rezepte})
 
 
 def Suchseite(request):
@@ -101,7 +105,7 @@ def Upload(request):
         kategorie = request.POST.get('category')
 
         neues_rezept = {
-            "Rezeptbild": rezept_bild.name,  # Bildname speichern, tatsÃ¤chliche Handhabung erforderlich
+            "Rezeptbild": rezept_bild.name,  # Bildname speichern, tatsÃƒÂ¤chliche Handhabung erforderlich
             "name": rezept_name,
             "Zutaten": zutaten,
             "Zubereitung": zubereitung,
@@ -134,23 +138,23 @@ def Kochbuch(request):
 	return render(request, "LeckerMeister/Kochbuch.html")
 
 def Profil(request):
-	nutzer = request.GET.get("nutzer", False)
+	benutzer = request.GET.get("benutzer", False)
 	user_Data_Filename = "/var/www/django-projekt/LeckerMeister/user_Data.json"
 
 	if not os.path.isfile(user_Data_Filename):
-		return HttpResponse(f"Der User mit dem Benutzername {nutzer} existiert nicht!")
+		return HttpResponse(f"Der User mit dem Benutzername {benutzer} existiert nicht!")
 
 	with open(user_Data_Filename, "r") as file: 
 		user_Data_list = json.load(file)
 
 	user_Data = None
 	for data in user_Data_list:
-		if data["name"] == nutzer:
+		if data["name"] == benutzer:
 			user_Data = data
 			break
 
 	if user_Data is None:
-		return HttpResponse(f"Der Benutzer mit dem Benutzernamen {nutzer} existiert nicht!")
+		return HttpResponse(f"Der Benutzer mit dem Benutzernamen {benutzer} existiert nicht!")
 
 
 	img_Pfad = user_Data.get("Profilbild", "")
@@ -174,5 +178,6 @@ def Impressum(request):
 
 def AGB(request):
 	return render(request, "LeckerMeister/AGB.html")
+
 
 
