@@ -1,58 +1,59 @@
+<!-----------------------Es fehlt noch die korrekte Verlinkung der Seiten--------------------------------------------------------------------------------------------->
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anmelden & Registrieren</title>
-  <style>
-/* Anmeldeseite + Registrierung  */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      margin: 0;
-      padding: 0;
-        
-    }
-    .container {
-      max-width: 400px;
-      margin: 100px auto;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h2 {
-      text-align: center;
-      color: #5f764f; /* DunkelgrÃ¼n */
-    }
-    /* schauen ob man das wirklich braucht 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anmelden & Registrieren</title>
+    <style>
+      /* Anmeldeseite + Registrierung  */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 400px;
+        margin: 100px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        text-align: center;
+        color: #5f764f; /* DunkelgrÃ¼n */
+      }
+      /* schauen ob man das wirklich braucht 
     input[type="email"],
     input[type="password"],
     input[type="text"],
     input[type="file"],
     textarea, */
-    button {
-      width: 100%;
-      margin-bottom: 10px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-sizing: border-box;
-    }
-    button {
-      background-color: #5f764f; /* DunkelgrÃ¼n */
-      color: #fff;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #445c3c; /* HellgrÃ¼n */
-    }
-    p {
-      text-align: center;
-    }
-/* Header Styles */
-   .logo-header {
+      button {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #5f764f; /* DunkelgrÃ¼n */
+        color: #fff;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #445c3c; /* HellgrÃ¼n */
+      }
+      p {
+        text-align: center;
+      }
+      /* Header Styles */
+      .logo-header {
         width: 100%;
         background-color: white;
         text-align: center;
@@ -84,7 +85,7 @@
       .icons img:hover {
         transform: scale(1.5);
       }
-  /* Search Styles */
+      /* Search Styles */
       .search-container {
         width: 100%;
         background-color: #5f764f;
@@ -113,7 +114,7 @@
         background-color: #2a401f;
       }
 
-  /* Footer Styles */
+      /* Footer Styles */
       .footer {
         background-color: #5f764f;
         color: white;
@@ -127,672 +128,1014 @@
         display: flex;
         justify-content: space-around;
       }
-
-  </style> 
-</head>
-<script>
-function Anmeldeseite (){
-    var hideSuchseite = document.getElementbyId("Suchseite").setAttribute("style","display:none");
-    var hideHomeseite = document.getElementbyId("Homeseite").setAttribute("style","display:none");
-    var hideUpload = document.getElementbyId("Upload").setAttribute("style","display:none");
-    var hideRegistrierung =document.getElementbyId("Registrierung").setAttribute("style","display:none");
-    var hideProfil = document.getElementbyId("Profil").setAttribute("style","display:none");
-    var hideKochbuch = document.getElementbyId("Kuchbuch").setAttribute("style","display:none");
-    var hideImpressum = document.getElementbyId("Impressum").setAttribute("style","display:none");
-    var hideAGB = document.getElementbyId("AGB").setAttribute("style","display:none");
-    var hideDatenschutz= document.getElementbyId("Datenschutz").setAttribute("style","display:none");
-}
-function Suchseite(){
-    var hideAnmeldeseite = document.getElementbyId("Anmeldeseite").setAttribute("style","display:none");
-    var hideHomeseite = document.getElementbyId("Homeseite").setAttribute("style","display:none");
-    var hideUpload = document.getElementbyId("Upload").setAttribute("style","display:none");
-    var hideRegistrierung =document.getElementbyId("Registrierung").setAttribute("style","display:none");
-    var hideProfil = document.getElementbyId("Profil").setAttribute("style","display:none");
-    var hideKochbuch = document.getElementbyId("Kuchbuch").setAttribute("style","display:none");
-    var hideImpressum = document.getElementbyId("Impressum").setAttribute("style","display:none");
-    var hideAGB = document.getElementbyId("AGB").setAttribute("style","display:none");
-    var hideDatenschutz= document.getElementbyId("Datenschutz").setAttribute("style","display:none");
-}
-function Homeseite(){
-    var hideAnmeldeseite = document.getElementbyId("Anmeldeseite").setAttribute("style","display:none");
-    var hideSuchseite = document.getElementbyId("Suchseite").setAttribute("style","display:none");
-    var hideUpload = document.getElementbyId("Upload").setAttribute("style","display:none");
-    var hideRegistrierung =document.getElementbyId("Registrierung").setAttribute("style","display:none");
-    var hideProfil = document.getElementbyId("Profil").setAttribute("style","display:none");
-    var hideKochbuch = document.getElementbyId("Kuchbuch").setAttribute("style","display:none");
-    var hideImpressum = document.getElementbyId("Impressum").setAttribute("style","display:none");
-    var hideAGB = document.getElementbyId("AGB").setAttribute("style","display:none");
-    var hideDatenschutz= document.getElementbyId("Datenschutz").setAttribute("style","display:none");
-}
-function Upload(){
-    var hideAnmeldeseite = document.getElementbyId("Anmeldeseite").setAttribute("style","display:none");
-    var hideSuchseite = document.getElementbyId("Suchseite").setAttribute("style","display:none");
-    var hideHomeseite = document.getElementbyId("Homeseite").setAttribute("style","display:none");
-    var hideRegistrierung =document.getElementbyId("Registrierung").setAttribute("style","display:none");
-    var hideProfil = document.getElementbyId("Profil").setAttribute("style","display:none");
-    var hideKochbuch = document.getElementbyId("Kuchbuch").setAttribute("style","display:none");
-    var hideImpressum = document.getElementbyId("Impressum").setAttribute("style","display:none");
-    var hideAGB = document.getElementbyId("AGB").setAttribute("style","display:none");
-    var hideDatenschutz= document.getElementbyId("Datenschutz").setAttribute("style","display:none");
-}
-function Registrierung(){
-    var hideAnmeldeseite = document.getElementbyId("Anmeldeseite").setAttribute("style","display:none");
-    var hideSuchseite = document.getElementbyId("Suchseite").setAttribute("style","display:none");
-    var hideHomeseite = document.getElementbyId("Homeseite").setAttribute("style","display:none");
-    var hideUpload =document.getElementbyId("Upload").setAttribute("style","display:none");
-    var hideProfil = document.getElementbyId("Profil").setAttribute("style","display:none");
-    var hideKochbuch = document.getElementbyId("Kuchbuch").setAttribute("style","display:none");
-    var hideImpressum = document.getElementbyId("Impressum").setAttribute("style","display:none");
-    var hideAGB = document.getElementbyId("AGB").setAttribute("style","display:none");
-    var hideDatenschutz= document.getElementbyId("Datenschutz").setAttribute("style","display:none");
-    }
-function Profil(){
-    var hideAnmeldeseite = document.getElementbyId("Anmeldeseite").setAttribute("style","display:none");
-    var hideSuchseite = document.getElementbyId("Suchseite").setAttribute("style","display:none");
-    var hideHomeseite = document.getElementbyId("Homeseite").setAttribute("style","display:none");
-    var hideUpload =document.getElementbyId("Upload").setAttribute("style","display:none");
-    var hideRegistrierung = document.getElementbyId("Registrierung").setAttribute("style","display:none");
-    var hideKochbuch = document.getElementbyId("Kuchbuch").setAttribute("style","display:none");
-    var hideImpressum = document.getElementbyId("Impressum").setAttribute("style","display:none");
-    var hideAGB = document.getElementbyId("AGB").setAttribute("style","display:none");
-    var hideDatenschutz= document.getElementbyId("Datenschutz").setAttribute("style","display:none");
-    }
-function Kochbuch(){
-    var hideAnmeldeseite = document.getElementbyId("Anmeldeseite").setAttribute("style","display:none");
-    var hideSuchseite = document.getElementbyId("Suchseite").setAttribute("style","display:none");
-    var hideHomeseite = document.getElementbyId("Homeseite").setAttribute("style","display:none");
-    var hideUpload =document.getElementbyId("Upload").setAttribute("style","display:none");
-    var hideRegistrierung = document.getElementbyId("Registrierung").setAttribute("style","display:none");
-    var hideProfil = document.getElementbyId("Profil").setAttribute("style","display:none");
-    var hideImpressum = document.getElementbyId("Impressum").setAttribute("style","display:none");
-    var hideAGB = document.getElementbyId("AGB").setAttribute("style","display:none");
-    var hideDatenschutz= document.getElementbyId("Datenschutz").setAttribute("style","display:none");
-    }
-function Impressum(){
-    var hideAnmeldeseite = document.getElementbyId("Anmeldeseite").setAttribute("style","display:none");
-    var hideSuchseite = document.getElementbyId("Suchseite").setAttribute("style","display:none");
-    var hideHomeseite = document.getElementbyId("Homeseite").setAttribute("style","display:none");
-    var hideUpload =document.getElementbyId("Upload").setAttribute("style","display:none");
-    var hideRegistrierung = document.getElementbyId("Registrierung").setAttribute("style","display:none");
-    var hideProfil = document.getElementbyId("Profil").setAttribute("style","display:none");
-    var hideKochbuch = document.getElementbyId("Kochbuch").setAttribute("style","display:none");
-    var hideAGB = document.getElementbyId("AGB").setAttribute("style","display:none");
-    var hideDatenschutz= document.getElementbyId("Datenschutz").setAttribute("style","display:none");
-    }
-function AGB(){
-    var hideAnmeldeseite = document.getElementbyId("Anmeldeseite").setAttribute("style","display:none");
-    var hideSuchseite = document.getElementbyId("Suchseite").setAttribute("style","display:none");
-    var hideHomeseite = document.getElementbyId("Homeseite").setAttribute("style","display:none");
-    var hideUpload =document.getElementbyId("Upload").setAttribute("style","display:none");
-    var hideRegistrierung = document.getElementbyId("Registrierung").setAttribute("style","display:none");
-    var hideProfil = document.getElementbyId("Profil").setAttribute("style","display:none");
-    var hideKochbuch = document.getElementbyId("Kochbuch").setAttribute("style","display:none");
-    var hideImpressum = document.getElementbyId("Impressum").setAttribute("style","display:none");
-    var hideDatenschutz= document.getElementbyId("Datenschutz").setAttribute("style","display:none");
-    }
-function Datenschutz(){
-    var hideAnmeldeseite = document.getElementbyId("Anmeldeseite").setAttribute("style","display:none");
-    var hideSuchseite = document.getElementbyId("Suchseite").setAttribute("style","display:none");
-    var hideHomeseite = document.getElementbyId("Homeseite").setAttribute("style","display:none");
-    var hideUpload =document.getElementbyId("Upload").setAttribute("style","display:none");
-    var hideRegistrierung = document.getElementbyId("Registrierung").setAttribute("style","display:none");
-    var hideProfil = document.getElementbyId("Profil").setAttribute("style","display:none");
-    var hideKochbuch = document.getElementbyId("Kochbuch").setAttribute("style","display:none");
-    var hideImpressum = document.getElementbyId("Impressum").setAttribute("style","display:none");
-    var hideAGB= document.getElementbyId("AGB").setAttribute("style","display:none");
-    }
-</script>
-<body>
-<!----------------------------Anmeldeseite------------------------------------------------------------------------------------->
- <div onclick="Anmeldeseite">
-  <div class="container">
-    <h2>Anmelden</h2>
-      <form id="loginForm" method="post">
-         {% csrf_token %}
-         <input type="text" id="benutzer_name" name="benutzer_name" placeholder="Benutzername" required />
-         <input type="password" id="Passwort" name="Passwort" placeholder="Passwort" required />
-         <button type="submit">Anmelden</button>
-         <input type="hidden" name="next" value="{% url 'Profil' %}?benutzer={{ benutzer_name }}" />
-      </form>
-    <p>
-      Noch keinen Account?
-      <a href="Registrierung.html" id="showRegister">Hier registrieren</a>.
-    </p>
-  </div>
-  <!----------------------Registrierungsseite------------------------------------------------------------------------------------>
-  <div onclick="Registrierung">
-    <div class="container">
-
-        <h2>Registrieren</h2>
-        <form id="registerForm" method="post" enctype="multipart/form-data">
-          {% csrf_token %}
-        <label for="benutzer_name">Benutzername:</label>
-        <input type="text" id="benutzer_name" name="benutzer_name">
-        
-        <label for="profil_bild">Profilbild:</label>
-        <input type="file" id="profil_bild" name="profil_bild">
-        
-        <label for="email">E-Mail:</label>
-        <input type="email" id="email" name="email">
-        
-        <label for="Wohnort">Wohnort:</label>
-        <input type="text" id="Wohnort" name="Wohnort">
-        
-        <label for="Biografie">Biografie:</label>
-        <textarea id="Biografie" name="Biografie"></textarea>
-        
-        <label for="Passwort">Passwort:</label>
-        <input type="password" id="Passwort" name="Passwort">
-        
-        <button type="submit">Registrieren</button>    </form>
-        <p>
-          Bereits einen Account? <a href="Anmeldung.html" id="showLogin">Hier anmelden</a>.
-        </p>
-      </div>  
-  </div>
-  <!-----------------------Suchseite--------------------------------------------------------------------------------------------->
- <div onclick="Suchseite">
-  <div class="logo-header">
-    <div>
-      <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
-    </div>
-  </div>
-  <header class="main-header">
-    <div class="icons">
-      <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
-      <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
-      <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
-      <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
-      <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
-    </div>
-  </header>
-  <div class="search-container">
-    <input type="text" placeholder="Suche..." class="search-box" />
-    <button class="search-button">Suchen</button>
-  </div>
-  <div class="button-container">
-    <button class="button">Auflauf</button>
-    <button class="button">Pizza</button>
-    <button class="button">Reis- oder Nudelsalat</button>
-    <button class="button">Salate</button>
-    <button class="button">Salatdressing</button>
-    <button class="button">Tarte</button>
-    <button class="button">Fingerfood</button>
-    <button class="button">Dips</button>
-    <button class="button">Saucen</button>
-    <button class="button">Suppe</button>
-    <button class="button">Kloesse</button>
-    <button class="button">Brot und Broetchen</button>
-    <button class="button">Brotspeise</button>
-    <button class="button">Aufstrich</button>
-    <button class="button">Suessspeise</button>
-    <button class="button">Eis</button>
-    <button class="button">Kuchen</button>
-    <button class="button">Kekse</button>
-    <button class="button">Torte</button>
-    <button class="button">Confiserie</button>
-    <button class="button">Getraenke</button>
-    <button class="button">Shake</button>
-    <button class="button">Gewuerzmischung</button>
-    <button class="button">Pasten</button>
-    <button class="button">Studentenkueche</button>
-
-  </div>
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="Datenschutz.html">Datenschutz</a>
-      <a href="Impressum.html">Impressum</a>
-      <a href="AGB.html">AGB</a>
-    </div>
-  </footer>
- </div>
- <!------------------------Homeseite--------------------------------------------------------------------------------------------->
- <div onclick="Homeseite">
-  <div class="logo-header">
-    <div>
-      <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
-    </div>
-  </div>
-  <header class="main-header">
-    <div class="icons">
-      <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
-      <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
-      <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
-      <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
-      <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
-    </div>
-  </header>
-
-  {% for rezept in rezepte %}
-    <div class="rezept-container">
-      <h1>{{ rezept.name }}</h1>
-      <img src="/static/uploads/{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="400" height="300">
-      <h2>Zutaten:</h2>
-      <ul>
-        {% for zutat in rezept.Zutaten %}
-          <li>{{ zutat }}</li>
-        {% endfor %}
-      </ul>
-      <h2>Anleitung:</h2>
-      <ol>
-        {% for schritt in rezept.Zubereitung %}
-          <li>{{ schritt }}</li>
-        {% endfor %}
-      </ol>
-      <h2>Zubereitungszeit:</h2>
-      <p>{{ rezept.Zubereitungszeit }}</p>
-      <h2>Kategorie:</h2>
-      <p>{{ rezept.Kategorie }}</p>
-
-    </div>
-  {% endfor %}
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="Datenschutz.html">Datenschutz</a>
-      <a href="Impressum.html">Impressum</a>
-      <a href="AGB.html">AGB</a>
-    </div>
-  </footer>
-
- </div>
- <!------------------------Upload-------------------------------------------------------------------------------------------------->
- <div onclick="Upload">
-  <div class="logo-header">
-    <div>
-      <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
-    </div>
-  </div>
-  <header class="main-header">
-    <div class="icons">
-      <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
-      <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
-      <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
-      <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
-      <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
-    </div>
-  </header>
-
-  <h1>Rezept hochladen</h1>
-
-  <form action="#" method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <label for="recipeName">Name des Rezepts:</label>
-    <input type="text" id="recipeName" name="recipeName" required />
-
-    <label for="recipeImage">Bild hochladen:</label>
-    <input
-      type="file"
-      id="recipeImage"
-      name="recipeImage"
-      accept="image/*"
-      required
-    />
-
-    <label for="ingredients">Zutaten:</label>
-    <textarea
-      id="ingredients"
-      name="ingredients"
-      rows="4"
-      required
-    ></textarea>
-
-    <label for="instructions">Zubereitung:</label>
-    <textarea
-      id="instructions"
-      name="instructions"
-      rows="6"
-      required
-    ></textarea>
-
-    <label for="preparationTime">Zubereitungszeit:</label>
-    <textarea
-      id="preparationTime"
-      name="preparationTime"
-      rows="1"
-      required
-    ></textarea>
-
-
-    <label for="category">Kategorie:</label>
-    <select id="category" name="category" required>
-      <option value="">Bitte Kategorie ausweahlen</option>
-      <option value="Auflauf">Auflauf</option>
-      <option value="PizzaÂ¸">Pizza</option>
-      <option value="Reis- oder Nudelsalat">Reis- oder Nudelsalat</option>
-      <option value="Salatdressing">Salatdressing</option>
-      <option value="Tarte">Tarte</option>
-      <option value="Fingerfood">Fingerfood</option>
-      <option value="Dips">Dips</option>
-      <option value="Saucen">Saucen</option>
-      <option value="Suppe">Suppe</option>
-      <option value="Kloesse">Kloesse</option>
-      <option value="Brot und Broetchen">Brot und Broetchen</option>
-      <option value="Brotspeise">Brotspeise</option>
-      <option value="Aufstrich">Aufstrich</option>
-      <option value="Suessspeise">Suessspeise</option>
-      <option value="Eis">Eis</option>
-      <option value="Kuchen">Kuchen</option>
-      <option value="Kekse">Kekse</option>
-      <option value="Torte">Torte</option>
-      <option value="Confiserie">Confiserie</option>
-      <option value="Getraenke">Getraenke</option>
-      <option value="Shake">Shake</option>
-      <option value="Gewuerzmischung">Gewuerzmischung</option>
-      <option value="Pasten">Pasten</option>
-      <option value="Studentenkueche">Studentenkueche</option>
-
-
-    </select>
-
-    <input type="submit" value="Rezept hochladen" />
-  </form>
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="Datenschutz.html">Datenschutz</a>
-      <a href="Impressum.html">Impressum</a>
-      <a href="AGB.html">AGB</a>
-    </div>
-  </footer>
- </div>
- <!------------------------Profil-------------------------------------------------------------------------------------------------->
- <div onclick="Profil">
-  <div class="logo-header">
-    <div>
-      <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
-    </div>
-  </div>
-  <header class="main-header">
-    <div class="icons">
-      <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
-      <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
-      <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
-      <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
-      <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
-    </div>
-  </header>
-  <div class="container">
-    <img class="profile-picture" src="{{ Profilbild }}" alt="Profilbild" />
-    <div class="user-info">
-      <h2>{{ Name }}</h2>
-      <p>E-Mail: {{ EMail }}</p>
-      <p>Ort: {{ Wohnort }}</p>
-      <p>
-        Biografie: {{ Bio }}
-      </p>
-    </div>
-    <div class="edit-profile">
-      <button onclick="changePassword()">Passwort ÃƒÂ¤ndern</button>
-      <button onclick="addBiography()">Biografie hinzufÃƒÂ¼gen/ÃƒÂ¤ndern</button>
-    </div>
-  </div>
-
+    </style>
+  </head>
   <script>
-    function changePassword() {
-      // Hier kannst du Logik zum Ãƒâ€žndern des Passworts implementieren
-      alert("Passwort ÃƒÂ¤ndern");
+    function Anmeldeseite() {
+      var hideSuchseite = document
+        .getElementById("Suchseite")
+        .setAttribute("style", "display:none");
+      var hideHomeseite = document
+        .getElementById("Homeseite")
+        .setAttribute("style", "display:none");
+      var hideUpload = document
+        .getElementById("Upload")
+        .setAttribute("style", "display:none");
+      var hideRegistrierung = document
+        .getElementById("Registrierung")
+        .setAttribute("style", "display:none");
+      var hideProfil = document
+        .getElementById("Profil")
+        .setAttribute("style", "display:none");
+      var hideKochbuch = document
+        .getElementById("Kuchbuch")
+        .setAttribute("style", "display:none");
+      var hideImpressum = document
+        .getElementById("Impressum")
+        .setAttribute("style", "display:none");
+      var hideAGB = document
+        .getElementById("AGB")
+        .setAttribute("style", "display:none");
+      var hideDatenschutz = document
+        .getElementById("Datenschutz")
+        .setAttribute("style", "display:none");
     }
-
-    function addBiography() {
-      // Hier kannst du Logik zum HinzufÃƒÂ¼gen/Ãƒâ€žndern der Biografie implementieren
-      alert("Biografie hinzufÃƒÂ¼gen/ÃƒÂ¤ndern");
+    function Suchseite() {
+      var hideAnmeldeseite = document
+        .getElementById("Anmeldeseite")
+        .setAttribute("style", "display:none");
+      var hideHomeseite = document
+        .getElementById("Homeseite")
+        .setAttribute("style", "display:none");
+      var hideUpload = document
+        .getElementById("Upload")
+        .setAttribute("style", "display:none");
+      var hideRegistrierung = document
+        .getElementById("Registrierung")
+        .setAttribute("style", "display:none");
+      var hideProfil = document
+        .getElementById("Profil")
+        .setAttribute("style", "display:none");
+      var hideKochbuch = document
+        .getElementById("Kuchbuch")
+        .setAttribute("style", "display:none");
+      var hideImpressum = document
+        .getElementById("Impressum")
+        .setAttribute("style", "display:none");
+      var hideAGB = document
+        .getElementById("AGB")
+        .setAttribute("style", "display:none");
+      var hideDatenschutz = document
+        .getElementById("Datenschutz")
+        .setAttribute("style", "display:none");
+    }
+    function Homeseite() {
+      var hideAnmeldeseite = document
+        .getElementById("Anmeldeseite")
+        .setAttribute("style", "display:none");
+      var hideSuchseite = document
+        .getElementById("Suchseite")
+        .setAttribute("style", "display:none");
+      var hideUpload = document
+        .getElementById("Upload")
+        .setAttribute("style", "display:none");
+      var hideRegistrierung = document
+        .getElementById("Registrierung")
+        .setAttribute("style", "display:none");
+      var hideProfil = document
+        .getElementById("Profil")
+        .setAttribute("style", "display:none");
+      var hideKochbuch = document
+        .getElementById("Kuchbuch")
+        .setAttribute("style", "display:none");
+      var hideImpressum = document
+        .getElementById("Impressum")
+        .setAttribute("style", "display:none");
+      var hideAGB = document
+        .getElementById("AGB")
+        .setAttribute("style", "display:none");
+      var hideDatenschutz = document
+        .getElementById("Datenschutz")
+        .setAttribute("style", "display:none");
+    }
+    function Upload() {
+      var hideAnmeldeseite = document
+        .getElementById("Anmeldeseite")
+        .setAttribute("style", "display:none");
+      var hideSuchseite = document
+        .getElementById("Suchseite")
+        .setAttribute("style", "display:none");
+      var hideHomeseite = document
+        .getElementById("Homeseite")
+        .setAttribute("style", "display:none");
+      var hideRegistrierung = document
+        .getElementById("Registrierung")
+        .setAttribute("style", "display:none");
+      var hideProfil = document
+        .getElementById("Profil")
+        .setAttribute("style", "display:none");
+      var hideKochbuch = document
+        .getElementById("Kuchbuch")
+        .setAttribute("style", "display:none");
+      var hideImpressum = document
+        .getElementById("Impressum")
+        .setAttribute("style", "display:none");
+      var hideAGB = document
+        .getElementById("AGB")
+        .setAttribute("style", "display:none");
+      var hideDatenschutz = document
+        .getElementById("Datenschutz")
+        .setAttribute("style", "display:none");
+    }
+    function Registrierung() {
+      var hideAnmeldeseite = document
+        .getElementById("Anmeldeseite")
+        .setAttribute("style", "display:none");
+      var hideSuchseite = document
+        .getElementById("Suchseite")
+        .setAttribute("style", "display:none");
+      var hideHomeseite = document
+        .getElementById("Homeseite")
+        .setAttribute("style", "display:none");
+      var hideUpload = document
+        .getElementById("Upload")
+        .setAttribute("style", "display:none");
+      var hideProfil = document
+        .getElementById("Profil")
+        .setAttribute("style", "display:none");
+      var hideKochbuch = document
+        .getElementById("Kuchbuch")
+        .setAttribute("style", "display:none");
+      var hideImpressum = document
+        .getElementById("Impressum")
+        .setAttribute("style", "display:none");
+      var hideAGB = document
+        .getElementById("AGB")
+        .setAttribute("style", "display:none");
+      var hideDatenschutz = document
+        .getElementById("Datenschutz")
+        .setAttribute("style", "display:none");
+    }
+    function Profil() {
+      var hideAnmeldeseite = document
+        .getElementById("Anmeldeseite")
+        .setAttribute("style", "display:none");
+      var hideSuchseite = document
+        .getElementById("Suchseite")
+        .setAttribute("style", "display:none");
+      var hideHomeseite = document
+        .getElementById("Homeseite")
+        .setAttribute("style", "display:none");
+      var hideUpload = document
+        .getElementById("Upload")
+        .setAttribute("style", "display:none");
+      var hideRegistrierung = document
+        .getElementById("Registrierung")
+        .setAttribute("style", "display:none");
+      var hideKochbuch = document
+        .getElementById("Kuchbuch")
+        .setAttribute("style", "display:none");
+      var hideImpressum = document
+        .getElementById("Impressum")
+        .setAttribute("style", "display:none");
+      var hideAGB = document
+        .getElementById("AGB")
+        .setAttribute("style", "display:none");
+      var hideDatenschutz = document
+        .getElementById("Datenschutz")
+        .setAttribute("style", "display:none");
+    }
+    function Kochbuch() {
+      var hideAnmeldeseite = document
+        .getElementById("Anmeldeseite")
+        .setAttribute("style", "display:none");
+      var hideSuchseite = document
+        .getElementById("Suchseite")
+        .setAttribute("style", "display:none");
+      var hideHomeseite = document
+        .getElementById("Homeseite")
+        .setAttribute("style", "display:none");
+      var hideUpload = document
+        .getElementById("Upload")
+        .setAttribute("style", "display:none");
+      var hideRegistrierung = document
+        .getElementById("Registrierung")
+        .setAttribute("style", "display:none");
+      var hideProfil = document
+        .getElementById("Profil")
+        .setAttribute("style", "display:none");
+      var hideImpressum = document
+        .getElementById("Impressum")
+        .setAttribute("style", "display:none");
+      var hideAGB = document
+        .getElementById("AGB")
+        .setAttribute("style", "display:none");
+      var hideDatenschutz = document
+        .getElementById("Datenschutz")
+        .setAttribute("style", "display:none");
+    }
+    function Impressum() {
+      var hideAnmeldeseite = document
+        .getElementById("Anmeldeseite")
+        .setAttribute("style", "display:none");
+      var hideSuchseite = document
+        .getElementById("Suchseite")
+        .setAttribute("style", "display:none");
+      var hideHomeseite = document
+        .getElementById("Homeseite")
+        .setAttribute("style", "display:none");
+      var hideUpload = document
+        .getElementById("Upload")
+        .setAttribute("style", "display:none");
+      var hideRegistrierung = document
+        .getElementById("Registrierung")
+        .setAttribute("style", "display:none");
+      var hideProfil = document
+        .getElementById("Profil")
+        .setAttribute("style", "display:none");
+      var hideKochbuch = document
+        .getElementById("Kochbuch")
+        .setAttribute("style", "display:none");
+      var hideAGB = document
+        .getElementById("AGB")
+        .setAttribute("style", "display:none");
+      var hideDatenschutz = document
+        .getElementById("Datenschutz")
+        .setAttribute("style", "display:none");
+    }
+    function AGB() {
+      var hideAnmeldeseite = document
+        .getElementById("Anmeldeseite")
+        .setAttribute("style", "display:none");
+      var hideSuchseite = document
+        .getElementById("Suchseite")
+        .setAttribute("style", "display:none");
+      var hideHomeseite = document
+        .getElementById("Homeseite")
+        .setAttribute("style", "display:none");
+      var hideUpload = document
+        .getElementById("Upload")
+        .setAttribute("style", "display:none");
+      var hideRegistrierung = document
+        .getElementById("Registrierung")
+        .setAttribute("style", "display:none");
+      var hideProfil = document
+        .getElementById("Profil")
+        .setAttribute("style", "display:none");
+      var hideKochbuch = document
+        .getElementById("Kochbuch")
+        .setAttribute("style", "display:none");
+      var hideImpressum = document
+        .getElementById("Impressum")
+        .setAttribute("style", "display:none");
+      var hideDatenschutz = document
+        .getElementById("Datenschutz")
+        .setAttribute("style", "display:none");
+    }
+    function Datenschutz() {
+      var hideAnmeldeseite = document
+        .getElementById("Anmeldeseite")
+        .setAttribute("style", "display:none");
+      var hideSuchseite = document
+        .getElementById("Suchseite")
+        .setAttribute("style", "display:none");
+      var hideHomeseite = document
+        .getElementById("Homeseite")
+        .setAttribute("style", "display:none");
+      var hideUpload = document
+        .getElementById("Upload")
+        .setAttribute("style", "display:none");
+      var hideRegistrierung = document
+        .getElementById("Registrierung")
+        .setAttribute("style", "display:none");
+      var hideProfil = document
+        .getElementById("Profil")
+        .setAttribute("style", "display:none");
+      var hideKochbuch = document
+        .getElementById("Kochbuch")
+        .setAttribute("style", "display:none");
+      var hideImpressum = document
+        .getElementById("Impressum")
+        .setAttribute("style", "display:none");
+      var hideAGB = document
+        .getElementById("AGB")
+        .setAttribute("style", "display:none");
     }
   </script>
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="Datenschutz.html">Datenschutz</a>
-      <a href="Impressum.html">Impressum</a>
-      <a href="AGB.html">AGB</a>
-    </div>
-  </footer>
- </div>
- <!-----------------------Kochbuch------------------------------------------------------------------------------------------------->
- <div onclick="Kochbuch">
-  <div class="logo-header">
-    <div>
-      <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
-    </div>
-  </div>
-  <header class="main-header">
-    <div class="icons">
-      <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
-      <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
-      <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
-      <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
-      <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
-    </div>
-  </header>
-
-  <h1>Mein Kochbuch</h1>
-
-  <div class="recipe">
-    <h2>Spaghetti Carbonara</h2>
-    <h3>Zutaten:</h3>
-    <ul>
-      <li>250g Spaghetti</li>
-      <li>150g Pancetta oder Speck</li>
-      <li>2 Eigelb</li>
-      <li>50g geriebener Parmesan</li>
-      <li>Salz und Pfeffer nach Geschmack</li>
-    </ul>
-    <h3>Zubereitung:</h3>
-    <ol>
-      <li>
-        Koche die Spaghetti gemÃ¤ÃŸ den Anweisungen auf der Verpackung al dente.
-      </li>
-      <li>
-        WÃ¤hrend die Spaghetti kochen, brate den Pancetta oder Speck in einer
-        Pfanne knusprig an.
-      </li>
-      <li>
-        In einer SchÃ¼ssel die Eigelbe mit dem geriebenen Parmesan vermischen.
-      </li>
-      <li>
-        Sobald die Spaghetti fertig sind, abgieÃŸen und direkt in die SchÃ¼ssel
-        mit den Eigelben und dem Parmesan geben. Schnell vermischen, damit die
-        Eigelbe durch die Hitze der Spaghetti cremig werden.
-      </li>
-      <li>
-        Mit dem gebratenen Pancetta oder Speck garnieren und mit Salz und
-        Pfeffer abschmecken. Sofort servieren.
-      </li>
-    </ol>
-    <img
-      src="https://example.com/spaghetti_carbonara.jpg"
-      alt="Spaghetti Carbonara"
-    />
-  </div>
-
-  <div class="recipe">
-    <h2>Griechischer Salat</h2>
-    <h3>Zutaten:</h3>
-    <ul>
-      <li>1 Salatgurke</li>
-      <li>3 Tomaten</li>
-      <li>1 rote Zwiebel</li>
-      <li>100g Feta-KÃ¤se</li>
-      <li>OlivenÃ¶l</li>
-      <li>Essig</li>
-      <li>Salz und Pfeffer nach Geschmack</li>
-    </ul>
-    <h3>Zubereitung:</h3>
-    <ol>
-      <li>
-        Die Salatgurke und Tomaten in Scheiben schneiden. Die rote Zwiebel in
-        Ringe schneiden.
-      </li>
-      <li>Alle Zutaten in einer SchÃ¼ssel vermischen.</li>
-      <li>Feta-KÃ¤se darÃ¼ber brÃ¶ckeln.</li>
-      <li>Mit OlivenÃ¶l und Essig betrÃ¤ufeln.</li>
-      <li>Mit Salz und Pfeffer abschmecken und servieren.</li>
-    </ol>
-    <img
-      src="https://example.com/griechischer_salat.jpg"
-      alt="Griechischer Salat"
-    />
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="Datenschutz.html">Datenschutz</a>
-      <a href="Impressum.html">Impressum</a>
-      <a href="AGB.html">AGB</a>
-    </div>
-  </footer>
- </div>
- <!------------------------Impressum----------------------------------------------------------------------------------------------->
- <div onclick="Impressum">
-  <div class="logo-header">
-    <div>
-      <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
-    </div>
-  </div>
-  <header class="main-header">
-    <div class="icons">
-      <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
-      <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
-      <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
-      <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
-      <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
-    </div>
-  </header>
-  <div class="design">
-   <h1>Impressum LeckerMeister</h1> 
-    LeckerMeister ist ein Produkt von Leonie Waimer, Sophie Schumann, Sabrina SchÃƒÂ¶nweiler <br><br>
-
-   <h3>Kundenservice:</h3>
-    HÃƒÂ¤ufig gestellte Fragen: FAQ<br><br>
-
-   <h3>Anschrift:</h3>
-    LeckerMeister GmbH<br>
-    MusterstraÃƒÅ¸e 33<br>
-    71336 Waiblingen<br>
-    Tel: 1111122220 (kein Kundenservice)<br>
-    Fax: 1111122220<br>
-    E-Mail: leckermeister@gmail.net<br><br>
-</div>
-<br>
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-links">
-        <a href="Datenschutz.html">Datenschutz</a>
-        <a href="Impressum.html">Impressum</a>
-        <a href="AGB.html">AGB</a>
+  <body>
+    <!----------------------------Anmeldeseite------------------------------------------------------------------------------------->
+    <div id="Anmeldeseite">
+      <div class="container">
+        <h2>Anmelden</h2>
+        <form id="loginForm" method="post">
+          {% csrf_token %}
+          <input
+            type="text"
+            id="benutzer_name"
+            name="benutzer_name"
+            placeholder="Benutzername"
+            required
+          />
+          <input
+            type="password"
+            id="Passwort"
+            name="Passwort"
+            placeholder="Passwort"
+            required
+          />
+          <button type="submit">Anmelden</button>
+          <input
+            type="hidden"
+            name="next"
+            value="{% url 'Profil' %}?benutzer={{ benutzer_name }}"
+          />
+        </form>
+        <p>
+          Noch keinen Account?
+          <p onclick="Registrierung()" id="showRegister" style="cursor: pointer;">Hier registrieren</p>.
+        </p>
       </div>
-    </footer>
- </div>
- <!------------------------AGB----------------------------------------------------------------------------------------------------->
- <div onclick="AGB">
-  <div class="logo-header">
-    <div>
-      <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
-    </div>
-  </div>
-  <header class="main-header">
-    <div class="icons">
-      <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
-      <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
-      <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
-      <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
-      <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
-    </div>
-  </header>
-  <div class="design">
-    <h1>AGB</h1> 
-    <h3>1. Unser Angebot</h3>
-    Bei LeckerMeister findest du neben hunderttausenden Rezepten alles rund ums Kochen, GenieÃŸen, KÃ¼che & Co. 
-    Unsere Mission ist es, passende Rezepte fÃ¼r dich, deine Familie oder Freunde zu finden. 
-    In deinem Nutzerprofil kannst du dazu alles NÃ¶tige einstellen. 
-    Mit deinem individuellen LeckerMeister-Kochbuch kannst du Rezepte sammeln, schnell wiederfinden.
-    <h3>2.Kostenloses Benutzerkonto, Passwort, aktuelle E-Mail-Adresse</h3>
-    2.1. Bei LeckerMeister kannst du dich kostenlos registrieren, 
-    um dein persÃ¶nliches Kochbuch zu nutzen, eigene Rezepte und Bilder hochzuladen oder anderweitig aktiv zu werden.<br>
-    2.2. Du darfst dich registrieren, wenn du voll geschÃ¤ftsfÃ¤hig bist und noch kein Benutzerkonto bei uns hast. 
-    Pro Person ist nur eine Registrierung erlaubt.<br>
-    2.3. FÃ¼r die Registrierung benÃ¶tigen wir deine E-Mail-Adresse. 
-    AuÃŸerdem musst du ein Passwort festlegen, um dein Konto zu schÃ¼tzen.<br>
-    2.4. Bewahre dein Passwort stets geheim und sorge dafÃ¼r, dass es niemand anderes kennt. 
-    Falls du vermutest, dass jemand dein Passwort erfahren hat oder Zugriff auf dein Benutzerkonto hat, benachrichtige uns bitte umgehend per E-Mail.<br>
-    2.5. Du bist verpflichtet, die E-Mail-Adresse in deinem Benutzerkonto stets aktuell zu halten und uns Ã„nderungen unverzÃ¼glich mitzuteilen.<br>
-    <h3>3. Nutzung der Inhalte</h3>
-    3.1. Die Inhalte auf LeckerMeister, einschlieÃŸlich Rezepte, Bilder und Texte, sind urheberrechtlich geschÃ¼tzt. 
-    Du darfst sie ausschlieÃŸlich fÃ¼r den privaten Gebrauch nutzen und nicht ohne unsere ausdrÃ¼ckliche Zustimmung verÃ¶ffentlichen, vervielfÃ¤ltigen oder anderweitig kommerziell verwenden.<br>
-    3.2. Wenn du eigene Inhalte hochlÃ¤dst, versicherst du, dass du die erforderlichen Rechte besitzt und keine Rechte Dritter verletzt werden. 
-    Du rÃ¤umst uns das Recht ein, diese Inhalte auf unserer Website und in unseren Dienstleistungen zu verwenden, zu bearbeiten und zu verbreiten.<br>
-    3.3. Wir behalten uns das Recht vor, hochgeladene Inhalte, die gegen unsere Richtlinien oder geltendes Recht verstoÃŸen, ohne VorankÃ¼ndigung zu lÃ¶schen oder zu sperren.<br>
-    <h3>4. Haftung und GewÃ¤hrleistung</h3>
-    4.1. Wir bemÃ¼hen uns, die Website stets erreichbar und fehlerfrei zu halten, Ã¼bernehmen jedoch keine Garantie fÃ¼r die stÃ¤ndige VerfÃ¼gbarkeit oder die Fehlerfreiheit der angebotenen Dienste und Inhalte.<br>
-    4.2. LeckerMeister haftet nicht fÃ¼r SchÃ¤den, die durch die Nutzung der Website oder der Inhalte entstehen, es sei denn, diese sind auf vorsÃ¤tzliches oder grob fahrlÃ¤ssiges Verhalten unsererseits zurÃ¼ckzufÃ¼hren.<br>
-    4.3. Wir Ã¼bernehmen keine Verantwortung fÃ¼r Inhalte, die von Nutzern hochgeladen werden, und distanzieren uns ausdrÃ¼cklich von solchen Inhalten, die gegen geltendes Recht oder unsere Richtlinien verstoÃŸen.<br>
-    <h3>5. Datenschutz</h3>
-    5.1. Der Schutz deiner personenbezogenen Daten ist uns wichtig. Alle Informationen zur Verarbeitung deiner Daten findest du in unserer DatenschutzerklÃ¤rung.<br>
-    5.2. Deine Daten werden ausschlieÃŸlich im Rahmen der geltenden Datenschutzgesetze und nur in dem Umfang verwendet, wie es fÃ¼r die Nutzung unserer Dienste erforderlich ist.<br>
-    <h3>6. Vertragsdauer und KÃ¼ndigung</h3>
-    6.1. Der Nutzungsvertrag fÃ¼r das Benutzerkonto wird auf unbestimmte Zeit geschlossen und kann von beiden Seiten jederzeit ohne Angabe von GrÃ¼nden gekÃ¼ndigt werden.<br>
-    6.2. Bei VerstÃ¶ÃŸen gegen diese AGB oder geltendes Recht behalten wir uns das Recht vor, dein Benutzerkonto ohne Vorwarnung zu sperren oder zu lÃ¶schen.<br>
-    <h3>7. Ã„nderungen der AGB</h3>
-    7.1. LeckerMeister behÃ¤lt sich das Recht vor, diese AGB jederzeit zu Ã¤ndern. Ãœber wesentliche Ã„nderungen wirst du rechtzeitig informiert.<br>
-    7.2. Solltest du den geÃ¤nderten AGB nicht zustimmen, steht es dir frei, dein Benutzerkonto zu lÃ¶schen. Die fortgesetzte Nutzung der Website nach Inkrafttreten der Ã„nderungen gilt als Zustimmung zu den neuen Bedingungen.<br>
-    <h3>8. Anwendbares Recht und Gerichtsstand</h3>
-    8.1. Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts.<br>
-    8.2. FÃ¼r alle Streitigkeiten aus oder im Zusammenhang mit der Nutzung der Website und diesen AGB ist der Gerichtsstand der Sitz der LeckerMeister GmbH, sofern der Nutzer Kaufmann, juristische Person des Ã¶ffentlichen Rechts oder Ã¶ffentlich-rechtliches SondervermÃ¶gen ist.<br>
- </div>
- <br>
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-links">
-        <a href="Datenschutz.html">Datenschutz</a>
-        <a href="Impressum.html">Impressum</a>
-        <a href="AGB.html">AGB</a>
+      <!----------------------Registrierungsseite------------------------------------------------------------------------------------>
+      <div id="Registrierung"  style="display: none">
+        <div class="container">
+          <h2>Registrieren</h2>
+          <form id="registerForm" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="benutzer_name">Benutzername:</label>
+            <input type="text" id="benutzer_name" name="benutzer_name" />
+
+            <label for="profil_bild">Profilbild:</label>
+            <input type="file" id="profil_bild" name="profil_bild" />
+
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" />
+
+            <label for="Wohnort">Wohnort:</label>
+            <input type="text" id="Wohnort" name="Wohnort" />
+
+            <label for="Biografie">Biografie:</label>
+            <textarea id="Biografie" name="Biografie"></textarea>
+
+            <label for="Passwort">Passwort:</label>
+            <input type="password" id="Passwort" name="Passwort" />
+
+            <button type="submit">Registrieren</button>
+          </form>
+          <p>
+            Bereits einen Account?
+            <p onclick="Anmeldeseite()" id="showLogin" style="cursor: pointer;">Hier anmelden</p>.
+          </p>
+        </div>
       </div>
-    </footer>
- </div>
- <!-----------------------Datenschutz---------------------------------------------------------------------------------------------->
- <div onclick="Datenschutz">
-  <div class="logo-header">
-    <div>
-      <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
-    </div>
-  </div>
-  <header class="main-header">
-    <div class="icons">
-      <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
-      <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
-      <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
-      <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
-      <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
-    </div>
-  </header>
-  <div class="design">
-    <h1>Datenschutz</h1> 
-    Du mÃƒÂ¶chtest wissen, wie wir bei LeckerMeister GmbH mit dem Thema Datenschutz umgehen? <br>
-    Uns ist es wichtig, dich hierÃƒÂ¼ber aufzuklÃƒÂ¤ren. 
-    Denn wenn du unsere Angebote und Services nutzt, verarbeiten wir personenbezogene Daten von dir.
-     Dies tun wir, um das Betreiben unserer Website mit Informationen zum Thema Kochen und Rezepte sowie die Darstellung und das Angebot von Dienstleistungen zu diesen Themen zu gewÃƒÂ¤hrleisten. 
-     Das Verarbeiten von personenbezogenen Daten ist notwendig, um unsere Angebote bzw. Services fÃƒÂ¼r dich besser zu gestalten. 
-     Wir machen dies jedoch verantwortungsvoll und nur, soweit es nach den Vorgaben der geltenden Datenschutzgesetze erlaubt ist, insbesondere der EU-Datenschutzgrundverordnung (DSGVO).
-    Die Verwendung von Daten fÃƒÂ¼r Werbezwecke macht es mÃƒÂ¶glich, kostenlose Angebote und Services betreiben zu kÃƒÂ¶nnen. 
-    AuÃƒÅ¸erdem mÃƒÂ¶chten wir stÃƒÂ¤ndig besser werden und Angebote und Services gern auch speziell auf dich zuschneiden, also personalisieren.
-     Das gelingt uns nur, wenn wir die Nutzung der Angebote und Services genauer beobachten und auswerten.es und alles Weitere, was mit deinen Daten geschieht, werden wir nicht heimlich tun, sondern nur mit der nÃƒÂ¶tigen Transparenz. 
-     Daher informieren wir dich an dieser Stelle umfassend ÃƒÂ¼ber das Was, Wie und Warum solcher Verarbeitungen. 
-     Auch alle relevanten Pflichtinformationen, die wir gemÃƒÂ¤ÃƒÅ¸ der EU-Datenschutzgrundverordnung bereitstellen mÃƒÂ¼ssen, haben wir hier fÃƒÂ¼r dich zusammengestellt.
- </div>
- <br>
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-links">
-        <a href="Datenschutz.html">Datenschutz</a>
-        <a href="Impressum.html">Impressum</a>
-        <a href="AGB.html">AGB</a>
+      <!-----------------------Suchseite--------------------------------------------------------------------------------------------->
+      <div id="Suchseite" style="display: none">
+        <div class="logo-header">
+          <div>
+            <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
+          </div>
+        </div>
+        <header class="main-header">
+          <div class="icons">
+            <a href="Homeseite.html"
+              ><img src="{% static 'Home.png' %}" alt="Home_Icon"
+            /></a>
+            <a href="Suchseite.html"
+              ><img src="{% static 'Suche.png' %}" alt="Such_Icon"
+            /></a>
+            <a href="Upload.html"
+              ><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon"
+            /></a>
+            <a href="Kochbuch.html"
+              ><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon"
+            /></a>
+            <a href="Profil.html"
+              ><img src="{% static 'Person.png' %}" alt="Person_Icon"
+            /></a>
+          </div>
+        </header>
+        <div class="search-container">
+          <input type="text" placeholder="Suche..." class="search-box" />
+          <button class="search-button">Suchen</button>
+        </div>
+        <div class="button-container">
+          <button class="button">Auflauf</button>
+          <button class="button">Pizza</button>
+          <button class="button">Reis- oder Nudelsalat</button>
+          <button class="button">Salate</button>
+          <button class="button">Salatdressing</button>
+          <button class="button">Tarte</button>
+          <button class="button">Fingerfood</button>
+          <button class="button">Dips</button>
+          <button class="button">Saucen</button>
+          <button class="button">Suppe</button>
+          <button class="button">Kloesse</button>
+          <button class="button">Brot und Broetchen</button>
+          <button class="button">Brotspeise</button>
+          <button class="button">Aufstrich</button>
+          <button class="button">Suessspeise</button>
+          <button class="button">Eis</button>
+          <button class="button">Kuchen</button>
+          <button class="button">Kekse</button>
+          <button class="button">Torte</button>
+          <button class="button">Confiserie</button>
+          <button class="button">Getraenke</button>
+          <button class="button">Shake</button>
+          <button class="button">Gewuerzmischung</button>
+          <button class="button">Pasten</button>
+          <button class="button">Studentenkueche</button>
+        </div>
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="footer-links">
+            <a href="Datenschutz.html">Datenschutz</a>
+            <a href="Impressum.html">Impressum</a>
+            <a href="AGB.html">AGB</a>
+          </div>
+        </footer>
       </div>
-    </footer>
- </div>
-</div>
-<!----------------------------Ende--------------------------------------------------------------------------------------------------->
-</body>
+      <!------------------------Homeseite--------------------------------------------------------------------------------------------->
+      <div id="Homeseite" style="display: none">
+        <div class="logo-header">
+          <div>
+            <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
+          </div>
+        </div>
+        <header class="main-header">
+          <div class="icons">
+            <a href="Homeseite.html"
+              ><img src="{% static 'Home.png' %}" alt="Home_Icon"
+            /></a>
+            <a href="Suchseite.html"
+              ><img src="{% static 'Suche.png' %}" alt="Such_Icon"
+            /></a>
+            <a href="Upload.html"
+              ><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon"
+            /></a>
+            <a href="Kochbuch.html"
+              ><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon"
+            /></a>
+            <a href="Profil.html"
+              ><img src="{% static 'Person.png' %}" alt="Person_Icon"
+            /></a>
+          </div>
+        </header>
+
+        {% for rezept in rezepte %}
+        <div class="rezept-container">
+          <h1>{{ rezept.name }}</h1>
+          <img
+            src="/static/uploads/{{ rezept.Rezeptbild }}"
+            alt="Bild des Rezepts"
+            width="400"
+            height="300"
+          />
+          <h2>Zutaten:</h2>
+          <ul>
+            {% for zutat in rezept.Zutaten %}
+            <li>{{ zutat }}</li>
+            {% endfor %}
+          </ul>
+          <h2>Anleitung:</h2>
+          <ol>
+            {% for schritt in rezept.Zubereitung %}
+            <li>{{ schritt }}</li>
+            {% endfor %}
+          </ol>
+          <h2>Zubereitungszeit:</h2>
+          <p>{{ rezept.Zubereitungszeit }}</p>
+          <h2>Kategorie:</h2>
+          <p>{{ rezept.Kategorie }}</p>
+        </div>
+        {% endfor %}
+
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="footer-links">
+            <a href="Datenschutz.html">Datenschutz</a>
+            <a href="Impressum.html">Impressum</a>
+            <a href="AGB.html">AGB</a>
+          </div>
+        </footer>
+      </div>
+      <!------------------------Upload-------------------------------------------------------------------------------------------------->
+      <div id="Upload" style="display: none">
+        <div class="logo-header">
+          <div>
+            <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
+          </div>
+        </div>
+        <header class="main-header">
+          <div class="icons">
+            <a href="Homeseite.html"
+              ><img src="{% static 'Home.png' %}" alt="Home_Icon"
+            /></a>
+            <a href="Suchseite.html"
+              ><img src="{% static 'Suche.png' %}" alt="Such_Icon"
+            /></a>
+            <a href="Upload.html"
+              ><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon"
+            /></a>
+            <a href="Kochbuch.html"
+              ><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon"
+            /></a>
+            <a href="Profil.html"
+              ><img src="{% static 'Person.png' %}" alt="Person_Icon"
+            /></a>
+          </div>
+        </header>
+
+        <h1>Rezept hochladen</h1>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <label for="recipeName">Name des Rezepts:</label>
+          <input type="text" id="recipeName" name="recipeName" required />
+
+          <label for="recipeImage">Bild hochladen:</label>
+          <input
+            type="file"
+            id="recipeImage"
+            name="recipeImage"
+            accept="image/*"
+            required
+          />
+
+          <label for="ingredients">Zutaten:</label>
+          <textarea
+            id="ingredients"
+            name="ingredients"
+            rows="4"
+            required
+          ></textarea>
+
+          <label for="instructions">Zubereitung:</label>
+          <textarea
+            id="instructions"
+            name="instructions"
+            rows="6"
+            required
+          ></textarea>
+
+          <label for="preparationTime">Zubereitungszeit:</label>
+          <textarea
+            id="preparationTime"
+            name="preparationTime"
+            rows="1"
+            required
+          ></textarea>
+
+          <label for="category">Kategorie:</label>
+          <select id="category" name="category" required>
+            <option value="">Bitte Kategorie ausweahlen</option>
+            <option value="Auflauf">Auflauf</option>
+            <option value="PizzaÂ¸">Pizza</option>
+            <option value="Reis- oder Nudelsalat">Reis- oder Nudelsalat</option>
+            <option value="Salatdressing">Salatdressing</option>
+            <option value="Tarte">Tarte</option>
+            <option value="Fingerfood">Fingerfood</option>
+            <option value="Dips">Dips</option>
+            <option value="Saucen">Saucen</option>
+            <option value="Suppe">Suppe</option>
+            <option value="Kloesse">Kloesse</option>
+            <option value="Brot und Broetchen">Brot und Broetchen</option>
+            <option value="Brotspeise">Brotspeise</option>
+            <option value="Aufstrich">Aufstrich</option>
+            <option value="Suessspeise">Suessspeise</option>
+            <option value="Eis">Eis</option>
+            <option value="Kuchen">Kuchen</option>
+            <option value="Kekse">Kekse</option>
+            <option value="Torte">Torte</option>
+            <option value="Confiserie">Confiserie</option>
+            <option value="Getraenke">Getraenke</option>
+            <option value="Shake">Shake</option>
+            <option value="Gewuerzmischung">Gewuerzmischung</option>
+            <option value="Pasten">Pasten</option>
+            <option value="Studentenkueche">Studentenkueche</option>
+          </select>
+
+          <input type="submit" value="Rezept hochladen" />
+        </form>
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="footer-links">
+            <a href="Datenschutz.html">Datenschutz</a>
+            <a href="Impressum.html">Impressum</a>
+            <a href="AGB.html">AGB</a>
+          </div>
+        </footer>
+      </div>
+      <!------------------------Profil-------------------------------------------------------------------------------------------------->
+      <div id="Profil" style="display: none">
+        <div class="logo-header">
+          <div>
+            <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
+          </div>
+        </div>
+        <header class="main-header">
+          <div class="icons">
+            <a href="Homeseite.html"
+              ><img src="{% static 'Home.png' %}" alt="Home_Icon"
+            /></a>
+            <a href="Suchseite.html"
+              ><img src="{% static 'Suche.png' %}" alt="Such_Icon"
+            /></a>
+            <a href="Upload.html"
+              ><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon"
+            /></a>
+            <a href="Kochbuch.html"
+              ><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon"
+            /></a>
+            <a href="Profil.html"
+              ><img src="{% static 'Person.png' %}" alt="Person_Icon"
+            /></a>
+          </div>
+        </header>
+        <div class="container">
+          <img
+            class="profile-picture"
+            src="{{ Profilbild }}"
+            alt="Profilbild"
+          />
+          <div class="user-info">
+            <h2>{{ Name }}</h2>
+            <p>E-Mail: {{ EMail }}</p>
+            <p>Ort: {{ Wohnort }}</p>
+            <p>Biografie: {{ Bio }}</p>
+          </div>
+          <div class="edit-profile">
+            <button onclick="changePassword()">Passwort ÃƒÂ¤ndern</button>
+            <button onclick="addBiography()">
+              Biografie hinzufÃƒÂ¼gen/ÃƒÂ¤ndern
+            </button>
+          </div>
+        </div>
+
+        <script>
+          function changePassword() {
+            // Hier kannst du Logik zum Ãƒâ€žndern des Passworts implementieren
+            alert("Passwort ÃƒÂ¤ndern");
+          }
+
+          function addBiography() {
+            // Hier kannst du Logik zum HinzufÃƒÂ¼gen/Ãƒâ€žndern der Biografie implementieren
+            alert("Biografie hinzufÃƒÂ¼gen/ÃƒÂ¤ndern");
+          }
+        </script>
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="footer-links">
+            <a href="Datenschutz.html">Datenschutz</a>
+            <a href="Impressum.html">Impressum</a>
+            <a href="AGB.html">AGB</a>
+          </div>
+        </footer>
+      </div>
+      <!-----------------------Kochbuch------------------------------------------------------------------------------------------------->
+      <div id="Kochbuch" style="display: none">
+        <div class="logo-header">
+          <div>
+            <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
+          </div>
+        </div>
+        <header class="main-header">
+          <div class="icons">
+            <a href="Homeseite.html"
+              ><img src="{% static 'Home.png' %}" alt="Home_Icon"
+            /></a>
+            <a href="Suchseite.html"
+              ><img src="{% static 'Suche.png' %}" alt="Such_Icon"
+            /></a>
+            <a href="Upload.html"
+              ><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon"
+            /></a>
+            <a href="Kochbuch.html"
+              ><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon"
+            /></a>
+            <a href="Profil.html"
+              ><img src="{% static 'Person.png' %}" alt="Person_Icon"
+            /></a>
+          </div>
+        </header>
+
+        <h1>Mein Kochbuch</h1>
+
+        <div class="recipe">
+          <h2>Spaghetti Carbonara</h2>
+          <h3>Zutaten:</h3>
+          <ul>
+            <li>250g Spaghetti</li>
+            <li>150g Pancetta oder Speck</li>
+            <li>2 Eigelb</li>
+            <li>50g geriebener Parmesan</li>
+            <li>Salz und Pfeffer nach Geschmack</li>
+          </ul>
+          <h3>Zubereitung:</h3>
+          <ol>
+            <li>
+              Koche die Spaghetti gemÃ¤ÃŸ den Anweisungen auf der Verpackung al
+              dente.
+            </li>
+            <li>
+              WÃ¤hrend die Spaghetti kochen, brate den Pancetta oder Speck in
+              einer Pfanne knusprig an.
+            </li>
+            <li>
+              In einer SchÃ¼ssel die Eigelbe mit dem geriebenen Parmesan
+              vermischen.
+            </li>
+            <li>
+              Sobald die Spaghetti fertig sind, abgieÃŸen und direkt in die
+              SchÃ¼ssel mit den Eigelben und dem Parmesan geben. Schnell
+              vermischen, damit die Eigelbe durch die Hitze der Spaghetti cremig
+              werden.
+            </li>
+            <li>
+              Mit dem gebratenen Pancetta oder Speck garnieren und mit Salz und
+              Pfeffer abschmecken. Sofort servieren.
+            </li>
+          </ol>
+          <img
+            src="https://example.com/spaghetti_carbonara.jpg"
+            alt="Spaghetti Carbonara"
+          />
+        </div>
+
+        <div class="recipe">
+          <h2>Griechischer Salat</h2>
+          <h3>Zutaten:</h3>
+          <ul>
+            <li>1 Salatgurke</li>
+            <li>3 Tomaten</li>
+            <li>1 rote Zwiebel</li>
+            <li>100g Feta-KÃ¤se</li>
+            <li>OlivenÃ¶l</li>
+            <li>Essig</li>
+            <li>Salz und Pfeffer nach Geschmack</li>
+          </ul>
+          <h3>Zubereitung:</h3>
+          <ol>
+            <li>
+              Die Salatgurke und Tomaten in Scheiben schneiden. Die rote Zwiebel
+              in Ringe schneiden.
+            </li>
+            <li>Alle Zutaten in einer SchÃ¼ssel vermischen.</li>
+            <li>Feta-KÃ¤se darÃ¼ber brÃ¶ckeln.</li>
+            <li>Mit OlivenÃ¶l und Essig betrÃ¤ufeln.</li>
+            <li>Mit Salz und Pfeffer abschmecken und servieren.</li>
+          </ol>
+          <img
+            src="https://example.com/griechischer_salat.jpg"
+            alt="Griechischer Salat"
+          />
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="footer-links">
+            <a href="Datenschutz.html">Datenschutz</a>
+            <a href="Impressum.html">Impressum</a>
+            <a href="AGB.html">AGB</a>
+          </div>
+        </footer>
+      </div>
+      <!------------------------Impressum----------------------------------------------------------------------------------------------->
+      <div id="Impressum" style="display: none">
+        <div class="logo-header">
+          <div>
+            <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
+          </div>
+        </div>
+        <header class="main-header">
+          <div class="icons">
+            <a href="Homeseite.html"
+              ><img src="{% static 'Home.png' %}" alt="Home_Icon"
+            /></a>
+            <a href="Suchseite.html"
+              ><img src="{% static 'Suche.png' %}" alt="Such_Icon"
+            /></a>
+            <a href="Upload.html"
+              ><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon"
+            /></a>
+            <a href="Kochbuch.html"
+              ><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon"
+            /></a>
+            <a href="Profil.html"
+              ><img src="{% static 'Person.png' %}" alt="Person_Icon"
+            /></a>
+          </div>
+        </header>
+        <div class="design">
+          <h1>Impressum LeckerMeister</h1>
+          LeckerMeister ist ein Produkt von Leonie Waimer, Sophie Schumann,
+          Sabrina SchÃƒÂ¶nweiler <br /><br />
+
+          <h3>Kundenservice:</h3>
+          HÃƒÂ¤ufig gestellte Fragen: FAQ<br /><br />
+
+          <h3>Anschrift:</h3>
+          LeckerMeister GmbH<br />
+          MusterstraÃƒÅ¸e 33<br />
+          71336 Waiblingen<br />
+          Tel: 1111122220 (kein Kundenservice)<br />
+          Fax: 1111122220<br />
+          E-Mail: leckermeister@gmail.net<br /><br />
+        </div>
+        <br />
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="footer-links">
+            <a href="Datenschutz.html">Datenschutz</a>
+            <a href="Impressum.html">Impressum</a>
+            <a href="AGB.html">AGB</a>
+          </div>
+        </footer>
+      </div>
+      <!------------------------AGB----------------------------------------------------------------------------------------------------->
+      <div id="AGB" style="display: none">
+        <div class="logo-header">
+          <div>
+            <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
+          </div>
+        </div>
+        <header class="main-header">
+          <div class="icons">
+            <a href="Homeseite.html"
+              ><img src="{% static 'Home.png' %}" alt="Home_Icon"
+            /></a>
+            <a href="Suchseite.html"
+              ><img src="{% static 'Suche.png' %}" alt="Such_Icon"
+            /></a>
+            <a href="Upload.html"
+              ><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon"
+            /></a>
+            <a href="Kochbuch.html"
+              ><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon"
+            /></a>
+            <a href="Profil.html"
+              ><img src="{% static 'Person.png' %}" alt="Person_Icon"
+            /></a>
+          </div>
+        </header>
+        <div class="design">
+          <h1>AGB</h1>
+          <h3>1. Unser Angebot</h3>
+          Bei LeckerMeister findest du neben hunderttausenden Rezepten alles
+          rund ums Kochen, GenieÃŸen, KÃ¼che & Co. Unsere Mission ist es,
+          passende Rezepte fÃ¼r dich, deine Familie oder Freunde zu finden. In
+          deinem Nutzerprofil kannst du dazu alles NÃ¶tige einstellen. Mit
+          deinem individuellen LeckerMeister-Kochbuch kannst du Rezepte sammeln,
+          schnell wiederfinden.
+          <h3>
+            2.Kostenloses Benutzerkonto, Passwort, aktuelle E-Mail-Adresse
+          </h3>
+          2.1. Bei LeckerMeister kannst du dich kostenlos registrieren, um dein
+          persÃ¶nliches Kochbuch zu nutzen, eigene Rezepte und Bilder
+          hochzuladen oder anderweitig aktiv zu werden.<br />
+          2.2. Du darfst dich registrieren, wenn du voll geschÃ¤ftsfÃ¤hig bist
+          und noch kein Benutzerkonto bei uns hast. Pro Person ist nur eine
+          Registrierung erlaubt.<br />
+          2.3. FÃ¼r die Registrierung benÃ¶tigen wir deine E-Mail-Adresse.
+          AuÃŸerdem musst du ein Passwort festlegen, um dein Konto zu
+          schÃ¼tzen.<br />
+          2.4. Bewahre dein Passwort stets geheim und sorge dafÃ¼r, dass es
+          niemand anderes kennt. Falls du vermutest, dass jemand dein Passwort
+          erfahren hat oder Zugriff auf dein Benutzerkonto hat, benachrichtige
+          uns bitte umgehend per E-Mail.<br />
+          2.5. Du bist verpflichtet, die E-Mail-Adresse in deinem Benutzerkonto
+          stets aktuell zu halten und uns Ã„nderungen unverzÃ¼glich
+          mitzuteilen.<br />
+          <h3>3. Nutzung der Inhalte</h3>
+          3.1. Die Inhalte auf LeckerMeister, einschlieÃŸlich Rezepte, Bilder
+          und Texte, sind urheberrechtlich geschÃ¼tzt. Du darfst sie
+          ausschlieÃŸlich fÃ¼r den privaten Gebrauch nutzen und nicht ohne
+          unsere ausdrÃ¼ckliche Zustimmung verÃ¶ffentlichen, vervielfÃ¤ltigen
+          oder anderweitig kommerziell verwenden.<br />
+          3.2. Wenn du eigene Inhalte hochlÃ¤dst, versicherst du, dass du die
+          erforderlichen Rechte besitzt und keine Rechte Dritter verletzt
+          werden. Du rÃ¤umst uns das Recht ein, diese Inhalte auf unserer
+          Website und in unseren Dienstleistungen zu verwenden, zu bearbeiten
+          und zu verbreiten.<br />
+          3.3. Wir behalten uns das Recht vor, hochgeladene Inhalte, die gegen
+          unsere Richtlinien oder geltendes Recht verstoÃŸen, ohne
+          VorankÃ¼ndigung zu lÃ¶schen oder zu sperren.<br />
+          <h3>4. Haftung und GewÃ¤hrleistung</h3>
+          4.1. Wir bemÃ¼hen uns, die Website stets erreichbar und fehlerfrei zu
+          halten, Ã¼bernehmen jedoch keine Garantie fÃ¼r die stÃ¤ndige
+          VerfÃ¼gbarkeit oder die Fehlerfreiheit der angebotenen Dienste und
+          Inhalte.<br />
+          4.2. LeckerMeister haftet nicht fÃ¼r SchÃ¤den, die durch die Nutzung
+          der Website oder der Inhalte entstehen, es sei denn, diese sind auf
+          vorsÃ¤tzliches oder grob fahrlÃ¤ssiges Verhalten unsererseits
+          zurÃ¼ckzufÃ¼hren.<br />
+          4.3. Wir Ã¼bernehmen keine Verantwortung fÃ¼r Inhalte, die von Nutzern
+          hochgeladen werden, und distanzieren uns ausdrÃ¼cklich von solchen
+          Inhalten, die gegen geltendes Recht oder unsere Richtlinien
+          verstoÃŸen.<br />
+          <h3>5. Datenschutz</h3>
+          5.1. Der Schutz deiner personenbezogenen Daten ist uns wichtig. Alle
+          Informationen zur Verarbeitung deiner Daten findest du in unserer
+          DatenschutzerklÃ¤rung.<br />
+          5.2. Deine Daten werden ausschlieÃŸlich im Rahmen der geltenden
+          Datenschutzgesetze und nur in dem Umfang verwendet, wie es fÃ¼r die
+          Nutzung unserer Dienste erforderlich ist.<br />
+          <h3>6. Vertragsdauer und KÃ¼ndigung</h3>
+          6.1. Der Nutzungsvertrag fÃ¼r das Benutzerkonto wird auf unbestimmte
+          Zeit geschlossen und kann von beiden Seiten jederzeit ohne Angabe von
+          GrÃ¼nden gekÃ¼ndigt werden.<br />
+          6.2. Bei VerstÃ¶ÃŸen gegen diese AGB oder geltendes Recht behalten wir
+          uns das Recht vor, dein Benutzerkonto ohne Vorwarnung zu sperren oder
+          zu lÃ¶schen.<br />
+          <h3>7. Ã„nderungen der AGB</h3>
+          7.1. LeckerMeister behÃ¤lt sich das Recht vor, diese AGB jederzeit zu
+          Ã¤ndern. Ãœber wesentliche Ã„nderungen wirst du rechtzeitig
+          informiert.<br />
+          7.2. Solltest du den geÃ¤nderten AGB nicht zustimmen, steht es dir
+          frei, dein Benutzerkonto zu lÃ¶schen. Die fortgesetzte Nutzung der
+          Website nach Inkrafttreten der Ã„nderungen gilt als Zustimmung zu den
+          neuen Bedingungen.<br />
+          <h3>8. Anwendbares Recht und Gerichtsstand</h3>
+          8.1. Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss
+          des UN-Kaufrechts.<br />
+          8.2. FÃ¼r alle Streitigkeiten aus oder im Zusammenhang mit der Nutzung
+          der Website und diesen AGB ist der Gerichtsstand der Sitz der
+          LeckerMeister GmbH, sofern der Nutzer Kaufmann, juristische Person des
+          Ã¶ffentlichen Rechts oder Ã¶ffentlich-rechtliches SondervermÃ¶gen
+          ist.<br />
+        </div>
+        <br />
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="footer-links">
+            <a href="Datenschutz.html">Datenschutz</a>
+            <a href="Impressum.html">Impressum</a>
+            <a href="AGB.html">AGB</a>
+          </div>
+        </footer>
+      </div>
+      <!-----------------------Datenschutz---------------------------------------------------------------------------------------------->
+      <div id="Datenschutz" style="display: none">
+        <div class="logo-header">
+          <div>
+            <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
+          </div>
+        </div>
+        <header class="main-header">
+          <div class="icons">
+            <a href="Homeseite.html"
+              ><img src="{% static 'Home.png' %}" alt="Home_Icon"
+            /></a>
+            <a href="Suchseite.html"
+              ><img src="{% static 'Suche.png' %}" alt="Such_Icon"
+            /></a>
+            <a href="Upload.html"
+              ><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon"
+            /></a>
+            <a href="Kochbuch.html"
+              ><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon"
+            /></a>
+            <a href="Profil.html"
+              ><img src="{% static 'Person.png' %}" alt="Person_Icon"
+            /></a>
+          </div>
+        </header>
+        <div class="design">
+          <h1>Datenschutz</h1>
+          Du mÃƒÂ¶chtest wissen, wie wir bei LeckerMeister GmbH mit dem Thema
+          Datenschutz umgehen? <br />
+          Uns ist es wichtig, dich hierÃƒÂ¼ber aufzuklÃƒÂ¤ren. Denn wenn du
+          unsere Angebote und Services nutzt, verarbeiten wir personenbezogene
+          Daten von dir. Dies tun wir, um das Betreiben unserer Website mit
+          Informationen zum Thema Kochen und Rezepte sowie die Darstellung und
+          das Angebot von Dienstleistungen zu diesen Themen zu gewÃƒÂ¤hrleisten.
+          Das Verarbeiten von personenbezogenen Daten ist notwendig, um unsere
+          Angebote bzw. Services fÃƒÂ¼r dich besser zu gestalten. Wir machen
+          dies jedoch verantwortungsvoll und nur, soweit es nach den Vorgaben
+          der geltenden Datenschutzgesetze erlaubt ist, insbesondere der
+          EU-Datenschutzgrundverordnung (DSGVO). Die Verwendung von Daten fÃƒÂ¼r
+          Werbezwecke macht es mÃƒÂ¶glich, kostenlose Angebote und Services
+          betreiben zu kÃƒÂ¶nnen. AuÃƒÅ¸erdem mÃƒÂ¶chten wir stÃƒÂ¤ndig besser
+          werden und Angebote und Services gern auch speziell auf dich
+          zuschneiden, also personalisieren. Das gelingt uns nur, wenn wir die
+          Nutzung der Angebote und Services genauer beobachten und auswerten.es
+          und alles Weitere, was mit deinen Daten geschieht, werden wir nicht
+          heimlich tun, sondern nur mit der nÃƒÂ¶tigen Transparenz. Daher
+          informieren wir dich an dieser Stelle umfassend ÃƒÂ¼ber das Was, Wie
+          und Warum solcher Verarbeitungen. Auch alle relevanten
+          Pflichtinformationen, die wir gemÃƒÂ¤ÃƒÅ¸ der
+          EU-Datenschutzgrundverordnung bereitstellen mÃƒÂ¼ssen, haben wir hier
+          fÃƒÂ¼r dich zusammengestellt.
+        </div>
+        <br />
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="footer-links">
+            <a href="Datenschutz.html">Datenschutz</a>
+            <a href="Impressum.html">Impressum</a>
+            <a href="AGB.html">AGB</a>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!----------------------------Ende--------------------------------------------------------------------------------------------------->
+  </body>
 </html>
