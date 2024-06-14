@@ -1,5 +1,3 @@
-<!-----------------------Es fehlt noch die korrekte Verlinkung der Seiten--------------------------------------------------------------------------------------------->
-
 {% load static %}
 <!DOCTYPE html>
 <html lang="de">
@@ -482,9 +480,11 @@
         </form>
         <p>
           Noch keinen Account?
-          <p onclick="Registrierung()" id="showRegister" style="cursor: pointer;">Hier registrieren</p>.
+          <p onclick="Registrierung()" id="showRegister" style="cursor: pointer;">Hier registrieren</p>
+          <p onclick="Homeseite()" style="cursor: pointer;">Hier registrieren</p>
         </p>
       </div>
+    </div>
       <!----------------------Registrierungsseite------------------------------------------------------------------------------------>
       <div id="Registrierung"  style="display: none">
         <div class="container">
@@ -513,7 +513,7 @@
           </form>
           <p>
             Bereits einen Account?
-            <p onclick="Anmeldeseite()" id="showLogin" style="cursor: pointer;">Hier anmelden</p>.
+            <p onclick="Anmeldeseite()" id="showLogin" style="cursor: pointer;">Hier anmelden</p>
           </p>
         </div>
       </div>
@@ -526,19 +526,19 @@
         </div>
         <header class="main-header">
           <div class="icons">
-            <a href="Homeseite.html"
+            <a onclick="Homeseite()"
               ><img src="{% static 'Home.png' %}" alt="Home_Icon"
             /></a>
-            <a href="Suchseite.html"
+            <a onclick="Suchseite()"
               ><img src="{% static 'Suche.png' %}" alt="Such_Icon"
             /></a>
-            <a href="Upload.html"
+            <a onclick="Upload()"
               ><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon"
             /></a>
-            <a href="Kochbuch.html"
+            <a onclick="Kochbuch()"
               ><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon"
             /></a>
-            <a href="Profil.html"
+            <a onclick="Profil()"
               ><img src="{% static 'Person.png' %}" alt="Person_Icon"
             /></a>
           </div>
@@ -577,9 +577,9 @@
         <!-- Footer -->
         <footer class="footer">
           <div class="footer-links">
-            <a href="Datenschutz.html">Datenschutz</a>
-            <a href="Impressum.html">Impressum</a>
-            <a href="AGB.html">AGB</a>
+            <a onclick="Datenschutz()">Datenschutz</a>
+            <a onclick="Impressum()">Impressum</a>
+            <a onclick="AGB()">AGB</a>
           </div>
         </footer>
       </div>
@@ -592,19 +592,19 @@
         </div>
         <header class="main-header">
           <div class="icons">
-            <a href="Homeseite.html"
+            <a onclick="Homeseite()"
               ><img src="{% static 'Home.png' %}" alt="Home_Icon"
             /></a>
-            <a href="Suchseite.html"
+            <a onclick="Suchseite()"
               ><img src="{% static 'Suche.png' %}" alt="Such_Icon"
             /></a>
-            <a href="Upload.html"
+            <a onclick="Upload()"
               ><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon"
             /></a>
-            <a href="Kochbuch.html"
+            <a onclick="Kochbuch()"
               ><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon"
             /></a>
-            <a href="Profil.html"
+            <a onclick="Profil()"
               ><img src="{% static 'Person.png' %}" alt="Person_Icon"
             /></a>
           </div>
@@ -641,9 +641,9 @@
         <!-- Footer -->
         <footer class="footer">
           <div class="footer-links">
-            <a href="Datenschutz.html">Datenschutz</a>
-            <a href="Impressum.html">Impressum</a>
-            <a href="AGB.html">AGB</a>
+            <a onclick="Datenschutz()">Datenschutz</a>
+            <a onclick="Impressum()">Impressum</a>
+            <a onclick="AGB()">AGB</a>
           </div>
         </footer>
       </div>
@@ -656,19 +656,19 @@
         </div>
         <header class="main-header">
           <div class="icons">
-            <a href="Homeseite.html"
+            <a onclick="Homeseite()"
               ><img src="{% static 'Home.png' %}" alt="Home_Icon"
             /></a>
-            <a href="Suchseite.html"
+            <a onclick="Suchseite()"
               ><img src="{% static 'Suche.png' %}" alt="Such_Icon"
             /></a>
-            <a href="Upload.html"
+            <a onclick="Upload()"
               ><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon"
             /></a>
-            <a href="Kochbuch.html"
+            <a onclick="Kochbuch()"
               ><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon"
             /></a>
-            <a href="Profil.html"
+            <a onclick="Profil()"
               ><img src="{% static 'Person.png' %}" alt="Person_Icon"
             /></a>
           </div>
@@ -748,9 +748,9 @@
         <!-- Footer -->
         <footer class="footer">
           <div class="footer-links">
-            <a href="Datenschutz.html">Datenschutz</a>
-            <a href="Impressum.html">Impressum</a>
-            <a href="AGB.html">AGB</a>
+            <a onclick="Datenschutz()">Datenschutz</a>
+            <a onclick="Impressum()">Impressum</a>
+            <a onclick="AGB()">AGB</a>
           </div>
         </footer>
       </div>
@@ -763,19 +763,19 @@
         </div>
         <header class="main-header">
           <div class="icons">
-            <a href="Homeseite.html"
+            <a onclick="Homeseite()"
               ><img src="{% static 'Home.png' %}" alt="Home_Icon"
             /></a>
-            <a href="Suchseite.html"
+            <a onclick="Suchseite()"
               ><img src="{% static 'Suche.png' %}" alt="Such_Icon"
             /></a>
-            <a href="Upload.html"
+            <a onclick="Upload()"
               ><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon"
             /></a>
-            <a href="Kochbuch.html"
+            <a onclick="Kochbuch()"
               ><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon"
             /></a>
-            <a href="Profil.html"
+            <a onclick="Profil()"
               ><img src="{% static 'Person.png' %}" alt="Person_Icon"
             /></a>
           </div>
@@ -814,9 +814,9 @@
         <!-- Footer -->
         <footer class="footer">
           <div class="footer-links">
-            <a href="Datenschutz.html">Datenschutz</a>
-            <a href="Impressum.html">Impressum</a>
-            <a href="AGB.html">AGB</a>
+            <a onclick="Datenschutz()">Datenschutz</a>
+            <a onclick="Impressum()">Impressum</a>
+            <a onclick="AGB()">AGB</a>
           </div>
         </footer>
       </div>
@@ -829,19 +829,19 @@
         </div>
         <header class="main-header">
           <div class="icons">
-            <a href="Homeseite.html"
+            <a onclick="Homeseite()"
               ><img src="{% static 'Home.png' %}" alt="Home_Icon"
             /></a>
-            <a href="Suchseite.html"
+            <a onclick="Suchseite()"
               ><img src="{% static 'Suche.png' %}" alt="Such_Icon"
             /></a>
-            <a href="Upload.html"
+            <a onclick="Upload()"
               ><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon"
             /></a>
-            <a href="Kochbuch.html"
+            <a onclick="Kochbuch()"
               ><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon"
             /></a>
-            <a href="Profil.html"
+            <a onclick="Profil()"
               ><img src="{% static 'Person.png' %}" alt="Person_Icon"
             /></a>
           </div>
@@ -922,9 +922,9 @@
         <!-- Footer -->
         <footer class="footer">
           <div class="footer-links">
-            <a href="Datenschutz.html">Datenschutz</a>
-            <a href="Impressum.html">Impressum</a>
-            <a href="AGB.html">AGB</a>
+            <a onclick="Datenschutz()">Datenschutz</a>
+            <a onclick="Impressum()">Impressum</a>
+            <a onclick="AGB()">AGB</a>
           </div>
         </footer>
       </div>
@@ -937,22 +937,23 @@
         </div>
         <header class="main-header">
           <div class="icons">
-            <a href="Homeseite.html"
-              ><img src="{% static 'Home.png' %}" alt="Home_Icon"
-            /></a>
-            <a href="Suchseite.html"
-              ><img src="{% static 'Suche.png' %}" alt="Such_Icon"
-            /></a>
-            <a href="Upload.html"
-              ><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon"
-            /></a>
-            <a href="Kochbuch.html"
-              ><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon"
-            /></a>
-            <a href="Profil.html"
-              ><img src="{% static 'Person.png' %}" alt="Person_Icon"
-            /></a>
-          </div>
+            <div class="icons">
+              <a onclick="Homeseite()"
+                ><img src="{% static 'Home.png' %}" alt="Home_Icon"
+              /></a>
+              <a onclick="Suchseite()"
+                ><img src="{% static 'Suche.png' %}" alt="Such_Icon"
+              /></a>
+              <a onclick="Upload()"
+                ><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon"
+              /></a>
+              <a onclick="Kochbuch()"
+                ><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon"
+              /></a>
+              <a onclick="Profil()"
+                ><img src="{% static 'Person.png' %}" alt="Person_Icon"
+              /></a>
+            </div>
         </header>
         <div class="design">
           <h1>Impressum LeckerMeister</h1>
@@ -974,9 +975,9 @@
         <!-- Footer -->
         <footer class="footer">
           <div class="footer-links">
-            <a href="Datenschutz.html">Datenschutz</a>
-            <a href="Impressum.html">Impressum</a>
-            <a href="AGB.html">AGB</a>
+            <a onclick="Datenschutz()">Datenschutz</a>
+            <a onclick="Impressum()">Impressum</a>
+            <a onclick="AGB()">AGB</a>
           </div>
         </footer>
       </div>
@@ -989,19 +990,19 @@
         </div>
         <header class="main-header">
           <div class="icons">
-            <a href="Homeseite.html"
+            <a onclick="Homeseite()"
               ><img src="{% static 'Home.png' %}" alt="Home_Icon"
             /></a>
-            <a href="Suchseite.html"
+            <a onclick="Suchseite()"
               ><img src="{% static 'Suche.png' %}" alt="Such_Icon"
             /></a>
-            <a href="Upload.html"
+            <a onclick="Upload()"
               ><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon"
             /></a>
-            <a href="Kochbuch.html"
+            <a onclick="Kochbuch()"
               ><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon"
             /></a>
-            <a href="Profil.html"
+            <a onclick="Profil()"
               ><img src="{% static 'Person.png' %}" alt="Person_Icon"
             /></a>
           </div>
@@ -1096,9 +1097,9 @@
         <!-- Footer -->
         <footer class="footer">
           <div class="footer-links">
-            <a href="Datenschutz.html">Datenschutz</a>
-            <a href="Impressum.html">Impressum</a>
-            <a href="AGB.html">AGB</a>
+            <a onclick="Datenschutz()">Datenschutz</a>
+            <a onclick="Impressum()">Impressum</a>
+            <a onclick="AGB()">AGB</a>
           </div>
         </footer>
       </div>
@@ -1111,19 +1112,19 @@
         </div>
         <header class="main-header">
           <div class="icons">
-            <a href="Homeseite.html"
+            <a onclick="Homeseite()"
               ><img src="{% static 'Home.png' %}" alt="Home_Icon"
             /></a>
-            <a href="Suchseite.html"
+            <a onclick="Suchseite()"
               ><img src="{% static 'Suche.png' %}" alt="Such_Icon"
             /></a>
-            <a href="Upload.html"
+            <a onclick="Upload()"
               ><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon"
             /></a>
-            <a href="Kochbuch.html"
+            <a onclick="Kochbuch()"
               ><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon"
             /></a>
-            <a href="Profil.html"
+            <a onclick="Profil()"
               ><img src="{% static 'Person.png' %}" alt="Person_Icon"
             /></a>
           </div>
@@ -1159,9 +1160,9 @@
         <!-- Footer -->
         <footer class="footer">
           <div class="footer-links">
-            <a href="Datenschutz.html">Datenschutz</a>
-            <a href="Impressum.html">Impressum</a>
-            <a href="AGB.html">AGB</a>
+            <a onclick="Datenschutz()">Datenschutz</a>
+            <a onclick="Impressum()">Impressum</a>
+            <a onclick="AGB()">AGB</a>
           </div>
         </footer>
       </div>
