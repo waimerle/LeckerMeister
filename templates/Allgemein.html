@@ -30,7 +30,7 @@
     input[type="text"],
     input[type="file"],
     textarea, 
-      button {
+      .ARbutton {
         width: 100%;
         margin-bottom: 10px;
         padding: 10px;
@@ -42,7 +42,7 @@
         overflow-x: auto;
         white-space: nowrap;
       }
-      button {
+      .ARbutton {
         background-color: #5f764f; /* DunkelgrÃ¼n */
         color: #fff;
         cursor: pointer;
@@ -621,7 +621,7 @@
             placeholder="Passwort"
             required
           />
-          <button type="submit">Anmelden</button>
+          <button class="ARbutton"type="submit">Anmelden</button>
           <input
             type="hidden"
             name="next"
@@ -658,7 +658,7 @@
             <label for="Passwort">Passwort:</label>
             <input type="password" id="Passwort" name="Passwort" />
 
-            <button type="submit">Registrieren</button>
+            <button type="submit" class="ARbutton" >Registrieren</button>
           </form>
           <p>
             Bereits einen Account?
