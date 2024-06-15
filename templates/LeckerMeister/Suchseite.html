@@ -14,16 +14,22 @@
       }
 
       .button-container {
-        overflow-x: auto;
-        white-space: nowrap;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px auto;
+        max-width: 800px;      
       }
+
       .button {
-        padding: 80px;
+        padding: 10px 20px;
         margin: 10px;
         background-color: #5f764f;
         color: white;
         border: none;
         border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;      
       }
       .button:hover {
         background-color: #41612b;
@@ -62,6 +68,21 @@
         transform: scale(1.5);
       }
 
+      .rezept-container {
+        background-color: white;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        max-width: 800px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .rezept-container + .rezept-container {
+        margin-top: 40px;
+        border-top: 2px solid #5f764f;
+        padding-top: 20px;
+      }
+ 
       /* Search Styles */
       .search-container {
         width: 100%;
@@ -122,40 +143,69 @@
         <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
       </div>
     </header>
-    <div class="search-container">
-      <input type="text" placeholder="Suche..." class="search-box" />
-      <button class="search-button">Suchen</button>
+	<div class="search-container">
+  		<form method="get" action="{% url 'Suchseite' %}">
+    		<input type="text" name="query" placeholder="Suche..." class="search-box" value=""/>
+    		<button type="submit" class="search-button">Suchen</button>
+  	</form>
+	</div>    
+     <h1 style="text-align: center; color: #5f764f">Stoebern Sie durch unsere koestlichen Suchergebnisse auf Leckermeister!</h1>
+     <div class="button-container">
+       <a href="{% url 'Suchseite' %}?category=Auflauf" class="button">Auflauf</a>
+       <a href="{% url 'Suchseite' %}?category=Pizza" class="button">Pizza</a>
+       <a href="{% url 'Suchseite' %}?category=Reis-oder-Nudelsalat" class="button">Reis- oder Nudelsalat</a>
+       <a href="{% url 'Suchseite' %}?category=Salate" class="button">Salate</a>
+       <a href="{% url 'Suchseite' %}?category=Salatdressing" class="button">Salatdressing</a>
+       <a href="{% url 'Suchseite' %}?category=Tarte" class="button">Tarte</a>
+       <a href="{% url 'Suchseite' %}?category=Fingerfood" class="button">Fingerfood</a>
+       <a href="{% url 'Suchseite' %}?category=Dips" class="button">Dips</a>
+       <a href="{% url 'Suchseite' %}?category=Saucen" class="button">Saucen</a>
+       <a href="{% url 'Suchseite' %}?category=Suppe" class="button">Suppe</a>
+       <a href="{% url 'Suchseite' %}?category=Kloesse" class="button">Kloesse</a>
+       <a href="{% url 'Suchseite' %}?category=Brot-und-Broetchen" class="button">Brot und Broetchen</a>
+       <a href="{% url 'Suchseite' %}?category=Brotspeise" class="button">Brotspeise</a>
+       <a href="{% url 'Suchseite' %}?category=Aufstrich" class="button">Aufstrich</a>
+       <a href="{% url 'Suchseite' %}?category=Suessspeise" class="button">Suessspeise</a>
+       <a href="{% url 'Suchseite' %}?category=Eis" class="button">Eis</a>
+       <a href="{% url 'Suchseite' %}?category=Kuchen" class="button">Kuchen</a>
+       <a href="{% url 'Suchseite' %}?category=Kekse" class="button">Kekse</a>
+       <a href="{% url 'Suchseite' %}?category=Torte" class="button">Torte</a>
+       <a href="{% url 'Suchseite' %}?category=Confiserie" class="button">Confiserie</a>
+       <a href="{% url 'Suchseite' %}?category=Getraenke" class="button">Getraenke</a>
+       <a href="{% url 'Suchseite' %}?category=Shake" class="button">Shake</a>
+       <a href="{% url 'Suchseite' %}?category=Gewuerzmischung" class="button">Gewuerzmischung</a>
+       <a href="{% url 'Suchseite' %}?category=Pasten" class="button">Pasten</a>
+       <a href="{% url 'Suchseite' %}?category=Studentenkueche" class="button">Studentenkueche</a> 
     </div>
-    <h1 style="text-align: center; color: #5f764f">Stöbern Sie durch unsere köstlichen Suchergebnisse auf Leckermeister!</h1>
-    <div class="button-container">
-      <button class="button">Auflauf</button>
-      <button class="button">Pizza</button>
-      <button class="button">Reis- oder Nudelsalat</button>
-      <button class="button">Salate</button>
-      <button class="button">Salatdressing</button>
-      <button class="button">Tarte</button>
-      <button class="button">Fingerfood</button>
-      <button class="button">Dips</button>
-      <button class="button">Saucen</button>
-      <button class="button">Suppe</button>
-      <button class="button">Kloesse</button>
-      <button class="button">Brot und Broetchen</button>
-      <button class="button">Brotspeise</button>
-      <button class="button">Aufstrich</button>
-      <button class="button">Suessspeise</button>
-      <button class="button">Eis</button>
-      <button class="button">Kuchen</button>
-      <button class="button">Kekse</button>
-      <button class="button">Torte</button>
-      <button class="button">Confiserie</button>
-      <button class="button">Getraenke</button>
-      <button class="button">Shake</button>
-      <button class="button">Gewuerzmischung</button>
-      <button class="button">Pasten</button>
-      <button class="button">Studentenkueche</button>
- 
-    </div>
-    <!-- Footer -->
+  <div class="results-container">
+    {% if rezepte %}
+      <h2>Suchergebnisse</h2>
+      {% for rezept in rezepte %}
+        <div class="rezept-container">
+          <h1>{{ rezept.name }}</h1>
+          <img src="{% static 'uploads/' %}{{ rezept.Rezeptbild }}" alt="{{ rezept.name }}" width="400" height="300">
+          <h2>Zutaten:</h2>
+          <ul>
+            {% for zutat in rezept.Zutaten %}
+              <li>{{ zutat }}</li>
+            {% endfor %}
+          </ul>
+          <h2>Anleitung:</h2>
+          <ol>
+            {% for schritt in rezept.Zubereitung %}
+              <li>{{ schritt }}</li>
+            {% endfor %}
+          </ol>
+          <h2>Zubereitungszeit:</h2>
+          <p>{{ rezept.Zubereitungszeit }}</p>
+          <h2>Kategorie:</h2>
+          <p>{{ rezept.Kategorie }}</p>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>Keine Ergebnisse gefunden.</p>
+    {% endif %}
+  </div>    <!-- Footer -->
     <footer class="footer">
       <div class="footer-links">
         <a href="Datenschutz.html">Datenschutz</a>
