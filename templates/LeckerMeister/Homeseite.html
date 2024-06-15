@@ -85,33 +85,36 @@
 .save-icon:hover {
   transform: scale(1.2);
 }
-/* Hide the checkbox */
-      .toggle-input {
-        display: none;
-      }
-      /* Style the label as a button */
-      .toggle-label {
-        display: block;
-        cursor: pointer;
-        padding: 10px;
-        background-color: #5f764f;
-        color: white;
-        text-align: center;
-        border-radius: 5px;
-        margin-top: 10px;
-      }
-      .toggle-label:hover {
-        background-color: #4d5f3d;
-      }
-      /* Hidden content styling */
-      .hidden-content {
-        display: none;
-        margin-top: 20px;
-      }
-      /* Show hidden content when the checkbox is checked */
-      .toggle-input:checked + .toggle-label + .hidden-content {
-        display: block;
-      }
+
+.toggle-input {
+    display: none; /* Das Input-Element ausblenden */
+}
+
+.toggle-label {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #5f764f;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.toggle-label:hover {
+    background-color: #4d5f3d;
+}
+
+/* Zeige die versteckten Inhalte an, wenn das Input-Element ausgewehlt ist */
+.toggle-input:checked + .toggle-label + .hidden-content {
+    display: block;
+}
+
+.hidden-content {
+    display: none;
+    margin-top: 20px;
+}
+
   </style>
  </head>
   <body>
