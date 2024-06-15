@@ -77,19 +77,25 @@
         justify-content: space-around;
       }
 
-      .save-icon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  color: #FFD700; /* Goldene Farbe fÃ¼r den Stern */
-  cursor: pointer;
-  transition: transform 0.3s ease;
+  .save-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #FFD700; /* Goldene Farbe fuer den Stern */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    outline: none;
+    line-height: 1; /* Passt die Hoehe des Buttons an */
 }
 
 .save-icon:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
+
 
 .toggle-input {
     display: none; /* Das Input-Element ausblenden */
@@ -143,7 +149,7 @@
 
     {% for rezept in rezepte %}
       <div class="rezept-container">
-        <div class="save-icon">&#9734;</div>
+        <button class="save-icon" aria-label="Rezept speichern">&#9734;</button>
         <h1  style="text-align: center">{{ rezept.name }}</h1>
         <img src="/static/uploads/{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="400" height="300">
         
