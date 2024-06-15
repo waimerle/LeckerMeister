@@ -71,12 +71,13 @@
         display: flex;
         justify-content: space-around;
       }
+
       .save-icon {
   position: absolute;
   top: 10px;
   right: 10px;
   font-size: 24px;
-  color: #FFD700; /* Goldene Farbe für den Stern */
+  color: #FFD700; /* Goldene Farbe fÃ¼r den Stern */
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -84,8 +85,35 @@
 .save-icon:hover {
   transform: scale(1.2);
 }
-    </style>
-  </head>
+/* Hide the checkbox */
+      .toggle-input {
+        display: none;
+      }
+      /* Style the label as a button */
+      .toggle-label {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        background-color: #5f764f;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+      .toggle-label:hover {
+        background-color: #4d5f3d;
+      }
+      /* Hidden content styling */
+      .hidden-content {
+        display: none;
+        margin-top: 20px;
+      }
+      /* Show hidden content when the checkbox is checked */
+      .toggle-input:checked + .toggle-label + .hidden-content {
+        display: block;
+      }
+  </style>
+ </head>
   <body>
     <div class="logo-header">
       <div>
@@ -107,23 +135,29 @@
         <div class="save-icon">&#9734;</div>
         <h1>{{ rezept.name }}</h1>
         <img src="/static/uploads/{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="400" height="300">
-        <h2>Zutaten:</h2>
-        <ul>
+        
+        <!-- Hidden content toggle -->
+        <input type="checkbox" id="toggle-{{ forloop.counter }}" class="toggle-input">
+        <label for="toggle-{{ forloop.counter }}" class="toggle-label">Mehr anzeigen</label>
+        
+        <div class="hidden-content">
+         <h2>Zutaten:</h2>
+         <ul>
           {% for zutat in rezept.Zutaten %}
             <li>{{ zutat }}</li>
           {% endfor %}
-        </ul>
-        <h2>Anleitung:</h2>
-        <ol>
+         </ul>
+         <h2>Anleitung:</h2>
+         <ol>
           {% for schritt in rezept.Zubereitung %}
             <li>{{ schritt }}</li>
           {% endfor %}
-        </ol>
-        <h2>Zubereitungszeit:</h2>
-        <p>{{ rezept.Zubereitungszeit }}</p>
-        <h2>Kategorie:</h2>
-        <p>{{ rezept.Kategorie }}</p>
-
+         </ol>
+         <h2>Zubereitungszeit:</h2>
+         <p>{{ rezept.Zubereitungszeit }}</p>
+         <h2>Kategorie:</h2>
+         <p>{{ rezept.Kategorie }}</p>
+        </div>
       </div>
     {% endfor %}
 
