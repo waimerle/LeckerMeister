@@ -247,4 +247,34 @@ def Abmeldung(request):
 
     return redirect('Anmeldung')
 
+def load_rezept_data():
+    rezept_filename = "/var/www/django-projekt/LeckerMeister/Rezepte.json"
+    try:
+        with open(rezept_filename, 'r') as file:
+            rezepte = json.load(file)
+    except FileNotFoundError:
+        rezepte = []
+    return rezepte
 
+# Funktion zum Hinzufuegen eines Kommentars zu einem Rezept
+def add_comment(request, recipe_name):
+    if request.method == "POST":
+        kommentar = request.POST.get('kommentar')
+        # Load the existing data
+        with open("/var/www/django-projekt/LeckerMeister/Rezepte.json", 'r') as file:
+            rezepte = json.load(file)
+        
+        # Ensure we have a list of comments, not a set
+        if isinstance(rezepte.get(recipe_name, {}).get('comments'), set):
+            rezepte[recipe_name]['comments'] = list(rezepte[recipe_name]['comments'])
+
+        # Add the new comment
+        rezepte[recipe_name].setdefault('comments', []).append(kommentar)
+
+        # Save the updated data
+        with open('path_to_your_json_file.json', 'w') as file:
+            json.dump(rezepte, file, indent=4)
+        
+        return redirect('Homeseite.html')  # Replace with your actual redirect target
+
+    return render(request, 'Homseite.html') 
