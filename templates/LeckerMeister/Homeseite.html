@@ -151,7 +151,7 @@
       <div class="rezept-container">
         <button class="save-icon" >&#9734;</button>
         <h1  style="text-align: center">{{ rezept.name }}</h1>
-        <img src="/static/uploads/{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="400" height="300">
+        <img src="/static/uploads/{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="300" height="200">
         
         <!-- Hidden content toggle -->
         <input type="checkbox" id="toggle-{{ forloop.counter }}" class="toggle-input">
@@ -176,8 +176,22 @@
          <h2>Kategorie:</h2>
          <p>{{ rezept.Kategorie }}</p>
         </div>
+ <h3>Kommentare:</h3>
+        {% for kommentar in rezept.Kommentare %}
+            <p><strong>{{ kommentar.benutzer_name }}:</strong> {{ kommentar.text }}</p>
+        {% endfor %}
+
+        {% if request.session.benutzer_name %}
+            <form method="post" action="{% url 'add_comment' rezept.name %}">
+                {% csrf_token %}
+                <textarea name="kommentar" required></textarea>
+                <button type="submit">Kommentar hinzufuegen</button>
+            </form>
+          {% endif %}
+        </div>
       </div>
     {% endfor %}
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -190,4 +204,3 @@
 
   </body>
 </html>
-
