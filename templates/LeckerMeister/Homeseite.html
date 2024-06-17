@@ -1,206 +1,225 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LeckerMeister</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-      }
-      .logo-header {
-        width: 100%;
-        background-color: white;
-        text-align: center;
-      }
-      .logo {
-        width: 100px;
-        height: auto;
-      }
-      .main-header {
-        width: 100%;
-        background-color: #5f764f;
-        text-align: center;
-        padding: 20px 0;
-        position: relative;
-      }
-      .icons {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        position: relative;
-      }
-      .icons img {
-        width: 40px;
-        height: 40px;
-        transition: transform 0.3s ease;
-      }
-
-      .icons img:hover {
-        transform: scale(1.5);
-      }
-      .rezept-container {
-        position: relative;
-        background-color: white;
-        margin: 20px auto;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        max-width: 800px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-       
-      }
-      .rezept-container img {
-       display: block; /* Stellt sicher, dass das Bild zentriert wird */
-       margin: 0 auto 20px; /* Zentriert das Bild horizontal und fuegt unten einen Abstand hinzu */
-       }
-      .rezept-container + .rezept-container {
-        margin-top: 40px;
-        border-top: 2px solid #5f764f;
-        padding-top: 20px;
-      }
-      .footer {
-        background-color: #5f764f;
-        color: white;
-        text-align: center;
-        padding: 10px 0;
-      }
-      .footer-links a {
-        color: white;
-        text-decoration: none;
-        margin: 0 10px;
-        display: flex;
-        justify-content: space-around;
-      }
-
-  .save-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    color: #FFD700; /* Goldene Farbe fuer den Stern */
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    border: none;
-    background-color: transparent;
-    padding: 0;
-    outline: none;
-    line-height: 1; /* Passt die Hoehe des Buttons an */
-}
-
-.save-icon:hover {
-    transform: scale(1.2);
-}
-
-
-.toggle-input {
-    display: none; /* Das Input-Element ausblenden */
-}
-
-.toggle-label {
-    display: block;
-    cursor: pointer;
-    padding: 10px;
-    background-color: #5f764f;
-    color: white;
-    text-align: center;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.toggle-label:hover {
-    background-color: #4d5f3d;
-}
-
-/* Zeige die versteckten Inhalte an, wenn das Input-Element ausgewehlt ist */
-.toggle-input:checked + .toggle-label + .hidden-content {
-    display: block;
-}
-
-.hidden-content {
-    display: none;
-    margin-top: 20px;
-}
-
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LeckerMeister</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    .logo-header {
+      width: 100%;
+      background-color: white;
+      text-align: center;
+    }
+    .logo {
+      width: 100px;
+      height: auto;
+    }
+    .main-header {
+      width: 100%;
+      background-color: #5f764f;
+      text-align: center;
+      padding: 20px 0;
+      position: relative;
+    }
+    .icons {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+    }
+    .icons img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s ease;
+    }
+    .icons img:hover {
+      transform: scale(1.5);
+    }
+    .rezept-container {
+      position: relative;
+      background-color: white;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      max-width: 800px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .rezept-container img {
+      display: block;
+      margin: 0 auto 20px;
+    }
+    .rezept-container + .rezept-container {
+      margin-top: 40px;
+      border-top: 2px solid #5f764f;
+      padding-top: 20px;
+    }
+    .footer {
+      background-color: #5f764f;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      display: flex;
+      justify-content: space-around;
+    }
+    .save-icon,
+    .heart-icon {
+      position: absolute;
+      top: 10px;
+      font-size: 24px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      outline: none;
+      line-height: 1;
+    }
+    .heart-icon {
+      left: 10px;
+      color: #ccc;
+    }
+    .heart-icon.liked {
+      color: red;
+    }
+    .heart-counter {
+      position: absolute;
+      top: 10px;
+      left: 40px;
+      font-size: 24px;
+      color: #000;
+    }
+    .save-icon {
+      right: 10px;
+      color: #ccc; /* Default grey color */
+    }
+    .save-icon.saved {
+      color: #FFD700; /* Yellow color when saved */
+    }
+    .save-icon:hover,
+    .heart-icon:hover {
+      transform: scale(1.2);
+    }
+    .toggle-input {
+      display: none;
+    }
+    .toggle-label {
+      display: block;
+      cursor: pointer;
+      padding: 10px;
+      background-color: #5f764f;
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .toggle-label:hover {
+      background-color: #4d5f3d;
+    }
+    .toggle-input:checked + .toggle-label + .hidden-content {
+      display: block;
+    }
+    .hidden-content {
+      display: none;
+      margin-top: 20px;
+    }
   </style>
- </head>
-  <body>
-    <div class="logo-header">
-      <div>
-        <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
-      </div>
+</head>
+<body>
+  <div class="logo-header">
+    <div>
+      <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
     </div>
-    <header class="main-header">
-      <div class="icons">
-        <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
-        <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
-        <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
-        <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
-        <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
-      </div>
-    </header>
-     <h1 style="text-align: center; color: #5f764f">Entdecken Sie mit LeckerMeister die Kunst des Geniessens!</h1>
-     <h3 style="text-align: center; color: #5f764f">Finden Sie hier die aktuellsten Rezepte</h3>
+  </div>
+  <header class="main-header">
+    <div class="icons">
+      <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
+      <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
+      <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
+      <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
+      <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
+    </div>
+  </header>
+  <h1 style="text-align: center; color: #5f764f">Entdecken Sie mit LeckerMeister die Kunst des Geniessens!</h1>
+  <h3 style="text-align: center; color: #5f764f">Finden Sie hier die aktuellsten Rezepte</h3>
 
-
-    {% for rezept in rezepte %}
-      <div class="rezept-container">
-        <button class="save-icon" >&#9734;</button>
-        <h1  style="text-align: center">{{ rezept.name }}</h1>
-        <img src="/static/uploads/{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="300" height="200">
-        
-        <!-- Hidden content toggle -->
-        <input type="checkbox" id="toggle-{{ forloop.counter }}" class="toggle-input">
-        <label for="toggle-{{ forloop.counter }}" class="toggle-label">Klicken Sie hier!</label>
-        
-        
-        <div class="hidden-content">
-         <h2>Zutaten:</h2>
-         <ul>
+  {% for rezept in rezepte %}
+    <div class="rezept-container">
+      <button class="heart-icon" onclick="likeRecipe(this)">&#9829;</button>
+      <span class="heart-counter">0</span>
+      <button class="save-icon" onclick="saveRecipe(this)">&#x2605;</button>
+      <h1 style="text-align: center">{{ rezept.name }}</h1>
+      <img src="/static/uploads/{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="300" height="200">
+      <input type="checkbox" id="toggle-{{ forloop.counter }}" class="toggle-input">
+      <label for="toggle-{{ forloop.counter }}" class="toggle-label">Klicken Sie hier!</label>
+      <div class="hidden-content">
+        <h2>Zutaten:</h2>
+        <ul>
           {% for zutat in rezept.Zutaten %}
             <li>{{ zutat }}</li>
           {% endfor %}
-         </ul>
-         <h2>Anleitung:</h2>
-         <ol>
+        </ul>
+        <h2>Anleitung:</h2>
+        <ol>
           {% for schritt in rezept.Zubereitung %}
             <li>{{ schritt }}</li>
           {% endfor %}
-         </ol>
-         <h2>Zubereitungszeit:</h2>
-         <p>{{ rezept.Zubereitungszeit }}</p>
-         <h2>Kategorie:</h2>
-         <p>{{ rezept.Kategorie }}</p>
-        </div>
- <h3>Kommentare:</h3>
-        {% for kommentar in rezept.Kommentare %}
-            <p><strong>{{ kommentar.benutzer_name }}:</strong> {{ kommentar.text }}</p>
-        {% endfor %}
-
-        {% if request.session.benutzer_name %}
-            <form method="post" action="{% url 'add_comment' rezept.name %}">
-                {% csrf_token %}
-                <textarea name="kommentar" required></textarea>
-                <button type="submit">Kommentar hinzufuegen</button>
-            </form>
-          {% endif %}
-        </div>
+        </ol>
+        <h2>Zubereitungszeit:</h2>
+        <p>{{ rezept.Zubereitungszeit }}</p>
+        <h2>Kategorie:</h2>
+        <p>{{ rezept.Kategorie }}</p>
       </div>
-    {% endfor %}
+      <h3>Kommentare:</h3>
+      {% for kommentar in rezept.Kommentare %}
+        <p><strong>{{ kommentar.benutzer_name }}:</strong> {{ kommentar.text }}</p>
+      {% endfor %}
+      {% if request.session.benutzer_name %}
+        <form method="post" action="{% url 'add_comment' rezept.name %}">
+          {% csrf_token %}
+          <textarea name="kommentar" required></textarea>
+          <button type="submit">Kommentar hinzufuegen</button>
+        </form>
+      {% endif %}
+    </div>
+  {% endfor %}
 
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="Datenschutz.html">Datenschutz</a>
+      <a href="Impressum.html">Impressum</a>
+      <a href="AGB.html">AGB</a>
+    </div>
+  </footer>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-links">
-        <a href="Datenschutz.html">Datenschutz</a>
-        <a href="Impressum.html">Impressum</a>
-        <a href="AGB.html">AGB</a>
-      </div>
-    </footer>
+  <script>
+    function likeRecipe(button) {
+      button.classList.toggle('liked');
+      const counter = button.nextElementSibling;
+      let count = parseInt(counter.textContent);
+      if (button.classList.contains('liked')) {
+        count += 1;
+      } else {
+        count -= 1;
+      }
+      counter.textContent = count;
+    }
 
-  </body>
+    function saveRecipe(button) {
+      button.classList.toggle('saved');
+    }
+  </script>
+</body>
 </html>
