@@ -71,7 +71,7 @@ def Homeseite(request):
 	benutzer_name = request.session.get("benutzer_name")
 
 	if not benutzer_name:
-		return HttpResponse("Benutzer nicht angemeldet oder Session abgelaufen.")
+		return redirect("Anmeldung.html")
 
 
 	Rezept_Filename = "/var/www/django-projekt/LeckerMeister/Rezepte.json"
@@ -98,7 +98,7 @@ def Suchseite(request):
     benutzer_name = request.session.get("benutzer_name")
 
     if not benutzer_name:
-        return HttpResponse("Benutzer nicht angemeldet oder Session abgelaufen.")
+        return redirect("Anmeldung.html")
 
     Rezept_Filename = "/var/www/django-projekt/LeckerMeister/Rezepte.json"
 
@@ -122,7 +122,7 @@ def Upload(request):
     benutzer_name = request.session.get("benutzer_name")
 
     if not benutzer_name:
-        return HttpResponse("Benutzer nicht angemeldet oder Session abgelaufen.")
+        return redirect("Anmeldung.html")
 
 
     if request.method == 'POST':
@@ -171,7 +171,7 @@ def Kochbuch(request):
     benutzer_name = request.session.get("benutzer_name")
 
     if not benutzer_name:
-        return HttpResponse("Benutzer nicht angemeldet oder Session abgelaufen.")
+        return redirect("Anmeldung.html")
 
     return render(request, 'LeckerMeister/Kochbuch.html')
 
@@ -180,7 +180,7 @@ def Profil(request):
     benutzer_name = request.session.get("benutzer_name")
 
     if not benutzer_name:
-        return HttpResponse("Benutzer nicht angemeldet oder Session abgelaufen.")
+        return redirect("Anmeldung.html")
 
     user_data_filename = "/var/www/django-projekt/LeckerMeister/user_Data.json"
 
@@ -211,6 +211,7 @@ def Profil(request):
     }
 
     return render(request, "LeckerMeister/Profil.html", vars)
+
 
 def Datenschutz(request):
     benutzer_name = request.session.get("benutzer_name")
