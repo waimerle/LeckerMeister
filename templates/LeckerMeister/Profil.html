@@ -1,3 +1,4 @@
+
 {% load static %}	
 <!DOCTYPE html>
 <html lang="de">
@@ -133,7 +134,7 @@
       </div>
     </header>
     <div class="container">
-      <img class="profile-picture" src="{{ Profilbild }}" alt="Profilbild" />
+      <img class="profile-picture" src="/static/users/{{ Profilbild }}" alt="Profilbild" />
       <div class="user-info">
         <h2>{{ Name }}</h2>
         <p>E-Mail: {{ EMail }}</p>
@@ -141,6 +142,7 @@
         <p>
           Biografie: {{ Bio }}
         </p>
+        <a href="{% url 'Abmeldung' %}">Abmelden</a> <!-- Abmeldelink -->
       </div>
       <div class="edit-profile">
         <button onclick="changePassword()">Passwort ÃƒÂ¤ndern</button>
@@ -158,6 +160,7 @@
         // Hier kannst du Logik zum HinzufÃƒÂ¼gen/Ãƒâ€žndern der Biografie implementieren
         alert("Biografie hinzufÃƒÂ¼gen/ÃƒÂ¤ndern");
       }
+
     </script>
     <!-- Footer -->
     <footer class="footer">
