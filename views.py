@@ -261,16 +261,16 @@ def load_rezept_data():
 def add_comment(request, rezept_name):
     if request.method == "POST":
         kommentar = request.POST.get('kommentar')
+        
         # Load the existing data
         with open("/var/www/django-projekt/LeckerMeister/Rezepte.json", 'r') as file:
             rezepte = json.load(file)
         
-        # Ensure we have a list of comments, not a set
-        if isinstance(rezepte.get(rezept_name, {}).get('comments'), set):
-            rezepte[recipe_name]['comments'] = list(rezepte[rezept_name]['comments'])
-
-        # Add the new comment
-        rezepte[rezept_name].setdefault('comments', []).append(kommentar)
+        # Find the correct recipe and add the comment
+        for rezept in rezepte:
+            if rezept['name'] == rezept_name:
+                rezept.setdefault('comments', []).append(kommentar)
+                break
 
         # Save the updated data
         with open('/var/www/django-projekt/LeckerMeister/Rezepte.json', 'w') as file:
@@ -278,4 +278,5 @@ def add_comment(request, rezept_name):
         
         return redirect('Homeseite.html')  # Replace with your actual redirect target
 
-    return render(request, 'Homseite.html') 
+    return render(request, 'LeckerMeister/Homeseite.html')
+
