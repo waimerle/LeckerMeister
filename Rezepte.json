@@ -14,7 +14,7 @@
         ],
         "Zubereitungszeit": "12 Minuten",
         "Kategorie": "Pasten",
-	"Kommentare": []
+	"comments": []
     },
     {
         "Rezeptbild": "Reis.jpg",
@@ -29,6 +29,7 @@
         ],
         "Zubereitungszeit": "12 Minuten",
         "Kategorie": "Eis",
-	"Kommentare": []
+	"comments": []
     }
 ]
+
