@@ -61,7 +61,7 @@ def Registrierung(request):
                 for chunk in profil_bild.chunks():
                     destination.write(chunk)
 
-        return redirect("Homeseite.html")
+        return redirect("Anmeldung.html")
 
     return render(request, 'LeckerMeister/Registrierung.html')
 
@@ -257,7 +257,7 @@ def load_rezept_data():
     return rezepte
 
 # Funktion zum Hinzufuegen eines Kommentars zu einem Rezept
-def add_comment(request, recipe_name):
+def add_comment(request, rezept_name):
     if request.method == "POST":
         kommentar = request.POST.get('kommentar')
         # Load the existing data
@@ -265,14 +265,14 @@ def add_comment(request, recipe_name):
             rezepte = json.load(file)
         
         # Ensure we have a list of comments, not a set
-        if isinstance(rezepte.get(recipe_name, {}).get('comments'), set):
-            rezepte[recipe_name]['comments'] = list(rezepte[recipe_name]['comments'])
+        if isinstance(rezepte.get(rezept_name, {}).get('comments'), set):
+            rezepte[recipe_name]['comments'] = list(rezepte[rezept_name]['comments'])
 
         # Add the new comment
-        rezepte[recipe_name].setdefault('comments', []).append(kommentar)
+        rezepte[rezept_name].setdefault('comments', []).append(kommentar)
 
         # Save the updated data
-        with open('path_to_your_json_file.json', 'w') as file:
+        with open('/var/www/django-projekt/LeckerMeister/Rezepte.json', 'w') as file:
             json.dump(rezepte, file, indent=4)
         
         return redirect('Homeseite.html')  # Replace with your actual redirect target
