@@ -155,16 +155,17 @@
   <h1 style="text-align: center; color: #5f764f">Entdecken Sie mit LeckerMeister die Kunst des Geniessens!</h1>
   <h3 style="text-align: center; color: #5f764f">Finden Sie hier die aktuellsten Rezepte</h3>
 
-  {% for rezept in rezepte %}
-    <div class="rezept-container">
-      <button class="heart-icon" onclick="likeRecipe(this)">&#9829;</button>
-      <span class="heart-counter">0</span>
-      <button class="save-icon" onclick="saveRecipe(this)">&#x2605;</button>
-      <h1 style="text-align: center">{{ rezept.name }}</h1>
-      <img src="/static/uploads/{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="300" height="200">
-      <input type="checkbox" id="toggle-{{ forloop.counter }}" class="toggle-input">
-      <label for="toggle-{{ forloop.counter }}" class="toggle-label">Klicken Sie hier!</label>
-      <div class="hidden-content">
+ {% for rezept in rezepte %}
+  <div class="rezept-container">
+    <button class="heart-icon" onclick="likeRecipe(this)">&#9829;</button>
+    <span class="heart-counter">0</span>
+    <button class="save-icon" onclick="saveRecipe(this)" data-recipe-id="{{ rezept.id }}">Speichern</button>
+    <h1 style="text-align: center">{{ rezept.name }}</h1>
+    <img src="/static/uploads/{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="300" height="200">
+    <input type="checkbox" id="toggle-{{ forloop.counter }}" class="toggle-input">
+    <label for="toggle-{{ forloop.counter }}" class="toggle-label">Klicken Sie hier!</label>
+    <div class="hidden-content">
+
         <h2>Zutaten:</h2>
         <ul>
           {% for zutat in rezept.Zutaten %}
@@ -217,9 +218,43 @@
       counter.textContent = count;
     }
 
-    function saveRecipe(button) {
-      button.classList.toggle('saved');
+   function saveRecipe(button) {
+    const recipeId = button.getAttribute('data-recipe-id');
+    button.classList.toggle('saved');
+
+    fetch('/save_recipe/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': getCookie('csrftoken')
+      },
+      body: JSON.stringify({ recipe_id: recipeId })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.status === 'success') {
+        alert('Rezept gespeichert!');
+      } else {
+        alert('Fehler beim Speichern des Rezepts.');
+      }
+    });
+  }
+
+  function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+      const cookies = document.cookie.split(';');
+      for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+          break;
+        }
+      }
     }
+    return cookieValue;
+  }
+
   </script>
 </body>
 </html>
