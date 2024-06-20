@@ -15,5 +15,6 @@ urlpatterns = [
 	path("Datenschutz.html", app_views.Datenschutz),
 	path("Impressum.html", app_views.Impressum),
 	path('add_comment/<str:rezept_name>/', views.add_comment, name='add_comment'),
-
+	path('save_recipe/', app_views.save_recipe, name='save_recipe'),
+	path('remove_recipe/', app_views.remove_recipe, name='remove_recipe'),
 ]
