@@ -84,6 +84,19 @@
         display: flex;
         justify-content: space-around;
       }
+
+    .save-icon {
+      right: 10px;
+      color: #ccc; 
+    }
+    .save-icon.saved {
+      color: #ccc; 
+    }
+    .save-icon:hover,
+    .heart-icon:hover {
+      transform: scale(1.2);
+    }
+
     </style>
   </head>
   <body>
@@ -103,74 +116,28 @@
       </div>
     </header>
 
-    <h1>Mein Kochbuch</h1>
+  <h1>Mein Kochbuch</h1>
 
+  {% for rezept in gespeicherte_rezepte %}
+    
     <div class="recipe">
-      <h2>Spaghetti Carbonara</h2>
+    <button class="save-icon" onclick="saveRecipe(this)" data-recipe-id="{{ rezept.id }}">Entfernen</button>
+      <h2>{{ rezept.name }}</h2>
+      <img src="{% static 'uploads/' %}{{ rezept.Rezeptbild }}" alt="Bild des Rezepts">
       <h3>Zutaten:</h3>
       <ul>
-        <li>250g Spaghetti</li>
-        <li>150g Pancetta oder Speck</li>
-        <li>2 Eigelb</li>
-        <li>50g geriebener Parmesan</li>
-        <li>Salz und Pfeffer nach Geschmack</li>
+        {% for zutat in rezept.Zutaten %}
+          <li>{{ zutat }}</li>
+        {% endfor %}
       </ul>
-      <h3>Zubereitung:</h3>
+      <h3>Anleitung:</h3>
       <ol>
-        <li>
-          Koche die Spaghetti gemÃ¤ÃŸ den Anweisungen auf der Verpackung al dente.
-        </li>
-        <li>
-          WÃ¤hrend die Spaghetti kochen, brate den Pancetta oder Speck in einer
-          Pfanne knusprig an.
-        </li>
-        <li>
-          In einer SchÃ¼ssel die Eigelbe mit dem geriebenen Parmesan vermischen.
-        </li>
-        <li>
-          Sobald die Spaghetti fertig sind, abgieÃŸen und direkt in die SchÃ¼ssel
-          mit den Eigelben und dem Parmesan geben. Schnell vermischen, damit die
-          Eigelbe durch die Hitze der Spaghetti cremig werden.
-        </li>
-        <li>
-          Mit dem gebratenen Pancetta oder Speck garnieren und mit Salz und
-          Pfeffer abschmecken. Sofort servieren.
-        </li>
+        {% for schritt in rezept.Zubereitung %}
+          <li>{{ schritt }}</li>
+        {% endfor %}
       </ol>
-      <img
-        src="https://example.com/spaghetti_carbonara.jpg"
-        alt="Spaghetti Carbonara"
-      />
     </div>
-
-    <div class="recipe">
-      <h2>Griechischer Salat</h2>
-      <h3>Zutaten:</h3>
-      <ul>
-        <li>1 Salatgurke</li>
-        <li>3 Tomaten</li>
-        <li>1 rote Zwiebel</li>
-        <li>100g Feta-KÃ¤se</li>
-        <li>OlivenÃ¶l</li>
-        <li>Essig</li>
-        <li>Salz und Pfeffer nach Geschmack</li>
-      </ul>
-      <h3>Zubereitung:</h3>
-      <ol>
-        <li>
-          Die Salatgurke und Tomaten in Scheiben schneiden. Die rote Zwiebel in
-          Ringe schneiden.
-        </li>
-        <li>Alle Zutaten in einer SchÃ¼ssel vermischen.</li>
-        <li>Feta-KÃ¤se darÃ¼ber brÃ¶ckeln.</li>
-        <li>Mit OlivenÃ¶l und Essig betrÃ¤ufeln.</li>
-        <li>Mit Salz und Pfeffer abschmecken und servieren.</li>
-      </ol>
-      <img
-        src="https://example.com/griechischer_salat.jpg"
-        alt="Griechischer Salat"
-      />
-    </div>
+  {% endfor %}
 
     <!-- Footer -->
     <footer class="footer">
