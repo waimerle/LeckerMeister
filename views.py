@@ -1,8 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, JsonResponse
 import json, os
 from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
+
 
 def Anmeldung(request):
     user_filename = "/var/www/django-projekt/LeckerMeister/user_Data.json"
@@ -137,7 +138,7 @@ def Upload(request):
         kategorie = request.POST.get('category')
 
         neues_rezept = {
-            "Rezeptbild": rezept_bild.name,  # Bildname speichern, tatsÃƒÂ¤chliche Handhabung erforderlich
+            "Rezeptbild": rezept_bild.name,  # Bildname speichern, tatsÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤chliche Handhabung erforderlich
             "name": rezept_name,
             "Zutaten": zutaten,
             "Zubereitung": zubereitung,
@@ -158,7 +159,7 @@ def Upload(request):
         with open(rezept_filename, 'w') as file:
             json.dump(rezepte, file, indent=4)
 
-
+	
         with open(f'/var/www/static/uploads/{rezept_bild.name}', 'wb+') as destination:
             for chunk in rezept_bild.chunks():
                 destination.write(chunk)
@@ -173,8 +174,35 @@ def Kochbuch(request):
     if not benutzer_name:
         return redirect("Anmeldung.html")
 
-    return render(request, 'LeckerMeister/Kochbuch.html')
+    # Pfade zu den Dateien
+    user_data_filename = "/var/www/django-projekt/LeckerMeister/user_Data.json"
+    rezept_filename = "/var/www/django-projekt/LeckerMeister/Rezepte.json"
 
+    # Lade Benutzerdaten aus der JSON-Datei
+    with open(user_data_filename, "r", encoding="utf-8") as file:
+        user_data_list = json.load(file)
+
+    # Suche nach dem Benutzer in der Liste
+    user_data = None
+    for data in user_data_list:
+        if data["name"] == benutzer_name:
+            user_data = data
+            break
+
+    if user_data is None:
+        return HttpResponse(f"Der Benutzer mit dem Benutzernamen {benutzer_name} wurde nicht gefunden.")
+
+    # Lade gespeicherte Rezepte des Benutzers
+    saved_recipe_ids = user_data.get("gespeicherte_Rezepte", [])  # Annahme: gespeicherte_Rezepte ist eine Liste von Rezept-IDs
+
+    # Lade Rezepte aus der JSON-Datei
+    with open(rezept_filename, "r") as file:
+        rezepte_list = json.loads(file.read())
+
+    # Filtere die Rezepte, die der Benutzer gespeichert hat
+    gespeicherte_rezepte = [rezept for rezept in rezepte_list if rezept.get("id") in saved_recipe_ids]
+
+    return render(request, 'LeckerMeister/Kochbuch.html', {'gespeicherte_rezepte': gespeicherte_rezepte})
 
 def Profil(request):
     benutzer_name = request.session.get("benutzer_name")
@@ -212,7 +240,6 @@ def Profil(request):
 
     return render(request, "LeckerMeister/Profil.html", vars)
 
-
 def Datenschutz(request):
     benutzer_name = request.session.get("benutzer_name")
 
@@ -248,35 +275,41 @@ def Abmeldung(request):
 
     return redirect('Anmeldung')
 
-def load_rezept_data():
-    rezept_filename = "/var/www/django-projekt/LeckerMeister/Rezepte.json"
-    try:
-        with open(rezept_filename, 'r') as file:
-            rezepte = json.load(file)
-    except FileNotFoundError:
-        rezepte = []
-    return rezepte
+def save_recipe(request):
+    benutzer_name = request.session.get("benutzer_name")
+    
+    with open("/var/www/django-projekt/LeckerMeister/user_Data.json", "r") as file:
+        user_list = json.load(file)
+        for user in user_list:
+            if user['name'] == benutzer_name:
+                user['gespeicherte_Rezepte'] = []
+                # Assuming Rezept_id needs to be fetched from Rezepte.json
+                with open("/var/www/django-projekt/LeckerMeister/Rezepte.json", "r") as rezepte_file:
+                    rezepte_data = json.load(rezepte_file)
+                    for rezept in rezepte_data:
+                        user['gespeicherte_Rezepte'].append(rezept['id'])  # Adjust to match your JSON structure
 
-# Funktion zum Hinzufuegen eines Kommentars zu einem Rezept
-def add_comment(request, rezept_name):
-    if request.method == "POST":
-        kommentar = request.POST.get('kommentar')
+    with open("/var/www/django-projekt/LeckerMeister/user_Data.json", "w") as file:
+        json.dump(user_list, file, indent = 4)
+    
+    return redirect('Kochbuch')
+
+
+def remove_recipe(request):
+    benutzer_name = request.session.get("benutzer_name")
+    
+    with open("/var/www/django-projekt/LeckerMeister/user_Data.json", "r") as file:
+        user_list = json.load(file)
+        for user in user_list:
+            if user['name'] == benutzer_name:
+                user['gespeicherte_Rezepte'] = []
+                with open("/var/www/django-projekt/LeckerMeister/Rezepte.json", "r") as rezepte_file:
+                    rezepte_data = json.load(rezepte_file)
+                    for rezept in rezepte_data:
+                        if rezept['id'] in user['gespeicherte_Rezepte']:
+                            user['gespeicherte_Rezepte'].remove(rezept['id'])
+
+    with open("/var/www/django-projekt/LeckerMeister/user_Data.json", "w") as file:
+        json.dump(user_list, file, indent=4)
         
-        # Load the existing data
-        with open("/var/www/django-projekt/LeckerMeister/Rezepte.json", 'r') as file:
-            rezepte = json.load(file)
-        
-        # Find the correct recipe and add the comment
-        for rezept in rezepte:
-            if rezept['name'] == rezept_name:
-                rezept.setdefault('comments', []).append(kommentar)
-                break
-
-        # Save the updated data
-        with open('/var/www/django-projekt/LeckerMeister/Rezepte.json', 'w') as file:
-            json.dump(rezepte, file, indent=4)
-        
-        return redirect('Homeseite.html')  # Replace with your actual redirect target
-
-    return render(request, 'LeckerMeister/Homeseite.html')
-
+    return redirect('Kochbuch')
