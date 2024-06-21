@@ -1,106 +1,90 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LeckerMeister</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-    }
-    .logo-header {
-      width: 100%;
-      background-color: white;
-      text-align: center;
-    }
-    .logo {
-      width: 100px;
-      height: auto;
-    }
-    .main-header {
-      width: 100%;
-      background-color: #5f764f;
-      text-align: center;
-      padding: 20px 0;
-      position: relative;
-    }
-    .icons {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      position: relative;
-    }
-    .icons img {
-      width: 40px;
-      height: 40px;
-      transition: transform 0.3s ease;
-    }
-    .icons img:hover {
-      transform: scale(1.5);
-    }
-    .rezept-container {
-      position: relative;
-      background-color: white;
-      margin: 20px auto;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      max-width: 800px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    .rezept-container img {
-      display: block;
-      margin: 0 auto 20px;
-    }
-    .rezept-container + .rezept-container {
-      margin-top: 40px;
-      border-top: 2px solid #5f764f;
-      padding-top: 20px;
-    }
-    .footer {
-      background-color: #5f764f;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-    }
-    .footer-links a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      display: flex;
-      justify-content: space-around;
-    }
-    .save-icon,
-    .heart-icon {
-      position: absolute;
-      top: 10px;
-      font-size: 24px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-      border: none;
-      background-color: transparent;
-      padding: 0;
-      outline: none;
-      line-height: 1;
-    }
-    .heart-icon {
-      left: 10px;
-      color: #ccc;
-    }
-    .heart-icon.liked {
-      color: red;
-    }
-    .heart-counter {
-      position: absolute;
-      top: 10px;
-      left: 40px;
-      font-size: 24px;
-      color: #000;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mein Kochbuch</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #5f764f;
+        color: #ffffff;
+        padding: 20px;
+        margin: 0;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        margin-top: 20px;
+      }
+
+      .recipe {
+        background-color: #ffffff;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 10px;
+        color: #5f764f;
+      }
+
+      img {
+        max-width: 100%;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+
+      /* Header Styles */
+      .logo-header {
+        width: 100%;
+        background-color: white;
+        text-align: center;
+      }
+      .logo {
+        width: 100px;
+        height: auto;
+      }
+      .main-header {
+        width: 100%;
+        background-color: #5f764f;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+        cursor: pointer;
+      }
+      .icons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+      }
+      .icons img {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s ease;
+      }
+
+      .icons img:hover {
+        transform: scale(1.5);
+      }
+
+      /* Footer Styles */
+      .footer {
+        background-color: #5f764f;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+      .footer-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        display: flex;
+        justify-content: space-around;
+      }
+
     .save-icon {
       right: 10px;
       color: #ccc; 
@@ -112,136 +96,98 @@
     .heart-icon:hover {
       transform: scale(1.2);
     }
-    .toggle-input {
-      display: none;
-    }
-    .toggle-label {
-      display: block;
-      cursor: pointer;
-      padding: 10px;
-      background-color: #5f764f;
-      color: white;
-      text-align: center;
-      border-radius: 5px;
-      margin-top: 10px;
-    }
-    .toggle-label:hover {
-      background-color: #4d5f3d;
-    }
-    .toggle-input:checked + .toggle-label + .hidden-content {
-      display: block;
-    }
-    .hidden-content {
-      display: none;
-      margin-top: 20px;
-    }
-  </style>
-</head>
-<body>
-  <div class="logo-header">
-    <div>
-      <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
-    </div>
-  </div>
-  <header class="main-header">
-    <div class="icons">
-      <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
-      <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
-      <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
-      <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
-      <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
-    </div>
-  </header>
-  <h1 style="text-align: center; color: #5f764f">Entdecken Sie mit LeckerMeister die Kunst des Geniessens!</h1>
-  <h3 style="text-align: center; color: #5f764f">Finden Sie hier die aktuellsten Rezepte</h3>
- {% csrf_token %}
- {% for rezept in rezepte %}
-  <div class="rezept-container">
-    <button class="heart-icon" onclick="likeRecipe(this)">&#9829;</button>
-    <span class="heart-counter">0</span>
-    <button class="save-icon" onclick="saveRecipe(this)" data-recipe-id="{{ rezept.id }}">Speichern</button>
-    <h1 style="text-align: center">{{ rezept.name }}</h1>
-    <img src="/static/uploads/{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="300" height="200">
-    <input type="checkbox" id="toggle-{{ forloop.counter }}" class="toggle-input">
-    <label for="toggle-{{ forloop.counter }}" class="toggle-label">Klicken Sie hier!</label>
-    <div class="hidden-content">
-      <h2>Zutaten:</h2> 
-        <ul>
-          {% for zutat in rezept.Zutaten %}
-            <li>{{ zutat }}</li>
-          {% endfor %}
-        </ul>
-        <h2>Anleitung:</h2>
-        <ol>
-          {% for schritt in rezept.Zubereitung %}
-            <li>{{ schritt }}</li>
-          {% endfor %}
-        </ol>
-        <h2>Zubereitungszeit:</h2>
-        <p>{{ rezept.Zubereitungszeit }}</p>
-        <h2>Kategorie:</h2>
-        <p>{{ rezept.Kategorie }}</p>
+
+    </style>
+
+     <script>
+        function saveRecipe(button) {
+            const recipeId = button.getAttribute('data-recipe-id');
+
+            fetch(`/remove_recipe/${recipeId}/`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken'),
+                },
+                body: JSON.stringify({ recipe_id: recipeId }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    button.closest('.recipe').remove();
+                } else {
+                    alert('Fehler beim Entfernen des Rezepts.');
+                }
+            })
+            .catch(error => {
+                console.error('Fehler beim Loeschen des Rezepts:', error);
+                alert('Fehler beim Entfernen des Rezepts.');
+            });
+        }
+
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === name + '=') {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="logo-header">
+      <div>
+        <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
       </div>
     </div>
-  {% endfor %}
+    <header class="main-header">
+      <div class="icons">
+        <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
+        <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
+        <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
+        <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
+        <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
+      </div>
+    </header>
 
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="Datenschutz.html">Datenschutz</a>
-      <a href="Impressum.html">Impressum</a>
-      <a href="AGB.html">AGB</a>
-    </div>
-  </footer>
 
-  <script>
-    function likeRecipe(button) {
-      button.classList.toggle('liked');
-      const counter = button.nextElementSibling;
-      let count = parseInt(counter.textContent);
-      if (button.classList.contains('liked')) {
-        count += 1;
-      } else {
-        count -= 1;
-      }
-      counter.textContent = count;
-    }
+    <h1>Mein Kochbuch</h1>
+    {% csrf_token %}
+    {% for rezept in gespeicherte_rezepte %}
+        <div class="recipe">
+            <button class="save-icon" onclick="saveRecipe(this)" data-recipe-id="{{ rezept.id }}">Entfernen</button>
+            <h2>{{ rezept.name }}</h2>
+            <img src="{% static 'uploads/' %}{{ rezept.Rezeptbild }}" alt="Bild des Rezepts">
+            <h3>Zutaten:</h3>
+            <ul>
+                {% for zutat in rezept.Zutaten %}
+                    <li>{{ zutat }}</li>
+                {% endfor %}
+            </ul>
+            <h3>Anleitung:</h3>
+            <ol>
+                {% for schritt in rezept.Zubereitung %}
+                    <li>{{ schritt }}</li>
+                {% endfor %}
+            </ol>
+        </div>
+    {% endfor %}
 
-   function saveRecipe(button) {
-    const recipeId = button.getAttribute('data-recipe-id');
-    button.classList.toggle('saved');
-
-    fetch('/save_recipe/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-CSRFToken': getCookie('csrftoken')
-      },
-      body: JSON.stringify({ recipe_id: recipeId })
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.status === 'success') {
-        alert('Rezept gespeichert!');
-      } else {
-        alert('Fehler beim Speichern des Rezepts.');
-      }
-    });
-  }
-
-  function getCookie(name) {
-    let cookieValue = null;
-    if (document.cookie && document.cookie !== '') {
-      const cookies = document.cookie.split(';');
-      for (let i = 0; i < cookies.length; i++) {
-        const cookie = cookies[i].trim();
-        if (cookie.substring(0, name.length + 1) === (name + '=')) {
-          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-          break;
-        }
-      }
-    }
-    return cookieValue;
-  }
-  </script>
-</body>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="Datenschutz.html">Datenschutz</a>
+        <a href="Impressum.html">Impressum</a>
+        <a href="AGB.html">AGB</a>
+      </div>
+    </footer>
+  </body>
 </html>
