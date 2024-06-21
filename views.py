@@ -69,31 +69,47 @@ def Registrierung(request):
 
 
 def Homeseite(request):
-	benutzer_name = request.session.get("benutzer_name")
+    benutzer_name = request.session.get("benutzer_name")
 
-	if not benutzer_name:
-		return redirect("Anmeldung.html")
+    if not benutzer_name:
+        return redirect("Anmeldung.html")
 
+    user_data_file = "/var/www/django-projekt/LeckerMeister/user_Data.json"
+    rezept_file = "/var/www/django-projekt/LeckerMeister/Rezepte.json"
 
-	Rezept_Filename = "/var/www/django-projekt/LeckerMeister/Rezepte.json"
+    try:
+        # Laden der Benutzerdaten aus der JSON-Datei
+        with open(user_data_file, "r") as file:
+            user_data = json.load(file)
 
-	with open(Rezept_Filename, "r") as file: 
-		Rezept_list = json.loads(file.read())
+        # Laden der Rezepte aus der JSON-Datei
+        with open(rezept_file, "r") as file: 
+            rezept_list = json.load(file)
 
-	rezepte = []
-	for rezept in Rezept_list:
-		rezepte.append({
-			"Ersteller": rezept.get("Ersteller", ""),
-			"Rezeptbild": rezept.get("Rezeptbild", ""),
-			"name": rezept.get("name", ""),
-			"Zutaten": rezept.get("Zutaten", ""),
-			"Zubereitung": rezept.get("Zubereitung", ""),
-			"Zubereitungszeit": rezept.get("Zubereitungszeit", ""),
-			"Kategorie": rezept.get("Kategorie", ""),
-		})
+    except FileNotFoundError:
+        # Behandlung, falls eine Datei nicht gefunden wird
+        rezept_list = []
 
+    # Vorbereitung der Rezepte für die Darstellung in der Vorlage
+    rezepte = []
+    for rezept in rezept_list:
+        ersteller_name = rezept.get("Ersteller", "")
+        ersteller_data = next((user for user in user_data if user["name"] == ersteller_name), None)
+        
+        if ersteller_data:
+            rezepte.append({
+                "Ersteller": ersteller_name,
+                "Profilbild": ersteller_data.get("Profilbild", ""),  # Profilbild des Erstellers hinzufügen
+                "Rezeptbild": rezept.get("Rezeptbild", ""),
+                "name": rezept.get("name", ""),
+                "Zutaten": rezept.get("Zutaten", ""),
+                "Zubereitung": rezept.get("Zubereitung", ""),
+                "Zubereitungszeit": rezept.get("Zubereitungszeit", ""),
+                "Kategorie": rezept.get("Kategorie", ""),
+            })
 
-	return render(request, "LeckerMeister/Homeseite.html", {"rezepte": rezepte})
+    # Rendern der HTML-Seite mit den Rezepten als Kontext
+    return render(request, "LeckerMeister/Homeseite.html", {"rezepte": rezepte})
 
 
 def Suchseite(request):
