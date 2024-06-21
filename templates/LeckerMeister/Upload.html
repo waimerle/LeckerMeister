@@ -15,6 +15,7 @@
 
       h1 {
         text-align: center;
+        color: white
       }
 
       form {
@@ -131,7 +132,7 @@
     <form action="#" method="post" enctype="multipart/form-data">
       {% csrf_token %}
       <label for="recipeName">Name des Rezepts:</label>
-      <input type="text" id="recipeName" name="recipeName" required />
+      <input type="text" id="recipeName" name="recipeName" placeholder="Geben Sie den Namen des Rezepts ein" required />
 
       <label for="recipeImage">Bild hochladen:</label>
       <input
@@ -147,6 +148,7 @@
         id="ingredients"
         name="ingredients"
         rows="4"
+        placeholder="Liste der Zutaten. Trennen Sie die einzelnen Zutaten immer mit einem Komma."
         required
       ></textarea>
 
@@ -155,6 +157,7 @@
         id="instructions"
         name="instructions"
         rows="6"
+        placeholder="Schritte zur Zubereitung. Trennen Sie die einzelnen Schritte immer mit einem Komma."
         required
       ></textarea>
 
@@ -163,15 +166,15 @@
         id="preparationTime"
         name="preparationTime"
         rows="1"
+        placeholder="Zubereitungszeit in Minuten"
         required
       ></textarea>
 
-
       <label for="category">Kategorie:</label>
       <select id="category" name="category" required>
-        <option value="">Bitte Kategorie ausweahlen</option>
+        <option value="">Bitte Kategorie auswaehlen</option>
         <option value="Auflauf">Auflauf</option>
-        <option value="PizzaÂ¸">Pizza</option>
+        <option value="Pizza">Pizza</option>
         <option value="Reis- oder Nudelsalat">Reis- oder Nudelsalat</option>
         <option value="Salatdressing">Salatdressing</option>
         <option value="Tarte">Tarte</option>
@@ -194,8 +197,6 @@
         <option value="Gewuerzmischung">Gewuerzmischung</option>
         <option value="Pasten">Pasten</option>
         <option value="Studentenkueche">Studentenkueche</option>
-
-
       </select>
 
       <input type="submit" value="Rezept hochladen" />
@@ -211,4 +212,3 @@
 
   </body>
 </html>
-
