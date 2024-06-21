@@ -139,13 +139,13 @@ def Suchseite(request):
         rezepte = [rezept for rezept in rezepte if rezept.get('Kategorie') == category]
 
     # Vorbereitung der Rezepte für die Darstellung in der Vorlage
-    rezepte_formatted = []
+    rezepte = []
     for rezept in rezepte:
         ersteller_name = rezept.get("Ersteller", "")
         ersteller_data = next((user for user in user_data_list if user["name"] == ersteller_name), None)
 
         if ersteller_data:
-            rezepte_formatted.append({
+            rezepte.append({
                 "Ersteller": ersteller_name,
                 "Profilbild": ersteller_data.get("Profilbild", ""),  # Profilbild des Erstellers hinzufügen
                 "Rezeptbild": rezept.get("Rezeptbild", ""),
@@ -156,7 +156,7 @@ def Suchseite(request):
                 "Kategorie": rezept.get("Kategorie", ""),
             })
 
-    return render(request, "LeckerMeister/Suchseite.html", {"rezepte": rezepte_formatted})
+    return render(request, "LeckerMeister/Suchseite.html", {"rezepte": rezepte})
 
 def Upload(request):
     benutzer_name = request.session.get("benutzer_name")
