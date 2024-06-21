@@ -1,193 +1,220 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mein Kochbuch</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #5f764f;
-        color: #ffffff;
-        padding: 20px;
-        margin: 0;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mein Kochbuch</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #5f764f;
+      color: white;
+      padding: 20px;
+      margin: 0;
+    }
 
-      h1 {
-        text-align: center;
-      }
+    h1 {
+      text-align: center;
+    }
 
-      h2 {
-        margin-top: 20px;
-      }
 
-      .recipe {
-        background-color: #ffffff;
-        padding: 20px;
-        margin-top: 20px;
-        border-radius: 10px;
-        color: #5f764f;
-      }
+    .recipe {
+      background-color: #ffffff;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      color: black;
+      position: relative; /* added for positioning */
+    }
 
-      img {
-        max-width: 100%;
-        border-radius: 5px;
-        margin-top: 10px;
-      }
+    img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
 
-      /* Header Styles */
-      .logo-header {
-        width: 100%;
-        background-color: white;
-        text-align: center;
-      }
-      .logo {
-        width: 100px;
-        height: auto;
-      }
-      .main-header {
-        width: 100%;
-        background-color: #5f764f;
-        text-align: center;
-        padding: 20px 0;
-        position: relative;
-        cursor: pointer;
-      }
-      .icons {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        position: relative;
-      }
-      .icons img {
-        width: 40px;
-        height: 40px;
-        transition: transform 0.3s ease;
-      }
+    .toggle-input {
+      display: none;
+    }
 
-      .icons img:hover {
-        transform: scale(1.5);
-      }
+    .toggle-label {
+      display: block;
+      cursor: pointer;
+      padding: 10px;
+      background-color: #5f764f;
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
 
-      /* Footer Styles */
-      .footer {
-        background-color: #5f764f;
-        color: white;
-        text-align: center;
-        padding: 10px 0;
-      }
-      .footer-links a {
-        color: white;
-        text-decoration: none;
-        margin: 0 10px;
-        display: flex;
-        justify-content: space-around;
-      }
+    .toggle-label:hover {
+      background-color: #4d5f3d;
+    }
+
+    .toggle-input:checked + .toggle-label + .hidden-content {
+      display: block;
+    }
+
+    .hidden-content {
+      display: none;
+      margin-top: 20px;
+    }
+
+    /* Header Styles */
+    .logo-header {
+      width: 100%;
+      background-color: white;
+      text-align: center;
+    }
+    .logo {
+      width: 100px;
+      height: auto;
+    }
+    .main-header {
+      width: 100%;
+      background-color: #5f764f;
+      text-align: center;
+      padding: 20px 0;
+      position: relative;
+      cursor: pointer;
+    }
+    .icons {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+    }
+    .icons img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    .icons img:hover {
+      transform: scale(1.5);
+    }
+
+    /* Footer Styles */
+    .footer {
+      background-color: #5f764f;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      display: inline-block; /* changed from flex to inline-block */
+    }
 
     .save-icon {
+      position: absolute;
+      top: 10px;
       right: 10px;
-      color: #ccc; 
+      color: #ccc;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s ease;
     }
-    .save-icon.saved {
-      color: #ccc; 
-    }
-    .save-icon:hover,
-    .heart-icon:hover {
+    .save-icon:hover {
       transform: scale(1.2);
     }
+  </style>
 
-    </style>
+  <script>
+    function saveRecipe(button) {
+      const recipeId = button.getAttribute('data-recipe-id');
 
-     <script>
-        function saveRecipe(button) {
-            const recipeId = button.getAttribute('data-recipe-id');
-
-            fetch(`/remove_recipe/${recipeId}/`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRFToken': getCookie('csrftoken'),
-                },
-                body: JSON.stringify({ recipe_id: recipeId }),
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    button.closest('.recipe').remove();
-                } else {
-                    alert('Fehler beim Entfernen des Rezepts.');
-                }
-            })
-            .catch(error => {
-                console.error('Fehler beim Loeschen des Rezepts:', error);
-                alert('Fehler beim Entfernen des Rezepts.');
-            });
+      fetch(`/remove_recipe/${recipeId}/`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken': getCookie('csrftoken'),
+        },
+        body: JSON.stringify({ recipe_id: recipeId }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          button.closest('.recipe').remove();
+        } else {
+          alert('Fehler beim Entfernen des Rezepts.');
         }
+      })
+      .catch(error => {
+        console.error('Fehler beim Loeschen des Rezepts:', error);
+        alert('Fehler beim Entfernen des Rezepts.');
+      });
+    }
 
-        function getCookie(name) {
-            let cookieValue = null;
-            if (document.cookie && document.cookie !== '') {
-                const cookies = document.cookie.split(';');
-                for (let i = 0; i < cookies.length; i++) {
-                    const cookie = cookies[i].trim();
-                    if (cookie.substring(0, name.length + 1) === name + '=') {
-                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                        break;
-                    }
-                }
-            }
-            return cookieValue;
+    function getCookie(name) {
+      let cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+          const cookie = cookies[i].trim();
+          if (cookie.substring(0, name.length + 1) === name + '=') {
+            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+            break;
+          }
         }
-    </script>
-  </head>
-  <body>
-    <!-- Header -->
-    <div class="logo-header">
-      <div>
-        <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
+      }
+      return cookieValue;
+    }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <div class="logo-header">
+    <img class="logo" src="{% static 'Logo.jpg' %}" alt="Logo" />
+  </div>
+  <header class="main-header">
+    <div class="icons">
+      <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
+      <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
+      <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
+      <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
+      <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
+    </div>
+  </header>
+
+  <h1>Mein Kochbuch</h1>
+  {% csrf_token %}
+  {% for rezept in gespeicherte_rezepte %}
+    <div class="recipe">
+      <button class="save-icon" onclick="saveRecipe(this)" data-recipe-id="{{ rezept.id }}">Entfernen</button>
+      <h1>{{ rezept.name }}</h1>
+      <img src="{% static 'uploads/' %}{{ rezept.Rezeptbild }}" alt="Bild des Rezepts">
+      <input type="checkbox" id="toggle-{{ forloop.counter }}" class="toggle-input">
+      <label for="toggle-{{ forloop.counter }}" class="toggle-label">Klicken Sie hier</label>
+      <div class="hidden-content">
+        <h2>Zutaten:</h2>
+        <ul>
+          {% for zutat in rezept.Zutaten %}
+            <li>{{ zutat }}</li>
+          {% endfor %}
+        </ul>
+        <h2>Anleitung:</h2>
+        <ol>
+          {% for schritt in rezept.Zubereitung %}
+            <li>{{ schritt }}</li>
+          {% endfor %}
+        </ol>
       </div>
     </div>
-    <header class="main-header">
-      <div class="icons">
-        <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
-        <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
-        <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
-        <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
-        <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
-      </div>
-    </header>
+  {% endfor %}
 
-
-    <h1>Mein Kochbuch</h1>
-    {% csrf_token %}
-    {% for rezept in gespeicherte_rezepte %}
-        <div class="recipe">
-            <button class="save-icon" onclick="saveRecipe(this)" data-recipe-id="{{ rezept.id }}">Entfernen</button>
-            <h2>{{ rezept.name }}</h2>
-            <img src="{% static 'uploads/' %}{{ rezept.Rezeptbild }}" alt="Bild des Rezepts">
-            <h3>Zutaten:</h3>
-            <ul>
-                {% for zutat in rezept.Zutaten %}
-                    <li>{{ zutat }}</li>
-                {% endfor %}
-            </ul>
-            <h3>Anleitung:</h3>
-            <ol>
-                {% for schritt in rezept.Zubereitung %}
-                    <li>{{ schritt }}</li>
-                {% endfor %}
-            </ol>
-        </div>
-    {% endfor %}
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-links">
-        <a href="Datenschutz.html">Datenschutz</a>
-        <a href="Impressum.html">Impressum</a>
-        <a href="AGB.html">AGB</a>
-      </div>
-    </footer>
-  </body>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="Datenschutz.html">Datenschutz</a>
+      <a href="Impressum.html">Impressum</a>
+      <a href="AGB.html">AGB</a>
+    </div>
+  </footer>
+</body>
 </html>
