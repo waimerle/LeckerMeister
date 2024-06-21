@@ -287,7 +287,7 @@ def save_recipe(request):
                 with open("/var/www/django-projekt/LeckerMeister/Rezepte.json", "r") as rezepte_file:
                     rezepte_data = json.load(rezepte_file)
                     for rezept in rezepte_data:
-                        user['gespeicherte_Rezepte'].append(rezept['id'])
+                        user['gespeicherte_Rezepte'].append(rezept['id'])  # Adjust to match your JSON structure
 
     with open("/var/www/django-projekt/LeckerMeister/user_Data.json", "w") as file:
         json.dump(user_list, file, indent = 4)
