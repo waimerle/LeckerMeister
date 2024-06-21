@@ -1,6 +1,7 @@
 [
     {
-	"id": 2,
+        "Ersteller": "Anton",
+        "id": 2,
         "Rezeptbild": "Spaghetti_Napoli.webp",
         "name": "Spaghetti",
         "Zutaten": [
@@ -14,11 +15,11 @@
             "Warten, bis Nudeln die gewuenschte Bissfestigkeit erreicht haben."
         ],
         "Zubereitungszeit": "12 Minuten",
-        "Kategorie": "Pasten",
-	"comments": []
+        "Kategorie": "Pasten"
     },
     {
-	"id": 1,
+        "Ersteller": "Carla",
+        "id": 1,
         "Rezeptbild": "Reis.jpg",
         "name": "Reis",
         "Zutaten": [
@@ -30,8 +31,6 @@
             "Wasser zum kochen bringen"
         ],
         "Zubereitungszeit": "12 Minuten",
-        "Kategorie": "Eis",
-	"comments": []
+        "Kategorie": "Eis"
     }
 ]
-
