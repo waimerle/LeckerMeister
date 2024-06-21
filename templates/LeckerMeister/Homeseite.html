@@ -162,6 +162,8 @@
     <button class="save-icon" onclick="saveRecipe(this)" data-recipe-id="{{ rezept.id }}">Speichern</button>
     <h1 style="text-align: center">{{ rezept.name }}</h1>
     <p>Erstellt von: {{ rezept.Ersteller }}</p>
+    <p> {{ rezept.Ersteller.Bild }} </p>
+    <img src="/static/users/{{ rezept.Profilbild }}" alt="Profilbild von {{ rezept.Ersteller }}" width="50" height="50">
     <img src="/static/uploads/{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="300" height="200">
     <input type="checkbox" id="toggle-{{ forloop.counter }}" class="toggle-input">
     <label for="toggle-{{ forloop.counter }}" class="toggle-label">Klicken Sie hier!</label>
