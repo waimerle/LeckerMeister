@@ -83,6 +83,7 @@ def Homeseite(request):
 	rezepte = []
 	for rezept in Rezept_list:
 		rezepte.append({
+			"Ersteller": rezept.get("Ersteller", ""),
 			"Rezeptbild": rezept.get("Rezeptbild", ""),
 			"name": rezept.get("name", ""),
 			"Zutaten": rezept.get("Zutaten", ""),
@@ -138,6 +139,7 @@ def Upload(request):
         kategorie = request.POST.get('category')
 
         neues_rezept = {
+            "Ersteller": benutzer_name,
             "Rezeptbild": rezept_bild.name,  # Bildname speichern, tatsÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤chliche Handhabung erforderlich
             "name": rezept_name,
             "Zutaten": zutaten,
