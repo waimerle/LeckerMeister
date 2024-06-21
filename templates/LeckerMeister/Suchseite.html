@@ -28,6 +28,7 @@
         color: white;
         border: none;
         border-radius: 10px;
+
         cursor: pointer;
         transition: background-color 0.3s ease;      
       }
@@ -82,6 +83,10 @@
         border-top: 2px solid #5f764f;
         padding-top: 20px;
       }
+      .rezept-container img {
+        display: block; /* Macht das Bild zu einem Blockelement */
+        margin: 0 auto; /* Zentriert das Bild horizontal */
+      }
  
       /* Search Styles */
       .search-container {
@@ -126,6 +131,30 @@
         display: flex;
         justify-content: space-around;
       }
+     .toggle-input {
+      display: none;
+    }
+    .toggle-label {
+      display: block;
+      cursor: pointer;
+      padding: 10px;
+      background-color: #5f764f;
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .toggle-label:hover {
+      background-color: #4d5f3d;
+    }
+    .toggle-input:checked + .toggle-label + .hidden-content {
+      display: block;
+    }
+    .hidden-content {
+      display: none;
+      margin-top: 20px;
+    }
+
     </style>
   </head>
   <body>
@@ -182,24 +211,29 @@
       <h2 style="text-align: center; color: #5f764f">Suchergebnisse:</h2>
       {% for rezept in rezepte %}
         <div class="rezept-container">
-          <h1>{{ rezept.name }}</h1>
-          <img src="{% static 'uploads/' %}{{ rezept.Rezeptbild }}" alt="{{ rezept.name }}" width="400" height="300">
-          <h2>Zutaten:</h2>
-          <ul>
-            {% for zutat in rezept.Zutaten %}
-              <li>{{ zutat }}</li>
-            {% endfor %}
-          </ul>
-          <h2>Anleitung:</h2>
-          <ol>
-            {% for schritt in rezept.Zubereitung %}
-              <li>{{ schritt }}</li>
-            {% endfor %}
-          </ol>
-          <h2>Zubereitungszeit:</h2>
-          <p>{{ rezept.Zubereitungszeit }}</p>
-          <h2>Kategorie:</h2>
-          <p>{{ rezept.Kategorie }}</p>
+          <h1 style="text-align: center" >{{ rezept.name }}</h1>
+          <img src="{% static 'uploads/' %}{{ rezept.Rezeptbild }}" alt="{{ rezept.name }}" width="300" height="200">
+          <input type="checkbox" id="toggle-{{ forloop.counter }}" class="toggle-input">
+          <label for="toggle-{{ forloop.counter }}" class="toggle-label">Klicken Sie hier!</label>
+
+          <div class="hidden-content">
+           <h2>Zutaten:</h2>
+           <ul>
+             {% for zutat in rezept.Zutaten %}
+               <li>{{ zutat }}</li>
+             {% endfor %}
+           </ul>
+           <h2>Anleitung:</h2>
+           <ol>
+             {% for schritt in rezept.Zubereitung %}
+               <li>{{ schritt }}</li>
+             {% endfor %}
+           </ol>
+           <h2>Zubereitungszeit:</h2>
+           <p>{{ rezept.Zubereitungszeit }}</p>
+           <h2>Kategorie:</h2>
+           <p>{{ rezept.Kategorie }}</p>
+         </div>
         </div>
       {% endfor %}
     {% else %}
