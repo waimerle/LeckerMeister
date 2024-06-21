@@ -119,7 +119,7 @@
       color: white;
       text-decoration: none;
       margin: 0 10px;
-      display: inline-block; /* changed from flex to inline-block */
+      display: space-around
     }
 
     .save-icon {
@@ -198,6 +198,11 @@
   {% csrf_token %}
   {% for rezept in gespeicherte_rezepte %}
     <div class="recipe-container">
+      <div style="display: flex; align-items: center; margin-bottom: 10px;">
+      <img src="/static/users/{{ rezept.Profilbild }}" alt="Profilbild von {{ rezept.Ersteller }}" width="40" height="40" style="border-radius: 50%; margin-right: 10px;">
+      <p style="color:black" >Erstellt von: {{ rezept.Ersteller }}</p>
+    </div>
+
       <div class="recipe">
         <button class="save-icon" onclick="saveRecipe(this)" data-recipe-id="{{ rezept.id }}">Entfernen</button>
         <h1>{{ rezept.name }}</h1>
