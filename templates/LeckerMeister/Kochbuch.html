@@ -18,20 +18,32 @@
       text-align: center;
     }
 
+    .recipe-container {
+      position: relative;
+      background-color: white;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      max-width: 800px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
     .recipe {
       background-color: #ffffff;
-      padding: 20px;
-      margin-top: 20px;
-      border-radius: 10px;
+      
+      
       color: black;
-      position: relative; /* added for positioning */
+      width: 100%;
     }
 
     img {
       max-width: 100%;
       border-radius: 5px;
       margin-top: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .toggle-input {
@@ -185,25 +197,27 @@
   <h1>Mein Kochbuch</h1>
   {% csrf_token %}
   {% for rezept in gespeicherte_rezepte %}
-    <div class="recipe">
-      <button class="save-icon" onclick="saveRecipe(this)" data-recipe-id="{{ rezept.id }}">Entfernen</button>
-      <h1>{{ rezept.name }}</h1>
-      <img src="{% static 'uploads/' %}{{ rezept.Rezeptbild }}" alt="Bild des Rezepts">
-      <input type="checkbox" id="toggle-{{ forloop.counter }}" class="toggle-input">
-      <label for="toggle-{{ forloop.counter }}" class="toggle-label">Klicken Sie hier</label>
-      <div class="hidden-content">
-        <h2>Zutaten:</h2>
-        <ul>
-          {% for zutat in rezept.Zutaten %}
-            <li>{{ zutat }}</li>
-          {% endfor %}
-        </ul>
-        <h2>Anleitung:</h2>
-        <ol>
-          {% for schritt in rezept.Zubereitung %}
-            <li>{{ schritt }}</li>
-          {% endfor %}
-        </ol>
+    <div class="recipe-container">
+      <div class="recipe">
+        <button class="save-icon" onclick="saveRecipe(this)" data-recipe-id="{{ rezept.id }}">Entfernen</button>
+        <h1>{{ rezept.name }}</h1>
+        <img src="{% static 'uploads/' %}{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="300" height="200" >
+        <input type="checkbox" id="toggle-{{ forloop.counter }}" class="toggle-input">
+        <label for="toggle-{{ forloop.counter }}" class="toggle-label">Klicken Sie hier</label>
+        <div class="hidden-content">
+          <h2>Zutaten:</h2>
+          <ul>
+            {% for zutat in rezept.Zutaten %}
+              <li>{{ zutat }}</li>
+            {% endfor %}
+          </ul>
+          <h2>Anleitung:</h2>
+          <ol>
+            {% for schritt in rezept.Zubereitung %}
+              <li>{{ schritt }}</li>
+            {% endfor %}
+          </ol>
+        </div>
       </div>
     </div>
   {% endfor %}
