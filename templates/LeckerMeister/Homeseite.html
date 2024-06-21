@@ -74,16 +74,16 @@
       display: flex;
       justify-content: space-around;
     }
-    .save-icon,
-        .save-icon {
+   
+     .save-icon {
       right: 10px;
-      color: #ccc; 
+      color: #5f764f; 
     }
     .save-icon.saved {
       color: #ccc; 
     }
     .save-icon:hover,
-    .heart-icon:hover {
+     {
       transform: scale(1.2);
     }
     .toggle-input {
@@ -157,7 +157,7 @@
         <p>{{ rezept.Zubereitungszeit }}</p>
         <h2>Kategorie:</h2>
         <p>{{ rezept.Kategorie }}</p>
-       <button class="save-icon" onclick="saveRecipe(this)" data-recipe-id="{{ rezept.id }}">Speichern</button>
+       <button class="save-icon" onclick="saveRecipe(this)" data-recipe-id="{{ rezept.id }}">Speichern in Mein Kochbuch!</button>
       </div>
 
     </div>
@@ -212,4 +212,3 @@
   </script>
 </body>
 </html>
-
