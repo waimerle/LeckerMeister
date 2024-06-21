@@ -283,33 +283,33 @@ def save_recipe(request):
         for user in user_list:
             if user['name'] == benutzer_name:
                 user['gespeicherte_Rezepte'] = []
-                # Assuming Rezept_id needs to be fetched from Rezepte.json
+                
                 with open("/var/www/django-projekt/LeckerMeister/Rezepte.json", "r") as rezepte_file:
                     rezepte_data = json.load(rezepte_file)
                     for rezept in rezepte_data:
-                        user['gespeicherte_Rezepte'].append(rezept['id'])  # Adjust to match your JSON structure
+                        user['gespeicherte_Rezepte'].append(rezept['id'])
 
     with open("/var/www/django-projekt/LeckerMeister/user_Data.json", "w") as file:
         json.dump(user_list, file, indent = 4)
     
     return redirect('Kochbuch')
 
-
-def remove_recipe(request):
+def remove_recipe(request, recipe_id):
     benutzer_name = request.session.get("benutzer_name")
     
-    with open("/var/www/django-projekt/LeckerMeister/user_Data.json", "r") as file:
-        user_list = json.load(file)
-        for user in user_list:
-            if user['name'] == benutzer_name:
-                user['gespeicherte_Rezepte'] = []
-                with open("/var/www/django-projekt/LeckerMeister/Rezepte.json", "r") as rezepte_file:
-                    rezepte_data = json.load(rezepte_file)
-                    for rezept in rezepte_data:
-                        if rezept['id'] in user['gespeicherte_Rezepte']:
-                            user['gespeicherte_Rezepte'].remove(rezept['id'])
+    if request.method == 'POST':
+        if recipe_id:
+            with open("/var/www/django-projekt/LeckerMeister/user_Data.json", "r") as file:
+                user_list = json.load(file)
+                for user in user_list:
+                    if user['name'] == benutzer_name:
+                        if recipe_id in user['gespeicherte_Rezepte']:
+                            user['gespeicherte_Rezepte'].remove(recipe_id)
+                            break
 
-    with open("/var/www/django-projekt/LeckerMeister/user_Data.json", "w") as file:
-        json.dump(user_list, file, indent=4)
-        
-    return redirect('Kochbuch')
+            with open("/var/www/django-projekt/LeckerMeister/user_Data.json", "w") as file:
+                json.dump(user_list, file, indent=4)
+
+            return JsonResponse({'success': True})
+    
+    return JsonResponse({'success': False})
