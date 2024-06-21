@@ -119,9 +119,13 @@ def Suchseite(request):
         return redirect("Anmeldung.html")
 
     Rezept_Filename = "/var/www/django-projekt/LeckerMeister/Rezepte.json"
+    user_data_filename = "/var/www/django-projekt/LeckerMeister/user_Data.json"
 
     with open(Rezept_Filename, "r") as file:
         Rezept_list = json.loads(file.read())
+
+    with open(user_data_filename, "r") as file:
+        user_data_list = json.load(file)
 
     query = request.GET.get('query')
     category = request.GET.get('category')
@@ -134,7 +138,25 @@ def Suchseite(request):
     if category:
         rezepte = [rezept for rezept in rezepte if rezept.get('Kategorie') == category]
 
-    return render(request, "LeckerMeister/Suchseite.html", {"rezepte": rezepte})
+    # Vorbereitung der Rezepte für die Darstellung in der Vorlage
+    rezepte_formatted = []
+    for rezept in rezepte:
+        ersteller_name = rezept.get("Ersteller", "")
+        ersteller_data = next((user for user in user_data_list if user["name"] == ersteller_name), None)
+
+        if ersteller_data:
+            rezepte_formatted.append({
+                "Ersteller": ersteller_name,
+                "Profilbild": ersteller_data.get("Profilbild", ""),  # Profilbild des Erstellers hinzufügen
+                "Rezeptbild": rezept.get("Rezeptbild", ""),
+                "name": rezept.get("name", ""),
+                "Zutaten": rezept.get("Zutaten", ""),
+                "Zubereitung": rezept.get("Zubereitung", ""),
+                "Zubereitungszeit": rezept.get("Zubereitungszeit", ""),
+                "Kategorie": rezept.get("Kategorie", ""),
+            })
+
+    return render(request, "LeckerMeister/Suchseite.html", {"rezepte": rezepte_formatted})
 
 def Upload(request):
     benutzer_name = request.session.get("benutzer_name")
