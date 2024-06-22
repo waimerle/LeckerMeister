@@ -352,8 +352,10 @@ def save_recipe(request, recipe_id):
             if 'gespeicherte_Rezepte' not in user:
                 user['gespeicherte_Rezepte'] = []
             
-            # FÃ¼ge die Rezept-ID zur Liste der gespeicherten Rezepte hinzu
-            user['gespeicherte_Rezepte'].append(int(recipe_id))  # Falls die recipe_id eine Zeichenkette ist, in eine Ganzzahl umwandeln
+            if int(recipe_id) not in user['gespeicherte_Rezepte']:
+                user['gespeicherte_Rezepte'].append(int(recipe_id))
+
+            break
 
     # Speichere die aktualisierten Benutzerdaten zurueck in die JSON-Datei
     with open(user_data_file, "w") as file:
