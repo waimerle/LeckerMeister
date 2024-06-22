@@ -16,5 +16,6 @@ urlpatterns = [
 	path("Impressum.html", app_views.Impressum, name='Impressum'),
 	path('save_recipe/<int:recipe_id>/', app_views.save_recipe, name='save_recipe'),
 	path('remove_recipe/<int:recipe_id>/', views.remove_recipe, name='remove_recipe'),
+	path('like_rezept/<int:recipe_id>/', views.like_rezept, name='like_rezept'),
 
 ]
