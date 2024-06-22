@@ -82,8 +82,7 @@
     .save-icon.saved {
       color: #ccc; 
     }
-    .save-icon:hover,
-     {
+    .save-icon:hover {
       transform: scale(1.2);
     }
     .toggle-input {
@@ -119,29 +118,29 @@
   </div>
   <header class="main-header">
     <div class="icons">
-      <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
-      <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
-      <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
-      <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
-      <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
+      <a href="{% url 'Homeseite' %}"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
+      <a href="{% url 'Suchseite' %}"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
+      <a href="{% url 'Upload' %}"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
+      <a href="{% url 'Kochbuch' %}"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
+      <a href="{% url 'Profil' %}"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
     </div>
   </header>
-  <h1 style="text-align: center; color: #5f764f">Entdecken Sie mit LeckerMeister die Kunst des Geniessens!</h1>
+  <h1 style="text-align: center; color: #5f764f">Entdecken Sie mit LeckerMeister die Kunst des GenieÃŸens!</h1>
   <h3 style="text-align: center; color: #5f764f">Finden Sie hier die aktuellsten Rezepte</h3>
- {% csrf_token %}
- {% for rezept in rezepte %}
-  <div class="rezept-container">
-    <div style="display: flex; align-items: center; margin-bottom: 10px;">
-      <img src="/static/users/{{ rezept.Profilbild }}" alt="Profilbild von {{ rezept.Ersteller }}" width="40" height="40" style="border-radius: 50%; margin-right: 10px;">
-      <p >Erstellt von: {{ rezept.Ersteller }}</p>
-    </div>
-    <h1 style="text-align: center">{{ rezept.name }}</h1>
-    <img src="/static/uploads/{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="300" height="200">
-    <input type="checkbox" id="toggle-{{ forloop.counter }}" class="toggle-input">
-    <label for="toggle-{{ forloop.counter }}" class="toggle-label">Klicken Sie hier!</label>
+  {% csrf_token %}
+  {% for rezept in rezepte %}
+    <div class="rezept-container">
+      <div style="display: flex; align-items: center; margin-bottom: 10px;">
+        <img src="/static/users/{{ rezept.Profilbild }}" alt="Profilbild von {{ rezept.Ersteller }}" width="40" height="40" style="border-radius: 50%; margin-right: 10px;">
+        <p >Erstellt von: {{ rezept.Ersteller }}</p>
+      </div>
+      <h1 style="text-align: center">{{ rezept.name }}</h1>
+      <img src="/static/uploads/{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="300" height="200">
+      <input type="checkbox" id="toggle-{{ forloop.counter }}" class="toggle-input">
+      <label for="toggle-{{ forloop.counter }}" class="toggle-label">Klicken Sie hier!</label>
 
-    <div class="hidden-content">
-      <h2>Zutaten:</h2> 
+      <div class="hidden-content">
+        <h2>Zutaten:</h2> 
         <ul>
           {% for zutat in rezept.Zutaten %}
             <li>{{ zutat }}</li>
@@ -157,58 +156,61 @@
         <p>{{ rezept.Zubereitungszeit }}</p>
         <h2>Kategorie:</h2>
         <p>{{ rezept.Kategorie }}</p>
-       <button class="save-icon" onclick="saveRecipe(this)" data-recipe-id="{{ rezept.id }}">Speichern in Mein Kochbuch!</button>
+        <button class="save-icon" onclick="saveRecipe(this)" data-recipe-id="{{ rezept.id }}">Speichern in Mein Kochbuch!</button>
       </div>
-
     </div>
   {% endfor %}
 
   <footer class="footer">
     <div class="footer-links">
-      <a href="Datenschutz.html">Datenschutz</a>
-      <a href="Impressum.html">Impressum</a>
-      <a href="AGB.html">AGB</a>
+      <a href="{% url 'Datenschutz' %}">Datenschutz</a>
+      <a href="{% url 'Impressum' %}">Impressum</a>
+      <a href="{% url 'AGB' %}">AGB</a>
     </div>
   </footer>
 
   <script>
-   
-   function saveRecipe(button) {
-    const recipeId = button.getAttribute('data-recipe-id');
-    button.classList.toggle('saved');
+    function saveRecipe(button) {
+      const recipeId = button.getAttribute('data-recipe-id');
 
-    fetch('/save_recipe/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-CSRFToken': getCookie('csrftoken')
-      },
-      body: JSON.stringify({ recipe_id: recipeId })
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.status === 'success') {
-        alert('Rezept gespeichert!');
-      } else {
-        alert('Fehler beim Speichern des Rezepts.');
-      }
-    });
-  }
-
-  function getCookie(name) {
-    let cookieValue = null;
-    if (document.cookie && document.cookie !== '') {
-      const cookies = document.cookie.split(';');
-      for (let i = 0; i < cookies.length; i++) {
-        const cookie = cookies[i].trim();
-        if (cookie.substring(0, name.length + 1) === (name + '=')) {
-          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-          break;
-        }
-      }
+      fetch('/save_recipe/' + recipeId + '/', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+              'X-CSRFToken': getCookie('csrftoken')
+          },
+          body: JSON.stringify({ recipe_id: recipeId })  // JSON-Daten mit der Rezept-ID
+      })
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          return response.json();
+      })
+      .then(data => {
+          if (data.status === 'success') {
+              alert('Rezept gespeichert!');
+              button.classList.add('saved');  // Optional: Button-Stil Ã¤ndern, um gespeicherten Zustand anzuzeigen
+          } else {
+              throw new Error('Fehler beim Speichern des Rezepts');
+          }
+      })
     }
-    return cookieValue;
-  }
+
+    function getCookie(name) {
+      let cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+          const cookies = document.cookie.split(';');
+          for (let i = 0; i < cookies.length; i++) {
+              const cookie = cookies[i].trim();
+              if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                  cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                  break;
+              }
+          }
+      }
+      return cookieValue;
+    }
   </script>
 </body>
 </html>
