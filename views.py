@@ -175,16 +175,31 @@ def Upload(request):
         zubereitung = [step.strip() for step in zubereitung_str.split(',')]  # Zubereitung aufteilen und Leerzeichen entfernen
         zubereitungszeit = request.POST.get('preparationTime')
         kategorie = request.POST.get('category')
+	    
+        rezept_filename = "/var/www/django-projekt/LeckerMeister/Rezepte.json"
+        try:
+            with open(rezept_filename, 'r') as file:
+                rezepte = json.load(file)
+        except FileNotFoundError:
+            rezepte = []
+
+        # ID für das neue Rezept bestimmen
+        if rezepte:
+            neue_id = max(rezept.get("id", 0) for rezept in rezepte) + 1
+        else:
+            neue_id = 1
 
         neues_rezept = {
+            "id": neue_id,
             "Ersteller": benutzer_name,
-            "Rezeptbild": rezept_bild.name,  # Bildname speichern, tatsÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤chliche Handhabung erforderlich
+            "Rezeptbild": rezept_bild.name,  
             "name": rezept_name,
             "Zutaten": zutaten,
             "Zubereitung": zubereitung,
             "Zubereitungszeit": zubereitungszeit,
             "Kategorie": kategorie
         }
+
 
         rezept_filename = "/var/www/django-projekt/LeckerMeister/Rezepte.json"
         try:
