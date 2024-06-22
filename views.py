@@ -90,7 +90,7 @@ def Homeseite(request):
         # Behandlung, falls eine Datei nicht gefunden wird
         rezept_list = []
 
-    # Vorbereitung der Rezepte fÃƒÂ¼r die Darstellung in der Vorlage
+    # Vorbereitung der Rezepte fÃƒÆ’Ã‚Â¼r die Darstellung in der Vorlage
     rezepte = []
     for rezept in rezept_list:
         ersteller_name = rezept.get("Ersteller", "")
@@ -100,13 +100,14 @@ def Homeseite(request):
             rezepte.append({
 		"id": rezept.get("id", ""),
                 "Ersteller": ersteller_name,
-                "Profilbild": ersteller_data.get("Profilbild", ""),  # Profilbild des Erstellers hinzufÃƒÂ¼gen
+                "Profilbild": ersteller_data.get("Profilbild", ""),  # Profilbild des Erstellers hinzufÃƒÆ’Ã‚Â¼gen
                 "Rezeptbild": rezept.get("Rezeptbild", ""),
                 "name": rezept.get("name", ""),
                 "Zutaten": rezept.get("Zutaten", ""),
                 "Zubereitung": rezept.get("Zubereitung", ""),
                 "Zubereitungszeit": rezept.get("Zubereitungszeit", ""),
                 "Kategorie": rezept.get("Kategorie", ""),
+		"likes": rezept.get("likes", ""),
             })
 
     # Rendern der HTML-Seite mit den Rezepten als Kontext
@@ -139,7 +140,7 @@ def Suchseite(request):
     if category:
         rezepte = [rezept for rezept in rezepte if rezept.get('Kategorie') == category]
 
-    # Vorbereitung der Rezepte fÃƒÂ¼r die Darstellung in der Vorlage
+    # Vorbereitung der Rezepte fÃƒÆ’Ã‚Â¼r die Darstellung in der Vorlage
     rezepte_formatted = []
     for rezept in rezepte:
         ersteller_name = rezept.get("Ersteller", "")
@@ -148,7 +149,7 @@ def Suchseite(request):
         if ersteller_data:
             rezepte_formatted.append({
                 "Ersteller": ersteller_name,
-                "Profilbild": ersteller_data.get("Profilbild", ""),  # Profilbild des Erstellers hinzufÃƒÂ¼gen
+                "Profilbild": ersteller_data.get("Profilbild", ""),  # Profilbild des Erstellers hinzufÃƒÆ’Ã‚Â¼gen
                 "Rezeptbild": rezept.get("Rezeptbild", ""),
                 "name": rezept.get("name", ""),
                 "Zutaten": rezept.get("Zutaten", ""),
@@ -184,7 +185,7 @@ def Upload(request):
         except FileNotFoundError:
             rezepte = []
 
-        # ID fÃƒÂ¼r das neue Rezept bestimmen
+        # ID fÃƒÆ’Ã‚Â¼r das neue Rezept bestimmen
         if rezepte:
             neue_id = max(rezept.get("id", 0) for rezept in rezepte) + 1
         else:
@@ -385,3 +386,60 @@ def remove_recipe(request, recipe_id):
     return JsonResponse({'success': False})
 
 
+def like_rezept(request, recipe_id):
+    benutzer_name = request.session.get("benutzer_name")
+
+    # Laden der Benutzerdaten aus der JSON-Datei
+    with open('/var/www/django-projekt/LeckerMeister/user_Data.json', 'r') as user_file:
+        user_list = json.load(user_file)
+
+    # Laden der Rezeptdaten aus der JSON-Datei
+    with open('/var/www/django-projekt/LeckerMeister/Rezepte.json', 'r') as rezepte_file:
+        rezepte_data = json.load(rezepte_file)
+    
+    found_user = False  # Flag zur Überprüfung, ob der Benutzer gefunden wurde
+
+    # Durchsuchen der Benutzerliste nach dem aktuellen Benutzer
+    for user in user_list:
+        if user['name'] == benutzer_name:
+            found_user = True
+            if 'gelikte_rezepte' not in user:
+                user['gelikte_rezepte'] = []
+            
+            # Prüfen, ob das Rezept bereits geliked wurde
+            if int(recipe_id) not in user['gelikte_rezepte']:
+                user['gelikte_rezepte'].append(int(recipe_id))
+
+                # Erhöhe die Anzahl der Likes für das Rezept
+                for rezept in rezepte_data:
+                    if rezept['id'] == int(recipe_id):
+                        if 'likes' not in rezept:
+                            rezept['likes'] = 0
+                        rezept['likes'] += 1
+                        break
+            else:
+                # Wenn das Rezept bereits geliked wurde, entferne den Like
+                user['gelikte_rezepte'].remove(int(recipe_id))
+
+                # Reduziere die Anzahl der Likes für das Rezept
+                for rezept in rezepte_data:
+                    if rezept['id'] == int(recipe_id):
+                        if 'likes' not in rezept:
+                            rezept['likes'] = 0
+                        rezept['likes'] -= 1
+                        break
+
+            break
+
+    # Wenn der Benutzer nicht gefunden wurde, Fehlermeldung ausgeben und zurückgeben
+    if not found_user:
+        print(f"Benutzer '{benutzer_name}' wurde nicht gefunden.")
+        return HttpResponse(status=404)  # Beispiel: Fehlerstatus zurückgeben
+
+    # Speichere die aktualisierten Benutzerdaten zurück in die JSON-Datei
+    with open('/var/www/django-projekt/LeckerMeister/user_Data.json', 'w') as user_file:
+        json.dump(user_list, user_file, indent=4)
+    
+    # Speichere die aktualisierten Rezeptdaten zurück in die JSON-Datei
+    with open('/var/www/django-projekt/LeckerMeister/Rezepte.json', 'w') as rezepte_file:
+        json.dump(rezepte_data, rezepte_file, indent=4)
