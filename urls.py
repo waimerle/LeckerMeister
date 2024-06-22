@@ -11,10 +11,10 @@ urlpatterns = [
 	path("Upload.html", app_views.Upload, name='Upload'),
 	path("Kochbuch.html", app_views.Kochbuch, name='Kochbuch'),
 	path("Profil.html", app_views.Profil, name='Profil'),
-	path("AGB.html", app_views.AGB),
-	path("Datenschutz.html", app_views.Datenschutz),
-	path("Impressum.html", app_views.Impressum),
-	path('save_recipe/', app_views.save_recipe, name='save_recipe'),
+	path("AGB.html", app_views.AGB, name='AGB'),
+	path("Datenschutz.html", app_views.Datenschutz, name='Datenschutz'),
+	path("Impressum.html", app_views.Impressum, name='Impressum'),
+	path('save_recipe/<int:recipe_id>/', app_views.save_recipe, name='save_recipe'),
 	path('remove_recipe/<int:recipe_id>/', views.remove_recipe, name='remove_recipe'),
 
 ]
