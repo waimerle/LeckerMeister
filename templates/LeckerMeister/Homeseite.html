@@ -133,6 +133,9 @@
       <div style="display: flex; align-items: center; margin-bottom: 10px;">
         <img src="/static/users/{{ rezept.Profilbild }}" alt="Profilbild von {{ rezept.Ersteller }}" width="40" height="40" style="border-radius: 50%; margin-right: 10px;">
         <p >Erstellt von: {{ rezept.Ersteller }}</p>
+      <span>Likes: <span class="like-count">{{ rezept.likes }} </span>
+    <button class="like-button" onclick="likeRecipe(this)" data-recipe-id="{{ rezept.id }}">Like</button>
+  
       </div>
       <h1 style="text-align: center">{{ rezept.name }}</h1>
       <img src="/static/uploads/{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="300" height="200">
@@ -211,6 +214,47 @@
       }
       return cookieValue;
     }
+
+function likeRecipe(button) {
+    const recipeId = button.getAttribute('data-recipe-id');
+
+    fetch(`/like_rezept/${recipeId}/`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': getCookie('csrftoken')
+        },
+        body: JSON.stringify({ recipe_id: recipeId })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        const likeCountElement = button.parentNode.querySelector('.like-count');
+
+        if (data.status === 'success') {
+            // Aktualisieren Sie die Anzahl der Likes
+            likeCountElement.textContent = data.likes;
+
+            // Aktualisieren Sie den Button-Text basierend auf dem Like-Status
+            if (data.liked) {
+                button.textContent = 'Unlike';
+            } else {
+                button.textContent = 'Like';
+            }
+        } else {
+            throw new Error('Fehler beim Liken des Rezepts');
+        }
+    })
+    .catch(error => {
+        location.reload();
+    });
+}
+
   </script>
 </body>
 </html>
+
