@@ -108,19 +108,20 @@
       transform: scale(1.5);
     }
 
-    /* Footer Styles */
-    .footer {
-      background-color: #5f764f;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-    }
-    .footer-links a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      display: space-around
-    }
+      /* Footer Styles */
+      .footer {
+        background-color: #5f764f;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+      .footer-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        display: flex;
+        justify-content: space-around;
+      }
 
     .save-icon {
       position: absolute;
@@ -136,48 +137,6 @@
       transform: scale(1.2);
     }
   </style>
-
-  <script>
-    function saveRecipe(button) {
-      const recipeId = button.getAttribute('data-recipe-id');
-
-      fetch(`/remove_recipe/${recipeId}/`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRFToken': getCookie('csrftoken'),
-        },
-        body: JSON.stringify({ recipe_id: recipeId }),
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          button.closest('.recipe').remove();
-        } else {
-          alert('Fehler beim Entfernen des Rezepts.');
-        }
-      })
-      .catch(error => {
-        console.error('Fehler beim Loeschen des Rezepts:', error);
-        alert('Fehler beim Entfernen des Rezepts.');
-      });
-    }
-
-    function getCookie(name) {
-      let cookieValue = null;
-      if (document.cookie && document.cookie !== '') {
-        const cookies = document.cookie.split(';');
-        for (let i = 0; i < cookies.length; i++) {
-          const cookie = cookies[i].trim();
-          if (cookie.substring(0, name.length + 1) === name + '=') {
-            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-            break;
-          }
-        }
-      }
-      return cookieValue;
-    }
-  </script>
 </head>
 <body>
   <!-- Header -->
@@ -235,5 +194,49 @@
       <a href="AGB.html">AGB</a>
     </div>
   </footer>
+
+
+  <script>
+    function saveRecipe(button) {
+      const recipeId = button.getAttribute('data-recipe-id');
+
+      fetch(`/remove_recipe/${recipeId}/`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken': getCookie('csrftoken'),
+        },
+        body: JSON.stringify({ recipe_id: recipeId }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          button.closest('.recipe').remove();
+        } else {
+          alert('Fehler beim Entfernen des Rezepts.');
+        }
+      })
+      .catch(error => {
+        console.error('Fehler beim Loeschen des Rezepts:', error);
+        alert('Fehler beim Entfernen des Rezepts.');
+      });
+    }
+
+    function getCookie(name) {
+      let cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+          const cookie = cookies[i].trim();
+          if (cookie.substring(0, name.length + 1) === name + '=') {
+            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+            break;
+          }
+        }
+      }
+      return cookieValue;
+    }
+  </script>
+
 </body>
 </html>
