@@ -232,33 +232,18 @@ def Kochbuch(request):
     if user_data is None:
         return HttpResponse(f"Der Benutzer mit dem Benutzernamen {benutzer_name} wurde nicht gefunden.")
 
-    # Lade gespeicherte Rezept-IDs des Benutzers
+    # Lade gespeicherte Rezepte des Benutzers
     saved_recipe_ids = user_data.get("gespeicherte_Rezepte", [])  # Annahme: gespeicherte_Rezepte ist eine Liste von Rezept-IDs
 
     # Lade Rezepte aus der JSON-Datei
     with open(rezept_filename, "r") as file:
         rezepte_list = json.loads(file.read())
-      
+
     # Filtere die Rezepte, die der Benutzer gespeichert hat
-    gespeicherte_rezepte = []
-    for rezept in rezepte_list:
-        if rezept.get("id") in saved_recipe_ids:
-            ersteller_name = rezept.get("Ersteller", "")
-            ersteller_data = next((user for user in user_data_list if user["name"] == ersteller_name), None)
-            
-            if ersteller_data:
-                gespeicherte_rezepte.append({
-                    "Ersteller": ersteller_name,
-                    "Profilbild": ersteller_data.get("Profilbild", ""),
-                    "Rezeptbild": rezept.get("Rezeptbild", ""),
-                    "name": rezept.get("name", ""),
-                    "Zutaten": rezept.get("Zutaten", ""),
-                    "Zubereitung": rezept.get("Zubereitung", ""),
-                    "Zubereitungszeit": rezept.get("Zubereitungszeit", ""),
-                    "Kategorie": rezept.get("Kategorie", ""),
-                })
+    gespeicherte_rezepte = [rezept for rezept in rezepte_list if rezept.get("id") in saved_recipe_ids]
 
     return render(request, 'LeckerMeister/Kochbuch.html', {'gespeicherte_rezepte': gespeicherte_rezepte})
+
 
 def Profil(request):
     benutzer_name = request.session.get("benutzer_name")
