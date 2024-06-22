@@ -90,7 +90,7 @@ def Homeseite(request):
         # Behandlung, falls eine Datei nicht gefunden wird
         rezept_list = []
 
-    # Vorbereitung der Rezepte für die Darstellung in der Vorlage
+    # Vorbereitung der Rezepte fÃƒÂ¼r die Darstellung in der Vorlage
     rezepte = []
     for rezept in rezept_list:
         ersteller_name = rezept.get("Ersteller", "")
@@ -98,8 +98,9 @@ def Homeseite(request):
         
         if ersteller_data:
             rezepte.append({
+		"id": rezept.get("id", ""),
                 "Ersteller": ersteller_name,
-                "Profilbild": ersteller_data.get("Profilbild", ""),  # Profilbild des Erstellers hinzufügen
+                "Profilbild": ersteller_data.get("Profilbild", ""),  # Profilbild des Erstellers hinzufÃƒÂ¼gen
                 "Rezeptbild": rezept.get("Rezeptbild", ""),
                 "name": rezept.get("name", ""),
                 "Zutaten": rezept.get("Zutaten", ""),
@@ -138,7 +139,7 @@ def Suchseite(request):
     if category:
         rezepte = [rezept for rezept in rezepte if rezept.get('Kategorie') == category]
 
-    # Vorbereitung der Rezepte für die Darstellung in der Vorlage
+    # Vorbereitung der Rezepte fÃƒÂ¼r die Darstellung in der Vorlage
     rezepte_formatted = []
     for rezept in rezepte:
         ersteller_name = rezept.get("Ersteller", "")
@@ -147,7 +148,7 @@ def Suchseite(request):
         if ersteller_data:
             rezepte_formatted.append({
                 "Ersteller": ersteller_name,
-                "Profilbild": ersteller_data.get("Profilbild", ""),  # Profilbild des Erstellers hinzufügen
+                "Profilbild": ersteller_data.get("Profilbild", ""),  # Profilbild des Erstellers hinzufÃƒÂ¼gen
                 "Rezeptbild": rezept.get("Rezeptbild", ""),
                 "name": rezept.get("name", ""),
                 "Zutaten": rezept.get("Zutaten", ""),
@@ -183,7 +184,7 @@ def Upload(request):
         except FileNotFoundError:
             rezepte = []
 
-        # ID für das neue Rezept bestimmen
+        # ID fÃƒÂ¼r das neue Rezept bestimmen
         if rezepte:
             neue_id = max(rezept.get("id", 0) for rezept in rezepte) + 1
         else:
@@ -331,24 +332,35 @@ def Abmeldung(request):
 
     return redirect('Anmeldung')
 
-def save_recipe(request):
+def save_recipe(request, recipe_id):
     benutzer_name = request.session.get("benutzer_name")
     
-    with open("/var/www/django-projekt/LeckerMeister/user_Data.json", "r") as file:
-        user_list = json.load(file)
-        for user in user_list:
-            if user['name'] == benutzer_name:
-                user['gespeicherte_Rezepte'] = []
-                
-                with open("/var/www/django-projekt/LeckerMeister/Rezepte.json", "r") as rezepte_file:
-                    rezepte_data = json.load(rezepte_file)
-                    for rezept in rezepte_data:
-                        user['gespeicherte_Rezepte'].append(rezept['id'])  # Adjust to match your JSON structure
+    if not benutzer_name:
+        return HttpResponse("Unauthorized", status=401)
 
-    with open("/var/www/django-projekt/LeckerMeister/user_Data.json", "w") as file:
-        json.dump(user_list, file, indent = 4)
-    
+    user_data_file = "/var/www/django-projekt/LeckerMeister/user_Data.json"
+
+    try:
+        with open(user_data_file, "r") as file:
+            user_list = json.load(file)
+    except FileNotFoundError:
+        user_list = []
+
+    # Durchsuche die Benutzerliste nach dem aktuellen Benutzer und aktualisiere seine gespeicherten Rezepte
+    for user in user_list:
+        if user['name'] == benutzer_name:
+            if 'gespeicherte_Rezepte' not in user:
+                user['gespeicherte_Rezepte'] = []
+            
+            # FÃ¼ge die Rezept-ID zur Liste der gespeicherten Rezepte hinzu
+            user['gespeicherte_Rezepte'].append(int(recipe_id))  # Falls die recipe_id eine Zeichenkette ist, in eine Ganzzahl umwandeln
+
+    # Speichere die aktualisierten Benutzerdaten zurueck in die JSON-Datei
+    with open(user_data_file, "w") as file:
+        json.dump(user_list, file, indent=4)
+
     return redirect('Kochbuch')
+ 
 
 def remove_recipe(request, recipe_id):
     benutzer_name = request.session.get("benutzer_name")
@@ -369,3 +381,5 @@ def remove_recipe(request, recipe_id):
             return JsonResponse({'success': True})
     
     return JsonResponse({'success': False})
+
+
