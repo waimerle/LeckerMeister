@@ -144,24 +144,37 @@
         </p>
         <a href="{% url 'Abmeldung' %}">Abmelden</a> <!-- Abmeldelink -->
       </div>
-      <div class="edit-profile">
-        <button onclick="changePassword()">Passwort ÃƒÂ¤ndern</button>
-        <button onclick="addBiography()">Biografie hinzufÃƒÂ¼gen/ÃƒÂ¤ndern</button>
+        <h2>Meine Rezepte</h2>
+  {% for rezept in eigene_rezepte %}
+    <div class="rezept-container">
+      <h1 style="text-align: center">{{ rezept.name }}</h1>
+      <img src="/static/uploads/{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="300" height="200">
+
+      <div class="hidden-content">
+        <h2>Zutaten:</h2> 
+        <ul>
+          {% for zutat in rezept.Zutaten %}
+            <li>{{ zutat }}</li>
+          {% endfor %}
+        </ul>
+        <h2>Anleitung:</h2>
+        <ol>
+          {% for schritt in rezept.Zubereitung %}
+            <li>{{ schritt }}</li>
+          {% endfor %}
+        </ol>
+        <h2>Zubereitungszeit:</h2>
+        <p>{{ rezept.Zubereitungszeit }}</p>
+        <h2>Kategorie:</h2>
+        <p>{{ rezept.Kategorie }}</p>
+        <h2> Likes: </h2>
+        <p>{{ rezept.likes }}</p>
       </div>
     </div>
+  {% endfor %}
 
-    <script>
-      function changePassword() {
-        // Hier kannst du Logik zum Ãƒâ€žndern des Passworts implementieren
-        alert("Passwort ÃƒÂ¤ndern");
-      }
+    </div>
 
-      function addBiography() {
-        // Hier kannst du Logik zum HinzufÃƒÂ¼gen/Ãƒâ€žndern der Biografie implementieren
-        alert("Biografie hinzufÃƒÂ¼gen/ÃƒÂ¤ndern");
-      }
-
-    </script>
     <!-- Footer -->
     <footer class="footer">
       <div class="footer-links">
