@@ -1,18 +1,92 @@
 [
-  {
-    "Profilbild": "https://cdn.royalcanin-weshare-online.io/mOgVlYgBaPOZra8q1ABE/v3/pubertat-beim-hund-2?w=1280&fm=jpg&auto=format%2Ccompress",
-    "name": "Anton",
-    "email": "Anton@mail.com",
-    "Wohnort": "Musterhausen",
-    "Passwort": "1234",
-    "bio": "Hallo ich bin Anton, und komme aus Musterhausen. Ich liebe es zu kochen."
-  },
-  {
-    "Profilbild": "https://www.schauspielervideos.de/FM/fotos/6/99006840/kf2125876_gr_1800.jpg",
-    "name": "Carla",
-    "email": "Carla@mail.com",
-    "Wohnort": "Musterstadt",
-    "Passwort": "1234",
-    "bio": "Hallo ich bin Carla, und komme aus Musterstadt. Ich liebe es zu kochen. Ich bin 35 Jahre alt und esse am liebsten Spaghetti mit Tomatensosse"
-  }
+    {
+        "Profilbild": "Carla.jpg",
+        "name": "Carla",
+        "email": "Carla@mail.com",
+        "Wohnort": "Musterstadt",
+        "Passwort": "1234",
+        "bio": "Hallo ich bin Carla, und komme aus Musterstadt. Ich liebe es zu kochen. Ich bin 35 Jahre alt und esse am liebsten Spaghetti mit Tomatensosse",
+        "gespeicherte_Rezepte": [
+            7
+        ],
+        "gelikte_rezepte": [
+            8,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            9
+        ]
+    },
+    {
+        "Profilbild": "bild.jpg",
+        "name": "Sophie",
+        "email": "schumann.sophie@gmx.net",
+        "Wohnort": "Waiblingen ",
+        "Passwort": "Sophie",
+        "bio": "Hi:)",
+        "gespeicherte_Rezepte": [
+            3,
+            4
+        ],
+        "gelikte_rezepte": [
+            3,
+            5,
+            4
+        ]
+    },
+    {
+        "Profilbild": "123.jpg",
+        "name": "Marie",
+        "email": "mariekk@gmail.com",
+        "Wohnort": "Hawaii",
+        "Passwort": "Marie",
+        "bio": "2 Jahre gestorben\r\n1 Jahr Fisch vorm ertrinken gerettet\r\nIch liebe Hawaii",
+        "gelikte_rezepte": [
+            1,
+            2,
+            3
+        ],
+        "gespeicherte_Rezepte": [
+            3
+        ]
+    },
+    {
+        "Profilbild": "abc.jpg",
+        "name": "Sandra",
+        "email": "pro.sarah@gmx.de",
+        "Wohnort": "Dubai",
+        "Passwort": "12345",
+        "bio": "Hobbyk\u00f6chin, Unternehmerin",
+        "gelikte_rezepte": [
+            1,
+            2,
+            3,
+            5,
+            4
+        ],
+        "gespeicherte_Rezepte": [
+            3
+        ]
+    },
+    {
+        "Profilbild": "Familie.jpeg",
+        "name": "Uwe",
+        "email": "uwe.mueller@gmail.de",
+        "Wohnort": "Leipzig",
+        "Passwort": "Uwe",
+        "bio": "Am liebsten Koche ich f\u00fcr meine Kinder! Hobbykoch.",
+        "gelikte_rezepte": [
+            3,
+            2,
+            1,
+            5,
+            4
+        ],
+        "gespeicherte_Rezepte": [
+            4
+        ]
+    }
 ]
