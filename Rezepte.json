@@ -1,7 +1,211 @@
 [
     {
-        "Ersteller": "Anton",
+        "id": 9,
+        "Ersteller": "Uwe",
+        "Rezeptbild": "IMG_3540.webp",
+        "name": "Tomatensuppe",
+        "Zutaten": [
+            "1 kg\tTomate(n)",
+            "2\tZwiebel(n)",
+            "3\tKnoblauchzehe(n)",
+            "Oliven\u00f6l zum Braten",
+            "\u00be Liter\tGem\u00fcsebr\u00fche",
+            "Salz und Pfeffer",
+            "Kr\u00e4utersalz",
+            "Thymian getrocknet",
+            "3 TL\tTomatenmark",
+            "Petersilie"
+        ],
+        "Zubereitung": [
+            "Die Tomaten an der Unterseite kreuzweise anritzen in eine gro\u00dfe Sch\u00fcssel legen und mit kochendem oder hei\u00dfem Wasser \u00fcbergie\u00dfen. Nach 10 Minuten vorsichtig die Haut und den gr\u00fcnen Knopf auf der Oberseite von der Tomate entfernen und die gesch\u00e4lten Tomaten klein schneiden.",
+            "Nun die Zwiebeln klein w\u00fcrfeln und den Knoblauch pressen. Beides in Oliven\u00f6l anbraten und nach ca. 3 Minuten die Tomatenst\u00fccke hinzugeben.",
+            "Nach ein paar Minuten die Gem\u00fcsebr\u00fche und die Gew\u00fcrze (ohne die Petersilie) hinzugeben und auf niedriger Temperatur 20 Minuten kochen.",
+            "Das Tomatenmark unterr\u00fchren und die Suppe mit einem Mixstab fein p\u00fcrieren.",
+            "Nach Belieben die Suppe mit den Gew\u00fcrzen abschmecken und mit ein wenig frischer Petersilie servieren.",
+            ""
+        ],
+        "Zubereitungszeit": "50 Minuten ",
+        "Kategorie": "Suppe",
+        "likes": 1
+    },
+    {
+        "id": 8,
+        "Ersteller": "Carla",
+        "Rezeptbild": "IMG_3539.webp",
+        "name": "Caesar Salat",
+        "Zutaten": [
+            "1 Kopf\tR\u00f6mersalat(e)",
+            "50 g\tParmesan",
+            "3 Scheibe/n\tToastbrot",
+            "\u00d6l zum Braten",
+            "1\tKnoblauchzehe(n)",
+            "F\u00fcr die Sauce:",
+            "1\tEi(er)",
+            "3\tKnoblauchzehe(n)",
+            "4\tSardellenfilet(s) aus dem Glas",
+            "2 TL\tDijonsenf",
+            "\u00bd\tZitrone(n)",
+            "150 ml\tKeim\u00f6l o. \u00c4.",
+            "Pfeffer aus der M\u00fchle"
+        ],
+        "Zubereitung": [
+            "Den R\u00f6mersalat waschen und trocken schleudern und in mundgerechte St\u00fccke schneiden. In einer Sch\u00fcssel anrichten.",
+            "F\u00fcr die Sauce die gesamten Zutaten bis auf das \u00d6l in einen hohen Becher geben und mit dem P\u00fcrierstab aufschlagen dann das \u00d6l langsam unter st\u00e4ndigem Weiterschlagen einlaufen lassen bis eine cremige Sauce entstanden ist.",
+            "Das Toastbrot entrinden in kleine W\u00fcrfel schneiden und in hei\u00dfem \u00d6l mit Knoblauch rundum zu krossen Cro\u00fbtons braten.",
+            "Die Sauce \u00fcber den Salat geben alles gut vermischen und den Salat mit reichlich geriebenem Parmesank\u00e4se und den Cro\u00fbtons bestreut servieren.",
+            "Mit kross gebratenem H\u00e4hnchenfilet wird dies eine leichte Hauptspeise.",
+            ""
+        ],
+        "Zubereitungszeit": "20 Minuten ",
+        "Kategorie": "Reis- oder Nudelsalat",
+        "likes": 1
+    },
+    {
+        "id": 7,
+        "Ersteller": "Sophie",
+        "Rezeptbild": "IMG_3538.webp",
+        "name": "Spaghetti Carbonara",
+        "Zutaten": [
+            "500 g\tSpaghetti",
+            "2\tEigelb",
+            "2 Becher\tSahne",
+            "Parmesan",
+            "Speckw\u00fcrfel",
+            "Salz und Pfeffer",
+            ""
+        ],
+        "Zubereitung": [
+            "Die Spaghetti kochen.",
+            "W\u00e4hrenddessen beliebig viele Speckw\u00fcrfel auslassen. Die Sahne mit den Eigelben und zwei Handvoll (oder nach Bedarf weniger) Parmesan mischen und mit etwas Salz und Pfeffer w\u00fcrzen.",
+            "Die Spaghetti abgie\u00dfen. Den Herd ausschalten. Die Eier-Sahne-Mischung zu den Speckw\u00fcrfeln geben. In der noch hei\u00dfen Pfanne mit den Spaghetti mischen bis sich die So\u00dfe sch\u00f6n um die Pasta gelegt hat.",
+            ""
+        ],
+        "Zubereitungszeit": "30 Minuten ",
+        "Kategorie": "Pasten",
+        "likes": 0
+    },
+    {
+        "id": 6,
+        "Ersteller": "Marie",
+        "Rezeptbild": "IMG_3537.webp",
+        "name": "Pizzaschnecken",
+        "Zutaten": [
+            "2 Pck.\tBl\u00e4tterteig",
+            "1\tZwiebel(n)",
+            "1 Becher\tSchmand",
+            "1 Pck.\tK\u00e4se geriebener (200g)",
+            "250 g\tSchinken",
+            "Salz und Pfeffer"
+        ],
+        "Zubereitung": [
+            "Ofen auf 200\u00b0 Grad vorheizen.",
+            "Zwiebel und Schinken w\u00fcrfen mit Schmand und K\u00e4se vermischen mit Salz und Pfeffer abschmecken.",
+            "Ausgerollten Bl\u00e4tterteig damit bestreichen und zu einer \"Wurst\" einrollen.",
+            "Mit einem scharfen Messer in Streifen schneiden und auf ein mit Backpapier ausgelegtes Backblech legen."
+        ],
+        "Zubereitungszeit": "Backzeit betr\u00e4gt ca. 20 Minuten.",
+        "Kategorie": "Fingerfood",
+        "likes": 1
+    },
+    {
+        "id": 5,
+        "Ersteller": "Sophie",
+        "Rezeptbild": "erdbeerkuchen-mit-schmand-vanillecreme.webp",
+        "name": "Erdbeerkuchen",
+        "Zutaten": [
+            "F\u00fcr den Boden:",
+            "250 g\tZucker",
+            "1 Pck.\tVanillezucker",
+            "4\tEi(er)",
+            "125 ml\t\u00d6l",
+            "150 ml\tOrangenlimonade",
+            "250 g\tMehl",
+            "3 TL\tBackpulver",
+            "F\u00fcr den Belag:",
+            "600 ml\tSahne",
+            "400 ml\tSchmand",
+            "2 Pck.\tVanillezucker",
+            "2 Pck.\tCremepulver (Paradiescreme Vanille)",
+            "1 \u00bd kg\tErdbeeren",
+            "1 Pck.\tTortenguss"
+        ],
+        "Zubereitung": [
+            "F\u00fcr den Boden die Eier mit dem Zucker und dem Vanillezucker verr\u00fchren.",
+            "\u00d6l Orangenlimonade Mehl und Backpulver hinzuf\u00fcgen.",
+            "Den Teig auf einem mit Backpapier ausgelegten Backblech verteilen und bei 180 \u00b0C Ober-/Unterhitze im vorgeheizten Ofen 25 Minuten backen.",
+            "F\u00fcr den Belag die Sahne mit dem Cremepulver und Vanillezucker 3 Minuten schlagen (die Masse wird relativ fest). Den Schmand unterheben und die Vanillecreme auf den erkalteten Boden streichen.",
+            "Die gewaschenen und entstielten Erdbeeren (gro\u00dfe sollten halbiert werden) auf der Vanillecreme verteilen.",
+            "Den Tortenguss nach Packungsanweisung mit dem Wasser anr\u00fchren kochen und anschlie\u00dfend \u00fcber den Erdbeeren verteilen.",
+            "Fest werden lassen und dann ist der Kuchen servierfertig."
+        ],
+        "Zubereitungszeit": "50 Minuten ",
+        "Kategorie": "Kuchen",
+        "likes": 4
+    },
+    {
+        "id": 4,
+        "Ersteller": "Uwe",
+        "Rezeptbild": "gnocchi-auflauf.jpg",
+        "name": "Gnocchi-Auflauf",
+        "Zutaten": [
+            "200 g\tSchinken gekochter gew\u00fcrfelt",
+            "300 g\tChampignons kleine aus der Dose",
+            "250 g\tKirschtomate(n) m\u00f6glichst fest halbiert",
+            "1\tZwiebel(n) gew\u00fcrfelt",
+            "3\tKnoblauchzehe(n) gepresst",
+            "3 EL\t\u00d6l",
+            "3 EL\tTomatenmark",
+            "1 EL\tMehl",
+            "400 g\tSahne",
+            "1.000 g\tGnocchi",
+            "200 g\tMozzarella",
+            "200 g Gouda",
+            "1 EL Kr\u00e4uter",
+            "Salz und Pfeffer"
+        ],
+        "Zubereitung": [
+            "Die Tomaten in 1 El hei\u00dfem \u00d6l kurz anbraten. Mit Salz und Pfeffer w\u00fcrzen herausnehmen und kurz beiseite stellen.",
+            "2 EL \u00d6l in der gleichen Pfanne erhitzen und die Zwiebel mit dem Knoblauch glasig d\u00fcnsten. Die Pilze dazugeben und anbraten.",
+            "Dann den Schinken zugeben und kurz mitbraten. Das Tomatenmark hineingeben und kurz anr\u00f6sten damit sich das Tomatenaroma besser entfalten kann.",
+            "Das Mehl dr\u00fcber streuen kurz verr\u00fchren und anschwitzen. Anschlie\u00dfend mit der Sahne abl\u00f6schen.",
+            "Nun die Kr\u00e4uter untermischen und das ganze ca. 5 Minuten leicht k\u00f6cheln lassen. Tomatenh\u00e4lften wieder zugeben und mit Salz und Pfeffer abschmecken.",
+            "Gnocchi nach Packungsanleitung garen abtropfen und in die gro\u00dfe gefettete Auflaufform geben.",
+            "Die Tomaten-Sahne-Sauce dar\u00fcber gie\u00dfen.",
+            "Nun die Mozzarella-W\u00fcrfel dar\u00fcber streuen anschlie\u00dfend den geriebenen Gouda dar\u00fcber verteilen."
+        ],
+        "Zubereitungszeit": "f\u00fcr 20 - 30 Minuten bei 200\u00b0 C im vorgeheizten Ofen \u00fcberbacken.",
+        "Kategorie": "Auflauf",
+        "likes": 4
+    },
+    {
+        "id": 3,
+        "Ersteller": "Marie",
+        "Rezeptbild": "1000051706.png",
+        "name": "Curryso\u00dfe ",
+        "Zutaten": [
+            "1 Zwiebel",
+            "1 Apfel",
+            "40 g Butter",
+            "2 EL Oliven\u00f6l",
+            "1 EL Currypulver",
+            "250 ml Gefl\u00fcgelbr\u00fche (oder Gem\u00fcsebr\u00fche)",
+            "200 ml Sahne",
+            "\u00bd TL Salz",
+            "1 Prise Cayennepfeffer"
+        ],
+        "Zubereitung": [
+            "F\u00fcr die Currysauce die Zwiebel sch\u00e4len halbieren und fein w\u00fcrfeln.",
+            "Den Apfel sch\u00e4len vierteln entkernen und das Fruchtfleisch grob w\u00fcrfeln.",
+            "Die Butter mit dem Oliven\u00f6l in einem Topf zerlassen und die Zwiebelw\u00fcrfel bei mittlerer Hitze ca. 2 Minuten and\u00fcnsten. Die Apfelw\u00fcrfel dazugeben und 2 weitere Minuten and\u00fcnsten.",
+            "Das Currypulver hinzugeben und kurz mitr\u00f6sten. Mit Br\u00fche auff\u00fcllen und f\u00fcr ca. 10 Minuten sanft k\u00f6cheln lassen. Die Sahne aufgie\u00dfen und die Sauce mit einem Stabmixer s\u00e4mig p\u00fcrieren und aufsch\u00e4umen. Mit Salz und Cayennepfeffer abschmecken. Lass es dir schmecken!"
+        ],
+        "Zubereitungszeit": "30 min",
+        "Kategorie": "Studentenkueche",
+        "likes": 5
+    },
+    {
         "id": 2,
+        "Ersteller": "Sophie",
         "Rezeptbild": "Spaghetti_Napoli.webp",
         "name": "Spaghetti",
         "Zutaten": [
@@ -15,11 +219,12 @@
             "Warten, bis Nudeln die gewuenschte Bissfestigkeit erreicht haben."
         ],
         "Zubereitungszeit": "12 Minuten",
-        "Kategorie": "Pasten"
+        "Kategorie": "Pasten",
+        "likes": 4
     },
     {
-        "Ersteller": "Carla",
         "id": 1,
+        "Ersteller": "Carla",
         "Rezeptbild": "Reis.jpg",
         "name": "Reis",
         "Zutaten": [
@@ -31,6 +236,7 @@
             "Wasser zum kochen bringen"
         ],
         "Zubereitungszeit": "12 Minuten",
-        "Kategorie": "Eis"
+        "Kategorie": "Eis",
+        "likes": 4
     }
 ]
