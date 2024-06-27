@@ -100,6 +100,26 @@
       .icons img:hover {
         transform: scale(1.5);
       }
+      .rezept-container {
+      position: relative;
+      background-color: white;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      max-width: 800px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .rezept-container img {
+      display: block;
+      margin: 0 auto 20px;
+    }
+    .rezept-container + .rezept-container {
+      margin-top: 40px;
+      border-top: 2px solid #5f764f;
+      padding-top: 20px;
+    }
+
 
       /* Footer Styles */
       .footer {
@@ -144,13 +164,13 @@
         </p>
         <a href="{% url 'Abmeldung' %}">Abmelden</a> <!-- Abmeldelink -->
       </div>
-        <h2>Meine Rezepte</h2>
+    </div>
+        <h2 style="text-align:center">Meine Rezepte: </h2>
   {% for rezept in eigene_rezepte %}
     <div class="rezept-container">
       <h1 style="text-align: center">{{ rezept.name }}</h1>
       <img src="/static/uploads/{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="300" height="200">
-
-      <div class="hidden-content">
+        <div class="hidden-content">
         <h2>Zutaten:</h2> 
         <ul>
           {% for zutat in rezept.Zutaten %}
