@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %} <!--Django-Template-Tag zum Laden von statistischen Daten-->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -157,24 +157,30 @@
   {% csrf_token %}
   {% for rezept in gespeicherte_rezepte %}
     <div class="recipe-container">
+      <!-- Abschnitt zur Anzeige des Erstellers eines Rezepts -->
       <div style="display: flex; align-items: center; margin-bottom: 10px;">
-      <img src="/static/users/{{ rezept.Profilbild }}" alt="Profilbild von {{ rezept.Ersteller }}" width="40" height="40" style="border-radius: 50%; margin-right: 10px;">
       <p style="color:black" >Erstellt von: {{ rezept.Ersteller }}</p>
     </div>
 
+      <!-- Rezeptanzeigebereich -->
       <div class="recipe">
         <button class="save-icon" onclick="saveRecipe(this)" data-recipe-id="{{ rezept.id }}">Entfernen</button>
+        <!-- Anzeigen des Rezeptnamens -->
         <h1>{{ rezept.name }}</h1>
+        <!-- Anzeige des Rezeptbilds -->
         <img src="{% static 'uploads/' %}{{ rezept.Rezeptbild }}" alt="Bild des Rezepts" width="300" height="200" >
+       <!-- Ausklappen des vollen Rezeptes -->
         <input type="checkbox" id="toggle-{{ forloop.counter }}" class="toggle-input">
         <label for="toggle-{{ forloop.counter }}" class="toggle-label">Klicken Sie hier</label>
         <div class="hidden-content">
+          <!-- Zutatenliste -->
           <h2>Zutaten:</h2>
           <ul>
             {% for zutat in rezept.Zutaten %}
               <li>{{ zutat }}</li>
             {% endfor %}
           </ul>
+          <!-- Zubereitungsschritte -->
           <h2>Anleitung:</h2>
           <ol>
             {% for schritt in rezept.Zubereitung %}
@@ -195,7 +201,7 @@
     </div>
   </footer>
 
-
+ <!-- JavaScript zum Entfernen eines Rezepts -->
   <script>
     function saveRecipe(button) {
       const recipeId = button.getAttribute('data-recipe-id');
@@ -211,7 +217,9 @@
       .then(response => response.json())
       .then(data => {
         if (data.success) {
-          button.closest('.recipe').remove();
+    //Entfernt Rezept Daten wenn das entfernen erfolreich war
+          button.closest('.recipe-container').remove();
+    //Falls Fehler bei Rezept Löschung
         } else {
           alert('Fehler beim Entfernen des Rezepts.');
         }
@@ -222,6 +230,7 @@
       });
     }
 
+    // Funktion zum Abrufen des CSRF-Tokens aus den Cookies
     function getCookie(name) {
       let cookieValue = null;
       if (document.cookie && document.cookie !== '') {
@@ -240,3 +249,4 @@
 
 </body>
 </html>
+  <!-- CSRF Token verhindern CSRF Angriffe von außerhalb wobei versucht wird sich in den Account eines Nutzern zu hacken um unerwünschte Sachen zu machen, dies der Benutzer aber nicht bemerken soll-->
