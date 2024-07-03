@@ -1,5 +1,1546 @@
 [
     {
+        "id": 67,
+        "Ersteller": "Sophie18",
+        "Rezeptbild": "kirschmuffins-2.webp",
+        "name": "Kirschmuffins",
+        "Zutaten": [
+            "250 g weiche Butter",
+            "240 g Zucker",
+            "2 Pck. Vanillezucker",
+            "4 Eier",
+            "400 g Schmand",
+            "500 g Mehl",
+            "4 TL Backpulver",
+            "2 Gl\u00e4ser Kirschen (Abtropfgewicht: 350g)",
+            "12 EL Milch"
+        ],
+        "Zubereitung": [
+            "F\u00fcr den Teig Butter mit beiden Zuckersorten verr\u00fchren. Eier sowie Schmand nach und nach unterr\u00fchren. Mehl mit Backpulver mischen und dann abwechselnd mit der Milch zum Teig geben und verr\u00fchren.",
+            "Ofen auf 180 Grad (Umluft: 160 Grad) vorheizen. Die Mulden eines Muffinblechs (12 Mulden) mit Papierf\u00f6rmchen auslegen. Mit einem Eisportionierer oder zwei Teel\u00f6ffeln den Teig auf die Muffinf\u00f6rmchen verteilen. Kirschen \u00fcber einem Sieb abgie\u00dfen und abtropfen lassen. Je 4-5 Kirschen in ein Muffinf\u00f6rmchen dr\u00fccken.",
+            "Muffins im vorgeheizten Ofen ca. 25 Min. backen. Abk\u00fchlen lassen. Wer m\u00f6chte kann die Muffins zum Servieren noch mit etwas Puderzucker bestreuen."
+        ],
+        "Zubereitungszeit": "35 Minuten ",
+        "Kategorie": "Suessspeise",
+        "likes": 1
+    },
+    {
+        "id": 66,
+        "Ersteller": "Leonie",
+        "Rezeptbild": "Hefezopf-Rezept.jpg",
+        "name": "Hefezopf",
+        "Zutaten": [
+            "500 gr. Mehl",
+            "20 gr. Hefe",
+            "ca 1/4 Liter Milch",
+            "80-100 gr. Butter",
+            "50-80 gr. Zucker",
+            "1-2 Eier",
+            "1 Prise Salz",
+            "Citroback",
+            "Rosinen",
+            "Hagelzucker",
+            "Kondensmilch"
+        ],
+        "Zubereitung": [
+            "Die Butter mit einem Mixer cremig r\u00fchren. Die restlichen Zutaten dazu geben und alles mit dem Knethaken gut vermischen. Anschlie\u00dfend gut durchkneten und zugedeckt f\u00fcr 2 Stunden stehen lassen.",
+            "In drei Teile teilen und jeweils zu Str\u00e4ngen rollen. Diese dann zu einem Zopf flechten",
+            "auf ein vorbereitetes Backblech geben und zugedeckt nochmals 1 Stunde ruhen lassen.",
+            "Mit Kondensmilch den Zopf bestreichen und mit Hagelzucker nach Belieben bestreuen.",
+            "Bei 175\u00b0C Umluft f\u00fcr 30-35 Min. in den hei\u00dfen Backofen geben."
+        ],
+        "Zubereitungszeit": "3 Stunden 10 Minuten",
+        "Kategorie": "Kuchen",
+        "likes": 3
+    },
+    {
+        "id": 65,
+        "Ersteller": "Leonie",
+        "Rezeptbild": "acf462b5-e589-4fb0-a4f8-e908e7e3f9bb.jpg",
+        "name": "Monster-Cake-Pops",
+        "Zutaten": [
+            "Kuchen",
+            "2 Eier",
+            "80 g Zucker",
+            "130 g Sahne",
+            "130 g Mehl",
+            "15 g Kakao",
+            "1 Prise Salz",
+            "1 TL Backpulver",
+            "F\u00fcllung und Dekoration",
+            "55 g Frischk\u00e4se",
+            "120 g Puderzucker",
+            "25 g Zartbitter-Schokolade",
+            "30 g Fondant wei\u00df",
+            "Lebensmittelfarbe schwarz",
+            "200 g wei\u00dfe Schokolade in St\u00fccken",
+            "\u00bd - 1 TL Lebensmittelfarbe blau",
+            "16 Schokoladen-Cookies (Mini) z. B. von Pickerd\u00ae"
+        ],
+        "Zubereitung": [
+            "Kuchen: Backofen auf 180\u00b0C vorheizen. Den Boden einer quadratischen Backform (20 cm) mit Backpapier auslegen.",
+            "Eier und Zucker in den Mixtopf geben und verr\u00fchren.",
+            "Sahne Mehl Kakao Salz und Backpulver zugeben verr\u00fchren und ggf. nochmals mit dem Spatel unterheben. Teig in die vorbereitete Form f\u00fcllen und 20-25 Minuten (180\u00b0C) backen. Kuchen vollst\u00e4ndig abk\u00fchlen lassen.",
+            "F\u00fcllung und Dekoration: Kuchen in St\u00fccke (ca. 3 cm) schneiden und zerkleinern.",
+            "Frischk\u00e4se und Puderzucker zugeben und verr\u00fchren. Teig auf die Arbeitsfl\u00e4che geben und mit den H\u00e4nden zu ca. 16 Kugeln formen.",
+            "Eine Vertiefung in die Kugeln formen um den Mund zu markieren. Zartbitter-Schokolade in eine Sch\u00fcssel geben und in der Mikrowelle schmelzen dabei ab und zu umr\u00fchren damit sie nicht anbrennt. Das stumpfe Ende eines Schaschlikspie\u00dfes in die Schokolade tauchen und in jede Cake-Pop-Kugel dr\u00fccken ohne sie ganz durchzustechen. Cake-Pop-Kugeln ca. 30 Minuten in den K\u00fchlschrank stellen. In dieser Zeit mit dem Rezept fortfahren.",
+            "30 g wei\u00dfen Fondant zu kleinen Augenkugeln (ca. \u00d8 1 cm) formen und mit schwarzer Lebensmittelfarbe die Augen aufmalen.",
+            "Wei\u00dfe Schokolade in eine Sch\u00fcssel geben und in der Mikrowelle schmelzen (20-30 Sekunden)",
+            "dabei von Zeit zu Zeit umr\u00fchren damit sie nicht anbrennt. Blaue Lebensmittelfarbe zugeben und umr\u00fchren.",
+            "Cake-Pop-Kugeln mit der geschmolzenen Schokolade bestreichen dann die gesamte Oberfl\u00e4che der Cake-Pops etwas aufrauen (siehe Tipp) und die Augen anbringen. Die Minikekse in die vorbereitete Mund\u00f6ffnung legen und etwas festdr\u00fccken. Cake-Pops mit Abstand zueinander in hohe Gl\u00e4ser stellen trocknen lassen und bis zum Servieren im K\u00fchlschrank aufbewahren."
+        ],
+        "Zubereitungszeit": "3 Stunden",
+        "Kategorie": "Fingerfood",
+        "likes": 2
+    },
+    {
+        "id": 64,
+        "Ersteller": "Uwe",
+        "Rezeptbild": "saftiges-vollkornbrot.webp",
+        "name": "Saftiges Vollkornbrot",
+        "Zutaten": [
+            "500 g\tDinkelvollkornmehl",
+            "150 g\tKerne gemischte nach Wahl (z.B. K\u00fcrbiskerne Leinsamen Sonnenblumenkerne etc.)",
+            "\u00bd Liter\tWasser",
+            "1 W\u00fcrfel\tHefe",
+            "2 TL\tSalz",
+            "2 EL\tObstessig z.B. Apfelessig"
+        ],
+        "Zubereitung": [
+            "Die Zutaten in der genannten Reihenfolge mischen und in der K\u00fcchenmaschine oder mit dem R\u00fchrger\u00e4t mit den Knethaken zu einem Teig verarbeiten. Dieser ist relativ fl\u00fcssig.",
+            "In eine mit Backpapier ausgelegt Kastenform (meine ist 30 cm lang und 15 cm breit) f\u00fcllen. Wenn das Papier am Rand zerkn\u00fcllt ist macht das gar nichts.\r\n\r\nDann die Form in den kalten (!) Backofen auf den Rost in die Mitte stellen und bei Ober-/Unterhitze 200\u00b0C eine Stunde backen. Das Brot ist sehr schnell zu machen superlecker und lange saftig."
+        ],
+        "Zubereitungszeit": "1 Stunde 10 Minuten",
+        "Kategorie": "Brot",
+        "likes": 2
+    },
+    {
+        "id": 63,
+        "Ersteller": "Leonie",
+        "Rezeptbild": "kokosbaellchen.webp",
+        "name": "Kokosb\u00e4llchen",
+        "Zutaten": [
+            "1 Dose\tKondensmilch gezuckerte (Milchm\u00e4dchen) \u00e0 400 g",
+            "1 T\u00fcte/n\tKokosraspel \u00e0 200 g",
+            "Kokosraspel zum W\u00e4lzen"
+        ],
+        "Zubereitung": [
+            "Man nimmt eine Dose gezuckerte Dosenmilch (Milchm\u00e4dchen) gibt sie in die Mikrokanne und l\u00e4sst sie bei 600 Watt 2 Minuten ohne Deckel aufkochen. Dann gibt man die Kokosraspel hinzu r\u00fchrt alles durch und stellt die Mischung \u00fcber Nacht in den K\u00fchlschrank.",
+            "Dann formt man aus der Masse kleine Kugeln und w\u00e4lzt sie jeweils in Kokosraspeln."
+        ],
+        "Zubereitungszeit": "12 Stunden 27 Minuten",
+        "Kategorie": "Confiserie",
+        "likes": 1
+    },
+    {
+        "id": 62,
+        "Ersteller": "Sandra",
+        "Rezeptbild": "brotaufstrich-mediterrane-art.webp",
+        "name": "Brotaufstrich mediterrane Art",
+        "Zutaten": [
+            "1 Pck.\tSchafsk\u00e4se ca. 200 g",
+            "5\tTomate(n) getrocknete",
+            "5\tOliven schwarze und entsteinte",
+            "1 EL\tTomatenmark",
+            "1 TL\tBasilikum gerebelt oder frisch wenn vorhanden",
+            "n. B.\tOliven\u00f6l gute Qualit\u00e4t",
+            "1\tKnoblauchzehe(n)",
+            "n. B.\tSalz und Pfeffer",
+            "1 kleine\tChilischote(n) getrocknete optional"
+        ],
+        "Zubereitung": [
+            "Die getrockneten Tomaten in hei\u00dfem Wasser einweichen bis sie weich sind.",
+            "Alle Zutaten in einem Blender/Mixer gut vermixen/p\u00fcrieren. So viel Oliven\u00f6l dazugeben dass es eine geschmeidige Masse gibt. Vorsicht! Nicht zuviel! Mit Salz und frisch gemahlenem Pfeffer abschmecken.",
+            "Die getrocknete Chilischote gibt dem Aufstrich noch den richtigen Pep muss aber nicht sein.",
+            "Die Masse in ein Schraubglas f\u00fcllen und verschlossen in den K\u00fchlschrank stellen. H\u00e4lt sich mindestens 14 Tage."
+        ],
+        "Zubereitungszeit": "10 Minuten",
+        "Kategorie": "Aufstrich",
+        "likes": 3
+    },
+    {
+        "id": 61,
+        "Ersteller": "Petra",
+        "Rezeptbild": "1000052209.png",
+        "name": "New York Toast",
+        "Zutaten": [
+            "Toast",
+            "K\u00e4se",
+            "Schinken",
+            "Schnittlauch",
+            "Frischk\u00e4se",
+            "Tomaten",
+            "Salz",
+            "Pfeffer"
+        ],
+        "Zubereitung": [
+            "Toast mit Frischk\u00e4se bestreichen",
+            "Schnittlauch und Salz und Pfeffer dr\u00fcber streuen",
+            "Schinken und K\u00e4se auf das Toast legen",
+            "Tomaten in Scheiben schneiden und auf den K\u00e4se legen",
+            "eine zweite Scheibe Toast auf die belegte Scheibe legen",
+            "2min im Sandwichmaker backen"
+        ],
+        "Zubereitungszeit": "10min",
+        "Kategorie": "Brotspeise",
+        "likes": 2
+    },
+    {
+        "id": 60,
+        "Ersteller": "Sophie",
+        "Rezeptbild": "1000052203.png",
+        "name": "Maultaschen-Lasagne ",
+        "Zutaten": [
+            "1 Dose\tPizzatomaten",
+            "300 g\tMaultasche(n)",
+            "2\tEi(er)",
+            "etwas\tSahne",
+            "150 g\tK\u00e4se geriebener",
+            "Salz und Pfeffer\r\nOregano"
+        ],
+        "Zubereitung": [
+            "Die H\u00e4lfte der Tomaten in eine Auflaufform geben und mit Salz und Pfeffer und Kr\u00e4utern w\u00fcrzen.",
+            "Die Maultaschen in Scheiben schneiden und darauf verteilen.",
+            "Die Eier mit der Sahne verquirlen.",
+            "Mit Salz und Pfeffer w\u00fcrzen und \u00fcber die Maultaschen geben.",
+            "Die restlichen Tomaten dar\u00fcber verteilen und w\u00fcrzen.",
+            "Mit K\u00e4se bestreuen",
+            "und im vorgeheizten Backofen bei 200 Grad ca. 25 - 30 Minuten \u00fcberbacken."
+        ],
+        "Zubereitungszeit": "35min",
+        "Kategorie": "Auflauf",
+        "likes": 4
+    },
+    {
+        "id": 59,
+        "Ersteller": "Paul",
+        "Rezeptbild": "1000052192.png",
+        "name": "Cr\u00eapes",
+        "Zutaten": [
+            "160 g\r\nWeizenmehl (Type 405)",
+            "1 Prise\r\nZucker",
+            "1 Prise\r\nSalz",
+            "2\r\nEier (Gr. M)",
+            "250 ml\r\nMilch",
+            "1 TL\r\nButter oder neutrales Pflanzenfett\r\nNach Belieben Zimt-Zucker - Mischung oder Nuss-Nougat-Creme zum F\u00fcllen"
+        ],
+        "Zubereitung": [
+            "Mehl mit Zucker und Salz vermischen.",
+            "Eier und Milch hinzuf\u00fcgen und mit einem Schneebesen oder dem Handr\u00fchrger\u00e4t zu einem glatten Teig verr\u00fchren.",
+            "Der Teig ist relativ d\u00fcnnfl\u00fcssig",
+            "damit er auf dem Cr\u00eapes-Maker m\u00f6glichst d\u00fcnn verstrichen werden kann."
+        ],
+        "Zubereitungszeit": "10 min",
+        "Kategorie": "Suessspeise",
+        "likes": 3
+    },
+    {
+        "id": 58,
+        "Ersteller": "Paul",
+        "Rezeptbild": "1000052184.png",
+        "name": "Apple Crumble ",
+        "Zutaten": [
+            "400 g \u00c4pfel",
+            "2 TL Zimt gemahlen",
+            "1 Prise Kardamom gemahlen",
+            "\u00bd P\u00e4ckchen Vanillezucker",
+            "60 g Zucker",
+            "2 EL Zitronensaft",
+            "100 g Waln\u00fcsse halbiert",
+            "100 g Butter kalt in St\u00fccken",
+            "400 g \u00c4pfel in St\u00fccken",
+            "120 g Weizenmehl griffig"
+        ],
+        "Zubereitung": [
+            "Backofen auf 200\u00b0C (Ober- und Unterhitze) vorheizen. Eine Auflaufform (ca. 30 x 20 cm) vorbereiten.",
+            " \u00c4pfel in W\u00fcrfel schneiden. In eine Sch\u00fcssel f\u00fcllen und beiseitestellen.",
+            "Zimt und Kardamom und Vanillezucker und 15 g Zucker und Zitronensaft und 50 g Waln\u00fcsse und 20 g Butter verr\u00fchren.",
+            "In die Sch\u00fcssel zu den \u00c4pfel f\u00fcllen und mithilfe des Spatels vermischen.",
+            "Apfelmasse in die vorbereitete Auflaufform umf\u00fcllen.",
+            "F\u00fcr die Streusel Mehl und 50 g Waln\u00fcsse und 80 g Butter und 45 g Zucker und Zimt verr\u00fchren.",
+            "Crumble auf der Apfelmasse verteilen.",
+            "22-25 Minuten (200\u00b0C) goldbraun backen. Apfel-Nuss-Crumble in kleinen Dessertsch\u00fcsseln anrichten und warm servieren."
+        ],
+        "Zubereitungszeit": "30 min",
+        "Kategorie": "Suessspeise",
+        "likes": 3
+    },
+    {
+        "id": 57,
+        "Ersteller": "A\u00e7elya",
+        "Rezeptbild": "lahamcun.jpeg",
+        "name": "lahmacun",
+        "Zutaten": [
+            "F\u00fcr den Teig:",
+            "500 g Mehl",
+            "1 P\u00e4ckchen Trockenhefe (7 g) oder 25 g frische Hefe",
+            "1 TL Zucker",
+            "1 TL Salz",
+            "250-300 ml warmes Wasser",
+            "2 EL Oliven\u00f6l",
+            "F\u00fcr den Belag:",
+            "300 g Lamm- oder Rinderhackfleisch",
+            "1 gro\u00dfe Zwiebel (fein gehackt)",
+            "2 Tomaten (fein gehackt) oder 200 g passierte Tomaten",
+            "1 gr\u00fcne Paprika (fein gehackt)",
+            "2-3 Knoblauchzehen (fein gehackt)",
+            "1 Bund Petersilie (fein gehackt)",
+            "2 EL Tomatenmark",
+            "1 TL Paprikamark (optional)",
+            "1 TL Paprikapulver (edels\u00fc\u00df)",
+            "1 TL Kreuzk\u00fcmmel",
+            "Salz und Pfeffer nach Geschmack",
+            "2-3 EL Oliven\u00f6l",
+            "Saft einer halben Zitrone (optional)\r\n\r\n",
+            "Zum Servieren:",
+            "Frische Petersilie",
+            "Zitronenspalten",
+            "Sumach (optional)",
+            "frischer Salat (z.B. Rucola Eisbergsalat)",
+            "Joghurt oder Ayran (optional)"
+        ],
+        "Zubereitung": [
+            "Trockenhefe mit Zucker in 100 ml warmem Wasser aufl\u00f6sen und etwa 10 Minuten stehen lassen bis sie sch\u00e4umt.",
+            "Mehl Salz und die aktivierte Hefe und das restliche warme Wasser in eine gro\u00dfe Sch\u00fcssel geben. Alles gut verkneten  bis ein glatter Teig entsteht. Zum Schluss das Oliven\u00f6l einarbeiten.",
+            "Den Teig abdecken und an einem warmen Ort etwa 1 Stunde gehen lassen bis er sich verdoppelt hat.",
+            "F\u00fcr den Belag: In einer gro\u00dfen Sch\u00fcssel das Hackfleisch die gehackte Zwiebel die Tomaten oder passierten Tomaten die gr\u00fcne Paprika den Knoblauch die Petersilie das Tomatenmark das Paprikamark (falls verwendet) das Paprikapulver den Kreuzk\u00fcmmel  Salz Pfeffer und das Oliven\u00f6l gut vermischen. Optional den Zitronensaft hinzuf\u00fcgen.",
+            "Ofen vorheizen: Den Backofen auf 250\u00b0C vorheizen (Ober-/Unterhitze) oder den Grill vorheizen.",
+            "Den gegangenen Teig in 8-10 gleich gro\u00dfe St\u00fccke teilen und zu Kugeln formen.",
+            "Jede Teigkugel auf einer bemehlten Arbeitsfl\u00e4che d\u00fcnn ausrollen (Durchmesser etwa 20-25 cm).",
+            "Eine d\u00fcnne Schicht der Fleischmischung auf den ausgerollten Teig geben und gleichm\u00e4\u00dfig verteilen.",
+            "Die Lahmacuns auf ein mit Backpapier belegtes Blech legen und im vorgeheizten Ofen etwa 10-15 Minuten backen bis der Teig knusprig und der Belag durchgegart ist. Alternativ auf dem Grill backen.",
+            "Garnieren:Mit frischer Petersilie Zitronenspalten und eventuell etwas Sumach garnieren."
+        ],
+        "Zubereitungszeit": "2 Stunden",
+        "Kategorie": "Brotspeise",
+        "likes": 4
+    },
+    {
+        "id": 56,
+        "Ersteller": "Sandra",
+        "Rezeptbild": "Screenshot 2024-06-27 201407.png",
+        "name": "Kirsch Tiramisu Eis",
+        "Zutaten": [
+            "50 ml Wasser",
+            "1 EL l\u00f6slicher Kaffee",
+            "125 g Brioche Zopf",
+            "5 EL Amaretto",
+            "130 g Sauerkirschen im Glas",
+            "200 ml Schlagsahne",
+            "25 g Zartbitter Schokolade",
+            "100 g Vanilleeis",
+            ""
+        ],
+        "Zubereitung": [
+            "Wasser erw\u00e4rmen und in einer Tasse Kaffeepulver damit aufgie\u00dfen. Brioche erst in Scheiben dann in breite Streifen schneiden. In eine Sch\u00fcssel legen Kaffee mit Amaretto mischen und Brioche damit tr\u00e4nken",
+            "In einem Sieb Kirschen abtropfen lassen und auf der Brioche verteilen",
+            "In einem hohen Gef\u00e4\u00df Schlagsahne mit einem Handr\u00fchrger\u00e4t mit Schneebesen steif schlagen",
+            "Schokolade fein reiben. Mit einem Essl\u00f6ffel Eiskugeln formen und \u00fcber den Kirschen verteilen Sahne dar\u00fcbergeben. Kirsch-Eis-Tiramisu mit Schokoladenraspeln bestreuen und sofort servieren."
+        ],
+        "Zubereitungszeit": "25 Min",
+        "Kategorie": "Eis",
+        "likes": 4
+    },
+    {
+        "id": 55,
+        "Ersteller": "Sophie",
+        "Rezeptbild": "Screenshot 2024-06-27 200931.png",
+        "name": "Gew\u00fcrzmischung f\u00fcr Gegrilltes",
+        "Zutaten": [
+            "25 g frischer Thymian",
+            "60 g Meersalz",
+            "2 EL schwarzer Pfeffer",
+            "4 TL Paprika edels\u00fc\u00df",
+            "1 TL granulierter Knoblauch",
+            "50 g Brauner Zucker"
+        ],
+        "Zubereitung": [
+            "Thymian waschen trocken sch\u00fctteln Bl\u00e4tter von den Stielen streichen",
+            "Meersalz in einem M\u00f6rser fein zersto\u00dfen Pfefferk\u00f6rner hinzugeben und zersto\u00dfen",
+            "In einer Sch\u00fcssel Salz mit den restlichen Gew\u00fcrzen und dem Thymian vermischen und in ein sauberes Glas umf\u00fcllen."
+        ],
+        "Zubereitungszeit": "15 Min",
+        "Kategorie": "Gewuerzmischung",
+        "likes": 2
+    },
+    {
+        "id": 54,
+        "Ersteller": "Tom",
+        "Rezeptbild": "Screenshot 2024-06-27 200309.png",
+        "name": "Nudelsalat mit gr\u00fcnem Spargel und Aprikosen ",
+        "Zutaten": [
+            "Prise Salz",
+            "1 Bund gr\u00fcner Spargel",
+            "500 g Farfalle",
+            "1 St. Mozzarella",
+            "6 El Oliven\u00f6l",
+            "3 El helles Balsamicoessig",
+            "1 TL Senf",
+            "1 EL Aprikosenkonfit\u00fcre",
+            "Prise schwarzer Pfeffer",
+            "250 g frische Aprikosen",
+            "20 g frischer Basilikum",
+            ""
+        ],
+        "Zubereitung": [
+            "In einem Topf ca. 5l Salzwasser zum Kochen bringen. Spargel waschen im unteren Drittel sch\u00e4len Enden abschneiden. Stangen in 4\u20135 cm lange St\u00fccke schneiden",
+            "Nudeln in kochendem Salzwasser ca. 9\u201311 Min. bissfest garen Spargel die letzten ca. 5 Min. mitgaren. Abgie\u00dfen und abtropfen lassen",
+            "Mozzarella abtropfen lassen und zerzupfen. In einer Sch\u00fcssel \u00d6l Essig Senf Aprikosenkonfit\u00fcre Salz und Pfeffer verr\u00fchren. Nudeln Spargel und Mozzarella unter das Dressing heben.\r\n\r\nAprikosen waschen halbieren entsteinen Fruchtfleisch in feine Spalten schneiden. Basilikum waschen trocken sch\u00fctteln Bl\u00e4ttchen von den Stielen zupfen und fein hacken",
+            "Basilikum und Aprikosen unter den Nudelsalat heben auf Tellern anrichten und servieren."
+        ],
+        "Zubereitungszeit": "35 Min",
+        "Kategorie": "Nudelsalat",
+        "likes": 5
+    },
+    {
+        "id": 53,
+        "Ersteller": "Uwe",
+        "Rezeptbild": "Screenshot 2024-06-27 195858.png",
+        "name": "Nudelsalat mit Tomate und Morzarella ",
+        "Zutaten": [
+            "Prise Salz",
+            "500 g Spaghetti",
+            "500 g Strauchtomaten",
+            "30 g frischer Basilikum",
+            "2 St. Mozzarella",
+            "4 El Oliven\u00f6l",
+            "4 El heller Balsamicoessig",
+            "Prise schwarzer Pfeffer"
+        ],
+        "Zubereitung": [
+            "In einem Topf ca. 5l Salzwasser aufkochen. Spaghetti im siedenden Salzwasser ca. 8 Min. bissfest garen und in ein Sieb abgie\u00dfen",
+            "Tomaten waschen und w\u00fcrfeln. Basilikum waschen trocken sch\u00fctteln Bl\u00e4tter von den Stielen zupfen und fein hacken. Mozzarella grob zerzupfen",
+            "Spaghetti im Kochtopf mit Tomaten Basilikum und Mozzarella vermengen. Mit Oliven\u00f6l Balsamico Salz und Pfeffer abschmecken und auf Tellern verteilt servieren."
+        ],
+        "Zubereitungszeit": "20 Min",
+        "Kategorie": "Nudelsalat",
+        "likes": 4
+    },
+    {
+        "id": 52,
+        "Ersteller": "Uwe",
+        "Rezeptbild": "Screenshot 2024-06-27 195419.png",
+        "name": "Klassischer Reissalat ",
+        "Zutaten": [
+            "300 g Langkornreis",
+            "200 g tiefgefrorene Erbsen",
+            "100 g Mais aus der Dose",
+            "1 rote Paprika",
+            "1 gr\u00fcne Paprika",
+            "1/2 Fr\u00fchlingszwiebeln",
+            "2 EL \u00d6l",
+            "1 El Essig",
+            "1 TL Senf",
+            "Prise Salz",
+            "Prise schwarzer Pfeffer"
+        ],
+        "Zubereitung": [
+            "In einem Topf Reis mit ca. 700 ml Salzwasser aufkochen und zugedeckt auf mittlerer Stufe ca. 13 Min. garen. Nach ca. 8 Min. Erbsen zugeben und zusammen zu Ende garen",
+            "Mais in ein Sieb abgie\u00dfen und abtropfen lassen. Paprika waschen halbieren Strunk und Kerne entfernen und w\u00fcrfeln. Fr\u00fchlingszwiebeln waschen trocken sch\u00fctteln Wurzelenden entfernen und in feine Ringe schneiden",
+            "In einer Sch\u00fcssel \u00d6l Essig Senf Salz und Pfeffer zu einem Dressing verr\u00fchren. Reis Erbsen Mais und Paprika zugeben und vermengen. Abschmecken und klassischen Reissalat bis zum Servieren kalt stellen."
+        ],
+        "Zubereitungszeit": "25 Min",
+        "Kategorie": "Reissalat",
+        "likes": 2
+    },
+    {
+        "id": 51,
+        "Ersteller": "Sabrina",
+        "Rezeptbild": "Screenshot 2024-06-27 194848.png",
+        "name": "Orientalisches H\u00e4hnchen mit Reissalat",
+        "Zutaten": [
+            "600 g H\u00e4hnchenbrustfilets",
+            "1/2 TL H\u00e4hnchenw\u00fcrzsalz",
+            "Prise Kurkuma",
+            "3 El \u00d6l",
+            "200 g Basmatireis",
+            "Prise Salz",
+            "400 g Cherrytomaten",
+            "1 St. Salatgurke",
+            "20 g frische Minze",
+            "20 g frische Petersilie",
+            "1 St. Bio Zitronen",
+            "150 Sahnejoghurt Griechischer Art",
+            "Prise schwarzer Pfeffer"
+        ],
+        "Zubereitung": [
+            "H\u00e4hnchenfilets waschen trocken tupfen und l\u00e4ngs in Streifen schneiden. In einer Sch\u00fcssel Fleisch mit H\u00e4hnchenw\u00fcrzsalz 1 Prise Kurkuma und 1 EL \u00d6l marinieren und zum Durchziehen beiseitestellen",
+            "Inzwischen Reis in einem Sieb gr\u00fcndlich waschen und in einem Topf mit ca. 500 ml Salzwasser aufkochen. Basmatireis anschlie\u00dfend zugedeckt auf niedriger Stufe ca. 12\u201315 Min. quellen lassen",
+            "Derweil Tomaten waschen und halbieren. Gurke waschen Enden entfernen nach Belieben sch\u00e4len und l\u00e4ngs vierteln. Kerngeh\u00e4use entfernen und klein w\u00fcrfeln. Minze und Petersilie waschen trocken sch\u00fctteln Bl\u00e4tter von den Stielen zupfen und fein hacken.\r\n\r\nIn einer Pfanne 1 EL \u00d6l auf hoher Stufe erhitzen und Filetstreifen darin ca. 2\u20133 Min. scharf anbraten. Temperatur reduzieren und auf niedriger Stufe ca. 3 Min. mit geschlossenem Deckel fertig garen.\r\n\r\nZitrone waschen ca. 1 TL Schale fein abreiben halbieren und Saft auspressen. In einer Sch\u00fcssel Joghurt mit Salz Pfeffer und etwas vom Zitronensaft abschmecken.\r\n\r\nReis mit einer Gabel etwas auflockern. Tomaten Gurke Zitronenabrieb und Kr\u00e4uter unterheben und mit 1 EL \u00d6l Salz Pfeffer und etwas vom \u00fcbrigen Zitronensaft abschmecken",
+            ""
+        ],
+        "Zubereitungszeit": "25 Min ",
+        "Kategorie": "Reissalat",
+        "likes": 2
+    },
+    {
+        "id": 50,
+        "Ersteller": "Sandra",
+        "Rezeptbild": "Screenshot 2024-06-27 194419.png",
+        "name": "Pizza mit Feta",
+        "Zutaten": [
+            "400 g Cherrytomaten Mix",
+            "10 g frischer Basilikum",
+            "2 St. Knoblauchzehen",
+            "300 g Cr\u00e8me fra\u00eeche",
+            "Prise schwarzer Pfeffer",
+            "2 St. Pizzateig mit Tomatensauce",
+            "400 g Feta",
+            "4 EL Oliven\u00f6l"
+        ],
+        "Zubereitung": [
+            "Ofen auf 240 \u00b0C Grad (Ober-/Unterhitze) mit Backblech vorheizen. Cherrytomaten waschen und in Scheiben schneiden. Basilikum waschen trocken sch\u00fctteln und Bl\u00e4tter von den Stielen zupfen. Knoblauch sch\u00e4len und fein hacken",
+            "In einer Sch\u00fcssel Knoblauch Cr\u00e8me fra\u00eeche und Pfeffer verr\u00fchren",
+            "Pizzateige mit Backpapier ausrollen und mit der Cr\u00e8me fra\u00eeche bestreichen Tomatensauce anderweitig verwenden. Pizzen mit Tomaten belegen Fetak\u00e4se dar\u00fcber zerbr\u00f6ckeln und Basilikum darauf verteilen",
+            "Hei\u00dfes Blech aus dem Ofen nehmen und eine belegte Pizza vorsichtig daraufziehen. Pizzen nacheinander auf der untersten Schiene im Ofen f\u00fcr ca. 15 Min. backen",
+            "Pizza Bianca mit Cherrytomaten und Basilikum aus dem Ofen nehmen und mit Oliven\u00f6l betr\u00e4ufeln. In St\u00fccke schneiden und servieren."
+        ],
+        "Zubereitungszeit": "30 Min",
+        "Kategorie": "Pizza",
+        "likes": 1
+    },
+    {
+        "id": 49,
+        "Ersteller": "Sandra",
+        "Rezeptbild": "Screenshot 2024-06-27 193016.png",
+        "name": "Reispapier Pizza mit Schinken",
+        "Zutaten": [
+            "4 St. Fr\u00fchlingszwiebeln",
+            "100 g Kochschinken",
+            "4 St. Reispapier",
+            "4 TL Schmelzk\u00e4se",
+            "4 St. Eier",
+            "4 EL R\u00f6stzwiebeln",
+            "4 El Mayonnaise",
+            "4 TL Tabasco"
+        ],
+        "Zubereitung": [
+            "Fr\u00fchlingszwiebeln waschen trocken sch\u00fctteln Enden entfernen und in feine Ringe schneiden. Kochschinken grob w\u00fcrfeln",
+            "Eine Pfanne ohne \u00d6l auf mittlerer Stufe erhitzen. Reispapier in die Pfanne legen jeweils mit 1 TL Schmelzk\u00e4se bestreichen Ei aufschlagen dar\u00fcbergeben und ca. 3 Min. stocken lassen",
+            "Anschlie\u00dfend Fr\u00fchlingszwiebeln und Schinkenstreifen auf der Pizza verteilen und Ei komplett stocken lassen. \u00dcbrige Pizza nacheinander in der Pfanne ausbacken",
+            "Fertige Reispapier-Pizza mit R\u00f6stzwiebeln garnieren und mit Mayonnaise und Tabasco-Sauce servieren."
+        ],
+        "Zubereitungszeit": "25 Min",
+        "Kategorie": "Pizza",
+        "likes": 2
+    },
+    {
+        "id": 48,
+        "Ersteller": "Leonie",
+        "Rezeptbild": "Screenshot 2024-06-27 192617.png",
+        "name": "Mango Bananen Shake",
+        "Zutaten": [
+            "1 St. Mango",
+            "2 St. Bananen",
+            "500 ml Milch",
+            "300 g natur Joghurt",
+            "1 TL Honig"
+        ],
+        "Zubereitung": [
+            "Mango sch\u00e4len",
+            "Fruchtfleisch vom Stein schneiden und grob w\u00fcrfeln. Bananen sch\u00e4len und grob zerschneiden",
+            "In einem hohen Gef\u00e4\u00df Fr\u00fcchte mit Milch und Joghurt zu einem glatten cremigen Shake p\u00fcrieren. Nach Belieben mit etwas Honig abschmecken und nochmals p\u00fcrieren. Auf Gl\u00e4ser verteilen und servieren."
+        ],
+        "Zubereitungszeit": "10 Min ",
+        "Kategorie": "Shake",
+        "likes": 3
+    },
+    {
+        "id": 47,
+        "Ersteller": "Uwe",
+        "Rezeptbild": "Screenshot 2024-06-27 191846.png",
+        "name": "Avocado Hack Burrito",
+        "Zutaten": [
+            "1 St. Knoblauchzehen",
+            "1 St. rote Zwiebeln",
+            "200 g Kidneybohnen",
+            "1 St. Bio Limetten",
+            "1 St. Avocado",
+            "2 El \u00d6L",
+            "300 g gemischtes Hackfleisch",
+            "Prise Salz",
+            "Prise schwarzer Pfeffer",
+            "Prise Kreuzk\u00fcmmel",
+            "200 g saure Sahne",
+            "Prise gemahlener Chili",
+            "4 St. Wraps"
+        ],
+        "Zubereitung": [
+            "Knoblauch sch\u00e4len und fein hacken. Zwiebel halbieren sch\u00e4len und fein w\u00fcrfeln. Bohnen in ein Sieb abgie\u00dfen. Limette halbieren und Saft auspressen. Avocado halbieren Kern entfernen mithilfe eines L\u00f6ffels Fruchtfleisch von der Schale l\u00f6sen und in Scheiben schneiden",
+            "In einer Pfanne \u00d6l auf hoher Stufe erhitzen und Hackfleisch ca. 3 Min. anbraten. Zwiebeln und Knoblauch zugeben und nochmals ca. 2 Min. braten. Mit Salz Pfeffer und Kreuzk\u00fcmmel w\u00fcrzen. Bohnen zugeben durchschwenken und Pfanne beiseitestellen",
+            "Saure Sahne im Becher mit Salz Chili und Limettensaft w\u00fcrzen und abschmecken",
+            "Eine weitere Pfanne auf hoher Stufe erhitzen und Wraps nacheinander fettfrei ca. 30 Sek. erhitzen. Mit saurer Sahne bestreichen und mit Avocado und Bohnen-Hack- Mischung belegen. Aufrollen und Avocado-Hack-Burrito servieren."
+        ],
+        "Zubereitungszeit": "25 Min",
+        "Kategorie": "Studentenkueche",
+        "likes": 2
+    },
+    {
+        "id": 46,
+        "Ersteller": "Marie",
+        "Rezeptbild": "Screenshot 2024-06-27 191321.png",
+        "name": "Zuccini Tartes Tatin",
+        "Zutaten": [
+            "50 g Quark 20 % Fett i.Tr.",
+            "Prise Salz",
+            "1 TL Oliven\u00f6l",
+            "50 g Weizenmehl",
+            "1 TL Backpulver",
+            "1 St. Zucchini",
+            "1 St. Knoblauchzehen",
+            "Prise schwarzer Pfeffer",
+            "1 St. Mozzarella",
+            "10 g frische Petersilie"
+        ],
+        "Zubereitung": [
+            "Ofen auf 180 \u00b0C (Ober-/Unterhitze) vorheizen. In einer Sch\u00fcssel Quark Salz \u00d6l Mehl Back\u00adpulver und 1\u20132 EL Wasser zu einem glatten Teig verkneten. Zu einer Kugel formen und mit Frischhaltefolie bedeckt bei Zimmertemperatur ruhen lassen",
+            "In einem Topf ca. 1 l Salzwasser aufkochen. Zucchini waschen in d\u00fcnne Scheiben hobeln und in kochendem Salzwasser ca. 2 Min. blanchieren. Abgie\u00dfen kalt abschrecken und abtropfen lassen",
+            "Knoblauch sch\u00e4len und fein hacken. In einer Sch\u00fcssel Zucchinischeiben mit Knoblauch Salz und Pfeffer marinieren. Mozzarella in Scheiben schneiden",
+            "Backofen auf 200 \u00b0C (Ober-/Unterhitze) vorheizen. Teig auf einer bemehlten Fl\u00e4che ca. 3 mm dick ausrollen 4 Kreise (ca. \u00d8 9 cm) ausstechen. Zucchinischeiben leicht \u00fcberlappend zu 4 Kreisen (ca. \u00d8 7 cm) auf ein mit Backpapier belegtes Blech legen. Erst mit je zwei Mozzarellascheiben dann mit einem Teigkreis belegen diesen am Rand gut festdr\u00fccken. Im Backofen ca. 15 Min. backen",
+            "In der Zwischenzeit Petersilie waschen trocken sch\u00fctteln und fein hacken. Tartes kurz abk\u00fchlen lassen dann vorsichtig wenden und mit Petersilie garnieren."
+        ],
+        "Zubereitungszeit": "45 Min",
+        "Kategorie": "Tarte",
+        "likes": 1
+    },
+    {
+        "id": 45,
+        "Ersteller": "Uwe",
+        "Rezeptbild": "Screenshot 2024-06-27 190650.png",
+        "name": "Flammkuchen mit gr\u00fcnem Spargel",
+        "Zutaten": [
+            "1 Bund gr\u00fcner Spargel",
+            "500 g vorw. festk. Kartoffeln",
+            "Prise Salz",
+            "300 g saure Sahne",
+            "Prise schwarzer Pfeffer",
+            "1 Bund Fr\u00fchlingszwiebeln",
+            "2 St. Bl\u00e4tterteig"
+        ],
+        "Zubereitung": [
+            "Backbleche im Ofen auf 250 \u00b0C (Ober-/Unterhitze) vorheizen. Spargel waschen holzige Enden entfernen und unteres Drittel sch\u00e4len",
+            "Kartoffeln waschen sch\u00e4len und in ca. 2 mm d\u00fcnne Scheiben schneiden",
+            "In einem Topf ca. 3 l Salzwasser aufkochen. Kartoffelscheiben und Spargel im kochenden Salzwasser ca. 5 Min. bissfest garen",
+            "Gem\u00fcse in ein Sieb abgie\u00dfen direkt unter kaltem Wasser abschrecken und auf K\u00fcchenkrepp ausgebreitet abtropfen. In einer Sch\u00fcssel saure Sahne mit jeweils 1 Prise Salz und Pfeffer abschmecken",
+            "W\u00e4hrenddessen Fr\u00fchlingszwiebeln waschen trocken sch\u00fctteln und wei\u00dfe und gr\u00fcne Teil getrennt voneinander leicht schr\u00e4g in d\u00fcnne Ringe schneiden. Gr\u00fcne Fr\u00fchlingszwiebeln beiseitelegen",
+            "Teig mit Backpapier entrollen und mit saurer Sahne gleichm\u00e4\u00dfig bestreichen. Dabei einen ca. 1 cm breiten Rand aussparen. Die H\u00e4lfte des vorbereiteten Gem\u00fcses auf einem Teig verteilen Flammkuchen vorsichtig auf ein hei\u00dfes Blech ziehen und im unteren Drittel des Ofens nacheinander ca. 10\u201312 Min. backen",
+            "Flammkuchen aus dem Ofen nehmen mit gr\u00fcnen Fr\u00fchlingszwiebeln bestreuen nach Belieben mit Salz und Pfeffer w\u00fcrzen und warm servieren."
+        ],
+        "Zubereitungszeit": "30 Min",
+        "Kategorie": "Pizza",
+        "likes": 1
+    },
+    {
+        "id": 44,
+        "Ersteller": "Sophie",
+        "Rezeptbild": "Screenshot 2024-06-27 190411.png",
+        "name": "Bananen Schoko Shake",
+        "Zutaten": [
+            "2 Bananen",
+            "800 ml Milch",
+            "1 EL Kakaopulver"
+        ],
+        "Zubereitung": [
+            "Banane sch\u00e4len und grob w\u00fcrfeln. In einem hohen Gef\u00e4\u00df mit Milch und Kakaopulver fein p\u00fcrieren. Bananen-Schoko-Shake auf Gl\u00e4ser verteilt servieren."
+        ],
+        "Zubereitungszeit": "10 Min",
+        "Kategorie": "Shake",
+        "likes": 1
+    },
+    {
+        "id": 43,
+        "Ersteller": "Leonie",
+        "Rezeptbild": "Screenshot 2024-06-27 190020.png",
+        "name": "Melonen Minz Shake",
+        "Zutaten": [
+            "1 kg Wassermelone\r\n15 g frische Minze",
+            "1 St. Bio Limetten",
+            "4 EL Brauner Zucker",
+            "8 EL Crushed Ice"
+        ],
+        "Zubereitung": [
+            "Wassermelone sch\u00e4len grob entkernen und in grobe St\u00fccke schneiden. Minze waschen trocken sch\u00fctteln und Bl\u00e4ttchen abzupfen. Limette halbieren und auspressen. In einem Gef\u00e4\u00df mit dem P\u00fcrierstab Wassermelone Minze Limettensaft und Rohrzucker fein p\u00fcrieren",
+            "In vier Gl\u00e4ser jeweils 2 EL Crushed Ice (nach Belieben mehr) geben und mit Melonenp\u00fcree auff\u00fcllen. Nach Belieben mit Minze und Limettenscheiben verzieren und servieren."
+        ],
+        "Zubereitungszeit": "10 Min",
+        "Kategorie": "Shake",
+        "likes": 3
+    },
+    {
+        "id": 42,
+        "Ersteller": "Sabrina",
+        "Rezeptbild": "Screenshot 2024-06-27 185412.png",
+        "name": "Kr\u00e4uter Sauce",
+        "Zutaten": [
+            "5 EL Margarine",
+            "1 St. Scharlotte",
+            "1 Zitrone",
+            "3 El lieblicher Wei\u00dfwein",
+            "3 EL Sojadrink",
+            "150 g Veganer Kr\u00e4uter Frischaufstrich",
+            "Prise Salz",
+            "Prise schwarzen Pfeffer"
+        ],
+        "Zubereitung": [
+            "Schalotte halbieren sch\u00e4len und in feine W\u00fcrfel schneiden. Zitrone waschen ca. 1 TL Schale fein abreiben halbieren und Saft auspressen",
+            "In einem Topf 4 EL Margarine Wei\u00dfwein Schalotte und Zitronenschale auf mittlerer Stufe erhitzen und ca. 5 Min. k\u00f6cheln. Topf von der Herdplatte nehmen veganen Streichgenuss Kr\u00e4uter Sojadrink und 1 EL Zitronensaft mit einem Schneebesen unterr\u00fchren. Mit Salz und Pfeffer abschmecken."
+        ],
+        "Zubereitungszeit": "25 Min",
+        "Kategorie": "Saucen",
+        "likes": 1
+    },
+    {
+        "id": 41,
+        "Ersteller": "Sandra",
+        "Rezeptbild": "Screenshot 2024-06-27 184625.png",
+        "name": "Helle So\u00dfe",
+        "Zutaten": [
+            "2 EL Butter",
+            "2 El Weizenmehl",
+            "200 ml Milch",
+            "200 ml Gem\u00fcsebr\u00fche",
+            "Prise gemahlene Muskatnuss",
+            "Prise Salz",
+            "Prise schwarzer Pfeffer"
+        ],
+        "Zubereitung": [
+            "Einen Topf auf mittlerer Stufe erhitzen Butter darin schmelzen lassen. Mehl dar\u00fcbersieben und unter st\u00e4ndigem R\u00fchren ca. 2 Min. hellgelb anschwitzen. Unter st\u00e4ndigem R\u00fchren mit Milch und Gem\u00fcsebr\u00fche abl\u00f6schen",
+            "Helle Grundsauce auf niedriger Stufe unter gelegentlichem R\u00fchren ca. 8 Min. k\u00f6cheln lassen bis sie leicht dickfl\u00fcssig wird. Helle Sauce mit Muskatnuss Salz und Pfeffer w\u00fcrzig abschmecken und zu hellem Fleisch oder Gem\u00fcse servieren."
+        ],
+        "Zubereitungszeit": "25 Min",
+        "Kategorie": "Saucen",
+        "likes": 2
+    },
+    {
+        "id": 40,
+        "Ersteller": "Tom",
+        "Rezeptbild": "Screenshot 2024-06-27 183910.png",
+        "name": "Makkaroni mit Fenchel Bolognese",
+        "Zutaten": [
+            "1 gelbe Zwiebel\r\n2 St. Fenchel",
+            "4 EL \u00d6l",
+            "600 g gemischtes Hackfleisch",
+            "Prise Salz",
+            "Prise schwarzer Pfeffer",
+            "1 Zitrone",
+            "20 g frischen Dill",
+            "200 ml trockener Wei\u00dfwein",
+            "500 g Makkaroni",
+            "200 g natur Frischk\u00e4se"
+        ],
+        "Zubereitung": [
+            "Zwiebel halbieren sch\u00e4len und in feine Streifen schneiden. Fenchelknolle waschen das dillartige Fenchelgr\u00fcn vom Stielansatz zupfen fein hacken und bis zur weiteren Verwendung k\u00fchl stellen. Stiele und Strunkansatz abschneiden. Knolle vierteln und in feine Spalten schneiden",
+            "In einer Pfanne 2 EL \u00d6l auf h\u00f6chster Stufe erhitzen und Hackfleisch darin mit 1 Prise Salz ca. 2\u20133 Min. sehr scharf anbraten. Fleisch anschlie\u00dfend auf einem Teller beiseitestellen. Pfanne nicht s\u00e4ubern. In einem Topf ca. 5 l. Salzwasser zugedeckt zum Kochen bringen",
+            "Fenchel Zwiebel und 2 EL \u00d6l zum Bratensatz in die Pfanne geben und auf mittlerer Stufe ca. 5\u20136 Min. anbraten. Mit jeweils 1 Prise Salz und Pfeffer w\u00fcrzen. Inzwischen Zitrone hei\u00df abwaschen ca. 1 TL Schale fein abreiben und Saft auspressen. Dill waschen trocken sch\u00fctteln Spitzen abzupfen und fein hacken (4\u20136 Dillspitzen zum\r\nAnrichten beiseitestellen)",
+            "Hackfleisch zum Gem\u00fcse in die Pfanne geben hoch erhitzen und mit Wei\u00dfwein abl\u00f6schen. 300 ml Kochwasser aus dem Topf absch\u00f6pfen ebenfalls zugeben alles aufkochen und ca. 4 Min. eink\u00f6cheln. W\u00e4hrenddessen Makkaroni im kochenden\r\nSalzwasser ca. 4 Min. al dente garen",
+            "Hitze der Pfanne reduzieren Frischk\u00e4se einr\u00fchren und auf niedriger bis mittlerer Stufe ca. 1\u20132 Min. schmelzen. Dill Fenchelgr\u00fcn Zitronenabrieb und 1\u20132 EL Zitronensaft zugeben",
+            "Makkaroni in ein Sieb abgie\u00dfen zur Fenchel-Bolognese geben durchmischen und mit Salz und Pfeffer abschmecken. Auf Tellern anrichten und mit den restlichen Dillspitzen garniert servieren."
+        ],
+        "Zubereitungszeit": "35 Min",
+        "Kategorie": "Pasten",
+        "likes": 2
+    },
+    {
+        "id": 39,
+        "Ersteller": "Carla",
+        "Rezeptbild": "Screenshot 2024-06-27 183225.png",
+        "name": "Pilz Lauch Suppe",
+        "Zutaten": [
+            "600 g vorw. festk. Kartoffeln",
+            "1 Lauch",
+            "500 g wei\u00dfe Champignons",
+            "5 g frischen Thymian",
+            "2 El Butter",
+            "1 EL Gem\u00fcsebr\u00fche",
+            "200 ml Milch"
+        ],
+        "Zubereitung": [
+            "Kartoffeln sch\u00e4len waschen und w\u00fcrfeln. Porree l\u00e4ngs halbieren Wurzelenden abschneiden in Ringe schneiden und in einem Sieb gr\u00fcndlich waschen. Pilze s\u00e4ubern und in Scheiben schneiden. Thymian waschen trocken sch\u00fctteln Bl\u00e4ttchen von den Stielen streifen und fein hacken",
+            "In einem Topf Butter auf hoher Stufe erhitzen und Porree mit Pilzen darin ca. 5 Min. anbraten. Kartoffeln und Thymian zugeben Br\u00fche ggf. anr\u00fchren und in den Topf gie\u00dfen. Milch dazugeben und aufkochen. Zugedeckt ca. 15 Min. k\u00f6cheln",
+            "Suppe ggf. abschmecken und auf Tellern verteilt servieren."
+        ],
+        "Zubereitungszeit": "30 Min",
+        "Kategorie": "Suppe",
+        "likes": 1
+    },
+    {
+        "id": 38,
+        "Ersteller": "Carla",
+        "Rezeptbild": "Screenshot 2024-06-27 141705.png",
+        "name": "B\u00e4rlauch Suppe",
+        "Zutaten": [
+            "1 gelbe Zwiebel",
+            "400 g vorw. festk. Kartoffeln",
+            "1 EL Butter",
+            "Prise Salz",
+            "Prise schwarzer Pfeffer",
+            "100 ml trockener Wei\u00dfwein",
+            "1 L Gem\u00fcsebr\u00fche",
+            "100 g B\u00e4rlauch",
+            "1 Zitronen",
+            "200 g Schlagsahne"
+        ],
+        "Zubereitung": [
+            "Zwiebel halbieren sch\u00e4len und w\u00fcrfeln. Kartoffeln waschen sch\u00e4len und w\u00fcrfeln",
+            "In einem Topf Butter auf hoher Stufe erhitzen und Zwiebeln darin ca. 2 Min. anbraten. Kartoffeln zugeben mit Salz und Pfeffer w\u00fcrzen und mit Wei\u00dfwein abl\u00f6schen. Mit Gem\u00fcsebr\u00fche auff\u00fcllen und zugedeckt ca. 20 Min. garen\r\nB\u00e4rlauch waschen und grob hacken. Zitrone waschen halbieren und Saft auspressen. In einem hohen Gef\u00e4\u00df 100 ml Sahne steif schlagen",
+            "B\u00e4rlauch und restliche Sahne zur Suppe geben und fein p\u00fcrieren. Mit Gew\u00fcrzen und Zitronensaft abschmecken und auf Tellern verteilen. Mit geschlagener Sahne garniert servieren."
+        ],
+        "Zubereitungszeit": "35 Min",
+        "Kategorie": "Suppe",
+        "likes": 1
+    },
+    {
+        "id": 37,
+        "Ersteller": "Sabrina",
+        "Rezeptbild": "Screenshot 2024-06-27 134903.png",
+        "name": "Veganer Spargel-Kartoffel-Auflauf",
+        "Zutaten": [
+            "1 Bund wei\u00dfer Spargel",
+            "1 Bund gr\u00fcner Spargel",
+            "1 kg kleine vorw. festk. Kartoffeln",
+            "Prise Salz",
+            "4 EL Margarine",
+            "4 EL Weizenmehl",
+            "200 ml trockener Wei\u00dfwein",
+            "500 ml Sojadrink",
+            "1 St. getrocknete Lorbeerbl\u00e4tter",
+            "Prise schwarzer Pfeffer",
+            "Prise gemahlener Muskatnuss",
+            "150 g Vemondo Reibegenuss",
+            "10 g frische Petersilie"
+        ],
+        "Zubereitung": [
+            "Wei\u00dfen Spargel waschen sch\u00e4len und holzige Enden abschneiden. Gr\u00fcnen Spargel waschen holzige Enden abscheiden und im unteren Drittel sch\u00e4len. Spargel in etwa 3 cm gro\u00dfe St\u00fccke schneiden. Kartoffeln sch\u00e4len waschen und viertel. In einem Topf Kartoffeln mit Salzwasser bedeckt aufkochen und ca. 10 Min. kochen lassen",
+            "In einem Topf Margarine auf mittlerer Stufe erhitzen. Mit Mehl best\u00e4uben und ca. 2 Min. anschwitzen. Nach und nach mit Wei\u00dfwein abl\u00f6schen. Dabei kr\u00e4ftig r\u00fchren",
+            "Sojadrink und Lorbeerblatt zugeben und auf mittlerer Stufe ca. 5 Min. k\u00f6cheln bis die Sauce leicht dickfl\u00fcssig ist. Mit Salz",
+            "Pfeffer und Muskat abschmecken",
+            "Backofen auf 180 \u00b0C (Ober-/Unterhitze) vorheizen. Kartoffeln abgie\u00dfen und abtropfen lassen. In einer Auflaufform Kartoffeln und Spargel mischen und Sauce dar\u00fcbergeben. Auflauf mit veganem Reibegenuss bestreuen und im Ofen ca. 30 Min. backen",
+            "Inzwischen Petersilie waschen trocken sch\u00fctteln Bl\u00e4tter abzupfen und fein hacken. Veganen Spargel-Kartoffeln-Auflauf vorsichtig aus dem Ofen nehmen und mit Petersilie bestreut servieren."
+        ],
+        "Zubereitungszeit": "50 Min",
+        "Kategorie": "Auflauf",
+        "likes": 2
+    },
+    {
+        "id": 36,
+        "Ersteller": "Sandra",
+        "Rezeptbild": "Screenshot 2024-06-27 133820.png",
+        "name": "Maultaschen-Auflauf mit Spinat",
+        "Zutaten": [
+            "300 g Babyspinat",
+            "1 gelbe Zwiebel",
+            "1 Knoblauchzehe",
+            "4 El \u00d6l",
+            "800 g geschnittene Maultaschen",
+            "400 ml Gem\u00fcsebr\u00fche",
+            "200 ml Schlagsahne",
+            "Prise Salz",
+            "Priser schwarzer Pfeffer",
+            "Prise gemahlene Muskatnuss",
+            "200 g gerieben Gouda"
+        ],
+        "Zubereitung": [
+            "Backofen auf 180 \u00b0C (Ober-/Unterhitze) vorheizen. Spinat waschen und abtropfen lassen. Zwiebel halbieren",
+            "sch\u00e4len und fein w\u00fcrfeln. Knoblauch sch\u00e4len und fein hacken",
+            "In einer Pfanne 2 EL \u00d6l auf hoher Stufe erhitzen und geschnittene Maultaschen ca. 4 Min. goldgelb anbraten. Anschlie\u00dfend in eine Auflaufform geben",
+            "In der Pfanne erneut 2 EL \u00d6l erhitzen und Zwiebel mit Knoblauch ca. 2 Min. anbraten. Spinat zugeben und ca. 1 Min. zusammenfallen lassen",
+            "Anschlie\u00dfend mit Gem\u00fcsebr\u00fche und Sahne auff\u00fcllen und aufkochen. Mit Salz Pfeffer und Muskatnuss abschmecken \r\nSauce \u00fcber die Maultaschen geben",
+            "K\u00e4se auf dem Maultaschen-Auflauf verteilen und im Ofen ca. 25 Min. \u00fcberbacken. Anschlie\u00dfend vorsichtig aus dem Ofen nehmen und servieren."
+        ],
+        "Zubereitungszeit": "40 Min",
+        "Kategorie": "Auflauf",
+        "likes": 1
+    },
+    {
+        "id": 35,
+        "Ersteller": "Sophie",
+        "Rezeptbild": "Screenshot 2024-06-27 132150.png",
+        "name": "Thunfisch Feta Auflauf",
+        "Zutaten": [
+            "Prise Salz",
+            "300 g Thunfisch in \u00d6l",
+            "400 g Kritharaki Nudeln",
+            "2 gelbe Zwiebeln",
+            "1 Knoblauchzehe",
+            "1 EL Oliven\u00f6l",
+            "1/2 EL getrockneter Oregano",
+            "200 g Schlagsahne",
+            "100 g Babyspinat",
+            "Prise schwarzer Pfeffer",
+            "200 g Feta",
+            "10 g frischer Dill"
+        ],
+        "Zubereitung": [
+            "In einem Topf ca. 4 l Salzwasser zugedeckt aufkochen. Thunfisch in ein Sieb abgie\u00dfen und zum Temperieren auf einem Teller beiseitestellen. Kritharaki im kochenden Salzwasser ca. 8 Min. al dente garen und anschlie\u00dfend in ein Sieb abgie\u00dfen",
+            "Inzwischen Zwiebeln und Knoblauch halbieren sch\u00e4len und fein w\u00fcrfeln. In einer Pfanne 1 EL Oliven\u00f6l auf mittlerer Stufe erhitzen und Zwiebeln und Knoblauch darin ca. 3\u20134 Min. farblos anschwitzen. Oregano zugeben leicht salzen und mit Sahne abl\u00f6schen. Aufkochen und alles auf mittlerer Stufe ca. 5 Min. s\u00e4mig eink\u00f6cheln",
+            "Ofen auf 200 \u00b0C (Ober-/Unterhitze) vorheizen. Spinat waschen und trocken sch\u00fctteln",
+            "In einer Auflaufform Kritharaki Spinat Thunfisch und Zwiebel-Sahne-So\u00dfe mischen und mit Salz Pfeffer w\u00fcrzen. Feta mit den H\u00e4nden grob zerbr\u00f6seln \u00fcber dem Auflauf verteilen und diesen im oberen Drittel des Ofens ca. 8\u201310 Min. goldgelb \u00fcberbacken",
+            "Dill waschen trocken sch\u00fctteln grobe Stiele entfernen und grob hacken. Fertigen Thunfisch-Feta-Auflauf mit Spinat aus dem Ofen nehmen etwas abk\u00fchlen lassen und mit Dill bestreut servieren."
+        ],
+        "Zubereitungszeit": "35 Min",
+        "Kategorie": "Auflauf",
+        "likes": 2
+    },
+    {
+        "id": 34,
+        "Ersteller": "Leonie",
+        "Rezeptbild": "Screenshot 2024-06-27 131106.png",
+        "name": "Minz Dip",
+        "Zutaten": [
+            "30 g frische Minze",
+            "1 Zitrone",
+            "2 EL Oliven\u00f6l",
+            "1 TL Honig",
+            "Prise Salz",
+            "Prise Pfeffer",
+            "150 g Natur Joghurt"
+        ],
+        "Zubereitung": [
+            "Minze waschen trocken sch\u00fctteln und grobe Stiele entfernen",
+            "Zitrone hei\u00df waschen etwa 1 TL Schale fein abreiben halbieren und Saft auspressen",
+            "In einem hohen Gef\u00e4\u00df Minze mit Zitronenschale 2 EL Zitronensaft 2 EL Oliven\u00f6l Honig Salz und Pfeffer p\u00fcrieren und abschmecken. Joghurt hinzugeben mit Salz und Pfeffer w\u00fcrzen."
+        ],
+        "Zubereitungszeit": "5 Min",
+        "Kategorie": "Dips",
+        "likes": 2
+    },
+    {
+        "id": 33,
+        "Ersteller": "Sabrina",
+        "Rezeptbild": "Screenshot 2024-06-27 130813.png",
+        "name": "Feta Dip",
+        "Zutaten": [
+            "1 Feta\r\n1 Zitrone\r\n200 g uark"
+        ],
+        "Zubereitung": [
+            "Feta abtropfen und grob zerbr\u00f6seln",
+            "Zitrone waschen",
+            "etwa 1 TL Schale fein abreiben und Saft auspressen",
+            "In einer Sch\u00fcssel Feta Quark Zitronenschale und 2 EL Zitronensaft verr\u00fchren. Mit Salz und Pfeffer abschmecken."
+        ],
+        "Zubereitungszeit": "5 min",
+        "Kategorie": "Dips",
+        "likes": 3
+    },
+    {
+        "id": 32,
+        "Ersteller": "Tom",
+        "Rezeptbild": "Screenshot 2024-06-27 125911.png",
+        "name": "Th\u00fcringer Kl\u00f6\u00dfe",
+        "Zutaten": [
+            "1 kg vorw. festk. Kartoffeln",
+            "Prise Salz",
+            "1 Br\u00f6tchen",
+            "2 EL Butter",
+            "2 EL Speisest\u00e4rke"
+        ],
+        "Zubereitung": [
+            "Kartoffeln sch\u00e4len und waschen. 500 g der Kartoffeln w\u00fcrfeln. In einem Topf Kartoffelw\u00fcrfel mit Salzwasser bedeckt zum Kochen bringen und ca. 20 Min. weich garen",
+            "Inzwischen Br\u00f6tchen klein w\u00fcrfeln. In einer Pfanne Butter auf mittlerer Stufe erhitzen und Br\u00f6tchenw\u00fcrfel darin ca. 3 Min. knusprig braten. Abk\u00fchlen lassen",
+            "In einem Topf ca. 5 l Salzwasser zum Kochen bringen. \u00dcbrige Kartoffeln fein reiben und auf ein sauberes K\u00fcchentuch geben. Kartoffeln gut auspressen bis sie trocken sind. In eine Sch\u00fcssel geben etwas auflockern und leicht salzen",
+            "Gekochte Kartoffeln abgie\u00dfen ausdampfen lassen und stampfen. Dann noch hei\u00df zu den rohen Kartoffeln geben und verr\u00fchren dabei ca. 2 EL St\u00e4rke zuf\u00fcgen sodass ein formbarer Teig entsteht. Mit k\u00fchlen H\u00e4nden 8\u201310 Teigportionen abnehmen jeweils flach dr\u00fccken mittig 1\u20132 Br\u00f6tchenw\u00fcrfel daraufgeben und zu runden Kl\u00f6\u00dfen formen",
+            "Beim Salzwasser die Hitze reduzieren sodass es nicht mehr kocht sondern nur leicht siedet. Kl\u00f6\u00dfe hineingeben und zugedeckt ca. 20 Min. gar ziehen lassen. Herausheben und gut abtropfen lassen."
+        ],
+        "Zubereitungszeit": "1h 10 min",
+        "Kategorie": "Kloesse",
+        "likes": 2
+    },
+    {
+        "id": 31,
+        "Ersteller": "Sophie",
+        "Rezeptbild": "Screenshot 2024-06-27 124543.png",
+        "name": "Mini-Kl\u00f6\u00dfe-Gulasch mit Champignons",
+        "Zutaten": [
+            "3 St. gelb Zwiebeln",
+            "2 St. rote Paprika",
+            "350 g braune Champignons",
+            "3 St. Karotten",
+            "3 EL \u00d6l",
+            "3 EL Tomatenmark",
+            "400 ml trockener Rotwein",
+            "600 ml Gem\u00fcsebr\u00fche",
+            "1 TL eldels\u00fc\u00df Paprika",
+            "2 getrocknete Lorbeerbl\u00e4tter",
+            "750 g Mini Kl\u00f6\u00dfe",
+            "2 EL Sojasauce",
+            "Prise Salz",
+            "Prise schwarzer Pfeffer",
+            "15 g frische Petersilie",
+            "4 EL Sojaghurt"
+        ],
+        "Zubereitung": [
+            "Zwiebeln halbieren sch\u00e4len und in grobe St\u00fccke schneiden. Paprika waschen Strunk und Kerne entfernen und in Streifen schneiden. Champignons ggf. mit einem K\u00fcchenkrepp putzen und vierteln. Karotten sch\u00e4len Enden entfernen und w\u00fcrfeln.",
+            "In einem Topf \u00d6l auf hoher Stufe erhitzen. Zwiebeln Champignons und Karotten ca. 5 Min. anbraten. Tomatenmark zugeben vermischen und ca. 3 Min. braten. Mit 50 ml Rotwein abl\u00f6schen verr\u00fchren und ca. 3 Min. k\u00f6cheln. Mit dem restlichen Rotwein erneut abl\u00f6schen verr\u00fchren und ca. 5 Min. k\u00f6cheln. Mit Gem\u00fcsebr\u00fche auff\u00fcllen Paprika Paprika edels\u00fc\u00df",
+            "Lorbeerbl\u00e4tter Mini Kl\u00f6\u00dfe und Sojasauce zugeben und vorsichtig verr\u00fchren. F\u00fcr ca. 15 Min. auf kleiner Stufe zugedeckt k\u00f6cheln lassen",
+            "Lorbeerbl\u00e4tter entfernen. Mit Salz und Pfeffer abschmecken. Herd ausstellen und Gulasch zugedeckt ca. 10 Min. ziehen lassen. Petersilie waschen trocken sch\u00fctteln und hacken",
+            "Mini-Kl\u00f6\u00dfe-Gulasch auf tiefe Teller verteilen und mit jeweils 1 EL Sojaghurt und Petersilie garniert servieren."
+        ],
+        "Zubereitungszeit": "45 Min",
+        "Kategorie": "Kloesse",
+        "likes": 1
+    },
+    {
+        "id": 30,
+        "Ersteller": "Thomas ",
+        "Rezeptbild": "schnell-gezauberte-sonntagsbroetchen.webp",
+        "name": "Sonntagsbr\u00f6tchen",
+        "Zutaten": [
+            "\u00bd W\u00fcrfel\tHefe",
+            "\u00bd EL\tHonig",
+            "\u00bd EL\tSalz",
+            "300 ml\tWasser",
+            "250 g\tWeizenmehl",
+            "250 g\tDinkelmehl (Vollkorn-)"
+        ],
+        "Zubereitung": [
+            "Hefe mit dem Honig verr\u00fchren Wasser und Salz hinzugeben. Mehl unterkneten.",
+            "Falls der Teig zu sehr klebt noch etwas Mehl zugeben. 10 Min ruhen lassen muss aber nicht sein.",
+            "6 gro\u00dfe Br\u00f6tchen formen.",
+            "Bei 180\u00b0C (nicht vorheizen) auf der mittleren Schiene 20 - 30 Min backen.",
+            "Nach 20 Min sind sie noch relativ weich aber nach 30 Min. werden sie richtig sch\u00f6n knusprig."
+        ],
+        "Zubereitungszeit": "30 Minuten",
+        "Kategorie": "Broetchen",
+        "likes": 2
+    },
+    {
+        "id": 29,
+        "Ersteller": "Julian ",
+        "Rezeptbild": "deutschland-smoothie-schwarz-rot-gold.webp",
+        "name": "Deutschland-Smoothie",
+        "Zutaten": [
+            "\u00bd\tMango(s)",
+            "1\tBanane(n)",
+            "200 g\tErdbeeren",
+            "100 g\tHimbeeren",
+            "200 g\tBrombeeren",
+            "100 g\tHeidelbeeren",
+            "2 EL\tPuderzucker",
+            "3 Handvoll\tCrushed Ice\r\nevtl.\tAktivkohle"
+        ],
+        "Zubereitung": [
+            "Die Mango und die Banane sch\u00e4len und grob zerschneiden. Dann zusammen mit einer Handvoll zersto\u00dfenem Eis in den Mixer geben und alles zu einer homogenen Masse verarbeiten. Die Gl\u00e4ser damit zu einem Drittel bef\u00fcllen und etwa 10 Minuten in den Tiefk\u00fchler geben.",
+            "W\u00e4hrenddessen die Erdbeeren und Himbeeren zusammen mit einer Handvoll zersto\u00dfenem Eis in den Mixer geben und alles zu einer homogenen Masse verarbeiten. Die Gl\u00e4ser wieder aus dem Tiefk\u00fchler nehmen und mit der rote Masse zu einem weiteren Drittel bef\u00fcllen. Danach wieder etwa 10 Minuten in den Tiefk\u00fchler geben.",
+            "In dieser Zeit die Brombeeren und Heidelbeeren zusammen mit dem Puderzucker und einer Handvoll zersto\u00dfenem Eis in den Mixer geben und alles zu einer homogenen Masse verarbeiten. Damit die Masse wirklich fast schwarz wird kann optional noch etwas Aktivkohle dazugegeben werden. Die Gl\u00e4ser dann wieder aus dem Tiefk\u00fchler nehmen und jetzt das letzte Drittel mit der dunklen Masse bef\u00fcllen.",
+            "Die nun fertigen Smoothies mit Trinkhalmen best\u00fccken und servieren."
+        ],
+        "Zubereitungszeit": "35 Minuten",
+        "Kategorie": "Shake",
+        "likes": 3
+    },
+    {
+        "id": 28,
+        "Ersteller": "Sophie",
+        "Rezeptbild": "subway-cookies.webp",
+        "name": "Subway-Cookies",
+        "Zutaten": [
+            "280 g\tMehl\r\n1 TL\tNatron\r\n1 TL gestr.\tSalz",
+            "250 g\tButter weiche",
+            "260 g\tZucker",
+            "2\tEi(er)",
+            "300 g\tSchokotropfen (Chocolate chips) zartbitter",
+            ""
+        ],
+        "Zubereitung": [
+            "Butter und Zucker mit dem Handmixer 3 Minuten schaumig r\u00fchren. Die Eier hinzugeben und weitere 3 min r\u00fchren bis es noch cremiger ist.",
+            "In einer separaten Sch\u00fcssel Mehl Natron und Salz mischen und anschlie\u00dfend zur Buttermischung geben und mit einem L\u00f6ffel unterr\u00fchren bis gerade so ein Teig entsteht.",
+            "Der Teig ist perfekt wenn gerade so kein Mehl mehr zu sehen ist. Die Schokolade unterheben.",
+            "Ein Backblech mit zwei Lagen Backpapier auslegen. Den Backofen auf 190\u00b0C Umluft vorheizen.",
+            "Zwetschgengro\u00dfe Teigh\u00e4ufchen auf das Backpapier geben und diese leicht andr\u00fccken. Sie sollen gleich gro\u00df sein damit sie gleichm\u00e4\u00dfig backen.",
+            "10-13 min backen.",
+            "Beim Abk\u00fchlen sind die Kekse anfangs noch leicht gew\u00f6lbt",
+            "fallen dann aber nach ein paar Minuten ein und bilden dabei diesen leckeren weichen Kekskern wie er bei Subway so ber\u00fchmt ist.",
+            "Kekse 20 Minuten abk\u00fchlen."
+        ],
+        "Zubereitungszeit": "53 Minuten ",
+        "Kategorie": "Kekse",
+        "likes": 3
+    },
+    {
+        "id": 27,
+        "Ersteller": "Sophie",
+        "Rezeptbild": "Screenshot 2024-06-27 123151.png",
+        "name": "Himbeerdressing ",
+        "Zutaten": [
+            "100 g tiefgeforen Himbeeren",
+            "1 El Honig",
+            "2 El Essig",
+            "50 ml Oliven\u00f6l",
+            "Prise Meersalz",
+            "Prise Chiliflocken"
+        ],
+        "Zubereitung": [
+            "Himbeeren in ein hohes Gef\u00e4\u00df geben und auftauen lassen",
+            "Honig Essig und Oliven\u00f6l zu den Himbeeren geben und alles zu einem Dressing p\u00fcrieren",
+            "Das Dressing mit Salz und Chili kr\u00e4ftig abschmecken",
+            "Dressing \u00fcber einen Salat geben oder verschlossen im K\u00fchlschrank aufbewahren."
+        ],
+        "Zubereitungszeit": "10 min",
+        "Kategorie": "Salatdressing",
+        "likes": 3
+    },
+    {
+        "id": 26,
+        "Ersteller": "Uwe",
+        "Rezeptbild": "Screenshot 2024-06-27 122428.png",
+        "name": "Ranch Dressing ",
+        "Zutaten": [
+            "1 Knoblauchzehe",
+            "5 g frischer Dill",
+            "5 g frischer Schnittlauch",
+            "1 Zitrone",
+            "6 EL saure Sahne",
+            "6 EL Buttermilch",
+            "2 EL Mayonnaise",
+            "Prise Salz",
+            "Prise schwarzer Pfeffer",
+            "1 TL Zucker"
+        ],
+        "Zubereitung": [
+            "Knoblauch sch\u00e4len und fein hacken. Kr\u00e4uter waschen trocken sch\u00fctteln und fein schneiden. Zitrone halbieren und Saft auspressen",
+            "In einer Sch\u00fcssel saure Sahne Buttermilch und Mayonnaise verr\u00fchren. Knoblauch und Kr\u00e4uter untermischen. Ranch Dressing mit Salz Pfeffer und Zucker abschmecken",
+            "Dressing \u00fcber den Salat geben oder in einem Glas verschlossen im K\u00fchlschrank aufbewahren."
+        ],
+        "Zubereitungszeit": "10 Min",
+        "Kategorie": "Salatdressing",
+        "likes": 4
+    },
+    {
+        "id": 25,
+        "Ersteller": "Tom",
+        "Rezeptbild": "erdbeer-shake.webp",
+        "name": "Erdbeer-Shake",
+        "Zutaten": [
+            "200 g\tFrischk\u00e4se",
+            "250 ml\tMineralwasser",
+            "200 g\tErdbeeren",
+            "1 Pck.\tVanillezucker",
+            "4 EL\tZucker",
+            "100 ml\tMilch",
+            "2 EL\tLimettensaft"
+        ],
+        "Zubereitung": [
+            "Alle Zutaten p\u00fcrieren auf vier Gl\u00e4ser verteilen und evtl. mit Beeren verzieren."
+        ],
+        "Zubereitungszeit": "5 Minuten",
+        "Kategorie": "Shake",
+        "likes": 6
+    },
+    {
+        "id": 24,
+        "Ersteller": "Sabrina",
+        "Rezeptbild": "Screenshot 2024-06-27 121826.png",
+        "name": "Mediterrane Fischspie\u00dfe ",
+        "Zutaten": [
+            "600 g gefrorenes Lachsfilet",
+            "150 g gefrorene gekochte Garnelen",
+            "40 g frischer Basilikum",
+            "1 Avocado",
+            "250 g Cherrytomaten",
+            "3 EL Oliven\u00f6l",
+            "Prise Salz",
+            "Prise schwarzer Pfeffer"
+        ],
+        "Zubereitung": [
+            "Lachsfilet und Garnelen am besten \u00fcber Nacht im K\u00fchlschrank auftauen lassen",
+            "Basili\u00adkum waschen trocken sch\u00fctteln und Bl\u00e4ttchen abzupfen. Avocado halbieren Kern entfernen Fruchtfleisch vom Stein l\u00f6sen und grob w\u00fcrfeln. Tomaten waschen. Lachs waschen trocken tupfen und in W\u00fcrfel schneiden. Garnelen waschen und trocken tupfen",
+            "Grill anheizen. Vorbereitete Zutaten und Garnelen abwech\u00adselnd auf die Spie\u00dfe schieben. Spie\u00dfe mit \u00d6l bestreichen und Salz und Pfeffer w\u00fcrzen. In einer Alugrillschale unter Wenden 6 Min. auf dem hei\u00dfen Grill garen und mediterrane Fischspie\u00dfe servieren."
+        ],
+        "Zubereitungszeit": "30 MIN",
+        "Kategorie": "Fingerfood",
+        "likes": 6
+    },
+    {
+        "id": 23,
+        "Ersteller": "Carla",
+        "Rezeptbild": "Screenshot 2024-06-27 121023.png",
+        "name": "Sommer-Salat mit Himbeeren, Melone und Zitronendressing ",
+        "Zutaten": [
+            "240 g Salat-Mix",
+            "25 g frischer Basilikum",
+            "500 g Wassermelone",
+            "250 g Himbeeren",
+            "1 rote Zwiebel",
+            "1 Zitrone",
+            "180 g Brie",
+            "50 ml Gem\u00fcsebr\u00fche",
+            "1 EL Oliven\u00f6l",
+            "Prise Salz",
+            "Prise schwarzer Pfeffer"
+        ],
+        "Zubereitung": [
+            "Salat waschen trocken schleudern und in mundgerechte St\u00fccke zupfen. Basilikum waschen trocken sch\u00fctteln Bl\u00e4tter von den Stielen zupfen. Melone halbieren Kerngeh\u00e4use entfernen und mithilfe eines Kugelausstechers Kugeln formen dabei den Saft auffangen",
+            "Himbeeren verlesen und waschen. Zwiebel halbieren sch\u00e4len und fein w\u00fcrfeln. Zitrone waschen 1 TL Schale abreiben halbieren und Saft auspressen. Brie klein w\u00fcrfeln",
+            "In einer Sch\u00fcssel Zitronen- und Melonensaft Br\u00fche und Oliven\u00f6l verr\u00fchren mit Salz und Pfeffer abschmecken",
+            "Sommersalat mit Melone und Zitronendressing im Dressing schwenken und mit Brie und frischen Himbeeren servieren."
+        ],
+        "Zubereitungszeit": "20 Min",
+        "Kategorie": "Salate",
+        "likes": 6
+    },
+    {
+        "id": 22,
+        "Ersteller": "Tom",
+        "Rezeptbild": "Screenshot 2024-06-27 120440.png",
+        "name": "Cantaloupe-Melonensalat mit Mozzarella ",
+        "Zutaten": [
+            "1 St. Cantaloupe Melone\r\n15 g frischer Basilikum",
+            "1 Zitrone",
+            "2 St. Morzarella",
+            "Prise Salz",
+            "Prise Schwarzer Pfeffer",
+            "4 EL Oliven\u00f6l"
+        ],
+        "Zubereitung": [
+            "Melone halbieren mithilfe eines L\u00f6ffels Kerne herauskratzen sch\u00e4len und in Scheiben schneiden",
+            "Basilikum waschen trocken sch\u00fctteln und grob hacken",
+            "Zitrone halbieren und Saft auspressen",
+            "Mozzarella abtropfen lassen und mit den H\u00e4nden grob zerpfl\u00fccken.\r\nIn einer Sch\u00fcssel 3 EL Zitronensaft mit Salz Pfeffer und 4 EL Oliven\u00f6l verr\u00fchren. Melonenscheiben und Mozzarella darin ca. 5 Min. marinieren",
+            "Cantaloupe-Melonen-Salat auf Tellern verteilen und mit frischem Basilikum servieren."
+        ],
+        "Zubereitungszeit": "20 min",
+        "Kategorie": "Salate",
+        "likes": 5
+    },
+    {
+        "id": 21,
+        "Ersteller": "Leonie",
+        "Rezeptbild": "Screenshot 2024-06-27 120001.png",
+        "name": "Spaghetti Aglio e Olio",
+        "Zutaten": [
+            "500 g Spaghetti",
+            "6 Knoblauchzehen",
+            "100 ml Oliven\u00f6l",
+            "1 TL getrockneter Oregano",
+            "1/2 TL Chiliflocken",
+            "20 g frische Petersilie",
+            "Prise Salz",
+            "4 EL Parmesan"
+        ],
+        "Zubereitung": [
+            "Koche die Spaghetti nach Packungsangabe gie\u00dfe sie in ein Sieb ab und lass sie gut abtropfen",
+            "Sch\u00e4le die Knoblauchzehen und schneide sie in d\u00fcnne Scheiben",
+            "Erhitze das Oliven\u00f6l bei mittlerer Temperatur in einer gro\u00dfen Pfanne und gib die Knoblauchscheiben f\u00fcr 1-2 Minuten in das \u00d6l. Aber Vorsicht: Der Knoblauch darf nicht braun werden da er sonst bitter schmeckt",
+            "Nun den Oregano dazugeben und die Chiliflocken dazu und l\u00e4sst alles ein paar Minuten ziehen",
+            "Dann die abgetropften Spaghetti mit dem Knoblauch-Chili-\u00d6l vermischen und kurz ziehen lassen damit die Pasta den Geschmack aufnimmt",
+            "Hacke die Petersilie und reibe den Parmesan. Schmecke die Spaghetti mit Salz ab und bestreue sie mit Petersilie und Parmesan."
+        ],
+        "Zubereitungszeit": "15 Min",
+        "Kategorie": "Studentenkueche",
+        "likes": 4
+    },
+    {
+        "id": 20,
+        "Ersteller": "Sandra",
+        "Rezeptbild": "Screenshot 2024-06-27 115339.png",
+        "name": "Sp\u00e4tzle mit Pilzsauce",
+        "Zutaten": [
+            "1 Gem\u00fcsezwiebeln",
+            "200 g Pfifferlinge",
+            "10 g frischer Schnittlauch",
+            "4 EL \u00d6l",
+            "4 EL Paniermehl",
+            "Prise Salz",
+            "800 g frische Sp\u00e4tzle",
+            "1 EL Speisest\u00e4rke",
+            "400 g Schlagsahne",
+            "Prise schwarzer Pfeffer"
+        ],
+        "Zubereitung": [
+            "Zwiebel halbieren sch\u00e4len und w\u00fcrfeln. Pfifferlinge s\u00e4ubern und je nach Gr\u00f6\u00dfe halbieren. Schnittlauch waschen trocken sch\u00fctteln und in d\u00fcnne Ringe schneiden",
+            "In einer Pfanne 2 EL \u00d6l auf mittlerer Stufe erhitzen und Paniermehl ca. 2\u20133 Min. unter R\u00fchren goldgelb anr\u00f6sten. Br\u00f6sel salzen und in einer Sch\u00fcssel etwas abk\u00fchlen lassen. Schnittlauch untermischen. Pfanne s\u00e4ubern",
+            "In einem Topf ca. 5 l Salzwasser aufkochen. Sp\u00e4tzle im siedenden Wasser ca. 5 Min. garen bis sie an die Oberfl\u00e4che schwimmen. In ein Sieb abgie\u00dfen und abtropfen lassen",
+            "W\u00e4hrenddessen in der Pfanne 2 EL \u00d6l auf mittlerer bis hoher Stufe erhitzen und Zwiebel ca. 4 Min. glasig anschwitzen. Pfifferlinge zugeben und ca. 5\u20137 Min. braten",
+            "In einer Sch\u00fcssel Speisest\u00e4rke mit 3 EL kaltem Wasser glatt r\u00fchren. Pfifferlinge mit Sahne abl\u00f6schen und Speisest\u00e4rkenwasser unter st\u00e4ndigem R\u00fchren dazugeben. Sauce ca. 3 Min. eink\u00f6cheln und mit Salz und Pfeffer kr\u00e4ftig abschmecken",
+            "Sp\u00e4tzle mit Pfifferlingsauce auf Tellern verteilen und mit Schnittlauchbr\u00f6sel servieren."
+        ],
+        "Zubereitungszeit": "25 min",
+        "Kategorie": "Studentenkueche",
+        "likes": 5
+    },
+    {
+        "id": 19,
+        "Ersteller": "Marie",
+        "Rezeptbild": "Screenshot 2024-06-27 114937.png",
+        "name": "Gin Tonic",
+        "Zutaten": [
+            "1/2 Bio Limetten",
+            "20 ml Gin",
+            "3 EL Eisw\u00fcrfel",
+            "200 ml Tonic Water"
+        ],
+        "Zubereitung": [
+            "Limette waschen und 2 Scheiben abschneiden",
+            "In Longdrinkgl\u00e4ser Gin geben. Die Gl\u00e4ser bis zum Rand mit Eisw\u00fcrfeln f\u00fcllen und mit gek\u00fchltem Tonic Water auff\u00fcllen",
+            "Nach Belieben mit zwei Limettenscheiben garnieren und servieren."
+        ],
+        "Zubereitungszeit": "5 min",
+        "Kategorie": "Getraenke",
+        "likes": 3
+    },
+    {
+        "id": 18,
+        "Ersteller": "Marie",
+        "Rezeptbild": "Screenshot 2024-06-27 114348.png",
+        "name": "Rotweinbowle mit Trauben und Orangen",
+        "Zutaten": [
+            "5 Orangen",
+            "50 g Brauner Zucker",
+            "30 g Honig",
+            "1 Zimtstange",
+            "100 ml Wasser",
+            "100 g dunkle Weintrauben",
+            "100 g helle Weintrauben",
+            "750 ml trockener Rotwein",
+            "750 ml trockener Sekt"
+        ],
+        "Zubereitung": [
+            "Zun\u00e4chst 1 Orange hei\u00df waschen und mit einem Sparsch\u00e4ler 2\u20133 St\u00fccke Schale d\u00fcnn absch\u00e4len",
+            "In einem Topf Schale mit Zucker",
+            "Honig",
+            "Zimtstange und Wasser aufkochen",
+            "ca. 1\u20132 Min. k\u00f6cheln dann ganz abk\u00fchlen lassen und durch ein Sieb gie\u00dfen",
+            "1 Orange waschen halbieren und auspressen. \u00dcbrige Orangen waschen und mit einem scharfen Messer so dick sch\u00e4len dass auch die wei\u00dfe Innenhaut mit entfernt wird. Durch v-f\u00f6rmige Schnitte Orangenfilets herausschneiden dabei den Saft auffangen. Trauben waschen und halbieren",
+            "In einer Sch\u00fcssel Orangensaft abgek\u00fchlten Sirup und Rotwein mischen und abschmecken. Orangenfilets und Trauben zuf\u00fcgen und zugedeckt im K\u00fchlschrank durchziehen lassen. Bowle auf Gl\u00e4ser verteilen und mit gut gek\u00fchltem Sekt aufgie\u00dfen."
+        ],
+        "Zubereitungszeit": "15 min",
+        "Kategorie": "Getraenke",
+        "likes": 6
+    },
+    {
+        "id": 17,
+        "Ersteller": "Sophie",
+        "Rezeptbild": "Screenshot 2024-06-27 112153.png",
+        "name": "Fu\u00dfball Pizza ",
+        "Zutaten": [
+            "100 g Rucola",
+            "1 Knoblauchzehe",
+            "150 g Cherrytomaten",
+            "100 g schwarze Oliven",
+            "80 g geriebener Parmesan",
+            "6 EL Oliven\u00f6l",
+            "Prise Salz",
+            "Prise Schwarzer Pfeffer",
+            "2 St\u00fcck Pizzateig mit Tomatensauce",
+            "6 EL Mayonnaise"
+        ],
+        "Zubereitung": [
+            "Ofen auf 200 \u00b0C (Ober-/Unterhitze) vorheizen",
+            "Rucola waschen und trocken schleudern. Knoblauch sch\u00e4len und fein hacken. Tomaten waschen. Oliven in ein Sieb abgie\u00dfen",
+            "In einem hohen Gef\u00e4\u00df Rucola mit der H\u00e4lfte des Knoblauchs Parmesan und Oliven\u00f6l fein p\u00fcrieren. Mit Salz und Pfeffer w\u00fcrzen",
+            "Pizzateige abrollen Tomatensauce anderweitig verwenden. Pizzateige leicht ausrollen und samt Backpapier jeweils auf ein Backblech ziehen. Mit Rucolapesto bestreichen",
+            "Oliven und Tomaten darauf verteilen",
+            "Im Ofen ca. 15 Min. backen.\r\nW\u00e4hrenddessen in einer Sch\u00fcssel restlichen Knoblauch mit Mayonnaise verr\u00fchren und abschmecken. Knoblauchmayo in einen Gefrierbeutel f\u00fcllen und eine Ecke d\u00fcnn abschneiden",
+            "Pizza aus dem Ofen nehmen. Knoblauchmayo auf der Pizza als Spielfeldmarkierung verteilen und Fu\u00dfball-Pizza servieren."
+        ],
+        "Zubereitungszeit": "25 min",
+        "Kategorie": "Pizza",
+        "likes": 4
+    },
+    {
+        "id": 16,
+        "Ersteller": "Carla",
+        "Rezeptbild": "Screenshot 2024-06-27 111654.png",
+        "name": "\u00dcberbackene Laugenstange",
+        "Zutaten": [
+            "4 Laugenstangen",
+            "10 g Schnittlauch",
+            "200 g Leberk\u00e4se",
+            "150 g Bergk\u00e4se",
+            ""
+        ],
+        "Zubereitung": [
+            "Backofen auf 200 \u00b0C (Ober-/Unterhitze) vorheizen",
+            "Laugenstangen l\u00e4ngs aufschneiden und leicht aush\u00f6hlen. Schnittlauch waschen trocken sch\u00fctteln und in feine Ringe schneiden. Leberk\u00e4se in W\u00fcrfel schneiden. Bergk\u00e4se grob reiben",
+            "Laugenstangen auf ein Backblech mit Backpapier setzen. Mit Leberk\u00e4se K\u00e4se und Schnittlauch f\u00fcllen und ca. 15 Min. im Ofen \u00fcberbacken",
+            "\u00dcberbackene Laugenstange aus dem Ofen nehmen",
+            "leicht abk\u00fchlen lassen und servieren."
+        ],
+        "Zubereitungszeit": "10 min",
+        "Kategorie": "Studentenkueche",
+        "likes": 5
+    },
+    {
+        "id": 15,
+        "Ersteller": "Uwe",
+        "Rezeptbild": "Screenshot 2024-06-27 110936.png",
+        "name": "Pizza Wrap",
+        "Zutaten": [
+            "1/2 Kopfsalat\r\n200 g Cherrytomaten",
+            "4 Scheiben Salami",
+            "4 Wraps",
+            "4 EL Brotaufstrich \u201eTomate und Mozzarella\u201c",
+            "200g Gouda",
+            "gerieben"
+        ],
+        "Zubereitung": [
+            "Salat vom Strunk entfernen grob schneiden waschen und trocken schleudern. Tomaten waschen Strunk entfernen und in Scheiben schneiden. Salami in Streifen schneiden",
+            "Eine Pfanne auf hoher Stufe erhitzen. Wraps jeweils ca. 1 Min. darin erw\u00e4rmen. Wraps mit jeweils 1 EL Brotaufstrich bestreichen. Pizza-Wraps mit Salat Tomate Salami und K\u00e4se belegen",
+            "Pizza-Wraps einrollen und in ca. 4 cm dicke Rollen schneiden. Pizza-Wrap-Rollen in einer Lunchbox anrichten und servieren."
+        ],
+        "Zubereitungszeit": "15 min",
+        "Kategorie": "Studentenkueche",
+        "likes": 4
+    },
+    {
+        "id": 14,
+        "Ersteller": "Sabrina",
+        "Rezeptbild": "Screenshot 2024-06-27 110642.png",
+        "name": "Pfannkuchen",
+        "Zutaten": [
+            "3 Eier",
+            "200 ml Milch",
+            "Prise Salz",
+            "250 g Weizenmehl",
+            "6 EL \u00d6L"
+        ],
+        "Zubereitung": [
+            "In einer Sch\u00fcssel Eier",
+            "Milch und Salz verr\u00fchren. Mehl in die Sch\u00fcssel sieben und zu einem leicht dickfl\u00fcssigen Teig verr\u00fchren",
+            "In einer beschichteten Pfanne 1 EL \u00d6l auf mittlerer Stufe erhitzen",
+            "1 Kelle des Teiges in das hei\u00dfe \u00d6l geben und d\u00fcnn in der Pfanne durch Neigen verteilen",
+            "Pfannkuchen ca. 1\u20132 Min. goldbraun ausbacken bis er beginnt fest zu werden und sich vom Boden l\u00f6st vorsichtig wenden und nochmals ca. 1 Min. von der anderen Seite goldbraun backen. Pfannkuchen beiseitestellen und Vorgang wiederholen bis die Masse aufgebraucht ist."
+        ],
+        "Zubereitungszeit": "15 min",
+        "Kategorie": "Studentenkueche",
+        "likes": 4
+    },
+    {
+        "id": 13,
+        "Ersteller": "Tom",
+        "Rezeptbild": "schneller-flammkuchen.webp",
+        "name": "Flammkuchen",
+        "Zutaten": [
+            "F\u00fcr den Teig:",
+            "2 EL\t\u00d6l",
+            "125 ml\tWasser",
+            "1 Prise(n)\tSalz",
+            "250 g\tMehl",
+            "F\u00fcr den Belag:",
+            "2\tZwiebel(n) in halbe Ringe d\u00fcnn geschnitten",
+            "1 Becher\tCr\u00e8me double",
+            "100 g\tSpeckw\u00fcrfel",
+            "1 Becher\tSchmand 24 % Fett",
+            "Salz oder Fondor und Pfeffer",
+            "Schnittlauchr\u00f6llchen"
+        ],
+        "Zubereitung": [
+            "Knetteig bereiten ganz d\u00fcnn ausrollen. Schmand und Cr\u00e8me double mischen w\u00fcrzen und auf dem Teig verstreichen.",
+            "Zwiebeln mit ganz wenig Wasser 1 Minute bei 600 Watt in der Mikrowelle d\u00fcnsten (durch die hohen Temperaturen beim Backen kann es leicht passieren dass die Zwiebeln verbrennen - das wird durch diesen Trick vermieden). Zusammen mit dem Speck auf dem Belag verteilen.",
+            "Im hei\u00dfen Ofen bei 250 \u00b0C Ober-/Unterhitze auf der unteren Einschubleiste 20 Minuten backen. Mit Schnittlauchr\u00f6llchen bestreut servieren.",
+            "Tipp: Wer Kalorien sparen m\u00f6chte",
+            "ersetzt Cr\u00e8me double durch 20%igen Quark.",
+            "Reicht f\u00fcr 2 - 3 Personen",
+            "je nach Hunger."
+        ],
+        "Zubereitungszeit": "35 Minuten",
+        "Kategorie": "Pizza",
+        "likes": 4
+    },
+    {
+        "id": 12,
+        "Ersteller": "Sabrina",
+        "Rezeptbild": "Screenshot 2024-06-27 110117.png",
+        "name": "H\u00e4hnchenfrikadellen",
+        "Zutaten": [
+            "320 g \tH\u00e4hnchenbrustfilet (bzw. fertiges Gefl\u00fcgelhackfleisch)",
+            "1 \tChilischote",
+            "1 \tEi",
+            "2 EL \tPaniermehl",
+            "2 \tKnoblauchzehe(n)",
+            "1 \tZwiebel",
+            "1 \tKarotte",
+            "1 \tIngwerwurzel",
+            "1 EL \tOliven\u00f6l",
+            "Salz und Pfeffer",
+            "Paprikapulver"
+        ],
+        "Zubereitung": [
+            "Das H\u00e4hnchenfleisch im Fleischwolf zu Hackfleisch durchdrehen (bzw. fertiges Hackfleisch verwenden) und in eine Sch\u00fcssel geben. Die Chilischote w\u00fcrfeln und zum Hackfleisch geben",
+            "Das Ei und das Paniermehl untermischen",
+            "Die Zwiebel",
+            "die Knoblauchzehen und die Karotte sch\u00e4len",
+            "fein hacken",
+            "die Ingwerwurzel sch\u00e4len und fein reiben. 1 TL \u00d6l in einer Pfanne erhitzen Zwiebeln Knoblauch Karotte und Ingwer dazugeben und glasig schwitzen",
+            "Die Zwiebelmischung zum Hackfleisch geben und unterr\u00fchren",
+            "mit den Gew\u00fcrzen kr\u00e4ftig abschmecken",
+            "Aus der Masse portionsweise Frikadellen formen",
+            "Restliches \u00d6l in einer Pfanne erhitzen und die H\u00e4hnchenfrikadellen darin braten."
+        ],
+        "Zubereitungszeit": "20 Minuten",
+        "Kategorie": "Studentenkueche",
+        "likes": 5
+    },
+    {
+        "id": 11,
+        "Ersteller": "Carla",
+        "Rezeptbild": "der-beste-italienische-nudelsalat.webp",
+        "name": "italienischer Nudelsalat",
+        "Zutaten": [
+            "250 g\tNudeln (z. B. Girandole)",
+            "100 g\tOliven schwarze ohne Stein",
+            "1 kleine\tZucchini",
+            "200 g\tCherry-Rispentomate(n)",
+            "8\tTomate(n) getrocknete in \u00d6l eingelegt",
+            "100 g\tRucola",
+            "1 Kugel\tMozzarella",
+            "1 St\u00fcck(e)\tParmesan",
+            "Crema di Balsamico",
+            "Oliven\u00f6l",
+            "Salz und Pfeffer",
+            "1\tKnoblauchzehe(n)",
+            "4 Scheibe/n\tParmaschinken"
+        ],
+        "Zubereitung": [
+            "Den Rucola waschen und die dicken Enden abschneiden trocken schleudern. Die Oliven halbieren getrocknete Tomaten in kleine St\u00fccke schneiden. Tomaten halbieren oder vierteln. Mozzarella in W\u00fcrfel schneiden.",
+            "Die Zucchini in kleine W\u00fcrfel schneiden den Knoblauch abziehen und in hauchd\u00fcnne Scheiben schneiden (hacken geht auch). Beides zusammen mit etwas Oliven\u00f6l in einer beschichteten Pfanne anbraten sodass etwas R\u00f6staromen entstehen.",
+            "In der Zwischenzeit die Nudeln nach Packungsanleitung in Salzwasser \"al dente\" kochen abgie\u00dfen und  kurz abschrecken. Sehr gut abtropfen lassen und dann mit allen vorbereiteten Zutaten in einer gro\u00dfen Sch\u00fcssel vermengen.",
+            "Dann Oliven\u00f6l und Crema di Balsamico hinzugeben bis alle Nudeln was abbekommen haben dann nochmal gut durchmischen. Mit Salz und Pfeffer abschmecken.",
+            "Den Nudelsalat auf Tellern anrichten und mit frisch gehobeltem Parmesan bestreuen. Parmaschinken nach Belieben dar\u00fcber legen."
+        ],
+        "Zubereitungszeit": "30 Minuten ",
+        "Kategorie": "Nudelsalat",
+        "likes": 4
+    },
+    {
+        "id": 10,
+        "Ersteller": "Leonie",
+        "Rezeptbild": "schwarzwaelder-kirschtorte-super-easy.webp",
+        "name": "Schwarzw\u00e4lder Kirschtorte",
+        "Zutaten": [
+            "F\u00fcr den Biskuitboden:\r\n6\tEi(er) getrennt",
+            "250 g\tZucker",
+            "6 EL\tWasser",
+            "200 g\tMehl",
+            "75 g\tSpeisest\u00e4rke",
+            "50 g\tKakaopulver unges\u00fc\u00dftes",
+            "2 TL\tBackpulver",
+            "F\u00fcr die F\u00fcllung: und Garnitur",
+            "1 Glas\tSauerkirschen",
+            "25 g\tSpeisest\u00e4rke",
+            "800 g\tSahne",
+            "1 Pck.\tSahnesteif",
+            "1 EL\tZucker",
+            "Kirschwasser zum Tr\u00e4nken",
+            "Schokoladenraspel zum Verzieren"
+        ],
+        "Zubereitung": [
+            "Eigelb mit Wasser und Zucker so lange r\u00fchren bis eine sehr cremige Masse entstanden ist und die Zuckerkristalle nicht mehr sichtbar sind.",
+            "Mehl St\u00e4rke Backpulver und Kakao mischen und auf die Eigelbcreme sieben.",
+            "Eiwei\u00df steif schlagen und alles vorsichtig unterheben.",
+            "Sofort in eine gefettete bemehlte Springform f\u00fcllen und bei 200 \u00b0C Ober-/Unterhitze 30 \u2013 35 min backen. Dabei die Temperatur im Backverlauf senken",
+            "damit der Biskuit nicht einsinkt sodass die Temperatur zum Ende der Backzeit nur noch ca. 150 \u00b0C betr\u00e4gt. Ausk\u00fchlen lassen.",
+            "Die Sauerkirschen \u00fcber einer Sch\u00fcssel abgie\u00dfen sodass der Saft aufgefangen wird.",
+            "Die St\u00e4rke mit etwas von dem kalten Kirschsaft anr\u00fchren. Den restlichen Kirschsaft aufkochen und die anger\u00fchrte Speisest\u00e4rke einr\u00fchren. Unter R\u00fchren einmal aufkochen lassen dann gleich vom Herd nehmen. Brennt schnell an!",
+            "Die 16 sch\u00f6nsten Kirschen beiseitelegen. Den Rest unter den Kirschpudding mengen.\r\n\r\nDen Tortenboden zweimal durchschneiden den untersten mit etwas Kirschwasser betr\u00e4ufeln mit der Kirschmasse \u00fcberziehen. Ausk\u00fchlen lassen.",
+            "Die Sahne mit Sahnesteif und Zucker steif schlagen d\u00fcnn auf die ausgek\u00fchlten Kirschmasse streichen den n\u00e4chsten Tortenboden auflegen und leicht andr\u00fccken. Wieder mit Kirschwasser betr\u00e4ufeln.",
+            "Den Boden mit ca. der H\u00e4lfte der Sahne bestreichen den n\u00e4chsten Boden aufdr\u00fccken. Von der restlichen Sahne etwa 3 EL in einen Spritzbeutel f\u00fcllen. Die Torte mit der restlichen Sahne rundherum verkleiden mit dem Spritzbeutel 16 Tuffs aufspritzen und mit den beiseitegelegten Kirschen belegen. Oberfl\u00e4che und Rand mit Raspelschokolade bestreuen."
+        ],
+        "Zubereitungszeit": "1 Stunde 35 Minuten",
+        "Kategorie": "Torte",
+        "likes": 5
+    },
+    {
         "id": 9,
         "Ersteller": "Uwe",
         "Rezeptbild": "IMG_3540.webp",
@@ -26,7 +1567,7 @@
         ],
         "Zubereitungszeit": "50 Minuten ",
         "Kategorie": "Suppe",
-        "likes": 1
+        "likes": 2
     },
     {
         "id": 8,
@@ -57,8 +1598,8 @@
             ""
         ],
         "Zubereitungszeit": "20 Minuten ",
-        "Kategorie": "Reis- oder Nudelsalat",
-        "likes": 1
+        "Kategorie": "Salate",
+        "likes": 3
     },
     {
         "id": 7,
@@ -82,7 +1623,7 @@
         ],
         "Zubereitungszeit": "30 Minuten ",
         "Kategorie": "Pasten",
-        "likes": 0
+        "likes": 2
     },
     {
         "id": 6,
@@ -105,7 +1646,7 @@
         ],
         "Zubereitungszeit": "Backzeit betr\u00e4gt ca. 20 Minuten.",
         "Kategorie": "Fingerfood",
-        "likes": 1
+        "likes": 3
     },
     {
         "id": 5,
@@ -175,7 +1716,7 @@
         ],
         "Zubereitungszeit": "f\u00fcr 20 - 30 Minuten bei 200\u00b0 C im vorgeheizten Ofen \u00fcberbacken.",
         "Kategorie": "Auflauf",
-        "likes": 4
+        "likes": 5
     },
     {
         "id": 3,
@@ -201,42 +1742,6 @@
         ],
         "Zubereitungszeit": "30 min",
         "Kategorie": "Studentenkueche",
-        "likes": 5
-    },
-    {
-        "id": 2,
-        "Ersteller": "Sophie",
-        "Rezeptbild": "Spaghetti_Napoli.webp",
-        "name": "Spaghetti",
-        "Zutaten": [
-            "Nudeln",
-            "Wasser",
-            "Salz"
-        ],
-        "Zubereitung": [
-            "Wasser zum kochen bringen",
-            "Salz und Nudeln hinzufuegen",
-            "Warten, bis Nudeln die gewuenschte Bissfestigkeit erreicht haben."
-        ],
-        "Zubereitungszeit": "12 Minuten",
-        "Kategorie": "Pasten",
-        "likes": 4
-    },
-    {
-        "id": 1,
-        "Ersteller": "Carla",
-        "Rezeptbild": "Reis.jpg",
-        "name": "Reis",
-        "Zutaten": [
-            "Reis",
-            "Wasser",
-            "Salz"
-        ],
-        "Zubereitung": [
-            "Wasser zum kochen bringen"
-        ],
-        "Zubereitungszeit": "12 Minuten",
-        "Kategorie": "Eis",
-        "likes": 4
+        "likes": 7
     }
 ]
