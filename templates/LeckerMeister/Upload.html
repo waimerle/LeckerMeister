@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %} <!--Django-Template-Tag zum Laden von statistischen Daten-->
 <!DOCTYPE html>
 <html lang="de">
   <head>
@@ -130,7 +130,9 @@
     <h1>Rezept hochladen</h1>
 
     <form action="#" method="post" enctype="multipart/form-data">
+      <!-- CSRF-Token zum Schutz -->
       {% csrf_token %}
+      <!-- Eingabefeld für den Namen des Rezepts -->
       <label for="recipeName">Name des Rezepts:</label>
       <input type="text" id="recipeName" name="recipeName" placeholder="Geben Sie den Namen des Rezepts ein" required />
 
@@ -166,16 +168,18 @@
         id="preparationTime"
         name="preparationTime"
         rows="1"
-        placeholder="Zubereitungszeit in Minuten"
+        placeholder="Zubereitungszeit"
         required
       ></textarea>
 
+      <!-- Dropdown-Menü für die Auswahl der Kategorie des Rezepts -->
       <label for="category">Kategorie:</label>
       <select id="category" name="category" required>
-        <option value="">Bitte Kategorie auswÃ¤hlen</option>
+        <option value="">Bitte Kategorie auswählen</option>
         <option value="Auflauf">Auflauf</option>
         <option value="Pizza">Pizza</option>
-        <option value="Reis- oder Nudelsalat">Reis- oder Nudelsalat</option>
+        <option value="Nudelsalat">Nudelsalat</option>
+        <option value="Reissalat">Reissalat</option>
         <option value="Salatdressing">Salatdressing</option>
         <option value="Salate">Salate</option>
         <option value="Tarte">Tarte</option>
@@ -183,23 +187,24 @@
         <option value="Dips">Dips</option>
         <option value="Saucen">Saucen</option>
         <option value="Suppe">Suppe</option>
-        <option value="Kloesse">KlÃ¶sse</option>
-        <option value="Brot-und-Broetchen">Brot und BrÃ¶tchen</option>
+        <option value="Kloesse">Klösse</option>
+        <option value="Broetchen">Brötchen</option>
         <option value="Brotspeise">Brotspeise</option>
+        <option value="Brot">Brot</option>
         <option value="Aufstrich">Aufstrich</option>
-        <option value="Suessspeise">SÃ¼ssspeise</option>
+        <option value="Suessspeise">Süssspeise</option>
         <option value="Eis">Eis</option>
         <option value="Kuchen">Kuchen</option>
         <option value="Kekse">Kekse</option>
         <option value="Torte">Torte</option>
         <option value="Confiserie">Confiserie</option>
-        <option value="Getraenke">GetrÃ¤nke</option>
+        <option value="Getraenke">Getränke</option>
         <option value="Shake">Shake</option>
-        <option value="Gewuerzmischung">GewÃ¼rzmischung</option>
+        <option value="Gewuerzmischung">Gewürzmischung</option>
         <option value="Pasten">Pasten</option>
-        <option value="Studentenkueche">StudentenkÃ¼che</option>
+        <option value="Studentenkueche">Studentenküche</option>
       </select>
-
+<!-- Button zum Absenden des Formulars -->
       <input type="submit" value="Rezept hochladen" />
     </form>
     <!-- Footer -->
