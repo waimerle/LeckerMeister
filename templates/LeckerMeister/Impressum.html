@@ -1,4 +1,5 @@
 {% load static %}
+<!--Django-Template-Tag zum Laden von statistischen Daten-->
 <!DOCTYPE html>
 <html lang="de">
   <head>
@@ -64,7 +65,6 @@
         border-radius: 10px;
         color: #5f764f;
       }
-
     </style>
   </head>
   <body>
@@ -75,32 +75,42 @@
     </div>
     <header class="main-header">
       <div class="icons">
-        <a href="Homeseite.html"><img src="{% static 'Home.png' %}" alt="Home_Icon" /></a>
-        <a href="Suchseite.html"><img src="{% static 'Suche.png' %}" alt="Such_Icon" /></a>
-        <a href="Upload.html"><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon" /></a>
-        <a href="Kochbuch.html"><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon" /></a>
-        <a href="Profil.html"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
+        <a href="Homeseite.html"
+          ><img src="{% static 'Home.png' %}" alt="Home_Icon"
+        /></a>
+        <a href="Suchseite.html"
+          ><img src="{% static 'Suche.png' %}" alt="Such_Icon"
+        /></a>
+        <a href="Upload.html"
+          ><img src="{% static 'plus_kreis.png' %}" alt="Plus_Icon"
+        /></a>
+        <a href="Kochbuch.html"
+          ><img src="{% static 'Besteck.png' %}" alt="Besteck_Icon"
+        /></a>
+        <a href="Profil.html"
+          ><img src="{% static 'Person.png' %}" alt="Person_Icon"
+        /></a>
       </div>
     </header>
     <div class="design">
-     <h1>Impressum LeckerMeister</h1> 
-      LeckerMeister ist ein Produkt von Sophie Schumann Sabrina SchÃ¶nweiler und Leonie Waimer<br><br>
+      <h1>Impressum LeckerMeister</h1>
+      LeckerMeister ist ein Produkt von Sophie Schumann, Sabrina SchÃ¶nweiler
+      und Leonie Waimer<br /><br />
 
-
-     <h3>Anschrift:</h3>
-      LeckerMeister<br>
-      Grönerstraße 25<br>
-      71636 Ludwigsburg<br>
-      E-Mail: leckermeister@gmail.net<br><br>
- </div>
- <br>
+      <h3>Anschrift:</h3>
+      LeckerMeister<br />
+      Grönerstraße 25<br />
+      71636 Ludwigsburg<br />
+      E-Mail: leckermeister@gmail.net<br /><br />
+    </div>
+    <br />
   </body>
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="footer-links">
-          <a href="Datenschutz.html">Datenschutz</a>
-          <a href="Impressum.html">Impressum</a>
-          <a href="AGB.html">AGB</a>
-        </div>
-      </footer>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="Datenschutz.html">Datenschutz</a>
+      <a href="Impressum.html">Impressum</a>
+      <a href="AGB.html">AGB</a>
+    </div>
+  </footer>
 </html>
