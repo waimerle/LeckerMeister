@@ -1,5 +1,5 @@
 
-{% load static %}	
+{% load static %}	<!--Django-Template-Tag zum Laden von statistischen Daten-->
 <!DOCTYPE html>
 <html lang="de">
   <head>
@@ -166,6 +166,8 @@
       </div>
     </div>
         <h2 style="text-align:center">Meine Rezepte: </h2>
+
+      <!-- Schleife durch die Liste der eigenen Rezepte des Benutzers ertsellt wird-->  
   {% for rezept in eigene_rezepte %}
     <div class="rezept-container">
       <h1 style="text-align: center">{{ rezept.name }}</h1>
@@ -173,12 +175,14 @@
         <div class="hidden-content">
         <h2>Zutaten:</h2> 
         <ul>
+           <!-- Schleife durch die Liste der Zutaten erstellt wird -->
           {% for zutat in rezept.Zutaten %}
             <li>{{ zutat }}</li>
           {% endfor %}
         </ul>
         <h2>Anleitung:</h2>
         <ol>
+          <!-- Schleife durch die Liste der Zubereitungsschritte erstellt wird-->
           {% for schritt in rezept.Zubereitung %}
             <li>{{ schritt }}</li>
           {% endfor %}
@@ -191,6 +195,7 @@
         <p>{{ rezept.likes }}</p>
       </div>
     </div>
+    <!-- Ende der Schleife -->
   {% endfor %}
 
     </div>
