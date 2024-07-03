@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %} <!--Django-Template-Tag zum Laden von statistischen Daten-->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -125,10 +125,10 @@
       <a href="{% url 'Profil' %}"><img src="{% static 'Person.png' %}" alt="Person_Icon" /></a>
     </div>
   </header>
-  <h1 style="text-align: center; color: #5f764f">Entdecken Sie mit LeckerMeister die Kunst des GenieÃŸens!</h1>
+  <h1 style="text-align: center; color: #5f764f">Entdecken Sie mit LeckerMeister die Kunst des Genießens!</h1>
   <h3 style="text-align: center; color: #5f764f">Finden Sie hier die aktuellsten Rezepte</h3>
   {% csrf_token %}
-  {% for rezept in rezepte %}
+  {% for rezept in rezepte %} <!--Django-Template-Schleife, die über 'rezept'-Liste iteriert-->
     <div class="rezept-container">
       <div style="display: flex; align-items: center; margin-bottom: 10px;">
         <img src="/static/users/{{ rezept.Profilbild }}" alt="Profilbild von {{ rezept.Ersteller }}" width="40" height="40" style="border-radius: 50%; margin-right: 10px;">
@@ -140,7 +140,7 @@
  
      <div style="text-align: center; margin-top: 10px;">
         <span> Likes: <span class="like-count">{{ rezept.likes }} </span>
-        <button class="like-button" onclick="likeRecipe(this)" data-recipe-id="{{ rezept.id }}">GefÃ¤llt mir</button>
+        <button class="like-button" onclick="likeRecipe(this)" data-recipe-id="{{ rezept.id }}">Gefällt mir</button>
       </div>
 
 
@@ -179,8 +179,9 @@
 
   <script>
     function saveRecipe(button) {
-      const recipeId = button.getAttribute('data-recipe-id');
-
+      const recipeId = button.getAttribute('data-recipe-id'); // ID des Rezeptes aus Attribut des Buttons entnehmen
+      
+      // POST-Request Anfrage an den Server, um Rezept zu speichern. Enthält Rezept-ID und CSRF-Token
       fetch('/save_recipe/' + recipeId + '/', {
           method: 'POST',
           headers: {
@@ -189,6 +190,8 @@
           },
           body: JSON.stringify({ recipe_id: recipeId })  // JSON-Daten mit der Rezept-ID
       })
+
+      // Antwortverarbeitung
       .then(response => {
           if (!response.ok) {
               throw new Error('Network response was not ok');
@@ -198,7 +201,7 @@
       .then(data => {
           if (data.status === 'success') {
               alert('Rezept gespeichert!');
-              button.classList.add('saved');  // Optional: Button-Stil Ã¤ndern, um gespeicherten Zustand anzuzeigen
+              button.classList.add('saved');  // Optional: Button-Stil ändern, um gespeicherten Zustand anzuzeigen
           } else {
               throw new Error('Fehler beim Speichern des Rezepts');
           }
@@ -208,7 +211,9 @@
     function getCookie(name) {
       let cookieValue = null;
       if (document.cookie && document.cookie !== '') {
-          const cookies = document.cookie.split(';');
+          const cookies = document.cookie.split(';'); // Cookies als Array aufrufen 
+
+          // Spezifische Cookies finden
           for (let i = 0; i < cookies.length; i++) {
               const cookie = cookies[i].trim();
               if (cookie.substring(0, name.length + 1) === (name + '=')) {
@@ -221,8 +226,9 @@
     }
 
 function likeRecipe(button) {
-    const recipeId = button.getAttribute('data-recipe-id');
+    const recipeId = button.getAttribute('data-recipe-id'); // Rezept-ID extrahieren 
 
+    // POST-Request Anfrage an den Server, um Rezept zu speichern. Enthält Rezept-ID und CSRF-Token
     fetch(`/like_rezept/${recipeId}/`, {
         method: 'POST',
         headers: {
@@ -231,6 +237,8 @@ function likeRecipe(button) {
         },
         body: JSON.stringify({ recipe_id: recipeId })
     })
+
+    // Antwortverarbeitung
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -262,4 +270,5 @@ function likeRecipe(button) {
   </script>
 </body>
 </html>
+
 
