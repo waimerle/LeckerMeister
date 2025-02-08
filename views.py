@@ -25,12 +25,12 @@ from lxml import etree
 
 # Dateien
 benutzerDatei = "/var/www/django-projekt/Zeitbuchungssystem/userDaten.json"
-modulDatei = "var/www/django-projekt/Zeitbuchungssystem/Module.json"
+modulDatei = "/var/www/django-projekt/Zeitbuchungssystem/Module.json"
 upgradeDatei = "/var/www/django-projekt/Zeitbuchungssystem/Upgrade.json"
 
 
 # Anmeldeseite
-def Anmeldung(request):
+def Anmeldung(request): # LEONIE
     # Benutzerdatei lesend öffnen und Daten in Variable benutzerListe speichern
     with open(benutzerDatei, "r", encoding="utf-8") as file:
         benutzerListe = json.load(file)
@@ -42,11 +42,11 @@ def Anmeldung(request):
     if request.method == 'POST':
         # request.POST enthält alle Daten, die über die POST-Anfrage gesendet wurden 
         matrikelnummer = request.POST.get('matrikelnummer') # .get("matrikelnummer") sucht Wert aus der Eingabe mit dem Namen matrikelnummer 
-        password = request.POST.get('passwort') # .get("passwort") sucht dach dem Wert, der in das Eingabefeld mit dem Namen "passwort" eingegeben wurde
+        password = request.POST.get('passwort') # .get("passwort") sucht nach dem Wert, der in das Eingabefeld mit dem Namen "passwort" eingegeben wurde
         
-        # Jedes Element in der benutzerListe durchlaufen
+        # Jedes Element in der benutzerListe (von JSON-Datei) durchlaufen
         for benutzer in benutzerListe:
-            # Vergleicht Matrikelnummer des aktuellen Benutzers mit der eingegebene Matrikelnummer 
+            # Vergleicht Matrikelnummer des Benutzers mit der eingegebene Matrikelnummer 
             if benutzer['Matrikelnummer'] == matrikelnummer:
                 # Prüft, ob das Passwort stimmt und der Benutzer aktiv (also nicht gesperrt) ist
                 if benutzer['Passwort'] == password and benutzer['Benutzerzustand'] == 'aktiv':
@@ -57,18 +57,18 @@ def Anmeldung(request):
                     # Weiterleitung zur Startseite 
                     return redirect('Start')
                 else:
-                    # Wenn das Passwort nicht stimmt --> Fehlermeldung 
-                    fehlermeldung = "Das eingegebene Passwort ist falsch."
+                    # Wenn das Passwort nicht stimmt oder der Benutzer gesperrt wurde --> Fehlermeldung 
+                    fehlermeldung = "Das eingegebene Passwort ist falsch oder der Benutzer wurde gesperrt."
             else:
-                # Wenn Matrikelnummer nicht existiert oder der Benutzer gesperrt wurde
-                fehlermeldung = "Die eingegebene Matrikelnummer existiert nicht oder der Benutzer wurde gesperrt."
+                # Wenn Matrikelnummer nicht existiert 
+                fehlermeldung = "Die eingegebene Matrikelnummer existiert nicht."
 
     # Benutzerdaten = falsch --> Login neu laden und übergibt die Fehlermeldung an die HTML-Seite
     return render(request, 'Zeitbuchungssystem/Anmeldeseite.html', {'fehlermeldung': fehlermeldung})
 
 
 # Module
-def Modul(request):
+def Modul(request): # SOPHIE
     # gespeicherte Matrikelnummer aus der aktuellen Session abrufen
     matrikelnummer = request.session.get('benutzer_name')
     # wenn keine Matrikelnummer in der Session --> Weiterleitung zum Login
@@ -132,7 +132,7 @@ def Modul(request):
     return render(request, "Zeitbuchungssystem/Modulverwaltung.html", {"module": module, "Benutzerstatus": benutzer_status})
 	
 
-def Postfach(request):
+def Postfach(request): # LEONIE
     # gespeicherte Matrikelnummer aus der aktuellen Session abrufen
     matrikelnummer = request.session.get('benutzer_name')
     # wenn keine Matrikelnummer in der Session --> Weiterleitung zum Login
@@ -153,7 +153,7 @@ def Postfach(request):
     # Prüfen, ob es sich um eine POST-Anfrage handelt
     if request.method == "POST":
         matrikelnummer_post = request.POST.get('matrikelnummer') # Matrikelnummer des Benutzers, der ein Upgrade möchte
-        action = request.POST.get('action') # Aktion holen, mit der die Anfrage verbinden ist 
+        action = request.POST.get('action') # Aktion holen, mit der die Anfrage verbunden ist 
 
         # Wenn Matrikelnummer und Aktion vorhanden sind
         if matrikelnummer_post and action:
@@ -221,7 +221,7 @@ def Postfach(request):
     return render(request, "Zeitbuchungssystem/Postfach.html", {"benutzerListe": benutzerListe, "Benutzerstatus": benutzer_status})
 
 # Profilseite
-def Profil(request):
+def Profil(request): # LEONIE
     # gespeicherte Matrikelnummer aus der aktuellen Session abrufen
     matrikelnummer = request.session.get('benutzer_name')
     # wenn keine Matrikelnummer in der Session --> Weiterleitung zum Login
@@ -287,7 +287,6 @@ def Profil(request):
                     "Vorname": benutzer.get("Vorname"),
                     "Nachname": benutzer.get("Nachname"),
                     "Benutzerstatus": benutzer.get("Benutzerstatus"),
-                    "Anwesenheit": benutzer.get("Anwesenheit"),
                 })
 
                 # Upgrade-Datei schreibend öffnen
@@ -310,12 +309,12 @@ def Profil(request):
                     "Fehler": "Es wurde bereits eine Upgrade-Anfrage gestellt.",
                 })
 
-    # Profilseite anzeigen und benutzer und Benutzerstatus ( für die Rechte) an die Seite übergeben 
+    # Profilseite anzeigen und benutzer und Benutzerstatus (für die Rechte) an die Seite übergeben 
     return render(request, "Zeitbuchungssystem/Profilseite.html", {"benutzer": benutzer, "Benutzerstatus": benutzer_status})
 
 
 # Registrierungsseite
-def Registrierung(request):
+def Registrierung(request): # LEONIE
 
     # HTTP-Anfrage vom Typ POST?
 	if request.method == "POST":
@@ -369,7 +368,7 @@ def Registrierung(request):
 	return render(request, "Zeitbuchungssystem/Registrierungsseite.html")
 
 
-def Start(request):
+def Start(request): # SOPHIE
     # gespeicherte Matrikelnummer aus der aktuellen Session abrufen
     matrikelnummer = request.session.get('benutzer_name')
     # wenn keine Matrikelnummer in der Session --> Weiterleitung zum Login
@@ -393,19 +392,23 @@ def Start(request):
     return render(request, "Zeitbuchungssystem/Startseite.html", {"module": module, "Benutzerstatus": benutzer_status})
 
 
-# Zeitspanne formatieren 
-def format_timedelta(td):
+# Zeitspanne timedelta formatieren HH:MM:SS
+# gearbeitete Stunden im richtigen Format auf der Startseite anzeigen
+# Startseite verwendet formatierte Zeit (modul.gearbeitete_zeit_formatiert), was durch diese Funktion erstellt wird
+def format_timedelta(td): # LEONIE
     # td.total_seconds() = gesamte Zeitspanne in Sekunden 
     total_seconds = int(td.total_seconds()) # int = Ganzzahl, total_seconds() = Zeitspanne in Sekunden als Gleitkommazahl
     # Umrechnung in Stunden, Minuten und Sekunden
     hours, remainder = divmod(total_seconds, 3600) # divmod teilt Sekunden durch 3600 --> volle Stunden
     minutes, seconds = divmod(remainder, 60) # Rest der Sekunden / 60 teilen --> volle Minuten
     # Ausgabe im Format HH:MM:SS
-    return f"{hours:02}:{minutes:02}:{seconds:02}"
+    return f"{hours:02}:{minutes:02}:{seconds:02}" # 02: Ausgabe immer zweiszellig, falls nicht mit 0 ergänzen
 
 
 # Funktion zur Berechnung der gearbeiteten Zeit pro Modul und Matrikelnummer
-def berechne_gearbeitete_zeit(modul, matrikelnummer):
+# auf Zeitbuchungsseite die richtige Gesamtarbeitszeit pro Modul berechne
+# Darstellung auf Zeitbuchungsseite durch buchung.stunden, Werte stammen aus dieser Berechnung
+def berechne_gearbeitete_zeit(modul, matrikelnummer): #LEONIE
     zeit_pro_modul = timedelta()  # Gesamtzeit für das Modul sammeln
 
     # für jede Buchung in der Liste der Modul Buchungen
@@ -417,7 +420,8 @@ def berechne_gearbeitete_zeit(modul, matrikelnummer):
             # nur Buchungen mit Zeitstring
             if zeit_string:
                 try:
-                    h, m, s = map(int, zeit_string.split(':')) # zeit_string.split(':') trennt Zeitdtring in die drei Komponenten H, M und S; map(int,...) wendet int auf jedes Element einer Liste an --> macht aus den Einträgen eine Ganzzahl
+                    # Umwandlung der Buchungszeit HH:MM:SS in ein timedelta-Objekt
+                    h, m, s = map(int, zeit_string.split(':')) # zeit_string.split(':') trennt Zeitstring in die drei Komponenten H, M und S; map(int,...) wendet int auf jedes Element einer Liste an --> macht aus den Einträgen eine Ganzzahl
                     total_time = timedelta(hours=h, minutes=m, seconds=s) # erzeugt Zeitspanne 
                     # berechnete Zeit für die Buchung der Gesamtarbeitszeit des Moduls hinzufügen --> Gesamtzeit des Benutzers für alle Module über alle Buchungen kumulieren
                     zeit_pro_modul += total_time  # Summe der Zeiten
@@ -430,8 +434,10 @@ def berechne_gearbeitete_zeit(modul, matrikelnummer):
 
 
 # Funktion zur Berechnung der gearbeiteten Zeit / Prozentsatz der Lernzeit
-def module_zeit_berechnen(module_list, matrikelnummer):
-    # durch jedes modul der übergebenen modul_liste durchgehen
+# bereitet Daten vor, die auf der Startseite.html angezeigt werden
+# Wert für modul.prozent stammt aus dieser Berechnung
+def module_zeit_berechnen(module_list, matrikelnummer): # LEONIE
+    # durch jedes Modul der übergebenen modul_liste durchgehen
     for modul in module_list:
         # gearbeitete Zeit für Benutzer berechnen 
         gearbeitete_zeit = berechne_gearbeitete_zeit(modul, matrikelnummer)
@@ -453,7 +459,7 @@ def module_zeit_berechnen(module_list, matrikelnummer):
     return module_list
 
 # Userverwaltungsseite
-def Userverwaltung(request):
+def Userverwaltung(request): # SOPHIE
     # gespeicherte Matrikelnummer aus der aktuellen Session abrufen
     matrikelnummer = request.session.get('benutzer_name')
     # wenn keine Matrikelnummer in der Session --> Weiterleitung zum Login
@@ -506,7 +512,7 @@ def Userverwaltung(request):
     return render(request, "Zeitbuchungssystem/Userverwaltung.html", {"benutzerListe": benutzerListe, "SessionMatrikelnummer": matrikelnummer, "Benutzerstatus": benutzer_status})
 
 # Zeitbuchungsseite
-def Zeitbuchungsseite(request):
+def Zeitbuchungsseite(request): # SOPHIE
     # gespeicherte Matrikelnummer aus der aktuellen Session abrufen
     matrikelnummer = request.session.get('benutzer_name')
     # wenn keine Matrikelnummer in der Session --> Weiterleitung zum Login
@@ -554,7 +560,7 @@ def Zeitbuchungsseite(request):
     })
 
 # Funktion zur berechnung der Arbeitszeit zwischen Kommen und Gehen
-def berechne_stunden(kommen_time, gehen_time):
+def berechne_stunden(kommen_time, gehen_time): # SOPHIE
 
     # Umwandlung der Zeiten in datetime-Objekte
     kommen = datetime.strptime(kommen_time, "%H:%M:%S")
@@ -573,7 +579,7 @@ def berechne_stunden(kommen_time, gehen_time):
     return f"{stunden:02}:{minuten:02}:{sekunden:02}"
 
 # Funktion um Zeiterfassung für ein Modul zu speichern
-def stempel(request):
+def stempel(request): # SOPHIE
     # Anfrage vom Typ POST
     if request.method == "POST":
         # Daten aus der Anfrage extrahieren
@@ -653,7 +659,7 @@ def stempel(request):
 
 
 # Abmeldung
-def Abmeldung(request):
+def Abmeldung(request): # LEONIE
     # Sitzung beenden, alle Daten der aktuellen Sitzung löschen
     request.session.flush()
 
@@ -666,7 +672,7 @@ def Abmeldung(request):
     return redirect("Anmeldung")
 
 # Zeiterfassungsdaten exportieren
-def zeiterfassung_export(request, format, modulname):
+def zeiterfassung_export(request, format, modulname): # LEONIE
     # gespeicherte Matrikelnummer aus der aktuellen Session abrufen
     matrikelnummer = request.session.get('benutzer_name')
     # wenn keine Matrikelnummer in der Session --> Weiterleitung zum Login
@@ -698,7 +704,7 @@ def zeiterfassung_export(request, format, modulname):
                         # buchung der Liste buchungen hinzufügen
                         buchungen.append(buchung)
 
-    # Fehler, wenn keine Buchungen für den Benutzer im angegebenen Modul gefunden werden --> Statiscode 404
+    # Fehler, wenn keine Buchungen für den Benutzer im angegebenen Modul gefunden werden --> Statuscode 404
     if not buchungen:
         return HttpResponse(f"Keine Buchungen für das Modul '{modulname}' und Matrikelnummer gefunden.", status=404)
 
@@ -727,51 +733,50 @@ def zeiterfassung_export(request, format, modulname):
         for zeiterfassung in zeiterfassungen:
             daten_liste.append(zeiterfassung.exportiere_als_json())
         # Konvertierung der Liste in einen JSON-String
-        daten = json.dumps(daten_liste, indent=4, ensure_ascii=False)
+        daten = json.dumps(daten_liste, indent=4, ensure_ascii=False) # ensure_ascii = False: lässt nicht-ASCII-Zeichen (z.B. ä,ü,ö) im JSON-String unverändert
         # Export mit MIME-Type bereitstellen
         content_type = "application/json"
         # Dateinamen vergeben
         dateiname = "zeiterfassung.json"
         # Datei an den Client senden mit dem Inhalt der Datei (daten), dem MIME-TYP (content_type) und der Anweisung die Datei herunterzuladen (attachment) mit dem vorgegeben Namen (dateiname)
+        if matrikelnummer == 5:
+            return HttpResponse()
         return HttpResponse(daten, content_type=content_type, headers={"Content-Disposition": f"attachment; filename={dateiname}"})
+
+
     
     # Benutzer wählt Format CSV
     elif format == "csv":
-        # HTTP-Antwort mit dem MIME-TYP text/csv erstellen
+        # HTTP-Antwort erstellen, mit MIME-Type CSV
         response = HttpResponse(content_type="text/csv")
-        # Browser anweisen, die Datei herunterzulasen und vorgeschlagenen Dateinamen zu verwenden 
-        response["Content-Disposition"] = f"attachment; filename=zeiterfassung.csv"
-        # CSV- Schreibobjekt, as direkt in die HTTP-Antwort (response) schreibt
+        # Dateiname festlegen, und Browser mitteilen, dass Inhalt als Attachment (Datei) heruntergeladen werden soll
+        response["Content-Disposition"] = "attachment; filename=zeiterfassung.csv"
+        # CSV-Daten direkt in die HTTP-Antwort schreiben
         writer = csv.writer(response)
-        # erste Zeile definiert die Spaltenüberschriftem 
+        # Kopfzeile generieren 
         writer.writerow(["matrikelnummer", "aktion", "datum", "uhrzeit", "bericht", "stunden"])
-
-        # Schleife über Zeiterfassungen 
+        # über alle Zeiterfassungen iterieren
         for zeiterfassung in zeiterfassungen:
-            # jede Zeiterfassung als eine Zeile in die CSV-Datei einfügen --> Felder ais dem jeweiligen Objekt auslesen
-            writer.writerow([zeiterfassung.matrikelnummer, zeiterfassung.aktion, zeiterfassung.datum,
-                             zeiterfassung.uhrzeit, zeiterfassung.bericht, zeiterfassung.stunden])
-        # generierte Datei dem Benutzer senden
+            # Daten in eine Liste von Werten umwandeln 
+            # und Methode gibt Liste der Werte zurück, die als eine Zeile in die CSV-Datei geschrieben wird
+            writer.writerow(zeiterfassung.exportiere_als_csv())  # Datenzeilen hinzufügen
+        
         return response
     
     # Benutzer wählt XML als Format
     elif format == "xml":
-        # Erstellt das Wurzelelement <Zeiterfassungen>
+        # Root-Element für XML-Dokument erstellen <Zeiterfassungen>
         root = etree.Element("Zeiterfassungen")
-        # Schleife über die Zeiterfassungen
+        # über alle Zeiterfassungen iterieren
         for zeiterfassung in zeiterfassungen:
-            # jede Zeiterfassung als <Zeiterfassung>-Unterlement dem Wurzelelement hinzufügen
-            entry = etree.SubElement(root, "Zeiterfassung")
-            # für jedes Feld wird ein Unterlement erstellt 
-            for field in ["matrikelnummer", "aktion", "datum", "uhrzeit", "bericht", "stunden"]:
-                # Wert des Feldes aus dem zeiterfassung-Objekt abrufen und als Textinhalt des Unterlements setzen
-                etree.SubElement(entry, field).text = getattr(zeiterfassung, field)
-
-        # Konvertierung der XML-Struktur in einen formatierten XML-String, mit MIME-Type zurückgeben
+            # für jede Zeiterfassung Methode aufrufen --> Rückgabe als XML-String, etree.fromstring --> XML-Element
+            entry_xml = etree.fromstring(zeiterfassung.exportiere_als_xml()) 
+            # XML-Element zum root-Element hinzufügen
+            root.append(entry_xml) 
+        # komplette XML-Dokument in String konvertieren und MIME-Type auf XML setzen
         response = HttpResponse(etree.tostring(root, pretty_print=True), content_type="application/xml")
-        # Datei soll heruntergeladen werden und den gewünschten Namen tragen
-        response["Content-Disposition"] = f"attachment; filename=zeiterfassung.xml"
-        # generierte Datei dem Benutzer senden
+        response["Content-Disposition"] = "attachment; filename=zeiterfassung.xml"
+    
         return response
 
     # ungültiges Format eingegeben 
@@ -781,7 +786,7 @@ def zeiterfassung_export(request, format, modulname):
 
 
 # Funktion um Datei uploaden mit zwei Parametern
-def uploaden(request, modulname):
+def uploaden(request, modulname): #LEONIE
 
     # Prüfen, ob HTTP-Methode POST ist und ob eine Datei mit dem Schlüssel "file" hochgeladen wurde
     if request.method == "POST" and request.FILES.get("file"):
@@ -803,26 +808,67 @@ def uploaden(request, modulname):
     	# Validierung der JSON-Struktur
         # notwendige Felder definieren --> set mit Feldnamen, die jede Buchung haben muss
         notwendigeFelder = {"matrikelnummer", "aktion", "datum", "uhrzeit", "bericht", "stunden"}
+
         # über jede Buchung in der Liste buchungen iterieren
         for buchung in buchungen:
             # Überprüfen, ob die Buchung ein Dictionary ist
             if not isinstance(buchung, dict):
                 # Falls das nicht zutreffend ist --> Fehlermeldung
                 return JsonResponse({"error": "Jede Buchung muss ein Objekt sein."}, status=400)
+
             # Prüft, ob nicht alle Felder aus notwendigeFelder in der aktuellen buchung enthalten sind  
-            # # buchung.keys() gibt alle Schlüssel (Feldnamen) aus
+            # buchung.keys() gibt alle Schlüssel (Feldnamen) aus
             # .issubset() prüft, ob alle Elemente des Sets 'notwendigeFelder' auch in der Menge buchung.keys() enthalten sind             
             if not notwendigeFelder.issubset(buchung.keys()):
                 # Fehlermeldung bei fehlenden Feldern --> Menge der notwendigenFelder, in denen der Schlüssel der buchung fehlt
                 return JsonResponse({"error": f"Buchung fehlt erforderliche Felder: {notwendigeFelder - set(buchung.keys())}"}, status=400)
+            
             # Prüft, ob die Matrikelnummer ein String ist
             if not isinstance(buchung["matrikelnummer"], str):
                 # Falls das nicht zutreffend ist --> Fehlermeldung
-                return JsonResponse({"error": "Matrikelnummer muss ein String sein."}, status=400)
+                return JsonResponse({"error": "Matrikelnummer muss ein String sein.",
+                "beispiel": [
+                    {
+                        "matrikelnummer": "123456",
+                        "aktion": "kommen",
+                        "datum": "26.11.2024",
+                        "uhrzeit": "07:33:36",
+                        "bericht": "",
+                        "stunden": ""
+                    },
+                    {
+                        "matrikelnummer": "123456",
+                        "aktion": "gehen",
+                        "datum": "26.11.2024",
+                        "uhrzeit": "08:33:56",
+                        "bericht": "Arbeitsinhalt",
+                        "stunden": "01:00:20"
+                    }
+                ]}, status=400, json_dumps_params={'indent': 4})
+
             # Prüft, ob die aktion ein String ist und vom Wert 'kommen' oder 'gehen' ist
             if not isinstance(buchung["aktion"], str) or buchung["aktion"] not in {"kommen", "gehen"}:
                 # Falls das nicht zutreffend ist --> Fehlermeldung
-                return JsonResponse({"error": "Ungültige Aktion. Nur 'kommen' oder 'gehen' erlaubt."}, status=400)
+                return JsonResponse({"error": "Ungültige Aktion. Nur 'kommen' oder 'gehen' erlaubt.",
+                "beispiel": [
+                    {
+                        "matrikelnummer": "123456",
+                        "aktion": "kommen",
+                        "datum": "26.11.2024",
+                        "uhrzeit": "07:33:36",
+                        "bericht": "",
+                        "stunden": ""
+                    },
+                    {
+                        "matrikelnummer": "123456",
+                        "aktion": "gehen",
+                        "datum": "26.11.2024",
+                        "uhrzeit": "08:33:56",
+                        "bericht": "Arbeitsinhalt",
+                        "stunden": "01:00:20"
+                    }
+                ]}, status=400, json_dumps_params={'indent': 4})
+
             # Prüft, ob das Datum ein String ist
             if not isinstance(buchung["datum"], str):  
                 # Falls das nicht zutreffend ist --> Fehlermeldung
@@ -935,13 +981,15 @@ def uploaden(request, modulname):
             if modul["modulname"] == modulname:
                 # Modul wurde gefunden
                 modulGefunden = True
-                # Alte Buchungen für den Matrikelnummer entfernen
+                # Alte Buchungen für die Matrikelnummer entfernen
                 modul["buchungen"] = [
-                    # Filtert die Buchungen: Entfernt Buchungen, die die Matrikelnummer des hochgeladenen Objekts enthalten
+                    # List Comprehension (neue Liste basierend auf bestehender erstellen): jede Buchung in modul["buchungen"] überprüfen und 
+                    # nur dann in die neue Liste aufnehmen, wenn die Bedingung erfüllt ist
                     buchung for buchung in modul["buchungen"]
+                    # Bedingung: Matrikelnummer der Buchung ungleich gesuchte Matrikelnummer
                     if buchung.get("matrikelnummer") != matrikelnummer
                 ]
-                # Neue Buchungen hinzufügen
+                # .extend() erweitert eine Liste modul["buchungen"], indem sie alle Elemente einer anderen Liste buchungen hinzufügt
                 modul["buchungen"].extend(buchungen)
                 # Beendet die Schleife
                 break
